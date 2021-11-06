@@ -1,0 +1,611 @@
+.book
+	.header__top
+		.centerLink
+			display: flex
+	.searchContainer
+		position: relative
+		background-color: #fff
+		&__searchBar
+			display: flex
+			justify-content: space-between
+			border: 1px solid #999999
+			li
+				width: 30%
+				padding: 15px 15px 15px 0px
+				position: relative
+				cursor: pointer
+				.function
+				  position: absolute
+				  padding: 15px 30px 15px 20px
+				  left: 0
+				  background-color: #fff
+				  z-index: 1
+				  border: 1px solid #999999
+				  border-top: none
+				  border-left: none
+				  top: 102%
+				  width: 100.5%
+				  display: flex
+				  justify-content: space-between
+				  align-items: center
+				  flex-flow: wrap
+				  display: none
+				  &.active
+				  	display: block
+				  	z-index: 55
+				  &__wrapper
+				  		width: 100%
+				  		display: flex
+				  		justify-content: space-between
+				  		align-items: center
+				  		position: relative
+				  		&:first-child
+				  			margin-bottom: 29px
+				  			&::after
+				  				content: ''
+				  				display: block
+				  				position: absolute
+				  				bottom: -17.5px
+				  				width: 100%
+				  				height: 1px
+				  				background-color: #F0F0F0
+
+				  		h3
+				  			padding-left: 0
+				  			&::before
+				  				content: none
+				  		.calculator
+				  		  width: auto
+				  		  display: flex
+				  		  justify-content: space-between
+				  		  .calcInput
+				  		    margin: 0 5px
+				  		    font-size: 16px
+				  		    padding: 0
+				  		    border: none
+				  		    background-color: transparent
+				  		    font-family: robotoMedium
+				  		    text-align: center
+				  		    width: 25px
+				  		    color: $chocolate
+				  		  .calc
+				  		    margin: 0
+				  		    width: 30px
+				  		    max-width: 30px
+				  		    height: 30px
+				  		    display: flex
+				  		    justify-content: center
+				  		    align-items: center
+				  		    border-radius: 50px
+				  		    border: solid 1px #A48E8B
+				  		    background-color: #fff
+				  		    -webkit-appearance: none
+				  		    appearance: none
+				  		    &.disabled
+				  		    	border: 1px solid #F8F2EE
+				  		    	color: #CCC3BF	
+				  		    &:focus
+				  		    	outline: none
+				h3
+					display: block
+					font-family: RobotoMedium
+					font-size: 14px
+					position: relative
+					color: $chocolate
+					margin-bottom: 5px
+					display: block
+					padding-left: 55px
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						left: 20px
+						width: 22px
+						height: 22px
+						top: 3px
+						z-index: 10
+				input
+					width: 100%
+					padding: 0
+					padding-left: 55px
+				input, span
+					appearance: none
+					border: none
+					position: relative
+					font-size: 13px
+					font-family: RobotoRegular
+					color: #a48e8b
+					&::placeholder
+						color: #a48e8b
+				&:first-child
+					padding: 0
+					.guests
+						padding: 15px 15px 15px 0px
+						.openCalc
+							padding-left: 55px
+					h3
+						&::before
+							background: url('../images/src/guests.svg') center center/contain no-repeat
+				&:nth-child(2)
+					border-left: 1px solid #999999
+					border-right: 1px solid #999999
+					h3
+						&::before
+							background: url('../images/src/calendar.svg') center center/contain no-repeat
+				&:last-child
+					width: 40%
+					h3
+						&::before
+							background: url('../images/src/calendar.svg') center center/contain no-repeat
+					.button
+						position: absolute
+						right: 15px
+						padding: 13px 25px
+						font-size: 14px
+						top: 50%
+						transform: translateY(-50%)
+		&__wrapper
+			padding: 31px 29px 77px 29px
+			position: relative
+			border-bottom: 1px solid #999999
+			border-left: 1px solid #999999
+			border-right: 1px solid #999999
+			&-pre
+				color: #A48E8B
+				font-family: RobotoRegular
+				font-size: 14px
+				position: absolute
+				right: 45px
+				top: 29px
+				&::after
+					content: ''
+					display: block
+					background: url('../images/src/preArrow.svg') center center/contain no-repeat
+					width: 10px
+					height: 5px
+					position: absolute
+					right: -15px
+					top: 5px
+			&-content
+				display: flex
+				justify-content: space-between
+				flex-flow: wrap
+				width: 462px
+				position: relative
+				input
+					border: none
+					appearance: none
+					font-family: RobotoRegular
+					font-size: 14px
+					padding: 20px 10px 20px 26px
+					border: 1px solid #999
+					&::placeholder
+						color: #A48E8B
+					&:first-child
+						border-right: none
+					&:first-child, &:nth-child(2)
+						width: 50%
+						margin-bottom: 16px
+					&:last-child
+						width: 100%
+
+			.buttons
+				position: absolute
+				right: 29px
+				bottom: 22px
+				.button
+					font-size: 14px
+					&:first-child
+						color: #947147
+						background-color: #fff
+						border: none
+						padding: 14px
+						text-transform: capitalize
+	.bookTreatment
+		padding-top: 43px
+		margin-bottom: 50px
+		h1
+			text-align: center
+		p
+			font-family: helveticaRegular
+			font-size: 14px
+			color: #8F7F72
+			text-align: center
+			margin-bottom: 55px
+			height: 36px
+		.cardsList
+			display: block
+			.chooseHotel
+				height: 400px
+				.cardText
+					padding-left: 15px
+					padding-right: 15px
+					h3
+						font-family: garamond
+						letter-spacing: normal
+						color: #957248
+				&:hover
+					.learnMore
+						&::before
+							width: calc(100% - 30px)
+							calc(100% - 30px)
+							left: 15px
+							top: 15px
+					.cardText
+						background-color: #fcfaf6
+						h3
+							color: #4a1d18
+							&::after
+								background-color:#ccc3bf
+						p
+							color: #8f7f72
+.book2
+	.generalSteps
+		li
+			&:nth-child(2)
+				p
+					&::after
+						content: none
+	.customizeCard
+		h5
+			font-size: 15px
+			font-family: helveticaRegular
+			color: $chocolate
+			margin-bottom: 30px
+		&__flexContainer
+			display: flex
+			justify-content: space-between			
+			padding-left: 24px
+			&--items
+				> ul
+					max-width: 305px
+					position: relative
+					.list
+						background-color: #F8F2EE
+						text-align: center
+						position: relative
+						padding: 30px 0 40px 0
+						border-radius: 13px
+						img
+							display: block
+							margin: 0 auto
+							width: 65px
+						h1
+							font-family: helveticaRegular
+							font-size: 22px
+							margin: 16px 0 5px 0
+							color: #947147
+						span
+							font-family: helveticaLight
+							font-size: 12px
+							color: #947147
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							border: 1px solid #947147
+							border-radius: 13px
+							left: 13px
+							top: 13px
+							width: calc(100% - 26px)
+							height: calc(100% - 26px)
+				.button
+						font-size: 13px
+						width: 100%
+						display: block
+						text-align: center
+				.slick-dots
+					bottom: -5px
+				.slick-arrow
+					top: 40%
+					&::before
+						background: url('../images/src/smallArrow.svg') center center/contain no-repeat
+			&--payment
+				border: 1px solid #8F7F72
+				padding: 18px 0 18px 45px
+				border-radius: 4px
+				height: 75px
+				position: relative
+				width: 175px
+				h4
+					font-family: helveticaRegular
+					font-size: 15px
+					color: $chocolate
+					margin-bottom: 10px
+					position: relative
+
+				span
+					font-family: helveticaLight
+					font-size: 12px
+					color: #8F7F72
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-50%)
+					width: 16px
+					height: 15px
+					background: url('../images/src/card.svg') center center/contain no-repeat
+	.cardContentWrapper					
+		background-color: #fff
+	.reverseContent 
+		.cardContent__text 
+			.button
+				&:hover
+					color: #fff
+	.hours
+		background-color: #FCFAF5
+		padding: 33px
+		&__top
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #fff
+			position: relative
+			padding: 22px 28px
+			input
+				appearance: none
+				border: none
+				font-family: EBGaramondItalic
+				font-size: 19px
+				color: #4A1D18
+				width: 50%
+				color: $chocolate
+				&::placeholder
+					color: $chocolate
+			.tel
+				color: $chocolate
+				font-family: robotoMedium
+				font-size: 12px
+				margin-right: 42px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					bottom: -3px
+					position: absolute
+					left: 0
+					background-color: #4A1D18
+			.button
+				font-size: 13px
+
+			input
+				a
+				.button
+		h1
+			font-size: 26px
+			text-align: center
+			margin: 35px 0 40px
+		&__schedule
+			width: 100%
+			li
+				font-family: robotoMedium
+				border-bottom: 1px solid #DDDDDD
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				color: #957248
+				padding: 16px 0
+				h5
+					font-size: 12px
+					text-transform: uppercase
+					letter-spacing: 1.6px
+				span
+					letter-spacing: 1.6px
+					text-transform: uppercase					
+					font-size: 11px
+				&:nth-child(2)
+					span
+						line-height: 20px
+						transform: translateY(-4px)
+	.reservation
+		margin-top: 60px
+		background-color: #FCFAF5
+		padding-bottom: 55px
+		h1
+			fz26px
+			text-align: center
+			padding: 42px 0 44px
+		&__container
+			padding: 55px
+			background-color: #fff
+			h2
+				font-family: helveticaLight
+				font-size: 19px
+			form
+				div
+					display: flex
+					justify-content: space-between
+					input
+						width: 49%
+						margin: 28px 0 22px
+						padding: 18px 21px
+						font-family: helveticaRegular
+						font-size: 13px
+						color: #ADADAD
+						border-radius: 0
+						border: 1px solid #999999
+						&::placeholder
+							color: #ADADAD
+				.button
+					float: right
+					padding: 18px 48px
+					font-size: 13px
+					&.disabled
+						color: #7D7E83
+						background-color: #EEEEEE
+						border: 1px solid #EEEEEE
+						pointer-events: none
+			h3
+				font-family: helveticaMedium
+				font-size: 13px
+				color: #7D7E83
+				margin: 106px 0 7px 0
+			p
+				font-family: helveticaRegular
+				font-size: 12px
+				color: #7D7E83
+
+@media (max-width: 1024px) 
+	.book
+		.bookTreatment
+			.cardsList
+				&__item
+					max-width: 398px
+
+				.chooseHotel
+					height: 460px !important
+					.cardText
+						h3
+							.ipad
+								display: block
+							&::after
+								top: 70px
+			.hotelList
+				&__item
+
+					.cardText
+						.button
+							font-size: 15px
+							padding: 10px 25px					
+@media (width: 1024px) 
+	.book
+		.ipad2
+			display: block
+@media (width: 768px) 
+	.book2
+		.cardContentWrapper
+			margin: 100px 0
+	.book
+		.searchContainer__searchBar
+			li 
+				padding: 15px 15px 15px 0px
+				span
+					font-size: 12px
+				.button
+					padding: 13px 20px !important
+					font-size: 12px !important
+		.bookTreatment
+			max-width: 70%
+			margin: 0 auto
+		.slider3
+			.slick-list
+				.slick-slide
+					> div
+						display: flex
+						justify-content: center
+	
+
+@media (max-width: 768px) 
+	.book2
+		.cardContent__text
+			.button
+				margin-top: 50px
+		.hours
+			&__top
+				flex-flow: wrap
+				input
+					font-size: 16px
+					width: 100%
+					margin-bottom: 10px
+				div
+					width: 100%
+					text-align: right
+@media (max-width: 767px)
+	.book
+		.bookTreatment
+			.cardsList
+				.chooseHotel
+					height: 450px !important
+		.cardContentWrapper
+			margin: 30px 0
+		.searchContainer
+			&__searchBar
+				display: flex
+				justify-content: space-between
+				flex-flow: wrap
+				li
+					border-bottom: 1px solid #999
+					padding: 15px 0px 15px 0px
+					h3, input
+						padding-left: 40px
+						&::before
+							left: 10px
+					input
+						width: 100%
+
+					&:nth-child(1), &:nth-child(2)
+						width: 50%
+					&:nth-child(3)
+						width: 100%
+						border-bottom: none
+					.guests
+	    				padding: 15px 5px 15px 0px !important
+	    				.openCalc
+	    					padding-left: 40px !important
+	    				.function
+	    					width: 300px
+				.specialWrapper
+					.qs-datepicker-container
+						left: auto !important
+						right: 0px !important
+
+			&__wrapper
+				padding-bottom: 100px
+				&-pre
+					top: 10px
+				&-content
+					flex-flow: wrap
+					width: 100%
+					input
+						width: 100% !important
+						border-right: 1px solid #999 !important
+		.customizeCard
+			&__flexContainer
+				padding-left: 0
+				flex-direction: column-reverse;
+				&--items
+					ul
+						margin: 30px auto 20px auto;
+				&--payment
+					margin: 20px auto
+		.hours
+			padding: 10px
+			&__top
+				div
+					text-align: center
+					input
+						font-size: 15px
+					.tel
+						margin: 0 0 15px 0				
+					.button
+						display: block
+						margin-top: 20px
+			&__schedule
+				li
+					h5
+						letter-spacing: 1.1px
+						font-size: 11px
+					span
+						letter-spacing: normal
+						font-size: 10px
+		.reservation__container
+			padding: 20px	
+			h2
+				margin-bottom: 20px
+			form
+				.deliverInputs
+					flex-flow: wrap
+					input
+						margin: 0 0 10px 0
+						padding: 18px 10px
+						width: 100%
+				button
+					display: block
+					text-align: center
+					width: 100%
+

@@ -1,0 +1,677 @@
+.book3
+    .globalContent 
+      display: flex
+      padding: 9px
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+      background-color: #fff
+      &__pic
+        width: 31%
+        position: relative
+        img
+          width: 100%
+          display: block
+      &__text
+        width: 69%
+        padding: 7px 24px
+        &--pre
+          font-size: 14px
+          font-family: helveticaLight
+          color: #8F7F72
+        h1
+          font-size: 26px
+          margin: 6px 0 20px
+        p
+          font-family: garamond
+          font-size: 18px
+          margin-bottom: 9px
+          color: #000
+          line-height: 22px
+        &--price
+          font-family: helveticaLight
+          font-size: 27px
+          color: $chocolate
+        .button
+          float: right
+          padding: 10px 30px
+          font-size: 13px
+    .mainContent
+        text-align: center
+        h1
+            font-size: 29px
+            margin-top: 62px
+            display: block
+            text-align: center
+        p
+            font-family: helveticaRegular
+            font-size: 14px
+            color: #8f7f72
+            text-align: center
+            // margin-bottom: 39px
+            height: 36px
+        .generalSteps
+            margin: 30px 0 50px
+            justify-content: space-between    
+            li
+                pointer-events: none
+                user-select: none
+                &.finished
+                    pointer-events: auto
+                    cursor: pointer
+                p
+                    &::after
+                        margin: 0 20px
+        &--change
+
+            .sections
+                display: none
+                &.visible
+                    display: block
+            .section0
+                .month
+                    display: flex
+                    max-width: 260px
+                    margin: 0 auto 60px auto
+                    justify-content: space-between
+                    align-items: center
+                    .prevArrow, .nextArrow
+                        display: block
+                        cursor: pointer
+                        &:hover
+                            svg
+                                #Сгруппировать_1391
+                                    #Контур_3
+                                        fill: $chocolate    
+                    .prevArrow
+                        transform: rotate(90deg)
+                    .nextArrow
+                        transform: rotate(-90deg)
+                    h1
+                        margin-bottom: 0
+                .globalCalendar
+                    display: none
+                    &.visible
+                        display: block
+                .calendarWrapper
+                    transform: translateX(2px)
+                    &__week
+                        display: flex
+                        justify-content: flex-start
+                        li
+                            width: calc(100% / 7)                        
+                            text-align: right
+                            font-family: SFpro
+                            font-size: 14px
+                            color: #957248
+                            margin-bottom: 25px
+                            transform: translateX(-5px)
+                    &__day
+                        display: flex
+                        justify-content: space-aroun
+                        flex-flow: wrap
+                        padding-top: 1px
+                        padding-left: 1px
+                        li
+                            cursor: pointer
+                            width: calc(100% / 7)
+                            font-family: helveticaMedium
+                            font-size: 15px
+                            color: #957248
+                            padding: 10px 10px 80px 
+                            text-align: right
+                            border: 1px solid #CCC3BF
+                            margin-left: -1px
+                            margin-top: -1px
+                            position: relative
+                            span
+                                position: absolute
+                                right: 10px
+                                top: 10px
+
+                            &.disabled
+                                background-color: #ccc3bf
+                                color: #FFFFFF
+                                pointer-events: none
+                            &.anotherMonth
+                                pointer-events: none
+                                span
+                                    color: #ABABAB
+                            &.active
+                                span
+                                    color: #fff
+                                    background-color: #957248
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 23px
+                                    height: 23px
+                                    border-radius: 50px
+                                    right: 5px
+                                    top: 5px
+                            &.weekend
+                                background-color: #FCFAF6
+                                color: #7E7E7E
+                            &:hover
+                                background-color: #9572484a    
+
+
+
+
+            .section1
+                > h2
+                    display: none
+                .timepicker-container
+                    padding: 22px 15px 23px 15px
+                    display: flex !important
+                    h2
+                        padding: 10.5px 0 10.5px 25px
+                        margin-bottom: 0 !important
+                    &__flex
+                        display: flex
+                        padding-bottom: 25px
+                        .timepicker
+                            opacity: 0
+                            position: absolute
+                            width: 70px
+                            padding: 10px 0
+                            user-select: none
+                        .timepicker-info
+                            opacity: 0
+                            position: absolute
+                            font-size: 12px
+                            bottom: 0
+                            color: #B5B5B5
+                        .hide
+                            display: none
+                            &.visible
+                                display: flex
+                        
+                    &.active
+                        display: block !important
+                        .timepicker
+                            opacity: 1
+                            pointer-events: all
+                            position: relative
+                            background-color: #fcfaf6
+                            color: $chocolate
+                        .timepicker-info
+                            opacity: 1
+                &.busy
+                    > h2
+                        display: block
+                        font-family: RobotoMedium
+                        font-size: 16px
+                        color: #957248
+                        position: relative
+                        margin-bottom: 20px
+                    form
+                        label
+                            border: none
+                            display: none
+                            &.active
+                                background-color: transparent
+                            &:last-child
+                                display: flex
+            
+            .section2
+                .hotelList, .cardsList
+                    &__item
+                        opacity: 0.5
+                        &:hover
+                            opacity: 1
+                            .learnMore
+                                span
+                                    opacity: 0
+                                &::before
+                                    content: none    
+                        &.active
+                            opacity: 1
+                            .learnMore
+                                span
+                                    opacity: 0
+                                &::before
+                                    content: none
+                            .cardText
+                                background-color: #fcfaf6
+                                h3, .price, p
+                                    color: #957248
+
+            .section3
+                text-align: left
+                .note
+                    padding: 15px 23px
+                    background-color: #FFF6F3
+                    h4
+                        margin: 0 0 12px 0
+                        padding-left: 0px
+                    > span
+                        font-family: robotoRegular
+                        font-size: 15px
+                        color: $chocolate
+                        position: relative
+                        margin-bottom: 7px
+                        display: block
+                        padding-left: 25px 
+                        &::before
+                            content: ''
+                            display: block
+                            position: absolute
+                            left: 0
+                            width: 16px
+                            height: 16px
+                            background: url('../images/src/calendar.svg') center center/contain no-repeat
+
+                        &:nth-of-type(2)
+                            &::before
+                                background: url('../images/src/attention.svg') center center/contain no-repeat                                   
+                h5
+                    font-family: RobotoMedium
+                    font-size: 15px
+                    margin-top: 15px
+                    display: block
+                    color: #4a1d18
+                    span
+                        color: #957248
+                        font-size: 18px
+
+                form
+                    padding-left: 23px
+                    span
+                        font-family: robotoRegular
+                        font-size: 16px
+                        color: #957248
+                        padding-left: 23px 
+                    .labels
+                        display: flex
+                        justify-content: space-between
+                        margin-bottom: 45px
+                        &:nth-of-type(1)
+                            label
+                                width: 28%
+                                &:nth-child(3)
+                                    width: 10%
+                        label, .label
+                            width: 30%
+                            position: relative
+                            div
+                                position: relative
+                                padding: 20px 0
+                                border-bottom: 1px solid #b6b6b682;
+                                &::after
+                                    content: ''
+                                    display: block
+                                    position: absolute
+                                    right: 0
+                                    top: 50%
+                                    transform: translateY(-50%)
+                                    background: url('../images/src/ok.svg') center center/contain no-repeat
+                                    width: 17px
+                                    height: 11px
+                                input
+                                    width: 100%
+                                    padding: 0
+                                    border: none
+                                    font-size: 16px
+                                    color: $chocolate
+                        .label
+                            label
+                                width: 80px
+                        &:nth-of-type(2)
+                            justify-content: 
+                            margin-bottom: 0
+                        &:nth-of-type(3)
+                            display: block
+                            label
+                                width: 100% !important
+                                position: relative
+                                display: block
+                                textarea
+                                    border: 2px solid #957248
+                                    border-radius: 8px
+                                    width: 100%
+                                    font-size: 16px
+                                    color: $chocolate
+                                    padding: 20px
+                                    font-family: helveticaMedium
+                                    &::placeholder
+                                        color: $chocolate
+                                        font-family: helveticaMedium
+                                        opacity: 0.3
+                                &:nth-child(1)
+                                    margin-bottom: 25px
+                                    div
+                                        width: 320px
+                                &:nth-child(2)
+                                    div
+                                        border: none
+                                        &::after
+                                            content: none
+                                
+                    .payment-labels
+                            display: none
+                            &.active
+                                display: block    
+                    h4, span
+                        padding-left: 0px
+                    span
+                        margin: 6px 0 21px
+                        display: block
+                    .check
+                      position: relative
+                      display: flex
+                      width: 350px
+                      margin: 22px 0 30px 
+                      -webkit-user-select: none
+                      -moz-user-select: none
+                      -ms-user-select: none
+                      user-select: none
+                      cursor: pointer
+                      span
+                        margin: 0
+                        &:first-of-type
+                            padding-left: 40px
+
+                      input
+                        width: auto
+                        position: absolute
+                        opacity: 0
+                        cursor: pointer
+                        height: 0
+                        width: 0
+
+                      input:checked ~ .checkmark:after
+                        content: ''
+                        display: block
+                        left: 0px
+                        top: -50%
+                        width: 24px
+                        height: 24px
+                        background: url('../images/src/ok2.svg') center center/contain no-repeat
+                        position: absolute
+                        background-color: transparent
+
+                      .checkmark
+                        
+                        border: solid 1px white
+                        cursor: pointer
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        left: 0
+                        height: 15px
+                        width: 15px
+
+                      .checkmark:after
+                        content: ''
+                        display: block
+                        width: 12px
+                        height: 2px
+                        background-color: #957248
+                        position: absolute
+                        top: 6px
+                        left: 5px
+                    .button
+                        text-align: center
+                        margin: 100px auto 0 auto
+                        display: block
+                h4
+                    font-family: RobotoMedium
+                    font-size: 17px
+                    color: #957248  
+                    margin: 25px 0 6px
+                    padding-left: 23px
+            
+            .section4
+                text-align: center
+                h1
+                    font-size: 55px
+                    font-family: EBGaramond
+                    color: #957248
+                p
+                    font-family: RobotoRegular
+                    font-size: 16px
+                    color: #957248
+                    margin-top: 25px
+                img
+                    width: 250px
+                    height: auto
+                    display: block
+                    margin: 60px auto 0 auto           
+            .bookTreatment
+                padding-top: 0
+            h1
+                margin-top: 0
+            .next
+                width: 214px
+                text-align: center
+                margin: 100px auto 0
+                font-size: 14px
+                padding: 12px 0
+                display: block
+            
+
+    .videoGalleryContainer
+        margin-top: 130px
+        background-color: #FCFAF6
+        padding: 130px 0 160px
+        .videoPart
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: relative
+            height: 320px
+            video, img
+                display: block
+                width: 100%
+            &__text
+                display: none
+                width: 22%
+                height: 100%
+                justify-content: space-between;
+                flex-direction: column;
+                &--pre
+                  font-size: 13px
+                  font-family: helveticaLight
+                  color: #8F7F72
+                .title
+                  font-size: 20px
+                  margin: 6px 0 20px
+                  letter-spacing: 4px
+                p
+                  font-family: garamond
+                  font-size: 15px
+                  margin-bottom: 9px
+                  color: #000
+                  line-height: 20px
+                &--price
+                  font-family: helveticaLight
+                  font-size: 27px
+                  color: $chocolate
+                .button
+                  // position: absolute
+                  // bottom: 0
+                  padding: 10px 30px
+                  font-size: 13px 
+                &.active
+                    display: flex   
+            &__video
+                width: 60%
+                height: 100%
+                video, img
+                    height: 100%
+                    display: none
+                    &.active
+                        display: block
+            &__gallery
+                // padding-left: 20px
+                width: 15%
+                overflow-Y: scroll
+                height: 100%
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                li
+                    cursor: pointer
+                    margin-bottom: 21px
+                    p
+                        font-family: garamond
+                        font-size: #000
+                        font-size: 12px
+                        margin-top: 10px
+                    img
+                        width: 100%
+    .bottomText
+        text-align: center
+        h1
+            margin-top: 110px
+            display: block
+        p
+            color: #000
+            font-family: garamond
+            font-size: 22px
+            line-height: 33px
+            margin: 25px auto
+            max-width: 80%
+            // text-align: center
+        // .button
+        //     margin: 0 auto
+.book-admin
+    .mainContent
+        .generalSteps
+            li 
+                width: auto
+                p
+                    font-size: 12px !important
+                    &::after
+                        width: 50px
+
+@media (max-width: 1024px)
+    .book3
+        .mainContent
+            p
+                font-size: 13px
+        .generalSteps
+            li
+                p
+                    font-size: 10px
+                    &::after
+                        content: none
+        .section2
+            width: 100%
+        .section3
+            .labels
+                flex-flow: wrap
+                label
+                    width: 45% !important
+                    margin-bottom: 20px
+        // .videoGalleryContainer
+        //     .videoPart
+        //         &__text
+        //             width: 100%
+        .videoGalleryContainer
+            padding: 60px 0
+            margin-top: 50px
+            .videoPart
+                display: block
+                height: auto
+                &__text
+                    width: 100%
+                    .button
+                        width: 214px
+                        margin: 20px auto 0
+                &__video
+                    width: 100%
+                    margin: 30px 0
+                &__gallery
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    overflow-x: scroll
+                    flex-direction: row
+                    li
+                        width: 30%
+@media (max-width: 768px) 
+    .book3
+        .globalContent
+            display: block
+            &__pic
+                width: 100%
+            &__text
+                width: 100%
+                .button
+                    display: block
+                    float: none
+                    margin: 20px 0
+        .bottomText
+            margin-bottom: 30px
+            h1
+                margin-top: 50px
+                font-size: 26px
+            p
+                font-size: 20px
+                line-height: 20px
+
+
+@media (max-width: 767px)
+    .book3
+        .mainContent
+            .generalSteps
+                max-width: 250px
+                margin: 30px auto 50px auto
+                p
+                    display: none
+                .digit
+                    margin-right: 0
+                    font-size: 12px
+                    &::after
+                        width: 36px
+                        height: 36px
+            &--change
+
+                .sections
+                    margin-top: 20px
+                    .globalCalendar
+                        .month
+                            margin-bottom: 20px
+                            .title
+                                font-size: 25px
+                        .calendarWrapper
+                            &__day
+                                li
+                                    font-size: 10px
+                                    padding-bottom: 30px
+                    .next
+                        margin-top: 50px
+                    .note
+                        padding-left: 23px
+                        span
+                            font-size: 13px
+                    form
+                        padding-left: 0
+                        .labels
+                            flex-flow: wrap
+                            justify-content: space-between
+                            label, .label
+                                width: 100% !important
+                                margin-bottom: 20px
+                                &:nth-child(4), &:nth-child(3)
+                                    width: 100%
+                        .timepicker-container
+                            .timepicker-info
+                                font-size: 9px
+                                text-align: left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,695 @@
+@import config
+.ipad
+	display: none
+.ipad2
+	display: none
+.none
+	display: none
+.hover
+	&:hover
+		color: $chocolate
+.account
+	background-color: #fcfaf6
+.title
+	font-size: 36px
+	font-family: helveticaLight
+	letter-spacing: 4.39px
+	color: $chocolate
+	margin-bottom: 11px
+	text-transform: uppercase	
+.widthWrapper
+	width: 960px
+	position: relative
+	margin: 0 auto
+	a
+		text-decoration: none
+	.noHover
+		background-color: #947147
+		color: #fff
+		&::before
+			content: none	
+		&:hover
+			background-color: $chocolate
+.transformed
+	transform: translateY(-172px)
+	.qs-datepicker-container
+		background-color: #fff
+		border-radius: 8px
+		border: none
+		box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5)
+		padding: 14px 26px 26px 26px
+		width: 300px
+		.qs-controls
+			background: #fff
+			margin-bottom: 17px
+			width: max-content
+			margin: 0 auto
+			.qs-month-year
+				&:hover
+					border: none
+				.qs-month, .qs-year
+					font-family: 'adobeclean' !important
+					font-size: 23px !important
+			.qs-arrow
+				&::after
+					width: 15px
+					height: 7px
+					border: none
+			.qs-left
+				&::after
+					background: url('../images/src/smallArrow.svg') center center/cover no-repeat
+					transform: translate(25%,-70%) rotate(0deg)
+			.qs-right
+				&::after
+					transform: translate(-25%,-70%) rotate(180deg)
+					background: url('../images/src/smallArrow.svg') center center/cover no-repeat
+			.qs-month-year
+				display: flex
+				font-size: 23px
+				font-weight: bold
+		.qs-squares
+			.qs-square
+				padding: 7%
+			.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover 
+				background: transparent
+			.qs-day
+				text-transform: uppercase
+				font-weight: bold
+				font-size: 14px
+				color: rgba(62, 62, 62, 0.5)
+				font-family: adobeClean
+			.qs-num
+				font-family: notosansbold
+				font-size: 16px
+				font-weight: bold
+				color: #3D3D3D	
+			.qs-current
+				color: $chocolate			
+				text-decoration: none
+			.qs-active
+				text-decoration: none
+				background: $chocolate !important
+				border-radius: 50px
+				color: #fff	
+.select2-container
+	float: right
+	.select2-search--dropdown
+		display: none
+	&:focus
+		outline: none
+.selection
+	&:focus
+		outline: none
+.select2-selection
+	&:focus
+		outline: none
+.select:focus, input:focus, .image-link:focus 
+	outline: none
+.ui-timepicker
+	cursor: pointer
+	.ui-menu-item
+		.ui-corner-all
+			font-family: helveticaMedium
+			color: #4a1d18 !important
+			font-size: 15px
+			letter-spacing: 2px 
+.timeselector
+	background-color: #fcfaf5 !important
+	&-item
+		a
+			color:#4a1d18
+			&:hover
+				color:#4a1d18
+	&-value	
+		font-family: helveticaRegular
+		font-size: 16px
+
+
+
+
+.transformed2ver
+	transform: translateY(-122px)
+.widthWrapper
+	.slider
+		.slick-track
+			display: flex
+			.slick-slide
+				div
+					li
+						max-width: 420px !important
+						display: block !important
+						margin: 0 auto
+	.slider3
+		.slick-track
+			display: flex
+			.slick-slide
+				> div
+					margin: 0 10px
+	.slider4
+		.slick-track
+			display: flex
+	.slick-dots
+		li
+			margin: 0
+			button
+				&::before
+					color: #ccc3bf
+					font-size: 10px
+			&.slick-active
+				button
+					&::before
+						color: #a48e8b
+						opacity: 1
+	.slick-prev
+		&::before
+			content: ''
+			display: block
+			background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
+			height: 43px
+			width: 12px
+	.slick-next
+		right: -35px
+		&::before
+			content: ''
+			display: block
+			transform: rotate(180deg)
+			background: url('../images/src/sliderArrow.svg') center center/contain no-repeat
+			height: 43px
+			width: 12px					
+	.slick-list
+		overflow: hidden
+
+input
+	width: 368px
+	display: block
+	appearance: none
+	border: none
+	border-bottom: 1px solid #b6b6b682
+	font-size: 15px
+	font-family: helveticaMedium
+	color: #b6b6b682
+	padding: 20px 0
+	border-radius: 0
+	&::placeholder
+		opacity: 0.3
+	&:focus
+		border-bottom: 1px solid $chocolate
+		opacity: 1
+		color: $chocolate
+		&::placeholder
+			opacity: 1
+input:focus::-webkit-input-placeholder
+    color: $chocolate
+							
+.button
+	position: relative
+	cursor: pointer
+	display: inline-block
+	line-height: normal
+	border-radius: 0
+	text-transform: uppercase
+	text-align: center
+	letter-spacing: 0.2em
+	font-weight: 500
+	font-style: normal
+	background-color: transparent
+	transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	z-index: 1
+	-webkit-tap-highlight-color: initial 
+	font-family: HelveticaRegular
+	font-size: 14px
+	padding: 10px 42px
+	border: 1px solid $mainColor
+	letter-spacing: 1.3px
+	background-color: transparent
+	&.disabled
+		pointer-events: none
+		background-color: #E8E5E2
+		color: #fff
+		border: 1px solid #E8E5E2
+	&:hover
+		color: #fff
+		&:before
+			transform-origin: left center
+			transform: scale(1, 1)
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background-color: $mainColor
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		transform: scale(0, 1)
+		transform-origin: right center
+		z-index: -1
+		transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)	
+.generalSteps
+	padding-left: 10px
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	position: relative
+	margin: 50px 0 30px
+	li
+		> p::after
+			content: ''
+			display: inline-block
+			position: relative
+			margin: 0 20px 0 10px
+			top: -4px
+			width: 80px
+			height: 1px
+			background-color: #CCC3BF
+		p
+			font-size: 12px
+			font-family: helveticaRegular
+			color: #957248
+			display: inline-block
+
+		.digit
+			font-size: 13px
+			font-family: helveticaBold
+			margin-right: 15px
+			position: relative
+			&::after
+				content: ''
+				display: block
+				border-radius: 50px
+				left: 50%
+				top: 50%
+				transform: translate3d(-50%,-50%,0)
+				z-index: -1
+				position: absolute
+				width: 26px
+				height: 26px
+				background-color: #FCFAF6
+		&:last-child
+			p
+				&::after
+					content: none
+		&.active
+			p
+				color: #4C1F1A
+			.digit
+				color: #fff
+				&::after
+					background-color: #BF9159
+
+			
+.checkbox__form
+    text-align: left
+    label, .label
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        cursor: pointer
+        width: 100%
+        display: block
+        position: relative
+        padding: 13px 15px 18px 15px
+        border-top: 1px solid #F7F2EE
+        cursor: pointer
+        input
+            position: absolute
+            cursor: pointer
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+        input:first-child:checked ~ .checkmark::before, .checkmark.active::before 
+          content: ''
+          display: block
+          right: 5px
+          top: 50%
+          transform: translateY(-50%)
+          width: 14px
+          height: 14px
+          position: absolute
+          background-color: #957248
+          border-radius: 50px
+        h2
+            font-family: RobotoMedium
+            font-size: 16px
+            color: #957248
+            position: relative
+            padding-left: 25px
+            margin-bottom: 7px
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: 0px
+                width: 16px
+                height: 16px
+                top: 50%
+                transform: translateY(-50%)
+                background: url('../images/src/time.svg') center center/contain no-repeat
+        span
+            font-family: robotoRegular
+            font-size: 10px
+            color: #CCC3BF
+            text-transform: uppercase
+            letter-spacing: 0.5px
+        .checkmark
+          border: solid 1px white
+          cursor: pointer
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          right: 10px
+          height: 15px
+          width: 15px
+
+        .checkmark:after
+          content: ''
+          display: block
+          width: 24px
+          height: 24px
+          border-radius: 50px
+          border: 1px solid #957248
+          position: absolute
+          top: 50%
+          right: 0
+          transform: translateY(-50%,)    
+        &:last-child
+            border-bottom: 1px solid #F7F2EE
+        .timepicker
+            width: 86px
+            z-index: 99
+            pointer-events: none
+            text-align: center
+        &.active
+            background-color: #fcfaf6
+
+
+.checkbox-section
+	display: none
+	label
+		h2
+			padding-left: 0
+			&::before
+				content: none
+	&.visible
+		display: block
+	&.non-clickable
+		opacity: 0.5
+		pointer-events: none
+
+
+
+
+
+
+
+.cardContentWrapper
+			background-color: #fcfaf6	
+			position: relative
+			z-index: -2
+			padding: 110px 0 133px				
+			.cardContent
+				display: flex
+				justify-content: space-between
+				align-items: center
+				position: relative
+				&__text
+					width: 60%
+					span
+						color: #8f7f72
+						letter-spacing: 0.34px
+						font-size: 18px
+						font-family: helveticaLight
+					h2
+						font-size: 36px
+						font-family: helveticaLight
+						margin: 10px 0 19px 0
+						display: block
+						color: $chocolate
+						letter-spacing: 4.39px
+					p
+						font-family: garamond
+						font-size: 18px
+						line-height: 22px
+						color: #000
+						padding-right: 55px
+
+				&__pic
+					width: 40%
+					img
+						width: 100%
+						display: block
+@media (min-width: 769px) 
+	.cardContentWrapper
+			.reverseContent
+				.cardContent__text
+					background-color: #fcfaf6
+					padding: 30px 0 30px 50px
+					margin-left: 40%
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					.button
+						margin-top: 20px
+						color: #957248
+					p
+						line-height: 19px
+						font-size: 16px
+				.cardContent__pic
+					position: relative
+					z-index: -1
+					width: 70%
+
+.cardsList
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		&__item
+			width: 30%
+			position: relative
+			transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+			background-color: #fcfaf6
+			img
+				width: 100%
+				display: block
+			.borderDiv
+				width: calc(100% - 30px)
+				height: calc(100% - 30px)
+				position: absolute
+				cursor: pointer
+				left: 15px
+				top: 15px
+				border: 1px solid #C0B5AF
+				z-index: 3
+			.learnMore
+				position: relative
+				z-index: 1
+				overflow: hidden
+				span
+					text-transform: uppercase
+					letter-spacing: 3px
+					display: block
+					padding: 95px 0 95px 0
+					text-align: center
+					font-family: helveticaRegular
+					font-size: 16px
+					color: #fff
+					opacity: 0
+					transition: .5s
+					z-index: 5
+			.cardText
+				background-color: #FCFAF6
+				padding: 29px 0 46px
+				text-align: center
+				h3
+					font-family: helveticaLight
+					font-size: 26px
+					color: #4A1D18
+					display: block
+					letter-spacing: 3px
+					margin-bottom: 40px
+					position: relative
+					&::after
+						content: '';
+						display: block
+						position: absolute
+						width: 68px
+						height: 2px
+						background-color: #CCC3BF
+						left: 50%
+						transform: translateX(-50%)
+						top: 45px
+				p
+					color: #8F7F72
+					font-family: 'garamond'
+					font-size: 18px
+					line-height: 22px
+					display: block
+					padding: 0 30px
+					margin: 11px 0 13px !important
+				a
+					color: #4A1D18
+					font-family: 'helveticaBold'
+					font-size: 12px
+					position: relative
+					display: inline-block
+					letter-spacing: 3px
+					z-index: 10
+					&::after
+						content: ''
+						display: block
+						width: 100%
+						height: 1px
+						bottom: -3px
+						position: absolute
+						background-color: #4A1D18
+			&:hover
+				// transform: translateY(10px) scale(1.)
+				transition: all .6s cubic-bezier(.215, .61, .355, 1) 0s
+				.learnMore
+					&::before
+						content: ''
+						display: block
+						width: 100%
+						height: 100%
+						background-color: #000000
+						opacity: 0.5
+						position: absolute
+						left: 0
+						top: 0
+						z-index: -1
+					span
+						opacity: 1
+						transition: .5s
+						z-index: 10
+				.cardText
+					background-color: #A48E8B
+					h3, p, a
+						color: #fff
+						&::before, &::after
+							background-color: #fff
+
+
+			&:nth-child(1)
+				.learnMore
+					background: url('../images/src/business.jpg') center center/cover no-repeat
+			&:nth-child(2)
+				.learnMore
+					background: url('../images/src/hotel.jpg') center center/cover no-repeat		
+			&:nth-child(3)
+				.learnMore
+					background: url('../images/src/member.jpg') center center/cover no-repeat				
+			&.disabled
+				opacity: 0.5
+				pointer-events: none	
+		.chooseHotel
+			&:hover
+				.cardText
+					color: 
+.hotelList
+	&__item
+		// .borderDiv
+		// 	display: none
+		.cardText
+			background-color: linear-gradient(213deg, #fcfaf5 99%, #f8f2ee 1%)
+			padding: 29px 15px 71px 15px
+			h3
+				font-family: EBgaramond
+				font-size: 26px
+				margin-bottom: 11px
+				letter-spacing: normal
+				color: #957248
+				&::after
+					content: none
+			p
+				font-size: 13px !important
+				font-family: helveticaLight
+				margin: 0
+				line-height: 18px
+				&:last-of-type
+					font-size: 12px !important
+					max-width: 235px
+					margin: 0 auto 24px !important
+			h4
+				font-family: EBgaramondMedium
+				font-size: 27px
+				position: relative
+				display: inline-block
+				color: #957248
+				margin: 12px 0 9px
+				span
+					position: absolute
+					right: -20px
+					font-family: EBgaramondMedium
+					right: -35px
+					top: 6px
+					font-size: 14px
+					color: #8F7F72
+					&::after
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						top: 55%
+						height: 1px
+						width: 100%
+						background-color: #8F7F72
+					
+			p
+			.button
+				font-size: 14px
+				color: #957248
+				font-family: helveticaRegular
+				&:before
+					content: none
+				&::after
+					content: none
+		&:hover
+			h4
+				color: #fff
+
+
+@media (max-width: 1024px)
+	.widthWrapper
+		width: 80%
+	.cardsList
+		display: block
+		li
+			&:hover
+				transform: none
+	.footerTableWrapper
+		width: 100%
+@media (max-width: 768px)		
+	.widthWrapper
+		width: 90%
+	.cardContentWrapper
+		padding: 30px 0
+		.cardContent
+			flex-direction: column-reverse
+			&__text, &__pic	
+				width: 100%
+				p
+					padding-right: 0
+			&__pic
+				margin-bottom: 20px	
+	.footerTableWrapper
+		width: 100%
+
+@media (max-width: 767px)
+	.slick-slide
+		width: 360px !important
+		margin: 0 10px
+	.cardsList
+		li
+			.cardText
+				p
+					height: auto
+					margin: 11px auto 12px auto !important
+					font-size: 18px
+
+@import 'blocks/**/*'

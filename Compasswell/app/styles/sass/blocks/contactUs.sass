@@ -1,0 +1,80 @@
+.contact
+		.searchBar
+			position: relative
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+			transform: translateY(-50%)
+			input
+				appearance: none
+				border: none
+				width: 100%
+				font-family: helveticaLight
+				letter-spacing: 4.39px
+				padding: 32px 20px 32px 120px
+				font-size: 26px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 24px
+				height: 24px
+				left: 53px
+				top: 50%
+				transform: translateY(-50%)
+				background: url('../images/src/search.svg') center center/cover no-repeat	
+		.map
+			margin: 100px 0 78px
+		.login
+			text-align: center
+			h1
+				letter-spacing: 4.39px
+				color: $chocolate
+				font-size: 36px
+				font-family: helveticaLight
+			p
+				font-family: garamond
+				font-size: 22px
+				color: #8f7f72
+				margin-top: 20px
+			form
+				width: 368px
+				margin: 48px auto 98px auto
+				label
+					display: block
+
+				.button
+					appearance: none
+					color: #fff
+					display: block
+					text-align: center
+					width: 100%
+					margin: 33px 0 16px
+				p, a
+					letter-spacing: 0.34px
+					font-family: helveticaLight
+					color: #8f7f72
+					font-size: 18px
+					display: inline-block
+		.footer
+			margin-top: 0
+@media (max-width: 768px) 
+	.contact
+		.searchBar
+			input
+				padding: 22px 10px 22px 60px 
+				font-size: 17px
+				letter-spacing: 1.2px
+			&::before
+				left: 23px
+				height: 20px
+				width: 20px
+		.login
+			form
+				margin: 50px auto
+				position: relative
+				label
+					input
+						width: 100%
+		.map
+			margin-top: 50px
+
+				
