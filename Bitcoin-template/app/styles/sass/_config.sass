@@ -1,0 +1,71 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$red: #E9204F
+$dark: #202021
+$orange: #FFA700
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@mixin shadow()
+	display: block
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+
+@include font('mserat-l', normal, 500, '../fonts/Montserrat-Light.ttf')
+@include font('mserat-im', normal, 500, '../fonts/Montserrat-MediumItalic.ttf')
+@include font('mserat-m', normal, 700, '../fonts/Montserrat-Medium.ttf')
+@include font('mserat-sb', normal, 700, '../fonts/Montserrat-SemiBold.ttf')
+@include font('mserat-b', normal, 600, '../fonts/Montserrat-Bold.ttf')
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #ffffffa8
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
