@@ -1,0 +1,468 @@
+.treatmentsPage
+	.gallery
+		overflow: visible
+	.treatments
+		margin-bottom: 40px
+		.specP
+			padding-right: 50px
+		.widthWrapper
+			h1
+				padding-top: 137px
+			.faces
+				li 
+					cursor: pointer
+					&::before
+						content: none
+	.triangle
+		&.hidden
+			opacity: 0
+		.rectangle_gradient
+		  border-radius: 15px
+		  display: block
+		  bottom: 0
+		  height: 40px
+		  width: 25%
+		  left: 0
+		.core 
+			display: block
+			width: 100%
+			transform: translateY(-20%)
+	.scrollContainer
+			position: relative
+			overflow: hidden
+	.block
+		opacity: 0
+		z-index: -10
+		height: 100vh
+		position: absolute
+		top: 0px
+		&.in-view
+			position: relative
+			z-index: 0
+			opacity: 1
+			height: auto
+			display: block
+		&:before
+			content: ''
+			display: block
+			width: 100vw
+			height: 100%
+			background-color: #f9f9f9
+			position: absolute
+			left: 0
+			top: 0
+			z-index: -2
+		.widthWrapper
+			> h1
+				padding: 99px 0 90px
+				letter-spacing: 5.6px
+				text-transform: uppercase		
+			.imgRight
+				.contentTemplate__text
+					h2
+						padding-left: 0
+					p, .chf
+						padding-left: 5% !important
+
+					.link
+						margin-left: 16px !important
+			.imgLeft
+				.contentTemplate__text
+					p
+						width: 45vw
+			.content
+				padding: 0
+				.contentTemplate
+					align-items: center
+					&__photo
+					.version1
+						position: relative
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							left: 0
+							top: -30px
+							z-index: -1
+							width: 78%
+							height: calc(100% + 60px)
+							background-color: #FFF3FE
+						img
+							display: block
+							float: right
+							width: 70%
+					.version2
+						position: relative
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							right: 0
+							top: -30px
+							z-index: -1
+							width: 78%
+							height: calc(100% + 60px)
+							background-color: #FFF0EB
+						img
+							display: block
+							width: 70%
+					.version3
+						position: relative
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							left: 0
+							top: -30px
+							z-index: -1
+							width: 78%
+							height: calc(100% + 60px)
+							background: linear-gradient(222deg,#ebffea,#caffff 36%)!important
+						img
+							display: block
+							width: 70%
+							float: right
+					.version4
+						position: relative
+						&::after
+							content: ''
+							display: block
+							position: absolute
+							right: 0
+							top: -30px
+							z-index: -1
+							width: 78%
+							height: calc(100% + 60px)
+							background-color: #FFF3FE
+						img
+							display: block
+							width: 70%
+					&__text
+						padding: 10px 0
+						h2
+							margin-top: 8px
+							font-family: saol
+							font-size: 39px
+						.chf
+							display: block
+							margin: 24px 0 50px
+							padding-left: 15%
+							font-family: saol
+							font-size: 21px
+						p
+							padding-left: 15%
+						.link
+							margin-bottom: 0
+							margin-left: 80px
+
+.treatmentsInfoPage
+	.treatmentsSection
+		padding-top: 160px
+		.widthWrapper
+			picture
+				img
+					display: block
+					width: 100%
+					padding: 0px 0 30px 0
+			.treatmentsContent
+				align-items: flex-start	
+				justify-content: space-between
+				&__text
+					width: 60%
+					padding-right: 10px
+					h2
+						font-size: 39px
+						font-family: saol
+						color: #000
+						display: block
+						margin-bottom: 39px
+					p
+						font-family: helveticaRegular
+						font-size: 14px
+						line-height: 1.5
+						color: #707070
+						margin-bottom: 63px
+				&__plan
+					width: 40%
+					margin-top: 45px
+					&-box
+						width: 370px
+						background-color: #fff3fe
+						text-align: center
+						float: right
+						border-radius: 5px
+						span
+							font-size: 24px
+							font-family: saol
+							margin: 43px 0 46px 0
+							display: block
+						h3
+							font-family: saol
+							font-size: 43px
+							margin-bottom: 30px
+						p
+							font-family: helveticaRegular
+							margin-bottom: 15px
+							color: #323232
+						.button
+							font-family: helveticaBold
+							margin: 39px auto 34px auto
+							display: block
+							width: 237px
+							padding: 14px 0 14px 0
+							border: 1px solid black
+							&:hover
+								background-color: black
+
+
+.faq, .faqPricing
+	.treatmentsSection
+		.widthWrapper
+			> img
+				display: block
+				width: 100%
+				padding: 115px 0 30px 0
+			.treatmentsContent
+				&__text
+					width: 55% 
+			.treatmentsContent__plan-box
+				 background-image: linear-gradient(222deg, #ebffea, #caffff 97%) !important
+				 span
+				 	line-height: 1.3
+			.faqLinks
+				a, span
+					font-family: saol
+					font-size: 24px
+					opacity: 0.6
+				li
+					&:nth-child(2)
+						margin: 0 56px
+					&.active
+						span
+							color: $highlighted
+							position: relative
+							&::after
+								content: ''
+								position: absolute
+								width: 100%
+								height: 2px
+								left: 0
+								bottom: -3px
+								background-color: $highlighted	
+
+
+			h1
+				margin: 52px 0 88px 0
+
+
+.faq
+	.widthWrapper
+		.headings, .headingsForm
+			margin-bottom: 140px
+			max-width: 768px
+			> li
+				border-radius: 8px
+				border: solid 1px #e0e0e0
+				margin-bottom: 8px
+				transition: 1s
+				&:hover
+					background: linear-gradient(248deg, rgba(255, 247, 234, 0.6), rgba(255, 240, 235, 0.6) 2%)
+				h4
+					padding: 24px 31px 28px 30px
+					font-size: 24px
+					opacity: 0.8
+					font-family: saol
+					color: #171616
+					border-bottom: none
+					&:after
+						right: 30px
+				p
+					font-family: helveticaRegular
+					font-size: 14px
+					line-height: 1.5
+					color: #707070
+					margin: 0 0 33px 0
+					padding: 0 82px 0 30px
+				&.active
+					transition: 1s
+					border: solid 1px rgba(0, 0, 0, 0)
+					background: linear-gradient(248deg, #fff7ea 2%, #fff0eb 100%)
+		.faqWrapper
+			display: none
+			&.visible
+				display: block
+@media (max-width: 1200px) 
+	.faqLinks
+		display: block !important
+		li
+			margin: 15px 0 !important
+			a
+				font-size: 17px !important
+	.treatmentsInfoPage
+		.treatmentsSection
+			.widthWrapper
+				.treatmentsContent
+					&__plan
+						&-box
+							width: 100%
+@media (max-width: 1024px) 
+	.imgLeft
+		.contentTemplate__text
+			p
+				width: 100% !important
+	.treatmentsInfoPage
+		.treatmentsSection
+			.widthWrapper
+				.treatmentsContent
+					flex-flow: wrap
+					flex-direction: column
+					&__text
+						width: 100%
+					&__plan
+						width: 100% !important
+						margin: 0 0 30px 0 !important
+						max-width: none !important
+						&-box
+							width: 100%
+	.treatmentsPage
+		.triangle
+			display: none
+		.widthWrapper
+			.faces
+				justify-content: space-between
+				li
+					margin-bottom: 50px
+					width: 45%
+@media (max-width: 767px) 
+	.treatmentsPage
+		.contentTemplate__photo
+			img
+				padding-top: 30px !important
+@media (max-width: 768px) 
+	.faq, .faqPricing, .treatmentsInfoPage
+		.treatmentsSection
+			padding-top: 70px
+	.treatmentsInfoPage
+		.widthWrapper
+			.headings
+				li
+					h4
+						padding: 20px 10px
+						font-size: 18px
+						line-height: 20px
+						&::after
+							right: 5px
+							width: 15px
+							height: 8px
+		.treatmentsSection
+			.widthWrapper
+				.treatmentsContent
+					&__text
+					&__plan
+						width: 100%
+						max-width: 450px
+						float: none
+						margin: 50px auto
+						&-box
+							width: 100%
+	.treatmentsPage
+		.treatments
+			overflow: hidden
+			.widthWrapper
+				h1
+					padding-top: 50px
+					font-size: 28px
+					letter-spacing: 4px
+					line-height: 40px
+					margin-bottom: 20px
+				.faces
+					li 
+						margin-bottom: 0
+		.scrollContainer
+			.block
+				.widthWrapper
+					h1
+						padding: 0
+						font-size: 28px
+						letter-spacing: 4px
+						line-height: 40px
+					.content
+						padding-top: 50px !important
+						padding-bottom: 0 !important
+						.contentTemplate
+							&:nth-child(2), &:nth-child(4)
+								flex-direction: column-reverse
+							&__text
+								.link
+									margin-left: 25px !important
+								h2
+									margin: 45px 0 25px
+								p, .chf
+									padding-left: 0 !important
+								.chf
+									margin-bottom: 25px
+	.faq
+		.faqSection
+			.widthWrapper
+				h1
+					font-size: 35px
+					letter-spacing: 4px
+					line-height: 35px
+					margin: 35px 0
+				.treatmentsContent
+					&__text
+						padding-right: 0
+					&__plan
+						margin-top: 0
+				.headings
+					li
+						h4
+							padding-right: 25px
+							&:after
+								right: 15px !important
+						p
+							padding: 0 30px 0 30px
+
+@media (min-width: 768px) and (max-width: 1024px)
+	
+	.faq, .pricing
+		.pricingSection, .faqSection
+			padding-top: 110px
+		.headings
+			width: 100%
+			max-width: none !important
+	.treatmentsPage
+		.content
+			padding-top: 0 !important
+		.treatments
+			.widthWrapper
+				h1
+					padding-top: 130px !important
+		.widthWrapper
+			.faces
+				li
+					width: 45%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

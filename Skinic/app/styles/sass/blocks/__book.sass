@@ -1,0 +1,494 @@
+.book
+	.content
+		padding-top: 153px
+		padding-bottom: 119px
+		&:after
+			content: none
+		.widthWrapper
+			.contentTemplate
+				padding-bottom: 0
+				&__text
+					padding-top: 130px !important
+					padding-left: 70px !important
+					h1
+						margin-bottom: 19px
+	.bookSchedule
+		.widthWrapper
+			h1
+				margin-bottom: 29px
+				text-transform: lowercase
+				font-family: 'saol'
+				font-size: 39px
+				letter-spacing: normal
+				&::first-letter
+					text-transform: uppercase
+			.headings
+				max-width: none
+				> li
+					margin-bottom: 20px
+					&:first-child
+						h4
+							&.active
+								&:after
+									transform: translateY(-50%)
+					&.active, &:hover
+						background: none
+						border: solid 1px #e0e0e0
+					h4
+						padding: 40px 60px
+						font-size: 30px
+
+					.animated, .notAnimated
+						padding: 0 60px
+						form
+							display: flex
+							justify-content: space-between
+							flex-flow: wrap
+							label, .dateTimePicker, .label
+								width: 48%
+								border-bottom: 1px solid #e0e0e0
+								margin-bottom: 36px
+								position: relative
+								select
+									position: relative
+									-webkit-appearance: none
+									-webkit-user-select: none
+									-moz-user-select: none
+									-ms-user-select: none
+									user-select: none
+									appearance: none
+								select, input
+									padding: 11px 0 16px 0
+									width: 100% !important
+									border: none
+									font-family: helveticaRegular
+									font-size: 21px
+									color: #212529
+									background-color: transparent
+									&:focus
+										outline: none
+									option
+										color: #818080
+								input
+									&::placeholder
+										color: #000
+								span
+									display: block
+									font-family: helveticaRegular
+									font-size: 14px	
+									line-height: 1.5	
+									color: #212529
+									outline: none					
+							.dateTimePicker
+								display: flex
+								flex-flow: wrap
+								justify-content: space-between
+								> span
+									width: 100%
+								.datePicker
+									width: calc(45% - 30px)
+									position: relative
+									input
+										padding: 13px 0 16px 30px
+										appearance: none
+										-webkit-appearance: none
+									&:before
+										content: ''
+										display: block
+										position: absolute
+										left: 0
+										top: 14px
+										width: 20px 
+										height: 20px
+										background: url('../images/src/calendar.svg') center center/cover no-repeat
+
+								.timePicker
+									width: 50%
+									position: relative
+									select
+										width: 100% !important
+									&.disabled
+										pointer-events: none
+										.select2
+											opacity: 0.38
+							.specLabel
+								border: none	
+								.check
+								  position: relative
+								  display: flex
+								  width: 100%
+								  padding: 14px 0
+								  border-bottom: 2px solid #DFDFDF
+								  font-family: 'roboto'
+								  font-style: normal
+								  font-weight: normal
+								  font-size: 12px
+								  line-height: 21px
+								  color: #fff
+								  -webkit-user-select: none
+								  -moz-user-select: none
+								  -ms-user-select: none
+								  user-select: none
+								  cursor: pointer
+								  p
+								  	color: #555555
+								  	margin: 0
+								  	font-family: helveticaRegular
+								  	font-size: 14px
+								  input
+								    width: auto
+								    position: absolute
+								    opacity: 0
+								    cursor: pointer
+								    height: 0
+								    width: 0
+
+								  input:checked ~ .checkmark:after
+								    content: ''
+								    display: block
+								    left: 5px
+								    top: -6px
+								    width: 7px
+								    height: 15px
+								    border: solid $highlighted
+								    border-width: 0 3px 3px 0
+								    -webkit-transform: rotate(45deg)
+								    -ms-transform: rotate(45deg)
+								    transform: rotate(45deg)
+								    position: absolute
+								    background-color: transparent
+
+								  .checkmark
+								    
+								    border: solid 2px #707070
+								    border-radius: 2px
+								    cursor: pointer
+								    position: absolute
+								    top: 50%
+								    transform: translateY(-50%)
+								    left: 0px
+								    height: 15px
+								    width: 15px
+								.spec
+								 	width: 100% 	
+								 	margin-bottom: 0
+								 	border: none
+								 	label
+								 		border: none								 
+							 			
+							.radio_width
+								width: 100%
+								position: relative
+								span
+									margin-bottom: 11px
+									display: block
+									font-family: helveticaRegular
+									font-size: 14px
+								.radio_core
+									width: 45%
+									display: flex
+									justify-content: space-between
+									align-items: center
+									label
+										width: 50%
+										cursor: pointer
+										position: relative
+										display: flex
+										justify-content: center
+										align-items: center									
+										border: none
+										#phone
+											padding-left: 60px
+										input
+											position: absolute
+											left: 0
+											top: 0
+											z-index: -1
+											opacity: 0
+											&:checked + .radio
+												background-color: $highlighted
+												opacity: 1
+												color: #fff
+										.radio
+											background-color: rgba(0, 0, 0, 0.05)
+											color: rgba(0, 0, 0, 0.35)
+											padding: 9px 0
+											display: block
+											width: 100%
+											font-size: 16px
+											text-align: center
+								.maleFemale
+									justify-content: flex-start
+									label
+										width: 22.5%
+							.radio_width50
+								width: 45%
+								.radio_core
+									width: 100%	
+						.button
+							display: inline-block
+							margin-bottom: 90px
+							padding: 14px 9%
+							cursor: pointer
+							border-radius: 0px
+
+						.confirmation
+							font-family: helveticaRegular
+							padding: 9px 0px 52px 0px
+							h1
+								text-transform: capitalize
+							p
+								font-size: 16px
+								padding: 0
+								max-width: 60%
+								color: #212529
+							.time
+								font-family: saol
+								display: block
+								margin: 37px 0 49px 0
+								font-size: 68px
+							.price
+								font-size: 48px
+								font-family: saolLight
+								margin-bottom: 29px
+								span
+									font-family: saol
+							.bonuses
+								position: relative
+								margin-bottom: 39px
+								padding-left: 65px
+								span
+									display: block
+									&:first-child
+										font-size: 18px
+										margin-bottom: 5px
+										color: #707070
+									&:last-child
+										font-size: 27px
+								&:before
+									content: ''
+									display: block
+									position: absolute
+									left: 0 
+									top: 0
+									width: 49px
+									height: 49px 
+									border-radius: 50px
+									background-color: #D5B168
+									background: url('../images/src/bonus.svg') center center/cover no-repeat
+							.italic
+								margin-bottom: 0
+								margin-top: 49px
+								font-family: helveticaItalic
+				> li:nth-child(2)
+					&:hover
+						background-image: linear-gradient(91deg, #fdf3ff 0%, #ffe6eb 100%)
+					&.active
+						background-image: none
+				#confirmationBlock
+					&:hover
+						background-image: linear-gradient(255deg, #ebffea 2%, #caffff 100%)
+					&.active
+						background-image: linear-gradient(234deg, rgba(235, 255, 234, 0.33) 4%, rgba(202, 255, 255, 0.33) 98%) !important
+	.terms
+		padding: 46px 0 140px 0
+		background: linear-gradient(to bottom, #fff8ed, rgba(255, 255, 255, 0))
+		border: solid 1px rgba(0, 0, 0, 0)
+		h3
+			font-family: saol
+			color: #d5b168
+			font-size: 45px
+			line-height: 54px
+			letter-spacing: 1.3px
+			margin-bottom: 65px
+		.termsText
+			width: 100%
+			position: relative
+			justify-content: space-between
+			align-items: flex-start
+			&-column
+				width: 32%
+				h4
+					font-size: 18px
+					font-family: helveticaMedium
+					color: #000000
+					margin: 15px 0
+					line-height: 21px
+					&.firstH
+						margin-top: 0
+				p
+					line-height: 21px
+					font-family: helveticaRegular
+					font-size: 16px
+					color: #707070
+
+	#confirmPopup
+		.popup__container
+			height: auto
+			&-ver
+				max-width: 345px
+				position: relative
+				padding: 44px 0 87px 0
+				h1
+					letter-spacing: 3.6px
+					font-family: italiana
+					width: 100%
+					text-align: center
+					font-size: 36px
+				.sub
+					font-family: blackerLight
+					line-height: 19px
+					margin: 17px auto 51px auto
+					text-align: center
+					max-width: 80%
+				input
+					width: 100%
+				label
+					margin-bottom: 48px
+					display: block
+					span
+						font-size: 14px
+						font-family: helveticaRegular
+						margin-bottom: 15px
+						display: block
+					input
+						// appearance: none
+						// -webkit-appearance: none
+						font-size: 21px
+						width: 100%
+						padding: 0 0 8px 0
+						border: none
+						border-bottom: 1px solid #e0e0e0
+						font-family: helveticaRegular
+				.popupClose
+					text-align: center
+					appearance: none
+					background-color: #343A40
+					color: #fff
+					padding: 10px 0px
+					border: none
+					cursor: pointer
+					font-size: 20px
+					width: 100%
+					border-radius: 4px
+					display: block
+					margin-top: 27px
+					font-family: helveticaRegular
+					&:hover
+						background-color: #23272B	
+				.code
+					font-size: 16px
+					font-family: helveticaRegular
+					text-align: left
+					margin-bottom: 44px
+					a
+						font-family: helveticaRegular
+						color: $highlighted	
+
+				.sms
+					justify-content: space-between
+					input
+						width: 24%
+						text-align: center
+						&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+							-webkit-appearance: none
+						  	margin: 0
+			  	
+
+@media (max-width:1024px) 
+	.book
+		.content
+			.widthWrapper
+				.contentTemplate
+					&__text
+						padding-top: 0px !important
+
+@media (max-width:768px) 
+
+	.book
+		.content
+			.widthWrapper
+				.contentTemplate
+					&__text
+						padding: 0 !important
+						padding-top: 50px !important
+		.bookSchedule
+			overflow: hidden
+			.widthWrapper
+				.headings
+					margin-bottom: 70px !important
+					li
+						h4
+							padding: 30px 20px
+							font-size: 24px
+						.animated, .notAnimated
+							padding: 0 20px
+							form
+								flex-flow: wrap
+								label, .label
+									width: 100%
+								.radio_width, .radio_width50
+									width: 100%
+									.radio_core
+										width: 100%
+										label
+											.radio
+												padding: 5px 0
+								.maleFemale
+									label
+										width: 50% !important
+								.dateTimePicker
+									width: 100%
+									flex-flow: wrap
+									.datePicker, .timePicker
+										width: 100%
+							.button
+									display: block
+									text-align: center
+									padding: 14px 0
+									margin-bottom: 40px
+							.confirmation
+								p
+									max-width: none
+								.time
+									font-size: 50px
+									line-height: 70px
+								.price
+									font-size: 30px
+					#confirmationBlock, li:nth-child(2)
+						&:hover
+							background-image: none
+		.terms
+			padding-bottom: 100px
+			.widthWrapper
+				.termsText
+					display: block
+					&-column
+						width: 100%
+						margin-bottom: 10px
+		.popup
+		#confirmPopup
+			.popup__container
+				width: 90%
+				&-ver
+					padding: 30px 35px 70px 35px
+
+					.code
+						text-align: center
+						a
+							display: block
+							margin-top: 5px
+					 	
+@media (max-width: 767px) 
+	.book
+		.content
+			.widthWrapper
+				.contentTemplate
+					&__text
+						padding: 0 !important
+
+
+
+
+
+

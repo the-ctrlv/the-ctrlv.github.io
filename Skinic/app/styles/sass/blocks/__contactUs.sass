@@ -1,0 +1,126 @@
+.contactPage
+	.map
+		padding-top: 103px
+		margin: 0 auto
+		iframe
+			-webkit-filter: grayscale(100%)
+	       	-moz-filter: grayscale(100%)
+	       	-ms-filter: grayscale(100%)
+	        -o-filter: grayscale(100%)
+            filter: grayscale(100%)
+	.mapContent
+		h1
+			margin: 75px 0
+			display: block
+		.contactLinks
+			align-items: start
+			margin-bottom: 100px
+			li
+				p
+					display: block
+					font-family: saol
+					font-size: 30px
+					margin-bottom: 10px
+					line-height: 44px
+					a
+						font-family: saol
+						display: inline-block
+						font-size: 30px
+				a
+					display: block
+					color: $highlighted
+					font-family: helveticaMedium
+					font-size: 16px
+					margin-bottom: 10px
+				&:nth-child(2)
+					margin: 0px 202px 0 92px
+	.covidInfo
+		background-color: #F5EBE3
+		padding: 45px 0 55px 0
+		h2
+			letter-spacing: 0.9px
+			font-size: 30px
+			font-family: saol
+			margin-bottom: 25px
+			max-width: 623px
+		p
+			line-height: 21px
+			color: #707070
+			font-size: 14px
+			font-family: helveticaRegular
+			max-width: 623px
+	h2
+		font-size: 30px
+		font-family: saol
+	.findUs
+		padding: 100px 0 138px 0
+		h2
+			font-family: saol
+			font-size: 30px
+			margin-bottom: 25px
+		.workingHours
+			width: 815px
+			position: relative
+			justify-content: space-between
+			align-items: start
+			li
+				margin: 0 23px
+				span
+					margin-bottom: 16px
+					font-family: helveticaRegular
+					font-size: 14px
+					display: block
+				p
+					color: #707070
+					font-family: helveticaRegular
+					line-height: 25px
+				&:first-child
+					margin-left: 0
+				&:last-child
+					margin-right: 0
+
+				// 586
+		.directionAddress
+			margin-top: 99px
+			justify-content: space-between
+			align-items: start
+			li
+				width: 39.3%
+				h3
+					font-family: helveticaMedium
+					margin: 23px 0 16px 0
+				p
+					font-family: helveticaRegular
+					font-size: 14px
+					color: #707070
+					line-height: 21px
+@media (max-width: 768px) 
+	.contactPage
+		.findUs
+			padding: 50px 0
+			.workingHours
+				width: 100%
+				flex-flow: wrap
+				justify-content: space-between
+				li
+					width: 50%
+					margin: 0 0 15px 0
+			.directionAddress
+				margin-top: 25px
+				width: 100%
+				flex-flow: wrap
+				li
+					width: 100%
+					margin-bottom: 25px
+		.mapContent
+			h1
+				margin: 25px 0
+			.contactLinks
+				display: block
+				margin-bottom: 20px
+				li
+				 	width: 100%
+				 	margin: 0 !important
+
+
+

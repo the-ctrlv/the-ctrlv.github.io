@@ -1,0 +1,328 @@
+@import config
+
+body 
+	font-family: HelveticaRegular
+	color: #000
+	a 
+		text-decoration: none
+		&:focus
+			outline: none
+	&.scrollDisabled
+		overflow: hidden
+.hover
+	&:hover
+		color: $highlighted
+		cursor: pointer
+.flex 
+	display: flex
+	align-items: center	
+.clicked
+	position: relative
+	color: $highlighted !important
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px
+		left: 0
+		bottom: -3px
+		background-color: $highlighted	
+.link
+	margin: 50px 0
+	display: block
+	font-family: HelveticaLight
+	font-size: 18px
+	position: relative
+	background-color: #f9f9f9
+	&::before
+		content: ''
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50px
+		border: 1px solid $highlighted
+		position: absolute
+		left: -20px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: -1
+.widthWrapper 
+	max-width: 1120px
+	margin: 0 auto
+	position: relative
+	h1 
+		font-family: italiana
+		font-weight: 400
+		font-size: 56px
+		letter-spacing: 5.6px
+		line-height: 67px	
+		text-transform: uppercase	
+	.highlighted
+		color: #BF9F5D !important
+.button
+	position: relative
+	display: inline-block
+	line-height: normal
+	border-radius: 0
+	text-transform: uppercase
+	text-align: center
+	letter-spacing: 0.2em
+	font-weight: 500
+	font-style: normal
+	background-color: transparent
+	transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	z-index: 1
+	-webkit-tap-highlight-color: initial 
+	font-family: HelveticaRegular
+	font-size: 14px
+	padding: 14px 33px
+	border: 1px solid $highlighted
+	letter-spacing: 1.3px
+	background-color: transparent
+	&:hover
+		color: #fff
+		&:before
+			transform-origin: left center
+			transform: scale(1, 1)
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background-color: $highlighted
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		transform: scale(0, 1)
+		transform-origin: right center
+		z-index: -1
+		transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86)	
+.imgLeft
+	.contentTemplate__text
+		padding: 20px 0 20px 50px !important
+.imgRight
+	.contentTemplate__text
+		padding: 20px 50px 20px 0px !important
+.headings, .headingsForm
+	margin-bottom: 70px !important
+	li
+		h4
+			font-family: saol
+			display: block
+			font-size: 39px
+			padding: 43px 10px 43px 0
+			border-bottom: 1px solid #E0D6CF
+			position: relative
+			cursor: pointer
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				right: 0
+				background: url('../images/src/arrow.svg') center center/cover no-repeat
+				width: 18px
+				height: 11px
+				top: 50%
+				transform: translateY(-50%)
+				transition: .5s
+			&.active
+				border-bottom: none
+				&::after 
+					transition: .5s
+					transform: translateY(-50%) rotate(540deg)
+		.animated, .notAnimated
+			display: none
+			p
+				display: block
+				margin: 45px 0
+				max-width: 818px
+			h5
+				font-family: saol
+				font-size: 29px
+
+.popup
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100vw
+	height: 100vh
+	z-index: -10
+	opacity: 0
+	left: 0
+	top: 0
+	&.active
+		z-index: 10
+		opacity: 1
+	&__container
+		width: 50%
+		height: 20%
+		background-color: #fff
+		display: flex
+		justify-content: space-around
+		align-items: center
+		z-index: 10
+		a, span
+			cursor: pointer
+			font-family: saol
+			font-size: 18px	
+			&:hover
+				color: $highlighted
+	.fade__container
+		position: absolute
+		left: 0
+		top: 0
+		width: 100vw
+		height: 100vh
+		background-color: rgba(0, 0, 0, 0.33)
+		z-index: 0
+.select2-container
+	.select2-search--dropdown
+		display: none
+.select:focus, input:focus, .image-link:focus 
+	outline: none
+
+
+.qs-datepicker-container
+	background-color: #fff
+	border-radius: 8px
+	border: none
+	box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5)
+	padding: 14px 26px 26px 26px
+	width: 155%
+	.qs-controls
+		background: #fff
+		margin-bottom: 17px
+		width: max-content
+		margin: 0 auto
+		.qs-month-year
+			&:hover
+				border: none
+			.qs-month, .qs-year
+				font-family: 'adobeclean' !important
+				font-size: 23px !important
+		.qs-arrow
+			&::after
+				width: 15px
+				height: 7px
+				border: none
+		.qs-left
+			&::after
+				background: url('../images/src/selectArrow.svg') center center/cover no-repeat
+				transform: translate(25%,-70%) rotate(90deg)
+		.qs-right
+			&::after
+				transform: translate(-25%,-70%) rotate(-90deg)
+				background: url('../images/src/selectArrow.svg') center center/cover no-repeat
+		.qs-month-year
+			display: flex
+			font-size: 23px
+			font-weight: bold
+	.qs-squares
+		.qs-square
+			padding: 7%
+		.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover 
+			background: transparent
+		.qs-day
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 14px
+			color: rgba(62, 62, 62, 0.5)
+			font-family: adobeClean
+		.qs-num
+			font-family: notosansbold
+			font-size: 16px
+			font-weight: bold
+			color: #3D3D3D	
+		.qs-current
+			color: $highlighted			
+			text-decoration: none
+		.qs-active
+			text-decoration: none
+			background: $highlighted !important
+			border-radius: 50px
+			color: #fff
+.widthWrapper
+	.slider
+		.slick-track
+			display: flex
+		.slick-next, .slick-prev
+			display: none !important
+
+
+
+
+
+
+// responsiveness			
+@media (max-width: 1300px) 
+	.widthWrapper 
+		max-width: 80% !important
+@media (max-width: 1300px) 
+	.widthWrapper
+		h1
+			font-size: 50px
+@media (max-width: 768px) 
+	.gallery
+		.widthWrapper
+			.slider
+				padding-bottom: 30px !important
+	.qs-datepicker-container
+		width: 100%
+		max-width: 269px
+	.content
+		.contentTemplate
+			flex-flow: wrap
+			padding-bottom: 40px !important
+			&__text, &__photo 
+				width: 100% !important
+				padding-left: 0 !important
+				padding-right: 0 !important
+		.treatmentPhilosophy
+			flex-direction: column-reverse
+	.widthWrapper
+		.slick-slider
+			.slick-track
+				display: flex
+				.slick-slide
+					display: block !important
+					// width: 279px!important
+					margin: 0 15px
+			.slick-list
+				width: 100%
+			.slick-next, .slick-prev
+				display: none !important
+		.faces
+			justify-content: space-between
+			li
+				width: 100%
+				// margin: 0px 25px !important
+				a
+					text-align: center
+					outline: none
+					&:focus
+						outline: none
+					img
+						width: 100%
+						display: inline-block
+		h1
+			font-size: 40px
+			letter-spacing: 6px
+			line-height: 50px
+		.headings
+			li
+				h4						
+					padding-right: 30px
+					font-size: 22px
+					line-height: 24px
+
+
+
+
+
+	
+
+@import 'blocks/**/*'
+@import 'blocks/__footer.sass'
