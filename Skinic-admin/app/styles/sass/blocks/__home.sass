@@ -1,0 +1,414 @@
+.content-wrapper
+	&__header
+		margin: 56px 0 27px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		margin-bottom: 27px
+		span
+			font-family: helveticaRegular
+			font-size: 16px
+			color: #343434
+			padding: 10px 15px
+			display: block
+			border: 1px solid #E2E6EA
+			border-radius: 0 8px 8px 0
+			&.active
+				background-color: #E2E6EA
+				border-color: #E2E6EA
+	&__app-hours
+		border-radius: 8px
+		display: flex
+		overflow: hidden
+		span
+			&.active
+				background-color: #fff
+		span:first-child
+			border-radius: 8px 0 0 8px
+			margin-right: -1px		
+
+	.TWM
+		display: none
+		div
+			display: flex
+		&__days
+			margin: 0px 10px 0px 58px
+			border-radius: 8px
+			overflow: hidden
+			cursor: pointer
+			span
+				padding: 10px 26px
+				// &.active
+				// 	pointer-events: none
+			span:first-child
+				border-radius: 8px 0 0 8px
+				&.disabled
+					background-color: #e2e6ea !important
+			span:nth-child(2)
+				border-radius: 0px
+				margin: 0 -1px
+			span:last-child
+				border-radius: 0 8px 8px 0
+			
+		&__arrows
+			img
+				padding: 10px 15px
+				cursor: pointer
+				border-radius: 8px
+				&:hover
+					background-color: #E2E6EA
+				&:last-child
+					transform: rotate(180deg)
+		&.home
+			display: flex
+	&__filter-calendar
+		display: flex
+		position: relative
+		&.solo
+			.filter-container
+				&.active
+					div
+						&::before
+							left: 90%
+					left: auto
+					right: 0
+					width: 300px
+		> span
+			border-radius: 8px
+			padding-left: 35px
+			position: relative
+			cursor: pointer
+			&::before
+				content: ''
+				display: block
+				width: 12px
+				height: 12px
+				position: absolute
+				left: 12px
+				top: 50%
+				transform: translateY(-50%)
+			&:first-child
+				margin-right: 16px
+				&::before
+					background: url('../images/dist/filter-icon.svg') center center/contain no-repeat
+			&:nth-child(2)
+				&::before
+					background: url('../images/dist/calendar-icon.svg') center center/contain no-repeat
+			
+			&.active
+				background-color: $highlighted
+				border: 1px solid $highlighted 
+				color: #fff						
+			&:first-child
+				&:hover, &.active
+					&::before
+							background: url('../images/dist/filter-icon-hover.svg') center center/contain no-repeat
+			&:nth-child(2)
+				&:hover, &.active
+					&::before
+							background: url('../images/dist/calendar-icon-hover.svg') center center/contain no-repeat
+		.filter-container
+			display: none
+			background-color: #323232
+			position: absolute
+			left: -50%
+			top: calc(100% + 10px)
+			border-radius: 4px
+			z-index: 50
+			padding: 34px 24px
+			div
+				display: block
+				position: relative
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					width: 0
+					height: 0
+					top: -40px
+					border-color: transparent transparent rgb(52, 52, 52)
+					border-width: 0px 6.5px 6px
+					border-style: solid
+			label
+				border: none
+				width: 100%
+				position: relative
+				display: flex
+				cursor: pointer
+				&:first-child
+					margin-bottom: 10px
+				p
+					color: #fff
+				span
+					color: #fff
+					border: none
+					padding: 0
+					background-color: #fff
+			&.active
+				display: block
+
+
+	.flex-table
+		&__list
+			display: none
+			&.in-view
+				display: block
+		&__days
+			width: 100%
+			position: relative
+			padding: 10px 0 0px 0
+			height: calc(100vh - 72px - 46px - 83px - 38px)
+			overflow-x: hidden
+			overflow-y: scroll
+			&::-webkit-scrollbar
+				display: none
+			.table-slot
+				cursor: pointer
+				&__time
+					display: block
+					position: relative
+					z-index: 2
+					width: 100%
+					background-color: #E6E5E6
+					height: 1px
+					margin-left: 35px
+					span
+						display: inline-block
+						z-index: 2
+						position: absolute
+						top: -5px
+						left: -35px
+						color: #C2C2C2
+						font-family: helveticaMedium
+						font-size: 12px
+			.block-hours
+				&__container
+					z-index: 1
+					position: relative
+					background-color: rgba(220, 230, 234, 0.6 )
+					margin-left: 35px
+					> span
+						display: inline-block
+						padding: 5px 0 5px 30px
+						color: rgba(21,21,21,0.58)
+						&:nth-of-type(2)
+							margin-left: 0
+							padding-left: 15px
+							font-family: helveticaMedium
+			.info-wrapper
+				display: flex
+				justify-content: space-between
+				position: relative
+				z-index: 1
+				&:hover
+					background-color: #FAFBFC
+				&__info
+					display: flex
+					justify-content: space-between
+					align-items: center
+					width: 50%
+					padding-left: 15px
+					li
+						width: 33%
+						height: 43px
+						margin: 20px 0
+						img
+							width: 43px
+							height: 43px
+							display: block
+							margin-right: 10px
+						h2
+							font-family: helveticaMedium
+							font-size: $desktopsize
+							color: #151515
+							display: block
+							margin-bottom: 12px
+						> span
+							font-size: 12px
+							color: #343434
+							&:nth-of-type(1)
+								opacity: .8
+						p
+							color: #343434
+							font-size: $desktopsize
+							line-height: 22px
+							// transform: translateY(-5px)
+						&:first-child
+							display: flex
+							width: 35%
+						&:nth-child(2)
+							width: 25%
+							span
+								position: relative
+								&::before
+									content: ''
+									display: inline-block
+									position: relative
+									margin-right: 5px
+									background: url('../images/dist/clock-icon.svg') center center/contain no-repeat
+									width: 10px
+									height: 10px
+									transform: translateY(1px)
+
+				&__notes
+					width: 50%
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					li
+						width: 23%
+						margin: 0 0.5%
+						min-height: 49px
+					.widget--red
+						width: 19%
+					.widget--blue
+						width: 25%
+		#calendar
+			&.fc
+				height: calc(100vh - 72px - 46px - 83px - 38px)
+				.fc-header-toolbar
+					display: none
+				.fc-timegrid
+					&.fc-timeGridDay-view 
+						.fc-scrollgrid-sync-inner
+							text-align: left
+						.fc-col-header-cell-cushion
+							color: #343434
+							font-family: helveticaBold
+							margin-left: 10px
+							font-size: 21px
+		// &__week
+		// 	.calendarWrapper
+		// 	    transform: translateX(2px)
+		// 	    &__week
+		// 	        display: flex
+		// 	        justify-content: flex-start
+		// 	        li
+		// 	            width: calc(100% / 7)                        
+		// 	            text-align: center
+		// 	            margin-bottom: 25px
+		// 	            transform: translateX(-5px)
+		// 	            span
+		// 	            	font-family: helveticaBold
+		// 	            	font-size: 13px
+		// 	            	color: #171616
+		//             	&:last-child
+		//             		span
+		//             			color: #FF4040
+
+		// 	    &__day
+		// 	        display: flex
+		// 	        justify-content: space-aroun
+		// 	        flex-flow: wrap
+		// 	        padding-top: 1px
+		// 	        padding-left: 1px
+		// 	        li
+		// 	            cursor: pointer
+		// 	            width: calc(100% / 7)
+		// 	            font-family: helveticaMedium
+		// 	            font-size: 15px
+		// 	            color: #957248
+		// 	            padding: 10px 10px 80px 
+		// 	            text-align: right
+		// 	            border: 1px solid #CCC3BF
+		// 	            margin-left: -1px
+		// 	            margin-top: -1px
+		// 	            position: relative
+		// 	            span
+		// 	                position: absolute
+		// 	                right: 10px
+		// 	                top: 10px
+
+		// 	            &.disabled
+		// 	                background-color: #ccc3bf
+		// 	                color: #FFFFFF
+		// 	                pointer-events: none
+		// 	            &.anotherMonth
+		// 	                pointer-events: none
+		// 	                span
+		// 	                    color: #ABABAB
+		// 	            &.active
+		// 	                span
+		// 	                    color: #fff
+		// 	                    background-color: #957248
+		// 	                    display: flex
+		// 	                    justify-content: center
+		// 	                    align-items: center
+		// 	                    width: 23px
+		// 	                    height: 23px
+		// 	                    border-radius: 50px
+		// 	                    right: 5px
+		// 	                    top: 5px
+		// 	            &.weekend
+		// 	                background-color: #F5F5F5
+		// 	                color: #7E7E7E
+		// 	            &:hover
+		// 	                background-color: #9572484a    
+
+		// &__month
+		// 	.calendarWrapper
+		// 	    transform: translateX(2px)
+		// 	    &__week
+		// 	        display: flex
+		// 	        justify-content: flex-start
+		// 	        li
+		// 	            width: calc(100% / 7)                        
+		// 	            text-align: right
+		// 	            font-family: SFpro
+		// 	            font-size: 14px
+		// 	            color: #957248
+		// 	            margin-bottom: 25px
+		// 	            transform: translateX(-5px)
+		// 	    &__day
+		// 	        display: flex
+		// 	        justify-content: space-aroun
+		// 	        flex-flow: wrap
+		// 	        padding-top: 1px
+		// 	        padding-left: 1px
+		// 	        li
+		// 	            cursor: pointer
+		// 	            width: calc(100% / 7)
+		// 	            font-family: helveticaMedium
+		// 	            font-size: 15px
+		// 	            color: #957248
+		// 	            padding: 10px 10px 80px 
+		// 	            text-align: right
+		// 	            border: 1px solid #CCC3BF
+		// 	            margin-left: -1px
+		// 	            margin-top: -1px
+		// 	            position: relative
+		// 	            span
+		// 	                position: absolute
+		// 	                right: 10px
+		// 	                top: 10px
+
+		// 	            &.disabled
+		// 	                background-color: #ccc3bf
+		// 	                color: #FFFFFF
+		// 	                pointer-events: none
+		// 	            &.anotherMonth
+		// 	                pointer-events: none
+		// 	                span
+		// 	                    color: #ABABAB
+		// 	            &.active
+		// 	                span
+		// 	                    color: #fff
+		// 	                    background-color: #957248
+		// 	                    display: flex
+		// 	                    justify-content: center
+		// 	                    align-items: center
+		// 	                    width: 23px
+		// 	                    height: 23px
+		// 	                    border-radius: 50px
+		// 	                    right: 5px
+		// 	                    top: 5px
+		// 	            &.weekend
+		// 	                background-color: #FCFAF6
+		// 	                color: #7E7E7E
+		// 	            &:hover
+		// 	                background-color: #9572484a    
+
+	

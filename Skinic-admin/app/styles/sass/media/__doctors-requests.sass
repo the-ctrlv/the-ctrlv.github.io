@@ -1,0 +1,117 @@
+// IPAD
+@media (min-width: 768px) and (max-width: 1024px)
+	.global-content__core
+		.flex-table
+			height: calc(100vh - 72px - 46px - 83px)
+			.table-slot__reqDoc
+				ul
+					li
+						span
+							font-size: 14px
+						.widget
+							span
+								font-size: 12px
+						&:nth-child(1)
+							img
+								margin-right: 5px
+						&:nth-child(2), &:nth-child(3)
+							span
+								&::before
+									left: -22px
+									width: 15px
+									height: 16px
+@media (max-width: 768px)
+	.global-content__core
+		.flex-table
+			.table-slot__reqDoc
+				ul
+					flex-flow: wrap
+					li
+						padding: 10px 0
+		.clients-table
+			.table-slot__reqDoc
+				ul
+					li
+						&:nth-child(3)
+							padding-right: 0
+		.requests-table
+			margin-top: 110px
+			.table-slot__reqDoc
+				ul
+					li
+						&:nth-child(4)
+							width: 40%
+@media (width: 768px)
+	.global-content__core
+		.flex-table
+			height: calc(100vh - 72px - 46px - 83px)
+			.table-slot__reqDoc
+				ul
+					li
+						&.clients-mode
+							&:nth-child(4)
+								width: 100%
+								justify-content: flex-end
+@media (max-width: 767px)
+	.global-content__core
+		.flex-table
+			height: auto
+			.table-slot__reqDoc
+				ul
+					padding: 0
+					li
+						a, span
+							font-size: 14px	
+						.widget
+							p
+								font-size: 12px
+							span
+								font-size: 11px
+						&:nth-child(1)
+							width: 100%
+							img
+								width: 43px
+								margin-right: 10px
+							span
+								font-size: 14px
+						&:nth-child(2), &:nth-child(3)
+							width: 50%
+							span
+								display: block
+								margin: 0 auto
+						&:nth-child(4)
+							width: 100%
+							span
+								br
+									display: none
+						&:nth-child(5)
+							width: 100%
+							display: flex
+							justify-content: space-around
+						&.clients-mode
+							&:last-child
+								display: flex
+								justify-content: space-around
+			&.doctors-table
+				li
+					ul
+						li
+							&:nth-child(4)
+								a
+									margin: 0 auto
+							&:nth-child(4), &:nth-child(5)
+								width: 50%
+			&.requests-table
+				li
+					ul
+						li
+							&:nth-child(2)
+								display: inline
+								padding-left: 50px
+
+		.invite-client-button
+			position: fixed
+			right: 15px
+			bottom: 30px
+			font-size: 14px
+

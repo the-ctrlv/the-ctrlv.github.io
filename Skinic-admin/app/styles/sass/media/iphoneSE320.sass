@@ -1,0 +1,60 @@
+// IPAD
+@media (max-width: 320px)
+	.content-wrapper
+		&__header 
+			.click-item	
+				font-size: 11px
+
+		&__filter-calendar
+			.filter-container
+				left: -120%
+				div
+					&::before
+						left: 67%
+			.click-item
+				&::before
+					left: 5px
+		.flex-table__days 
+			.info-wrapper__info
+				li
+					.clients-type
+						position: absolute
+					&:nth-child(3)
+						margin-top: 20px !important
+	
+
+	.modal
+		.modal-details
+			.info__notes__client-comments
+				li
+					.widget
+						&__head
+							flex-flow: wrap
+							div
+								width: 100%
+								display: flex
+								justify-content: space-between
+	
+
+	.gallery-page
+		.gallery-page__buttons
+			.click-item
+				font-size: 11px
+		.gallery__slot
+			.bottom-line
+				.time
+					font-size: 8px
+	
+
+	.global-content__core
+		.flex-table
+			.table-slot__reqDoc
+				ul
+					li
+						span, a
+							font-size: 12px
+						&:nth-child(2)
+							span
+								&::before
+									left: -30px
+									top: 40%
