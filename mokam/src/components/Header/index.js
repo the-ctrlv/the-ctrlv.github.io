@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <div>
+        <div style={{ backgroundColor: '#FFA600' }}>
             check
         </div>
     )

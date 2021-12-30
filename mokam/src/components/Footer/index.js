@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div>
+        <div style={{ backgroundColor: '#FF0' }}>
             check footer
         </div>
     )
