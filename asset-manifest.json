@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/the-ctrlv.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/the-ctrlv.github.io/static/js/main.5011cd7e.js",
+    "main.css": "/the-ctrlv.github.io/static/css/main.75cb2aa4.css",
+    "main.js": "/the-ctrlv.github.io/static/js/main.c8c510e6.js",
     "static/js/787.72cb1e49.chunk.js": "/the-ctrlv.github.io/static/js/787.72cb1e49.chunk.js",
+    "static/media/AvenirNext-Bold.ttf": "/the-ctrlv.github.io/static/media/AvenirNext-Bold.ae3b1e683a0c6a170a24.ttf",
+    "static/media/Lato-Regular.ttf": "/the-ctrlv.github.io/static/media/Lato-Regular.9919edff6283018571ad.ttf",
+    "static/media/Lato-Bold.ttf": "/the-ctrlv.github.io/static/media/Lato-Bold.5dd5aa0269395f0ea927.ttf",
     "index.html": "/the-ctrlv.github.io/index.html",
-    "main.073c9b0a.css.map": "/the-ctrlv.github.io/static/css/main.073c9b0a.css.map",
-    "main.5011cd7e.js.map": "/the-ctrlv.github.io/static/js/main.5011cd7e.js.map",
+    "static/media/pin-icon.svg": "/the-ctrlv.github.io/static/media/pin-icon.bec21df5ae3df3a62922d4d754072678.svg",
+    "static/media/mail-icon.svg": "/the-ctrlv.github.io/static/media/mail-icon.ddcf15ce21b50c2b7b5300b43c9d1b64.svg",
+    "static/media/arrow.svg": "/the-ctrlv.github.io/static/media/arrow.5d891840ef5960012bb2996eec4862df.svg",
+    "main.75cb2aa4.css.map": "/the-ctrlv.github.io/static/css/main.75cb2aa4.css.map",
+    "main.c8c510e6.js.map": "/the-ctrlv.github.io/static/js/main.c8c510e6.js.map",
     "787.72cb1e49.chunk.js.map": "/the-ctrlv.github.io/static/js/787.72cb1e49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5011cd7e.js"
+    "static/css/main.75cb2aa4.css",
+    "static/js/main.c8c510e6.js"
   ]
 }
