@@ -1,14 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Dummy2 from './components/Footer';
+import Dummy from './components/Header';
+
 
 function App() {
   return (
     <div className="App">
+      
       <Routes>
-        <Route path="/header" element={<Header />} />
-        <Route path="/footer" element={<Footer />} />
+        <Route path="/dummy" element={<Dummy />} />
+        <Route path="/dummy2" element={<Dummy2 />} />
       </Routes>
     </div>
   );
