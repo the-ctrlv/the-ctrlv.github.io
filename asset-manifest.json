@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/the-ctrlv.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/the-ctrlv.github.io/static/js/main.38378950.js",
+    "main.js": "/the-ctrlv.github.io/static/js/main.4baaea1f.js",
     "static/js/787.72cb1e49.chunk.js": "/the-ctrlv.github.io/static/js/787.72cb1e49.chunk.js",
     "index.html": "/the-ctrlv.github.io/index.html",
     "main.073c9b0a.css.map": "/the-ctrlv.github.io/static/css/main.073c9b0a.css.map",
-    "main.38378950.js.map": "/the-ctrlv.github.io/static/js/main.38378950.js.map",
+    "main.4baaea1f.js.map": "/the-ctrlv.github.io/static/js/main.4baaea1f.js.map",
     "787.72cb1e49.chunk.js.map": "/the-ctrlv.github.io/static/js/787.72cb1e49.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.38378950.js"
+    "static/js/main.4baaea1f.js"
   ]
 }
