@@ -1,10 +1,6 @@
-import { StyledManufacturersPage } from "./style"
+import { StyledManufacturersPage } from './style'
 
 function Manufacturers() {
-    return (
-        <StyledManufacturersPage>
-            
-        </StyledManufacturersPage>
-    )
+  return <StyledManufacturersPage></StyledManufacturersPage>
 }
 export default Manufacturers

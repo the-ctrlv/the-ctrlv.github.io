@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledManufacturersPage = styled.footer`
-    display: block;
+  display: block;
 `

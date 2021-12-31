@@ -1,11 +1,11 @@
-import Footer from "../../components/Footer"
-import { StyledRetailPage } from "./style"
+import Footer from '../../components/Footer'
+import { StyledRetailPage } from './style'
 
 function Retail() {
-    return (
-        <StyledRetailPage>
-            <Footer />
-        </StyledRetailPage>
-    )
+  return (
+    <StyledRetailPage>
+      <Footer />
+    </StyledRetailPage>
+  )
 }
 export default Retail
