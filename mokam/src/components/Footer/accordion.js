@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import { getClassNames } from '../../App'
+import { getClassNames, useWindowResize } from '../../functions'
 import arrow from '../../assets/images/arrow.svg'
-import { useWindowResize } from '../../functions'
 import { StyledAccordion } from './style'
 
 function Accordion({ title, children }) {

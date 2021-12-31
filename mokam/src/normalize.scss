@@ -67,8 +67,7 @@ table {
 		font-weight: $fweight;
 		src: url($furl) format('woff2');
   }
-}
-	
+}	
 	
 @include font('Lato-Regular', normal, 500, './assets/fonts/Lato/Lato-Regular.ttf');
 @include font('Lato-Bold', normal, 700, './assets/fonts/Lato/Lato-Bold.ttf');

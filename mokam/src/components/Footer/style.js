@@ -55,8 +55,43 @@ export const StyledFooter = styled.footer`
     }
   }
   @media (max-width: 767px) {
+    padding: 25px 0;
     ul {
       display: block;
+      li {
+        &:not(:last-child) {
+          margin-bottom: 17px;
+          h2 {
+            font-size: 18px;
+            color: #4d4d4d;
+            font-family: Lato-Bold;
+          }
+          .collapse-wrapper {
+            a {
+              &:first-child {
+                margin-top: 17px;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        &:last-child {
+          h2 {
+            display: none;
+          }
+          .social-media {
+            padding-top: 32px;
+            border-top: 1px solid #d6d6d6;
+            justify-content: center;
+          }
+          p {
+            max-width: none;
+            text-align: center;
+          }
+        }
+      }
     }
   }
 `
@@ -87,7 +122,7 @@ export const StyledAccordion = styled.li`
       overflow: hidden;
       max-height: 0;
       &.opened {
-        max-height: 100px;
+        max-height: 150px;
         transition: all 0.3s linear;
       }
     }

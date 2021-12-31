@@ -1,5 +1,8 @@
 import pinIcon from '../../assets/images/pin-icon.svg'
 import mailIcon from '../../assets/images/mail-icon.svg'
+import facebookIcon from '../../assets/images/facebook.svg'
+import youtubeIcon from '../../assets/images/youtube.svg'
+import linkedinIcon from '../../assets/images/linkedin.svg'
 import { StyledFooter } from './style'
 import Accordion from './accordion'
 
@@ -33,14 +36,14 @@ function Footer() {
           <li>
             <h2>Get connected</h2>
             <div className="social-media">
-              <a href="/some">
-                <img src={mailIcon} alt="mail" />
+              <a href="https://www.facebook.com/MokamApp" target="_blank" rel="noreferrer">
+                <img src={facebookIcon} alt="mail" />
               </a>
-              <a href="/some">
-                <img src={mailIcon} alt="mail" />
+              <a href="https://www.linkedin.com/company/mokamltd/" target="_blank" rel="noreferrer">
+                <img src={linkedinIcon} alt="mail" />
               </a>
-              <a href="/some">
-                <img src={mailIcon} alt="mail" />
+              <a href="https://www.youtube.com/channel/UCllWgqIpwe2ts0hnN-u0qdw" target="_blank" rel="noreferrer">
+                <img src={youtubeIcon} alt="mail" />
               </a>
             </div>
             <p>© Copyright 2021 Mokam Limited. All rights reserved</p>

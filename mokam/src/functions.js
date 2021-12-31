@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+export const getClassNames = (...args) => args.filter(Boolean).join(' ')
+
 export function useWindowResize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,

@@ -1,9 +1,4 @@
 {
-  "settings": {
-    "react": {
-      "version": "16.8.5"
-    }
-  },
   "parser": "babel-eslint",
   "plugins": ["prettier", "react", "import", "react-hooks"],
   "extends": [
@@ -22,14 +17,7 @@
       "jsx": true
     }
   },
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "globals": {
-    "history": "readonly"
-  },
+
   "rules": {
     "no-debugger": 0,
     "no-unused-vars": 2,

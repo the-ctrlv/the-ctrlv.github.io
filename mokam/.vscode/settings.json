@@ -24,5 +24,8 @@
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "cSpell.words": [
+    "mokam"
+  ]
 }
