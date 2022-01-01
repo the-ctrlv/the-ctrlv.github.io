@@ -1,29 +1,36 @@
 import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import mokamLogo from '../../assets/images/mokam-logo.svg'
-import telIcon from '../../assets/images/mail-icon.svg'
+import telIcon from '../../assets/images/tel-icon.svg'
 import languageIcon from '../../assets/images/language-icon.svg'
+import { getClassNames } from '../../functions'
 import { StyledHeader } from './style'
 
-function Header({ setLanguage, isLanguageEN }) {
+function Header({ setLanguage, isLanguageEN, isRetailPage }) {
   return (
     <StyledHeader>
       <div className="width-wrapper">
         <div className="left-container">
-          <Link to={'/retail'}>
+          <Link to={'/retail'} className="logo">
             <img src={mokamLogo} alt="" />
           </Link>
-          <Link to={'/retail'}>Retail</Link>
-          <Link to={'/manufacturers'}>Manufacturers</Link>
+          <div className="links">
+            <Link to={'/retail'} className={getClassNames(isRetailPage && 'active')}>
+              Retail
+            </Link>
+            <Link to={'/manufacturers'} className={getClassNames(!isRetailPage && 'active')}>
+              Manufacturers
+            </Link>
+          </div>
         </div>
         <div className="right-container">
-          <div>
+          <div className="hotline-tel">
             <img src={telIcon} alt="telephone" />
             <span>Hotline</span>
             <a href="tel:09610066525">09610066525</a>
           </div>
           <div
-            className="language"
+            className="language-wrapper"
             onClick={() => {
               setLanguage(!isLanguageEN)
             }}>
@@ -38,6 +45,7 @@ function Header({ setLanguage, isLanguageEN }) {
 Header.propTypes = {
   setLanguage: PropTypes.func,
   isLanguageEN: PropTypes.bool,
+  isRetailPage: PropTypes.bool,
 }
 
 export default Header
