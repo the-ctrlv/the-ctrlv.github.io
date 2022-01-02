@@ -34,7 +34,7 @@ function Footer() {
             </a>
           </Accordion>
           <li>
-            <h2>Get connected</h2>
+            <h3>Get connected</h3>
             <div className="social-media">
               <a href="https://www.facebook.com/MokamApp" target="_blank" rel="noreferrer">
                 <img src={facebookIcon} alt="mail" />

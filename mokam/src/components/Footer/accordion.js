@@ -21,7 +21,7 @@ function Accordion({ title, children }) {
   return (
     <StyledAccordion>
       <div onClick={tapAndOpen} className="collapse-title">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         {mobileView && <img src={arrow} alt="arrow" className={getClassNames(open && 'rotated')} />}
       </div>
       <div className={getClassNames('collapse-wrapper', open && 'opened')}>{children}</div>

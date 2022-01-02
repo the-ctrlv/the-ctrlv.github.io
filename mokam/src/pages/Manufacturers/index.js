@@ -8,7 +8,6 @@ function ManufacturersPage({ isLanguageEN, setLanguage }) {
     <StyledManufacturersPage>
       <Header isLanguageEN={isLanguageEN} setLanguage={setLanguage} />
       <Footer />
-      <p>MANUFACTURERS PAGE</p>
     </StyledManufacturersPage>
   )
 }

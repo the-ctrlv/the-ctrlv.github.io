@@ -34,17 +34,72 @@ export const StyledRetailPage = styled.div`
         letter-spacing: -0.2px;
         color: #1a1a1a;
       }
-      button {
-        padding: 12px 6px;
-        border-radius: 6px;
-        background-color: #448aff;
-        width: 258px;
-        cursor: pointer;
-        font-family: 'Lato-bold';
-        font-size: 16px;
-        color: #fff;
-        appearance: none;
-        border: none;
+    }
+  }
+
+  .why-mokam {
+    margin: 114px 0;
+  }
+
+  .start-business {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    .width-wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      .text-container {
+        max-width: 400px;
+        transform: translateY(-20%);
+        h2 {
+          text-align: left;
+          margin-bottom: 37px;
+        }
+        p {
+          font-size: 18px;
+          color: #4d4d4d;
+          margin-bottom: 13px;
+          &:last-of-type {
+            margin: 32px 0 20px;
+          }
+        }
+        a {
+          display: flex;
+          align-items: center;
+          img {
+            width: 50px;
+            margin-right: 8px;
+          }
+          span {
+            font-family: 'AvenirNext-Bold';
+            color: #448aff;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    img {
+      width: 50%;
+    }
+  }
+
+  .get-in-touch {
+    margin: 65px 0 96px;
+    .width-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        margin-bottom: 0;
+      }
+      h4 {
+        margin: 10px 0 50px;
       }
     }
   }

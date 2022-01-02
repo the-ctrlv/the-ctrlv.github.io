@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
     align-items: flex-start;
     justify-content: space-between;
     li {
-      h2 {
+      h3 {
         display: block;
         color: #666;
         margin-bottom: 20px;
@@ -61,7 +61,7 @@ export const StyledFooter = styled.footer`
       li {
         &:not(:last-child) {
           margin-bottom: 17px;
-          h2 {
+          h3 {
             font-size: 18px;
             color: #4d4d4d;
             font-family: Lato-Bold;
@@ -78,7 +78,7 @@ export const StyledFooter = styled.footer`
           }
         }
         &:last-child {
-          h2 {
+          h3 {
             display: none;
           }
           .social-media {
@@ -105,7 +105,7 @@ export const StyledAccordion = styled.li`
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      h2 {
+      h3 {
         margin-bottom: 0;
       }
       img {
