@@ -3,11 +3,13 @@ import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import mainPic from '../../assets/images/main-pic.jpg'
 import { StyledRetailPage } from './style'
+import MokamContentSlider from './whyChooseMokam'
 
 function RetailPage({ isLanguageEN, setLanguage }) {
   return (
     <StyledRetailPage>
       <Header isLanguageEN={isLanguageEN} setLanguage={setLanguage} isRetailPage />
+
       <section className="main">
         <img src={mainPic} alt="main" />
         <div className="width-wrapper">
@@ -18,6 +20,14 @@ function RetailPage({ isLanguageEN, setLanguage }) {
           </div>
         </div>
       </section>
+
+      <section className="why-mokam">
+        <div className="width-wrapper">
+          <h1>Why choose Mokam</h1>
+          <MokamContentSlider />
+        </div>
+      </section>
+
       <Footer />
     </StyledRetailPage>
   )
