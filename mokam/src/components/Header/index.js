@@ -6,7 +6,7 @@ import languageIcon from '../../assets/images/language-icon.svg'
 import { getClassNames } from '../../functions'
 import { StyledHeader } from './style'
 
-function Header({ setLanguage, isLanguageEN, isRetailPage }) {
+function Header({ setLanguage, english, isRetailPage }) {
   return (
     <StyledHeader>
       <div className="width-wrapper">
@@ -32,10 +32,10 @@ function Header({ setLanguage, isLanguageEN, isRetailPage }) {
           <div
             className="language-wrapper"
             onClick={() => {
-              setLanguage(!isLanguageEN)
+              setLanguage(!english)
             }}>
             <img src={languageIcon} alt="" />
-            <span>{isLanguageEN ? 'En' : 'Fr'}</span>
+            <span>{english ? 'En' : 'Fr'}</span>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ function Header({ setLanguage, isLanguageEN, isRetailPage }) {
 }
 Header.propTypes = {
   setLanguage: PropTypes.func,
-  isLanguageEN: PropTypes.bool,
+  english: PropTypes.bool,
   isRetailPage: PropTypes.bool,
 }
 

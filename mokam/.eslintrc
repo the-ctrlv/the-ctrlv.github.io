@@ -1,5 +1,4 @@
 {
-  "parser": "babel-eslint",
   "plugins": ["prettier", "react", "import", "react-hooks"],
   "extends": [
     "eslint:recommended",

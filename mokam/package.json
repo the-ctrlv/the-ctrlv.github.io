@@ -49,6 +49,7 @@
   "devDependencies": {
     "eslint": "^8.5.0",
     "gh": "^2.8.9",
-    "pages": "0.0.16"
+    "pages": "0.0.16",
+    "prettier": "2.5.1"
   }
 }

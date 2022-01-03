@@ -3,16 +3,16 @@ import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import { StyledManufacturersPage } from './style'
 
-function ManufacturersPage({ isLanguageEN, setLanguage }) {
+function ManufacturersPage({ english, setLanguage }) {
   return (
     <StyledManufacturersPage>
-      <Header isLanguageEN={isLanguageEN} setLanguage={setLanguage} />
+      <Header english={english} setLanguage={setLanguage} />
       <Footer />
     </StyledManufacturersPage>
   )
 }
 ManufacturersPage.propTypes = {
-  isLanguageEN: PropTypes.bool,
+  english: PropTypes.bool,
   setLanguage: PropTypes.func,
 }
 export default ManufacturersPage

@@ -1,7 +1,9 @@
-import mediaSliderImage1 from '../../assets/images/media-slider-image1.png'
+import propTypes from 'prop-types'
+import EN from '../../language/en.js'
+import FR from '../../language/fr.js'
 import { StyledMokamFeedbackSlider } from './style'
 
-function MokamFeedbackSlider() {
+function MokamFeedbackSlider({ english }) {
   var settings = {
     dotsClass: 'dots-container',
     speed: 500,
@@ -18,51 +20,54 @@ function MokamFeedbackSlider() {
     <StyledMokamFeedbackSlider {...settings}>
       <div className="feedback-post">
         <div className="media-container">
-          <img src={mediaSliderImage1} alt="" />
+          <iframe title="Retailer Shajal" width="100%" height="100%" frameBorder="{0}" src="https://www.youtube.com/embed/4DHXVh_-X9g" />
         </div>
         <div className="text-container">
-          <p>Mokam always ensures good price and quick delivery, which is why I want to continue working with Mokam.</p>
-          <h4>Pankaj Kumar Bishshash</h4>
-          <span>Bishshash Traders, Dhour </span>
+          <p>{english ? EN.feedback.post1.text : FR.feedback.post1.text}</p>
+          <h4>{english ? EN.feedback.post1.name : FR.feedback.post1.name}</h4>
+          <span>{english ? EN.feedback.post1.company : FR.feedback.post1.company}</span>
         </div>
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <img src={mediaSliderImage1} alt="" />
+          <iframe title="Retailer Pankaj" width="100%" height="100%" frameBorder="{0}" src="https://www.youtube.com/embed/URPzlmwJ0vc" />
         </div>
         <div className="text-container">
-          <p>
-            I am glad to be doing business with Mokam – where other companies take 4/5 days to deliver, Mokam ensures super fast door-step
-            delivery.
-          </p>
-          <h4>MD. Jalaluddin</h4>
-          <span>Atik Rice Agency, Chandona Chourasta Gazipur</span>
+          <p>{english ? EN.feedback.post2.text : FR.feedback.post2.text}</p>
+          <h4>{english ? EN.feedback.post2.name : FR.feedback.post2.name}</h4>
+          <span>{english ? EN.feedback.post2.company : FR.feedback.post2.company}</span>
         </div>
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <img src={mediaSliderImage1} alt="" />
+          <iframe
+            title="Retailer Jalaluddin"
+            width="100%"
+            height="100%"
+            frameBorder="{0}"
+            src="https://www.youtube.com/embed/orItI-N0_S0"
+          />
         </div>
         <div className="text-container">
-          <p>
-            I have been with Mokam for the last 1.5 years and I am getting stellar service. Mokam ensures on-time delivery and more
-            importantly, their salespersons are very helpful.
-          </p>
-          <h4>MD. Shojol Ahmed</h4>
-          <span>Molik Enterprise, Sayeednagar -Notunbajar</span>
+          <p>{english ? EN.feedback.post3.text : FR.feedback.post3.text}</p>
+          <h4>{english ? EN.feedback.post3.name : FR.feedback.post3.name}</h4>
+          <span>{english ? EN.feedback.post3.company : FR.feedback.post3.company}</span>
         </div>
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <img src={mediaSliderImage1} alt="" />
+          <iframe title="Retailer Khokon" width="100%" height="100%" frameBorder="{0}" src="https://www.youtube.com/embed/yAkYyaR-AeU" />
         </div>
         <div className="text-container">
-          <p>I have been with Mokam for the last 1.5 years and I like them because they always keep their commitments.</p>
-          <h4>Mostofa Kamal Khokon</h4>
-          <span>Bengal Traders, Jatrabari</span>
+          <p>{english ? EN.feedback.post4.text : FR.feedback.post4.text}</p>
+          <h4>{english ? EN.feedback.post4.name : FR.feedback.post4.name}</h4>
+          <span>{english ? EN.feedback.post4.company : FR.feedback.post4.company}</span>
         </div>
       </div>
     </StyledMokamFeedbackSlider>
   )
+}
+MokamFeedbackSlider.propTypes = {
+  english: propTypes.bool,
 }
 export default MokamFeedbackSlider

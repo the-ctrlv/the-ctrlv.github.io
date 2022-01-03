@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledContentSlider = styled.div`
   overflow: hidden;
   display: flex;
+  align-items: center;
   .media-container {
     width: 45%;
     margin-right: 5%;

@@ -1,19 +1,27 @@
+import propTypes from 'prop-types'
+import EN from '../../language/en.js'
+import FR from '../../language/fr.js'
 import { StyledMokamForm } from './style'
 
-function MokamForm() {
+function MokamForm({ english }) {
   return (
     <StyledMokamForm>
       <label>
-        Name
+        {english ? EN.getInTouch.form.name : FR.getInTouch.form.name}
         <input type="text" placeholder="Enter name" />
       </label>
       <label>
-        Phone number
-        <input type="text" placeholder="Enter phone number" />
+        {english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
+        <input type="text" placeholder={english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder} />
       </label>
       <label>
-        Comment
-        <textarea name="" id="" cols="30" rows="10" placeholder="Write comment here"></textarea>
+        {english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder={english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
       </label>
       <div className="button-wrapper">
         <button className="mokam-button" type="button">
@@ -22,6 +30,9 @@ function MokamForm() {
       </div>
     </StyledMokamForm>
   )
+}
+MokamForm.propTypes = {
+  english: propTypes.bool,
 }
 
 export default MokamForm

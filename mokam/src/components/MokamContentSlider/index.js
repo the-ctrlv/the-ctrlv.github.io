@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import mediaSliderImage1 from '../../assets/images/media-slider-image1.png'
@@ -6,9 +7,11 @@ import mediaSliderImage3 from '../../assets/images/media-slider-image3.png'
 import mediaSliderImage4 from '../../assets/images/media-slider-image4.png'
 import { ReactComponent as PointIcon } from '../../assets/images/point-icon.svg'
 import { getClassNames } from '../../functions'
+import EN from '../../language/en.js'
+import FR from '../../language/fr.js'
 import { StyledContentSlider } from './style'
 
-function MokamContentSlider() {
+function MokamContentSlider({ english }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderRef = useRef()
   var settings = {
@@ -26,7 +29,6 @@ function MokamContentSlider() {
   const handleOnClick = index => {
     sliderRef.current.slickGoTo(index - 1)
   }
-  console.log(currentSlide)
 
   return (
     <StyledContentSlider>
@@ -39,27 +41,30 @@ function MokamContentSlider() {
       <div className="text-container">
         <div className="content-item active" onClick={() => handleOnClick(1)}>
           <PointIcon />
-          <h3>One stop market</h3>
-          <p>Get all products from Mokam , no need to visit markets or talk to hundreds of salespeople</p>
+          <h3>{english ? EN.whyChooseMokam.sliderTitle1 : FR.whyChooseMokam.sliderTitle1}</h3>
+          <p>{english ? EN.whyChooseMokam.sliderTitle1 : FR.whyChooseMokam.sliderSubtitle1}</p>
         </div>
         <div className={getClassNames('content-item', 1 <= currentSlide && 'active')} onClick={() => handleOnClick(2)}>
           <PointIcon />
-          <h3>No minimum order quantity</h3>
-          <p>No need to place bulk orders, only order what you need, even if it is 1 product</p>
+          <h3>{english ? EN.whyChooseMokam.sliderTitle2 : FR.whyChooseMokam.sliderTitle2}</h3>
+          <p>{english ? EN.whyChooseMokam.sliderTitle2 : FR.whyChooseMokam.sliderSubtitle2}</p>
         </div>
         <div className={getClassNames('content-item', 2 <= currentSlide && 'active')} onClick={() => handleOnClick(3)}>
           <PointIcon />
-          <h3>Order today, delivery tomorrow</h3>
-          <p>Get everything delivered right to your doorstep - we offer next day delivery across the country</p>
+          <h3>{english ? EN.whyChooseMokam.sliderTitle3 : FR.whyChooseMokam.sliderTitle3}</h3>
+          <p>{english ? EN.whyChooseMokam.sliderTitle3 : FR.whyChooseMokam.sliderSubtitle3}</p>
         </div>
         <div className={getClassNames('content-item', 3 <= currentSlide && 'active')} onClick={() => handleOnClick(4)}>
           <PointIcon />
-          <h3>Buy now pay later</h3>
-          <p>Do business with us, with a good record, you can buy products on credit</p>
+          <h3>{english ? EN.whyChooseMokam.sliderTitle4 : FR.whyChooseMokam.sliderTitle4}</h3>
+          <p>{english ? EN.whyChooseMokam.sliderTitle4 : FR.whyChooseMokam.sliderSubtitle4}</p>
         </div>
       </div>
     </StyledContentSlider>
   )
+}
+MokamContentSlider.propTypes = {
+  english: propTypes.bool,
 }
 
 export default MokamContentSlider

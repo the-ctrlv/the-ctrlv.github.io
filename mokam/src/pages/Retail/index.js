@@ -9,29 +9,32 @@ import MokamContentSlider from '../../components/MokamContentSlider'
 import MokamForm from '../../components/MokamForm'
 import downloadAppLogo from '../../assets/images/download-logo.png'
 import MokamFeedbackSlider from '../../components/MokamFeedbackSlider'
+import EN from '../../language/en.js'
+import FR from '../../language/fr.js'
 import { StyledRetailPage } from './style'
 
-function RetailPage({ isLanguageEN, setLanguage }) {
+function RetailPage({ english, setLanguage }) {
   const scrolledElToStartBusiness = useRef()
   const scrolledElToContactUs = useRef()
   return (
     <StyledRetailPage>
-      <Header isLanguageEN={isLanguageEN} setLanguage={setLanguage} isRetailPage />
+      <Header english={english} setLanguage={setLanguage} isRetailPage />
 
       <section className="main">
         <img src={mainPic} alt="main" />
         <div className="width-wrapper">
           <div className="content-wrapper">
-            <h1>One stop sourcing solution for retail shops</h1>
-            <h3>Big Catalogue | Daily Delivery | Products on Credit</h3>
+            <h1>{english ? EN.main.title : FR.main.title}</h1>
+            <h3>{english ? EN.main.subtitle : FR.main.subtitle}</h3>
             <a
               href="#startBusiness"
               onClick={(evt) => {
                 evt.preventDefault()
-                scrolledElToStartBusiness.current.scrollIntoView({ behavior: 'smooth' })
+                const y = scrolledElToStartBusiness.current.getBoundingClientRect().top + window.pageYOffset - 90
+                window.scrollTo({ top: y, behavior: 'smooth' })
               }}
               className="mokam-button">
-              Start Business
+              {english ? EN.main.button : FR.main.button}
             </a>
           </div>
         </div>
@@ -39,29 +42,30 @@ function RetailPage({ isLanguageEN, setLanguage }) {
 
       <section className="why-mokam">
         <div className="width-wrapper">
-          <h2>Why choose Mokam</h2>
-          <MokamContentSlider />
+          <h2>{english ? EN.whyChooseMokam.title : FR.whyChooseMokam.title}</h2>
+          <MokamContentSlider english={english} />
         </div>
       </section>
 
       <section className="start-business" id="startBusiness" ref={scrolledElToStartBusiness}>
         <div className="width-wrapper">
           <div className="text-container">
-            <h2>Start your business in one simple step</h2>
-            <p>Give us a call at </p>
+            <h2>{english ? EN.startBusiness.title : FR.startBusiness.title}</h2>
+            <p>{english ? EN.startBusiness.subtitle1 : FR.startBusiness.subtitle1}</p>
             <a href="/some">
               <img src={telIcon} alt="tel" />
               <span>09610066525</span>
             </a>
-            <p>or, drop us a line</p>
+            <p>{english ? EN.startBusiness.subtitle2 : FR.startBusiness.subtitle2}</p>
             <button
               type="button"
               className="mokam-button"
               onClick={(evt) => {
                 evt.preventDefault()
-                scrolledElToContactUs.current.scrollIntoView({ behavior: 'smooth' })
+                const y = scrolledElToContactUs.current.getBoundingClientRect().top + window.pageYOffset - 90
+                window.scrollTo({ top: y, behavior: 'smooth' })
               }}>
-              Contact now
+              {english ? EN.startBusiness.button : FR.startBusiness.button}
             </button>
           </div>
         </div>
@@ -70,37 +74,37 @@ function RetailPage({ isLanguageEN, setLanguage }) {
 
       <section className="feedback">
         <div className="width-wrapper">
-          <h2>Empowering small retailers across Bangladesh</h2>
-          <h4 className="subtitle">Hear what our partners have to say about their experience with Mokam</h4>
-          <MokamFeedbackSlider />
+          <h2>{english ? EN.feedback.title : FR.feedback.title}</h2>
+          <h4 className="subtitle">{english ? EN.feedback.subtitle : FR.feedback.subtitle}</h4>
+          <MokamFeedbackSlider english={english} />
         </div>
       </section>
 
       <section className="get-in-touch" ref={scrolledElToContactUs}>
         <div className="width-wrapper">
-          <h2>Get in touch with us</h2>
-          <h4 className="subtitle">Drop us your contact details and we will get back to you</h4>
-          <MokamForm />
+          <h2>{english ? EN.getInTouch.title : FR.getInTouch.title}</h2>
+          <h4 className="subtitle">{english ? EN.getInTouch.subtitle : FR.getInTouch.subtitle}</h4>
+          <MokamForm english={english} />
         </div>
       </section>
 
       <section className="get-the-app">
         <div className="width-wrapper">
           <div>
-            <h2>Download Mokam app</h2>
-            <p>Let's grow together</p>
+            <h2>{english ? EN.getTheApp.title : FR.getTheApp.title}</h2>
+            <p>{english ? EN.getTheApp.subtitle : FR.getTheApp.subtitle}</p>
           </div>
           <a href="/some">
             <img src={downloadAppLogo} alt="" />
           </a>
         </div>
       </section>
-      <Footer />
+      <Footer english={english} />
     </StyledRetailPage>
   )
 }
 RetailPage.propTypes = {
-  isLanguageEN: PropTypes.bool,
+  english: PropTypes.bool,
   setLanguage: PropTypes.func,
 }
 export default RetailPage

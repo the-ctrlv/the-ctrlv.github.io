@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledRetailPage = styled.div`
   .main {
     position: relative;
+    margin-top: 80px;
     img {
       display: block;
       width: 100vw;

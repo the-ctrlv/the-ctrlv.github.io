@@ -34,6 +34,7 @@ export const StyledMokamForm = styled.form`
         border: solid 1px #b3b3b3;
         resize: none;
         appearance: none;
+        font-family: 'Lato-Regular';
         &:focus,
         &:focus-visible {
           border: solid 1px #448aff;

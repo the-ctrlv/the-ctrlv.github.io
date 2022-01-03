@@ -5,12 +5,12 @@ import ManufacturersPage from './pages/Manufacturers'
 import RetailPage from './pages/Retail'
 
 function App() {
-  const [isEN, setIsEN] = useState(true)
+  const [english, setEnglish] = useState(true)
   return (
     <div className="App">
       <Routes>
-        <Route path="/retail" element={<RetailPage isLanguageEN={isEN} setLanguage={setIsEN} />} />
-        <Route path="/manufacturers" element={<ManufacturersPage isLanguageEN={isEN} setLanguage={setIsEN} />} />
+        <Route path="/retail" element={<RetailPage english={english} setLanguage={setEnglish} />} />
+        <Route path="/manufacturers" element={<ManufacturersPage english={english} setLanguage={setEnglish} />} />
       </Routes>
     </div>
   )

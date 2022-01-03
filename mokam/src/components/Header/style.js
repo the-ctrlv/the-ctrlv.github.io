@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1091;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   .width-wrapper {
     display: flex;
     justify-content: space-between;

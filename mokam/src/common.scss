@@ -32,6 +32,10 @@ body {
     color: #fff;
     appearance: none;
     border: none;
+    color: #fff;
+    &:hover {
+      background-color:#0046a0;
+    }
   }
   .subtitle {
     margin: 10px 0 50px;
@@ -41,7 +45,7 @@ body {
   .slick-list {
     overflow: hidden;
     .slick-track {
-      display: flex;
+      display: flex; 
     }
   }
 }

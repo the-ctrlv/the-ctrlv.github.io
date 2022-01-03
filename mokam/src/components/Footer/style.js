@@ -22,6 +22,7 @@ export const StyledFooter = styled.footer`
         font-size: 16px;
         margin-bottom: 9px;
         &.contact-links {
+          max-width: 250px;
           display: flex;
           align-items: flex-start;
           span {
