@@ -30,7 +30,7 @@ function RetailPage({ english, setLanguage }) {
               href="#startBusiness"
               onClick={(evt) => {
                 evt.preventDefault()
-                const y = scrolledElToStartBusiness.current.getBoundingClientRect().top + window.pageYOffset - 90
+                const y = scrolledElToStartBusiness.current.getBoundingClientRect().top + window.pageYOffset - 80
                 window.scrollTo({ top: y, behavior: 'smooth' })
               }}
               className="mokam-button">
@@ -62,7 +62,7 @@ function RetailPage({ english, setLanguage }) {
               className="mokam-button"
               onClick={(evt) => {
                 evt.preventDefault()
-                const y = scrolledElToContactUs.current.getBoundingClientRect().top + window.pageYOffset - 90
+                const y = scrolledElToContactUs.current.getBoundingClientRect().top + window.pageYOffset - 80
                 window.scrollTo({ top: y, behavior: 'smooth' })
               }}>
               {english ? EN.startBusiness.button : FR.startBusiness.button}

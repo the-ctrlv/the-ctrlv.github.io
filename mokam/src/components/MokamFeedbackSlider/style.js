@@ -7,6 +7,7 @@ export const StyledMokamFeedbackSlider = styled(Slider)`
     .media-container {
       padding: 60px;
       width: 40%;
+      height: 400px;
       iframe {
         height: 100%;
         border-radius: 4px;
