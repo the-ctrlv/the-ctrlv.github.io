@@ -75,7 +75,4 @@ export const StyledContentSlider = styled.div`
       }
     }
   }
-  .slick-track {
-    display: flex;
-  }
 `

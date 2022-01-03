@@ -33,4 +33,15 @@ body {
     appearance: none;
     border: none;
   }
+  .subtitle {
+    margin: 10px 0 50px;
+    text-align: center;
+    color: #4d4d4d;
+  }
+  .slick-list {
+    overflow: hidden;
+    .slick-track {
+      display: flex;
+    }
+  }
 }

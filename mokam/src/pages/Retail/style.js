@@ -86,6 +86,30 @@ export const StyledRetailPage = styled.div`
     }
     img {
       width: 50%;
+      max-width: 750px;
+    }
+  }
+
+  .feedback {
+    padding: 87px 0 117px;
+    background-color: #f2f8ff;
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 17px;
+    }
+    h4 {
+      font-family: 'AvenirNext-Bold';
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      color: #000;
+      margin-bottom: 3px;
+    }
+    span {
+      font-family: 'Lato';
+      font-size: 14px;
+      color: #808080;
     }
   }
 
@@ -98,8 +122,28 @@ export const StyledRetailPage = styled.div`
       h2 {
         margin-bottom: 0;
       }
-      h4 {
-        margin: 10px 0 50px;
+    }
+  }
+
+  .get-the-app {
+    background-color: #0046a0;
+    padding: 50px 0;
+    .width-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        color: #fff;
+        font-family: 'Lato';
+      }
+      img {
+        max-width: 300px;
       }
     }
   }
