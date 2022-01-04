@@ -6,7 +6,7 @@ import languageIcon from '../../assets/images/language-icon.svg'
 import { getClassNames } from '../../functions'
 import { StyledHeader } from './style'
 
-function Header({ setLanguage, english, isRetailPage }) {
+function Header({ setLanguage, english, isRetailPage, isThanksPage }) {
   return (
     <StyledHeader>
       <div className="width-wrapper">
@@ -15,10 +15,10 @@ function Header({ setLanguage, english, isRetailPage }) {
             <img src={mokamLogo} alt="" />
           </Link>
           <div className="links">
-            <Link to={'/retail'} className={getClassNames(isRetailPage && 'active')}>
+            <Link to={'/retail'} className={getClassNames(isRetailPage & !isThanksPage && 'active')}>
               Retail
             </Link>
-            <Link to={'/manufacturers'} className={getClassNames(!isRetailPage && 'active')}>
+            <Link to={'/manufacturers'} className={getClassNames(!isRetailPage & !isThanksPage && 'active')}>
               Manufacturers
             </Link>
           </div>
@@ -46,6 +46,7 @@ Header.propTypes = {
   setLanguage: PropTypes.func,
   english: PropTypes.bool,
   isRetailPage: PropTypes.bool,
+  isThanksPage: PropTypes.bool,
 }
 
 export default Header

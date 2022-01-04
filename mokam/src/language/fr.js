@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
+  // RETAIL PAGE
   main: {
     title: 'রিটেইল ব্যবসার পরিপূর্ণ সমাধান',
     subtitle: 'বিশাল পণ্য সম্ভার প্রতিদিন ডেলিভারি বাকিতে পণ্য',
@@ -69,6 +70,15 @@ export default {
     title: 'মোকাম অ্যাপ ডাউনলোড করুন',
     subtitle: 'আজই ব্যবসা শুরু করুন',
   },
+
+  // THANKS PAGE
+  thanks: {
+    title: 'ধন্যবাদ',
+    subtitle: 'খুব শীঘ্রই আপনার সাথে যোগাযোগ করা হবে',
+    button: 'ফেরত যান',
+  },
+
+  // FOOTER
   footer: {
     column1: {
       title: 'গুরুত্বপূর্ণ লিংক',

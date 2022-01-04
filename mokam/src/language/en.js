@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
+  // RETAIL PAGE
   main: {
     title: 'One stop sourcing solution for retail shops',
     subtitle: 'Big Catalogue | Daily Delivery | Products on Credit',
@@ -67,6 +68,14 @@ export default {
     title: 'Download Mokam app',
     subtitle: "Let's grow together",
   },
+
+  // THANKS PAGE
+  thanks: {
+    title: 'Thanks',
+    subtitle: 'We will get back to you soon as possible',
+    button: 'Go back home',
+  },
+  // FOOTER
   footer: {
     column1: {
       title: 'IMPORTANT LINK',
