@@ -1,37 +1,43 @@
 import propTypes from 'prop-types'
+import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
 import EN from '../../language/en.js'
 import FR from '../../language/fr.js'
-import { StyledMokamForm } from './style'
+import { StyledGetInTouch } from './style'
 
-function MokamForm({ english }) {
-  return (
-    <StyledMokamForm>
-      <label>
-        {english ? EN.getInTouch.form.name : FR.getInTouch.form.name}
-        <input type="text" placeholder="Enter name" />
-      </label>
-      <label>
-        {english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
-        <input type="text" placeholder={english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder} />
-      </label>
-      <label>
-        {english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder={english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
-      </label>
-      <div className="button-wrapper">
-        <Link className="mokam-button" to={'/thanks'}>
-          Submit
-        </Link>
-      </div>
-    </StyledMokamForm>
-  )
-}
+const MokamForm = forwardRef((props, ref) => (
+  <StyledGetInTouch className="get-in-touch" ref={ref}>
+    <div className="width-wrapper">
+      <h2>{props.english ? EN.getInTouch.title : FR.getInTouch.title}</h2>
+      <h4 className="subtitle">{props.english ? EN.getInTouch.subtitle : FR.getInTouch.subtitle}</h4>
+      <form>
+        <label>
+          {props.english ? EN.getInTouch.form.name : FR.getInTouch.form.name}
+          <input type="text" placeholder="Enter name" />
+        </label>
+        <label>
+          {props.english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
+          <input type="text" placeholder={props.english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder} />
+        </label>
+        <label>
+          {props.english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder={props.english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
+        </label>
+        <div className="button-wrapper">
+          <Link className="mokam-button" to={'/thanks'}>
+            Submit
+          </Link>
+        </div>
+      </form>
+    </div>
+  </StyledGetInTouch>
+))
+MokamForm.displayName = 'MokamForm'
 MokamForm.propTypes = {
   english: propTypes.bool,
 }

@@ -65,18 +65,6 @@ export const StyledRetailPage = styled.div`
     }
   }
 
-  .get-in-touch {
-    margin: 65px 0 96px;
-    .width-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h2 {
-        margin-bottom: 0;
-      }
-    }
-  }
-
   .get-the-app {
     background-color: #0046a0;
     padding: 50px 0;

@@ -63,13 +63,7 @@ function RetailPage({ english, setLanguage }) {
         </div>
       </section>
 
-      <section className="get-in-touch" ref={scrolledElToContactUs}>
-        <div className="width-wrapper">
-          <h2>{english ? EN.getInTouch.title : FR.getInTouch.title}</h2>
-          <h4 className="subtitle">{english ? EN.getInTouch.subtitle : FR.getInTouch.subtitle}</h4>
-          <MokamForm english={english} ref={scrolledElToContactUs} />
-        </div>
-      </section>
+      <MokamForm english={english} ref={scrolledElToContactUs} />
 
       <section className="get-the-app">
         <div className="width-wrapper">

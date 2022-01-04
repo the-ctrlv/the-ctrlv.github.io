@@ -25,6 +25,7 @@ const StartBusiness = forwardRef((props, ref) => (
     <img src={heroPic} alt="hero" />
   </StyledStartBusiness>
 ))
+
 StartBusiness.displayName = 'StartBusiness'
 StartBusiness.propTypes = {
   english: propTypes.bool,
