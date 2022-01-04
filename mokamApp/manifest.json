@@ -1,8 +1,0 @@
-{
-  "short_name": "Mokam App",
-  "name": "Mokam SPA!",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
