@@ -1,4 +1,5 @@
 import propTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import EN from '../../language/en.js'
 import FR from '../../language/fr.js'
 import { StyledMokamForm } from './style'
@@ -24,9 +25,9 @@ function MokamForm({ english }) {
           placeholder={english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
       </label>
       <div className="button-wrapper">
-        <button className="mokam-button" type="button">
+        <Link className="mokam-button" to={'/thanks'}>
           Submit
-        </button>
+        </Link>
       </div>
     </StyledMokamForm>
   )
