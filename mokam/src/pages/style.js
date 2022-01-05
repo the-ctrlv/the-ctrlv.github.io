@@ -46,4 +46,24 @@ export const StyledMainSection = styled.div`
       }
     }
   }
+  @media (max-width: 767px) {
+    .width-wrapper {
+      .content-wrapper {
+        text-align: center;
+        h1 {
+          line-height: 58px;
+        }
+        h3 {
+          max-width: 270px;
+          font-size: 20px;
+          text-align: center;
+          display: block;
+          margin: 13px auto 40px;
+        }
+        a {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 `

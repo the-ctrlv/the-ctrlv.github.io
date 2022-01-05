@@ -62,4 +62,18 @@ export const StyledGetInTouch = styled.div`
       }
     }
   }
+  @media (max-width: 767px) {
+    margin: 55px 0 60px;
+    .width-wrapper {
+      form {
+        padding: 0;
+        label {
+          width: 100%;
+        }
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
 `

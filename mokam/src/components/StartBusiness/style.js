@@ -60,4 +60,30 @@ export const StyledStartBusiness = styled.div`
       }
     }
   }
+  @media (max-width: 767px) {
+    flex-flow: wrap;
+    flex-direction: column-reverse;
+    .width-wrapper {
+      position: relative;
+      margin: 35px 0 75px;
+      text-align: center;
+      .text-container {
+        max-width: none;
+        h2 {
+          margin-bottom: 48px;
+          text-align: center;
+        }
+        p {
+        }
+        a,
+        button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+    picture {
+      width: 100%;
+    }
+  }
 `

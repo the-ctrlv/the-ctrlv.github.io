@@ -15,6 +15,9 @@ export const StyledRetailPage = styled.div`
           width: 48%;
           text-align: center;
           margin-bottom: 60px;
+          &:last-child {
+            margin-bottom: 0px;
+          }
           img {
             height: 165px;
           }
@@ -24,6 +27,17 @@ export const StyledRetailPage = styled.div`
           &::after {
             content: none;
           }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      margin: 75px 0;
+      h2 {
+        margin-bottom: 55px;
+      }
+      .text-container {
+        .content-item {
+          width: 100%;
         }
       }
     }
@@ -48,6 +62,12 @@ export const StyledRetailPage = styled.div`
       font-family: 'Lato';
       font-size: 14px;
       color: #808080;
+    }
+    @media (max-width: 767px) {
+      padding: 55px 0 100px;
+      .subtitle {
+        display: none;
+      }
     }
   }
 
@@ -79,6 +99,18 @@ export const StyledRetailPage = styled.div`
         }
         img {
           width: 230px;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .width-wrapper {
+        flex-flow: wrap;
+        justify-content: center;
+        > div {
+          width: 100%;
+          max-width: 280px;
+          text-align: center;
+          margin-bottom: 20px;
         }
       }
     }

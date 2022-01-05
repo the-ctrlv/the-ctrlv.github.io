@@ -108,24 +108,24 @@ export default {
   // FOOTER
   footer: {
     column1: {
-      title: 'IMPORTANT LINK',
+      title: 'Important Links',
       link1: 'Retailer',
       link2: 'Supplier',
     },
     column2: {
-      title: 'LEGAL',
+      title: 'Legal',
       link1: 'IPR Infringement Policy',
       link2: 'Permitted Usage Policy',
       link3: 'Privacy Policy',
       link4: 'Terms of Service',
     },
     column3: {
-      title: 'CONTACT',
+      title: 'Contact',
       link1: 'B112, Road 06, Mohakhali DOHS, Dhaka-1206',
       link2: 'hello@mokam.com.bd',
     },
     column4: {
-      title: 'GET CONNECTED',
+      title: 'Get Connected',
       copyright: '© Copyright 2021 Mokam Limited. All rights reserved',
     },
   },

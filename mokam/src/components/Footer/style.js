@@ -108,6 +108,9 @@ export const StyledAccordion = styled.li`
       width: 100%;
       h3 {
         margin-bottom: 0;
+        @media (min-width: 768px) {
+          text-transform: uppercase;
+        }
       }
       img {
         transform: rotate(0);

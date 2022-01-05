@@ -91,4 +91,29 @@ export const StyledMokamFeedbackSlider = styled(Slider)`
       bottom: -50px;
     }
   }
+  @media (max-width: 767px) {
+    .feedback-post {
+      display: block !important;
+      .media-container {
+        width: 100%;
+      }
+      .text-container {
+        width: 100%;
+        padding: 0;
+        margin-top: 33px;
+        font-family: 'Lato-Bold';
+        text-align: center;
+        p {
+          font-size: 20px;
+          padding: 0 5px;
+        }
+        span {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .dots-container {
+      bottom: -10px;
+    }
+  }
 `

@@ -18,13 +18,13 @@ function Footer({ english }) {
             <a href="/some">{english ? EN.footer.column1.link1 : FR.footer.column1.link1}</a>
             <a href="/some">{english ? EN.footer.column1.link2 : FR.footer.column1.link2}</a>
           </Accordion>
-          <Accordion title={english ? EN.footer.column1.title : FR.footer.column1.title}>
+          <Accordion title={english ? EN.footer.column2.title : FR.footer.column2.title}>
             <a href="/some">{english ? EN.footer.column2.link1 : FR.footer.column2.link1}</a>
             <a href="/some">{english ? EN.footer.column2.link2 : FR.footer.column2.link2}</a>
             <a href="/some">{english ? EN.footer.column2.link3 : FR.footer.column2.link3}</a>
             <a href="/some">{english ? EN.footer.column2.link4 : FR.footer.column2.link4}</a>
           </Accordion>
-          <Accordion title={english ? EN.footer.column1.title : FR.footer.column1.title}>
+          <Accordion title={english ? EN.footer.column3.title : FR.footer.column3.title}>
             <a href="/some" className="contact-links">
               <img src={pinIcon} alt="map" />
               <span>{english ? EN.footer.column3.link1 : FR.footer.column3.link1}</span>
