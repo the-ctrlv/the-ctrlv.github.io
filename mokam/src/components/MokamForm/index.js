@@ -49,7 +49,7 @@ const MokamForm = forwardRef((props, ref) => (
             placeholder={props.english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
         </label>
         <div className="button-wrapper">
-          <Link className="mokam-button" to={'/thanks'}>
+          <Link className="mokam-button" to={`/${props.url}/thanks`}>
             Submit
           </Link>
         </div>
@@ -61,6 +61,7 @@ MokamForm.displayName = 'MokamForm'
 MokamForm.propTypes = {
   english: propTypes.bool,
   manufacturersForm: propTypes.bool,
+  url: propTypes.string,
 }
 
 export default MokamForm

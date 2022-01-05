@@ -12,7 +12,9 @@ function App() {
       <Routes>
         <Route path="/retail" element={<RetailPage english={english} setLanguage={setEnglish} />} />
         <Route path="/manufacturers" element={<ManufacturersPage english={english} setLanguage={setEnglish} />} />
-        <Route path="/thanks" element={<ThanksPage english={english} setLanguage={setEnglish} />} />
+        {['/retail/thanks', '/manufacturers/thanks'].map((path, index) => (
+          <Route path={path} key={index} element={<ThanksPage english={english} setLanguage={setEnglish} />} />
+        ))}
       </Routes>
     </div>
   )

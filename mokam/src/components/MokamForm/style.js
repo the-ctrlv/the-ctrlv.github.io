@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledGetInTouch = styled.form`
+export const StyledGetInTouch = styled.div`
   margin: 65px 0 96px;
   .width-wrapper {
     display: flex;

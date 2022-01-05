@@ -5,9 +5,9 @@ body {
   box-sizing: border-box;
 }
 .width-wrapper {
-  max-width: 1170px;
+  max-width: calc(1170px + 68px);
+  padding: 0 34px;
   margin: 0 auto;
-  // padding: 0 32px;
   position: relative;
   // @media (max-width: 767px) {
   //   padding: 0 16px;

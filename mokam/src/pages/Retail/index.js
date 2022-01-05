@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import mainPic from '../../assets/images/main-pic.jpg'
+import mainPicTablet from '../../assets/images/main-pic-tablet.jpg'
+import mainPicMob from '../../assets/images/main-pic-mobile.jpg'
 
 import MokamContentSlider from '../../components/MokamContentSlider'
 import MokamForm from '../../components/MokamForm'
@@ -28,7 +30,12 @@ function RetailPage({ english, setLanguage }) {
       <Header english={english} setLanguage={setLanguage} isRetailPage />
 
       <StyledMainSection>
-        <img src={mainPic} alt="main" />
+        <picture>
+          <source media="(min-width:1025px)" srcSet={mainPic} />
+          <source media="(min-width:768px)" srcSet={mainPicTablet} />
+          <img src={mainPicMob} alt="main" />
+        </picture>
+
         <div className="width-wrapper">
           <div className="content-wrapper">
             <h1>{english ? EN.main.title : FR.main.title}</h1>
@@ -64,7 +71,7 @@ function RetailPage({ english, setLanguage }) {
         </div>
       </section>
 
-      <MokamForm english={english} ref={scrolledElToContactUs} />
+      <MokamForm english={english} ref={scrolledElToContactUs} url="retail" />
 
       <section className="get-the-app">
         <div className="width-wrapper">

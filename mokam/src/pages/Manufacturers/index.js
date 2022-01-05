@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import mainPic2 from '../../assets/images/main-pic2.jpg'
+import mainPic2Tablet from '../../assets/images/main-pic2-tablet.jpg'
+import mainPic2Mob from '../../assets/images/main-pic2-mobile.jpg'
 
 import reasonPic1 from '../../assets/images/reason-pic1.png'
 import reasonPic2 from '../../assets/images/reason-pic2.png'
@@ -39,7 +41,12 @@ function ManufacturersPage({ english, setLanguage }) {
       <Header english={english} setLanguage={setLanguage} />
 
       <StyledMainSection>
-        <img src={mainPic2} alt="main" />
+        <picture>
+          <source media="(min-width:1025px)" srcSet={mainPic2} />
+          <source media="(min-width:768px)" srcSet={mainPic2Tablet} />
+          <img src={mainPic2Mob} alt="main" />
+        </picture>
+
         <div className="width-wrapper">
           <div className="content-wrapper">
             <h1>{english ? EN.main2.title : FR.main2.title}</h1>
@@ -126,9 +133,9 @@ function ManufacturersPage({ english, setLanguage }) {
         </div>
       </section>
 
-      <MokamForm english={english} ref={scrolledElToContactUs} manufacturersForm />
+      <MokamForm english={english} ref={scrolledElToContactUs} manufacturersForm url="manufacturers" />
 
-      <Footer />
+      <Footer english={english} setLanguage={setLanguage} />
     </StyledManufacturersPage>
   )
 }
