@@ -1,6 +1,7 @@
 import propTypes from 'prop-types'
 import { forwardRef } from 'react'
 import heroPic from '../../assets/images/hero-pic.jpg'
+import heroPicTablet from '../../assets/images/hero-pic-tablet.jpg'
 import telIcon from '../../assets/images/tel-icon.svg'
 import EN from '../../language/en.js'
 import FR from '../../language/fr.js'
@@ -22,7 +23,12 @@ const StartBusiness = forwardRef((props, ref) => (
         </button>
       </div>
     </div>
-    <img src={heroPic} alt="hero" />
+    {/* <img src={heroPic} alt="hero" /> */}
+    <picture>
+      <source media="(min-width:1025px)" srcSet={heroPic} />
+      <source media="(min-width:768px)" srcSet={heroPicTablet} />
+      <img src={heroPic} alt="main" />
+    </picture>
   </StyledStartBusiness>
 ))
 

@@ -3,6 +3,30 @@ import styled from 'styled-components'
 export const StyledRetailPage = styled.div`
   .why-mokam {
     margin: 114px 0;
+    @media (max-width: 1024px) {
+      margin: 68px 0;
+      .text-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-flow: wrap;
+        .content-item {
+          padding: 0;
+          width: 48%;
+          text-align: center;
+          margin-bottom: 60px;
+          img {
+            height: 165px;
+          }
+          h3 {
+            margin: 35px 0 7px;
+          }
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
   }
 
   .feedback {
@@ -15,7 +39,6 @@ export const StyledRetailPage = styled.div`
       margin-bottom: 17px;
     }
     h4 {
-      font-family: 'AvenirNext-Bold';
       font-size: 18px;
       letter-spacing: 0.5px;
       color: #000;
@@ -46,7 +69,17 @@ export const StyledRetailPage = styled.div`
         font-family: 'Lato';
       }
       img {
-        max-width: 300px;
+        width: 300px;
+      }
+    }
+    @media (max-width: 1024px) {
+      .width-wrapper {
+        h2 {
+          font-size: 30px;
+        }
+        img {
+          width: 230px;
+        }
       }
     }
   }

@@ -67,4 +67,28 @@ export const StyledMokamFeedbackSlider = styled(Slider)`
       }
     }
   }
+  @media (max-width: 1024px) {
+    .feedback-post {
+      padding-top: 51px;
+      .media-container {
+        padding: 0;
+        height: 300px;
+        iframe {
+          width: 100%;
+        }
+      }
+      .text-container {
+        padding: 0 0 0 37px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+    .dots-container {
+      bottom: -50px;
+    }
+  }
 `

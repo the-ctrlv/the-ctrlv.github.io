@@ -50,7 +50,13 @@ const MokamForm = forwardRef((props, ref) => (
         </label>
         <div className="button-wrapper">
           <Link className="mokam-button" to={`/${props.url}/thanks`}>
-            Submit
+            {props.manufacturersForm
+              ? props.english
+                ? EN.getInTouch.form.button2
+                : FR.getInTouch.form.button2
+              : props.english
+              ? EN.getInTouch.form.button
+              : FR.getInTouch.form.button}
           </Link>
         </div>
       </form>

@@ -35,4 +35,15 @@ export const StyledMainSection = styled.div`
       color: #1a1a1a;
     }
   }
+  @media (max-width: 1024px) {
+    .width-wrapper {
+      h1 {
+        color: #fff;
+        max-width: 450px;
+      }
+      h3 {
+        color: #fff;
+      }
+    }
+  }
 `

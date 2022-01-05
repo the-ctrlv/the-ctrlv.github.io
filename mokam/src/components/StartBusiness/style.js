@@ -43,8 +43,21 @@ export const StyledStartBusiness = styled.div`
       }
     }
   }
-  img {
+
+  picture {
     width: 50%;
     max-width: 750px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  @media (max-width: 1024px) {
+    .width-wrapper {
+      .text-container {
+        max-width: 330px;
+        transform: none;
+      }
+    }
   }
 `

@@ -93,6 +93,7 @@ export default {
       comment: 'মন্তব্য',
       commentholder: 'আপনার কোন মন্তব্য থাকলে এখানে লিখুন',
       button: 'জমা দিন',
+      button2: '???',
     },
   },
   getTheApp: {

@@ -91,6 +91,7 @@ export default {
       comment: 'Comment',
       commentholder: 'Write comment here',
       button: 'Submit',
+      button2: 'Become Our Partner',
     },
   },
   getTheApp: {

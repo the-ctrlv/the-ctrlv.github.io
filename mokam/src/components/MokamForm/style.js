@@ -44,10 +44,6 @@ export const StyledGetInTouch = styled.div`
             resize: none;
             appearance: none;
             font-family: 'Lato-Regular';
-            &:focus,
-            &:focus-visible {
-              border: solid 1px #448aff;
-            }
           }
         }
       }
@@ -56,6 +52,13 @@ export const StyledGetInTouch = styled.div`
         display: flex;
         justify-content: center;
         margin-top: 32px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .width-wrapper {
+      form {
+        padding: 0 60px;
       }
     }
   }
