@@ -61,7 +61,10 @@ table {
 }
 
 input, textarea {
-  box-sizing: border-box;
+  box-sizing: inherit;
+  &:focus {
+    outline: none;
+  }
 }
   
 

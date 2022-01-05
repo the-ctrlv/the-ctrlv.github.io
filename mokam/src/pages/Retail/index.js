@@ -11,6 +11,7 @@ import MokamFeedbackSlider from '../../components/MokamFeedbackSlider'
 import EN from '../../language/en.js'
 import FR from '../../language/fr.js'
 import StartBusiness from '../../components/StartBusiness'
+import { StyledMainSection } from '../style'
 import { StyledRetailPage } from './style'
 
 function RetailPage({ english, setLanguage }) {
@@ -26,7 +27,7 @@ function RetailPage({ english, setLanguage }) {
     <StyledRetailPage>
       <Header english={english} setLanguage={setLanguage} isRetailPage />
 
-      <section className="main">
+      <StyledMainSection>
         <img src={mainPic} alt="main" />
         <div className="width-wrapper">
           <div className="content-wrapper">
@@ -44,7 +45,7 @@ function RetailPage({ english, setLanguage }) {
             </a>
           </div>
         </div>
-      </section>
+      </StyledMainSection>
 
       <section className="why-mokam">
         <div className="width-wrapper">

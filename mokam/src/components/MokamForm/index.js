@@ -8,7 +8,12 @@ import { StyledGetInTouch } from './style'
 const MokamForm = forwardRef((props, ref) => (
   <StyledGetInTouch className="get-in-touch" ref={ref}>
     <div className="width-wrapper">
-      <h2>{props.english ? EN.getInTouch.title : FR.getInTouch.title}</h2>
+      {props.manufacturersForm ? (
+        <h2>{props.english ? EN.getInTouch.title2 : FR.getInTouch.title2}</h2>
+      ) : (
+        <h2>{props.english ? EN.getInTouch.title : FR.getInTouch.title}</h2>
+      )}
+
       <h4 className="subtitle">{props.english ? EN.getInTouch.subtitle : FR.getInTouch.subtitle}</h4>
       <form>
         <label>
@@ -19,6 +24,21 @@ const MokamForm = forwardRef((props, ref) => (
           {props.english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
           <input type="text" placeholder={props.english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder} />
         </label>
+        {props.manufacturersForm && (
+          <>
+            <label>
+              {props.english ? EN.getInTouch.form.company : FR.getInTouch.form.company}
+              <input type="text" placeholder={props.english ? EN.getInTouch.form.companyholder : FR.getInTouch.form.companyholder} />
+            </label>
+            <label>
+              {props.english ? EN.getInTouch.form.designation : FR.getInTouch.form.designation}
+              <input
+                type="text"
+                placeholder={props.english ? EN.getInTouch.form.designationholder : FR.getInTouch.form.designationholder}
+              />
+            </label>
+          </>
+        )}
         <label>
           {props.english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
           <textarea
@@ -40,6 +60,7 @@ const MokamForm = forwardRef((props, ref) => (
 MokamForm.displayName = 'MokamForm'
 MokamForm.propTypes = {
   english: propTypes.bool,
+  manufacturersForm: propTypes.bool,
 }
 
 export default MokamForm

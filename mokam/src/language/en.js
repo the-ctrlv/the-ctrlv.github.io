@@ -6,6 +6,31 @@ export default {
     subtitle: 'Big Catalogue | Daily Delivery | Products on Credit',
     button: 'Start Business',
   },
+  main2: {
+    title: 'Take advantage of the country’s largest retail distribution network',
+    button: 'Become Our Partner',
+  },
+  helpBusiness: {
+    title: 'How can we help your business',
+    reasons: {
+      title1: 'Boost your sales',
+      text1: 'Our large network of retailers ensures an increase in your sales',
+      title2: 'Increase your brand visibility',
+      text2: 'Increase your brand visibility even in areas where your distribution does not reach.',
+      title3: 'Reach remote areas',
+      text3: 'Get your products delivered to 60+ districts, even to the most hard to reach areas.',
+    },
+    bransTitle: 'Brands we have worked with so far',
+  },
+  awards: {
+    sectionTitle: 'Awards we have received',
+    title1: 'Best E-Commerce Platform (B2B)',
+    text1: 'Winner in Retail Awards Bangladesh 2021',
+    title2: 'Most Sustainable Retail Initiative',
+    text2: 'Honorable Mention at Retail Awards Bangladesh 2021',
+    title3: 'Best Use of Technology ',
+    text3: 'Honorable Mention at Retail Awards Bangladesh 2021',
+  },
   whyChooseMokam: {
     title: 'Why choose Mokam',
 
@@ -53,12 +78,16 @@ export default {
   },
   getInTouch: {
     title: 'Get in touch with us',
+    title2: 'Let’s grow together!',
     subtitle: 'Drop us your contact details and we will get back to you',
     form: {
       name: 'Name',
       nameholder: 'Enter phone number',
       phone: 'Phone number',
       phoneholder: 'Enter phone number',
+      company: 'Company',
+      companyholder: 'Enter company number',
+      designation: 'Designation',
       comment: 'Comment',
       commentholder: 'Write comment here',
       button: 'Submit',
