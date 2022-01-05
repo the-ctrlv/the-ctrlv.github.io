@@ -55,6 +55,29 @@ export const StyledFooter = styled.footer`
       }
     }
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 58px 0 33px;
+    ul {
+      flex-flow: wrap;
+      li {
+        &:last-child {
+          width: 100%;
+          margin-top: 32px;
+          padding-top: 16px;
+          border-top: 1px solid #d6d6d6;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            display: none;
+          }
+          p {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
   @media (max-width: 767px) {
     padding: 25px 0;
     ul {

@@ -48,6 +48,7 @@ export default {
   },
   startBusiness: {
     title: 'Start your business in one simple step',
+    title2: 'Become our partner in one simple step',
     subtitle1: 'Give us a call at',
     subtitle2: 'or, drop us a line',
     button: 'Contact now',

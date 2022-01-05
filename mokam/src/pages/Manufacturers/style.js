@@ -11,6 +11,7 @@ export const StyledManufacturersPage = styled.footer`
       .reasons {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         margin-bottom: 116px;
         li {
           display: flex;
@@ -53,6 +54,22 @@ export const StyledManufacturersPage = styled.footer`
         }
       }
     }
+    @media (max-width: 1024px) {
+      margin: 68px 0 96px;
+      .width-wrapper {
+        .reasons {
+          li {
+            width: 28%;
+          }
+        }
+        .brands {
+          flex-flow: wrap;
+          li {
+            width: 30%;
+          }
+        }
+      }
+    }
   }
   .awards {
     padding: 82px 0 130px;
@@ -64,6 +81,9 @@ export const StyledManufacturersPage = styled.footer`
       ul {
         display: flex;
         justify-content: space-between;
+        align-items: stretch;
+        position: relative;
+        flex-grow: 1;
         li {
           width: 32%;
           background-color: #fff;
@@ -93,6 +113,9 @@ export const StyledManufacturersPage = styled.footer`
           }
         }
       }
+    }
+    @media (max-width: 1024px) {
+      padding: 70px 0 80px;
     }
   }
 `

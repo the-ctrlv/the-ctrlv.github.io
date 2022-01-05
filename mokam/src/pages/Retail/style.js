@@ -112,6 +112,10 @@ export const StyledRetailPage = styled.div`
           text-align: center;
           margin-bottom: 20px;
         }
+        a {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }

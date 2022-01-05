@@ -21,4 +21,13 @@ export const StyledThanksPage = styled.div`
       }
     }
   }
+  @media (max-width: 767px) {
+    .thanks {
+      .width-wrapper {
+        img {
+          max-width: 190px;
+        }
+      }
+    }
+  }
 `

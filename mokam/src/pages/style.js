@@ -39,7 +39,7 @@ export const StyledMainSection = styled.div`
     .width-wrapper {
       h1 {
         color: #fff;
-        max-width: 450px;
+        max-width: 535px;
       }
       h3 {
         color: #fff;
@@ -50,8 +50,10 @@ export const StyledMainSection = styled.div`
     .width-wrapper {
       .content-wrapper {
         text-align: center;
+        width: 100%;
         h1 {
           line-height: 58px;
+          margin: 0 auto;
         }
         h3 {
           max-width: 270px;
@@ -61,7 +63,7 @@ export const StyledMainSection = styled.div`
           margin: 13px auto 40px;
         }
         a {
-          margin: 0 auto;
+          width: 100%;
         }
       }
     }

@@ -11,7 +11,12 @@ const StartBusiness = forwardRef((props, ref) => (
   <StyledStartBusiness id="startBusiness" ref={ref} {...props}>
     <div className="width-wrapper">
       <div className="text-container">
-        <h2>{props.english ? EN.startBusiness.title : FR.startBusiness.title}</h2>
+        {props.manufacturersPage ? (
+          <h2>{props.english ? EN.startBusiness.title2 : FR.startBusiness.title2}</h2>
+        ) : (
+          <h2>{props.english ? EN.startBusiness.title : FR.startBusiness.title}</h2>
+        )}
+
         <p>{props.english ? EN.startBusiness.subtitle1 : FR.startBusiness.subtitle1}</p>
         <a href="/some">
           <img src={telIcon} alt="tel" />
@@ -38,6 +43,7 @@ StartBusiness.propTypes = {
   scrolledElToStartBusiness: propTypes.func,
   scrolledElToContactUs: propTypes.func,
   scrollToContact: propTypes.func,
+  manufacturersPage: propTypes.bool,
 }
 
 export default StartBusiness

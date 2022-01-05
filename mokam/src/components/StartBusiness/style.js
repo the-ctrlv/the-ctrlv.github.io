@@ -69,6 +69,7 @@ export const StyledStartBusiness = styled.div`
       text-align: center;
       .text-container {
         max-width: none;
+        width: 100%;
         h2 {
           margin-bottom: 48px;
           text-align: center;

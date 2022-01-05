@@ -50,6 +50,7 @@ export default {
   },
   startBusiness: {
     title: 'মোকামের সাথে ব্যবসা শুরু করুন এখনই',
+    title2: 'আমাদের পার্টনার হোন আজই',
     subtitle1: 'কল করুন',
     subtitle2: 'অথবা, আমাদের লিখুন ',
     button: '???',

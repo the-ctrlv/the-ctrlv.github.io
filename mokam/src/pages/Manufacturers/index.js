@@ -59,7 +59,7 @@ function ManufacturersPage({ english, setLanguage }) {
                 window.scrollTo({ top: y, behavior: 'smooth' })
               }}
               className="mokam-button">
-              {english ? EN.main.button : FR.main.button}
+              {english ? EN.main2.button : FR.main2.button}
             </a>
           </div>
         </div>
@@ -108,7 +108,7 @@ function ManufacturersPage({ english, setLanguage }) {
           </ul>
         </div>
       </section>
-      <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} english={english} />
+      <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} english={english} manufacturersPage />
 
       <section className="awards">
         <div className="width-wrapper">
