@@ -74,6 +74,12 @@ export const StyledContentSlider = styled.div`
           }
         }
       }
+      &:hover {
+        h3,
+        p {
+          color: #0046a0;
+        }
+      }
     }
   }
 `

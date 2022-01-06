@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledThanksPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   .thanks {
     position: relative;
     margin-top: 80px;
@@ -22,6 +26,7 @@ export const StyledThanksPage = styled.div`
     }
   }
   @media (max-width: 767px) {
+    margin-top: 66px;
     .thanks {
       .width-wrapper {
         img {

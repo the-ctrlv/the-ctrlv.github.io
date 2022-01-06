@@ -5,7 +5,7 @@ export const StyledMainSection = styled.div`
   margin-top: 80px;
   img {
     display: block;
-    width: 100vw;
+    width: 100%;
   }
   .width-wrapper {
     position: absolute;
@@ -30,9 +30,10 @@ export const StyledMainSection = styled.div`
     h3 {
       margin: 17px 0 24px;
       font-family: 'Lato-bold';
-      line-height: 1.33;
+      line-height: 32px;
       letter-spacing: -0.2px;
       color: #1a1a1a;
+      font-size: 24px;
     }
   }
   @media (max-width: 1024px) {
@@ -47,13 +48,16 @@ export const StyledMainSection = styled.div`
     }
   }
   @media (max-width: 767px) {
+    margin-top: 66px;
     .width-wrapper {
       .content-wrapper {
         text-align: center;
         width: 100%;
         h1 {
-          line-height: 58px;
+          font-size: 38px;
+          line-height: 49px;
           margin: 0 auto;
+          max-width: 80vw;
         }
         h3 {
           max-width: 270px;

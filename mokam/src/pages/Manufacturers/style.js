@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledManufacturersPage = styled.footer`
+export const StyledManufacturersPage = styled.div`
   display: block;
   .help-business {
     margin: 112px 0 124px;
@@ -70,52 +70,35 @@ export const StyledManufacturersPage = styled.footer`
         }
       }
     }
-  }
-  .awards {
-    padding: 82px 0 130px;
-    background-color: #f2f8ff;
-    .width-wrapper {
-      h2 {
-        margin-bottom: 39px;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        position: relative;
-        flex-grow: 1;
-        li {
-          width: 32%;
-          background-color: #fff;
-          border-radius: 4px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          padding: 32px 16px 30px;
-          img {
-            max-height: 156px;
+    @media (max-width: 767px) {
+      margin: 75px 0 80px;
+      .width-wrapper {
+        h2 {
+          &:last-of-type {
+            margin-bottom: 21px;
           }
-          h4 {
-            margin: 23px 0 7px;
-            font-family: 'AvenirNext-Bold';
-            font-size: 20px;
-            line-height: 1.6;
-            letter-spacing: 0.5px;
-            color: #000;
+        }
+        .reasons {
+          flex-flow: wrap;
+          li {
+            width: 100%;
+            margin-bottom: 57px;
+            p {
+              max-width: 80vw;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
-          p {
-            max-width: 300px;
-            line-height: 1.56;
-            font-size: 18px;
-            color: #4d4d4d;
+        }
+        .brands {
+          flex-flow: wrap;
+          li {
+            width: calc(50% - 15px);
+            margin-bottom: 17px;
           }
         }
       }
-    }
-    @media (max-width: 1024px) {
-      padding: 70px 0 80px;
     }
   }
 `

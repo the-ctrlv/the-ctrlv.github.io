@@ -25,7 +25,7 @@ export const StyledRetailPage = styled.div`
             margin: 35px 0 7px;
           }
           &::after {
-            content: none;
+            content: none !important;
           }
         }
       }

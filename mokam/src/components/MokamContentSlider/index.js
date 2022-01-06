@@ -50,22 +50,22 @@ function MokamContentSlider({ english }) {
         <div className="content-item active" onClick={() => handleOnClick(1)}>
           {mobileView ? <img src={mediaSliderImage1} alt="" /> : <PointIcon />}
           <h3>{english ? EN.whyChooseMokam.sliderTitle1 : FR.whyChooseMokam.sliderTitle1}</h3>
-          <p>{english ? EN.whyChooseMokam.sliderTitle1 : FR.whyChooseMokam.sliderSubtitle1}</p>
+          <p>{english ? EN.whyChooseMokam.sliderSubtitle1 : FR.whyChooseMokam.sliderSubtitle1}</p>
         </div>
         <div className={getClassNames('content-item', 1 <= currentSlide && 'active')} onClick={() => handleOnClick(2)}>
           {mobileView ? <img src={mediaSliderImage2} alt="" /> : <PointIcon />}
           <h3>{english ? EN.whyChooseMokam.sliderTitle2 : FR.whyChooseMokam.sliderTitle2}</h3>
-          <p>{english ? EN.whyChooseMokam.sliderTitle2 : FR.whyChooseMokam.sliderSubtitle2}</p>
+          <p>{english ? EN.whyChooseMokam.sliderSubtitle2 : FR.whyChooseMokam.sliderSubtitle2}</p>
         </div>
         <div className={getClassNames('content-item', 2 <= currentSlide && 'active')} onClick={() => handleOnClick(3)}>
           {mobileView ? <img src={mediaSliderImage3} alt="" /> : <PointIcon />}
           <h3>{english ? EN.whyChooseMokam.sliderTitle3 : FR.whyChooseMokam.sliderTitle3}</h3>
-          <p>{english ? EN.whyChooseMokam.sliderTitle3 : FR.whyChooseMokam.sliderSubtitle3}</p>
+          <p>{english ? EN.whyChooseMokam.sliderSubtitle3 : FR.whyChooseMokam.sliderSubtitle3}</p>
         </div>
         <div className={getClassNames('content-item', 3 <= currentSlide && 'active')} onClick={() => handleOnClick(4)}>
           {mobileView ? <img src={mediaSliderImage4} alt="" /> : <PointIcon />}
           <h3>{english ? EN.whyChooseMokam.sliderTitle4 : FR.whyChooseMokam.sliderTitle4}</h3>
-          <p>{english ? EN.whyChooseMokam.sliderTitle4 : FR.whyChooseMokam.sliderSubtitle4}</p>
+          <p>{english ? EN.whyChooseMokam.sliderSubtitle4 : FR.whyChooseMokam.sliderSubtitle4}</p>
         </div>
       </div>
     </StyledContentSlider>

@@ -17,15 +17,12 @@ import brandPic4 from '../../assets/images/brand-pic4.png'
 import brandPic5 from '../../assets/images/brand-pic5.png'
 import brandPic6 from '../../assets/images/brand-pic6.png'
 
-import awardsPic1 from '../../assets/images/awards-pic1.png'
-import awardsPic2 from '../../assets/images/awards-pic2.png'
-import awardsPic3 from '../../assets/images/awards-pic3.png'
-
 import EN from '../../language/en.js'
 import FR from '../../language/fr.js'
 import StartBusiness from '../../components/StartBusiness'
 import MokamForm from '../../components/MokamForm'
 import { StyledMainSection } from '../style'
+import MokamAwards from '../../components/MokamAwards'
 import { StyledManufacturersPage } from './style'
 
 function ManufacturersPage({ english, setLanguage }) {
@@ -110,28 +107,7 @@ function ManufacturersPage({ english, setLanguage }) {
       </section>
       <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} english={english} manufacturersPage />
 
-      <section className="awards">
-        <div className="width-wrapper">
-          <h2>{english ? EN.awards.sectionTitle : FR.awards.sectionTitle}</h2>
-          <ul>
-            <li>
-              <img src={awardsPic1} alt="" />
-              <h4>{english ? EN.awards.title1 : FR.awards.title1}</h4>
-              <p>{english ? EN.awards.text1 : FR.awards.text1}</p>
-            </li>
-            <li>
-              <img src={awardsPic2} alt="" />
-              <h4>{english ? EN.awards.title2 : FR.awards.title2}</h4>
-              <p>{english ? EN.awards.text2 : FR.awards.text2}</p>
-            </li>
-            <li>
-              <img src={awardsPic3} alt="" />
-              <h4>{english ? EN.awards.title3 : FR.awards.title3}</h4>
-              <p>{english ? EN.awards.text3 : FR.awards.text3}</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <MokamAwards english={english} />
 
       <MokamForm english={english} ref={scrolledElToContactUs} manufacturersForm url="manufacturers" />
 

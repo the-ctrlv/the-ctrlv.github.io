@@ -39,6 +39,7 @@ export const StyledStartBusiness = styled.div`
           font-family: 'AvenirNext-Bold';
           color: #448aff;
           font-size: 30px;
+          letter-spacing: 0.5px;
         }
       }
     }
@@ -74,12 +75,14 @@ export const StyledStartBusiness = styled.div`
           margin-bottom: 48px;
           text-align: center;
         }
-        p {
-        }
+
         a,
         button {
           width: 100%;
           justify-content: center;
+          span {
+            font-size: 24px;
+          }
         }
       }
     }

@@ -27,10 +27,11 @@ body {
   }
   .mokam-button {
     display: block;
-    padding: 12px 6px;
+    padding: 17px 13px;
     border-radius: 6px;
     background-color: #448aff;
-    width: 258px;
+    width: 270px;
+    height: 50px;
     text-align: center;
     cursor: pointer;
     font-family: 'Lato-bold';
@@ -39,10 +40,6 @@ body {
     appearance: none;
     border: none;
     color: #fff;
-    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
-    @media (max-width: 1024px) {
-      padding: 17px 12px;
-    }
     &:hover {
       background-color:#0046a0;
     }
@@ -61,5 +58,40 @@ body {
     .slick-track {
       display: flex; 
     }
+  }
+
+  .dots-container {
+    display: flex !important;
+    gap: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    cursor: pointer;
+    li {
+      width: 10px;
+      height: 10px;
+      background-color: #cce2ff;
+      border-radius: 50%;
+      margin: 0px 4px;
+      position: relative;
+      overflow: hidden;
+      button {
+        opacity: 0;
+        position: absolute;
+        cursor: pointer;
+      }
+      &.slick-active {
+        background-color: #0046a0;
+        width: 25px;
+        border-radius: 15px;
+      }
+    }
+    @media (max-width: 1024px) {
+        bottom: -50px;
+    }
+    @media (max-width: 767px) {
+        bottom: -10px;
+    } 
   }
 }

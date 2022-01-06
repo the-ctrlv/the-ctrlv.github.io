@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledFooter = styled.footer`
-  width: 100vw;
+  width: 100%;
   position: relative;
   padding: 75px 0;
   background-color: #f6f6f6;
@@ -20,7 +20,7 @@ export const StyledFooter = styled.footer`
         display: block;
         color: #4d4d4d;
         font-size: 16px;
-        margin-bottom: 9px;
+        margin-bottom: 15px;
         &.contact-links {
           max-width: 250px;
           display: flex;
