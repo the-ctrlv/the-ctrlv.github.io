@@ -51,6 +51,9 @@ export const StyledContentSlider = styled.div`
         color: #4d4d4d;
         line-height: 1.56;
         margin-top: 7px;
+        @media (max-width: 767px) {
+          margin: 7px auto;
+        }
       }
       svg {
         position: absolute;
