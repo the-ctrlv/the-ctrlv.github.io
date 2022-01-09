@@ -20,6 +20,7 @@ export const StyledGetInTouch = styled.div`
         color: #808080;
         font-size: 14px;
         margin-bottom: 18px;
+        position: relative;
         input {
           display: block;
           width: 100%;
@@ -43,6 +44,22 @@ export const StyledGetInTouch = styled.div`
             resize: none;
             appearance: none;
             font-family: 'Lato';
+          }
+        }
+        p {
+          position: absolute;
+          left: 0;
+          bottom: -16px;
+          font-size: 12px;
+        }
+        &.invalid {
+          color: #d74241;
+          input,
+          .css-1s2u09g-control {
+            border-color: #d74241 !important;
+          }
+          p {
+            color: #d74241;
           }
         }
       }

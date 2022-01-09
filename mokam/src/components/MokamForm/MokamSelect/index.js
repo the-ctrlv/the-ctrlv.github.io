@@ -2,7 +2,7 @@ import EN from '../../../shared/language/en.js'
 import FR from '../../../shared/language/fr.js'
 import { StyledMokamSelect } from './style'
 // eslint-disable-next-line react/prop-types
-export default function MokamSelect({ english, designation, setDesignation }) {
+export default function MokamSelect({ english, onChange, props }) {
   const options = [
     { value: EN.mokamSelectOptions.option1, label: english ? EN.mokamSelectOptions.option1 : FR.mokamSelectOptions.option1 },
     { value: EN.mokamSelectOptions.option2, label: english ? EN.mokamSelectOptions.option2 : FR.mokamSelectOptions.option2 },
@@ -34,13 +34,12 @@ export default function MokamSelect({ english, designation, setDesignation }) {
   ]
   return (
     <StyledMokamSelect
+      {...props}
       options={options}
-      defaultValue={designation}
       onChange={(obj) => {
-        setDesignation(obj.value)
+        onChange(obj.value)
       }}
       placeholder={english ? EN.getInTouch.form.selectDesignation : FR.getInTouch.form.selectDesignation}
-      required
     />
   )
 }

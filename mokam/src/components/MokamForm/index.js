@@ -1,32 +1,37 @@
+/* eslint-disable no-undef */
 import propTypes from 'prop-types'
 import { forwardRef, useState } from 'react'
+import { useForm, Controller } from 'react-hook-form'
 import { useFormspark } from '@formspark/use-formspark'
 import EN from '../../shared/language/en.js'
 import FR from '../../shared/language/fr.js'
-import { StyledGetInTouch } from './style'
 import MokamSelect from './MokamSelect'
+import { StyledGetInTouch } from './style'
 
 const MokamForm = forwardRef((props, ref) => {
-  const RETAIL_ID = 'cJWgAjlY'
-  const SUPPLIER_ID = 'YYUC7vxh'
+  const testForm = 'SlWG9IDL'
   const [submit, submitting] = useFormspark({
-    formId: props.manufacturersForm ? SUPPLIER_ID : RETAIL_ID,
+    formId: testForm,
+  })
+  const [message, setMessage] = useState('')
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm({
+    mode: 'onBlur',
   })
 
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [message, setMessage] = useState('')
-  const [company, setCompany] = useState('')
-  const [designation, setDesignation] = useState()
-
-  const onSubmit = async (e) => {
+  const onSubmit = async (data, e) => {
+    alert(JSON.stringify(data))
     e.preventDefault()
     await submit({
-      Name: name,
-      Phone: phone,
-      Company: company,
-      Designation: designation,
-      Message: message,
+      Name: data.name,
+      Phone: data.phone,
+      Company: data.company,
+      Designation: data.designation,
+      Message: data.message,
     })
     window.location.href = `/#/${props.url}/thanks`
   }
@@ -40,36 +45,61 @@ const MokamForm = forwardRef((props, ref) => {
         )}
 
         <h4 className="subtitle">{props.english ? EN.getInTouch.subtitle : FR.getInTouch.subtitle}</h4>
-        <form onSubmit={onSubmit}>
-          <label>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label className={errors?.name && 'invalid'}>
             {props.english ? EN.getInTouch.form.name : FR.getInTouch.form.name}
-            <input name="name" value={name} type="text" placeholder="Enter name" onChange={(e) => setName(e.target.value)} required />
+            <input
+              {...register('name', { required: 'Name is required' })}
+              placeholder={props.english ? EN.getInTouch.form.nameholder : FR.getInTouch.form.nameholder}
+            />
+            {errors?.name && <p>{errors.name.message}</p>}
           </label>
-          <label>
+          <label className={errors?.phone && 'invalid'}>
             {props.english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
             <input
-              name="phone"
-              onChange={(e) => setPhone(e.target.value)}
-              type="text"
+              {...register('phone', {
+                required: 'Phone is required',
+                pattern: {
+                  value: /^[0-9]{4,8}/,
+                  message: 'Phone number must be numbers only',
+                },
+                minLength: {
+                  value: 6,
+                  message: 'Phone number must be minimum 6 digits',
+                },
+              })}
               placeholder={props.english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder}
-              required
             />
+            {errors?.phone && <p>{errors.phone.message}</p>}
           </label>
           {props.manufacturersForm && (
             <>
-              <label>
+              <label className={errors?.company && 'invalid'}>
                 {props.english ? EN.getInTouch.form.company : FR.getInTouch.form.company}
                 <input
-                  name="company"
-                  onChange={(e) => setCompany(e.target.value)}
+                  {...register('company', {
+                    required: 'Company is required',
+                  })}
                   type="text"
                   placeholder={props.english ? EN.getInTouch.form.companyholder : FR.getInTouch.form.companyholder}
-                  required
                 />
+                {errors?.company && <p>{errors.company.message}</p>}
               </label>
-              <label>
+              <label className={errors?.designation && 'invalid'}>
                 {props.english ? EN.getInTouch.form.designation : FR.getInTouch.form.designation}
-                <MokamSelect english={props.english} designation={designation} setDesignation={setDesignation} />
+                <Controller
+                  name="designation"
+                  control={control}
+                  render={({ field }) => (
+                    <MokamSelect
+                      {...field}
+                      {...register('designation', { required: true })}
+                      onChange={field.onChange}
+                      english={props.english}
+                    />
+                  )}
+                />
+                {errors.designation && <p>Designation is required.</p>}
               </label>
             </>
           )}

@@ -90,7 +90,7 @@ export default {
     subtitle: 'Drop us your contact details and we will get back to you',
     form: {
       name: 'Name',
-      nameholder: 'Enter phone number',
+      nameholder: 'Enter name',
       phone: 'Phone number',
       phoneholder: 'Enter phone number',
       company: 'Company',
