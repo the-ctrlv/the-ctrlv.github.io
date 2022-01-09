@@ -31,7 +31,6 @@ export default function MokamSelect({ english, designation, setDesignation }) {
     { value: EN.mokamSelectOptions.option25, label: english ? EN.mokamSelectOptions.option25 : FR.mokamSelectOptions.option25 },
     { value: EN.mokamSelectOptions.option26, label: english ? EN.mokamSelectOptions.option26 : FR.mokamSelectOptions.option26 },
     { value: EN.mokamSelectOptions.option27, label: english ? EN.mokamSelectOptions.option27 : FR.mokamSelectOptions.option27 },
-    { value: EN.mokamSelectOptions.option28, label: english ? EN.mokamSelectOptions.option28 : FR.mokamSelectOptions.option28 },
   ]
   return (
     <StyledMokamSelect
@@ -41,7 +40,6 @@ export default function MokamSelect({ english, designation, setDesignation }) {
         setDesignation(obj.value)
       }}
       placeholder={english ? EN.getInTouch.form.selectDesignation : FR.getInTouch.form.selectDesignation}
-      getOptionValue={(option) => `${option['id']}`}
       required
     />
   )

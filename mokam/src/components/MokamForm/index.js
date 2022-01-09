@@ -22,11 +22,11 @@ const MokamForm = forwardRef((props, ref) => {
   const onSubmit = async (e) => {
     e.preventDefault()
     await submit({
-      'Name:': name,
-      'Phone:': phone,
-      'Company:': company,
-      'Designation:': designation,
-      'Message:': message,
+      Name: name,
+      Phone: phone,
+      Company: company,
+      Designation: designation,
+      Message: message,
     })
     window.location.href = `/#/${props.url}/thanks`
   }
