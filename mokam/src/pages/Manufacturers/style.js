@@ -23,7 +23,7 @@ export const StyledManufacturersPage = styled.div`
             max-width: 140px;
           }
           h4 {
-            font-family: 'AvenirNext-Bold';
+            font-family: 'AvenirNext';
             font-size: 24px;
             margin: 34px 0 8px;
             line-height: 1.42;

@@ -25,11 +25,11 @@ export const StyledMainSection = styled.div`
       font-size: 48px;
       max-width: 600px;
       line-height: 68px;
-      font-family: 'AvenirNext-Bold';
+      font-family: 'AvenirNext';
     }
     h3 {
       margin: 17px 0 24px;
-      font-family: 'Lato-bold';
+      font-family: 'Lato';
       line-height: 32px;
       letter-spacing: -0.2px;
       color: #1a1a1a;

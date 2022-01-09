@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react'
 import mokamLogo from '../../assets/images/mokam-logo.svg'
 import telIcon from '../../assets/images/tel-icon.svg'
 import languageIcon from '../../assets/images/language-icon.svg'
-import { getClassNames, useWindowResize } from '../../functions'
+import { getClassNames, useWindowResize } from '../../shared/functions'
+import EN from '../../shared/language/en.js'
+import FR from '../../shared/language/fr.js'
 import { StyledHeader } from './style'
 
 function Header({ setLanguage, english, isRetailPage, isThanksPage }) {
@@ -29,18 +31,18 @@ function Header({ setLanguage, english, isRetailPage, isThanksPage }) {
           </Link>
           <div className="links">
             <Link to={'/retail'} className={getClassNames(isRetailPage & !isThanksPage && 'active')}>
-              Retail
+              {english ? EN.header.link1 : FR.header.link1}
             </Link>
             <Link to={'/manufacturers'} className={getClassNames(!isRetailPage & !isThanksPage && 'active')}>
-              Manufacturers
+              {english ? EN.header.link2 : FR.header.link2}
             </Link>
           </div>
         </div>
         <div className="right-container">
           <a href="tel:09610066525" className="hotline-tel">
             <img src={telIcon} alt="telephone" />
-            <span>Hotline</span>
-            <p>09610066525</p>
+            <span>{english ? EN.header.telTitle : FR.header.telTitle}</span>
+            <p>{english ? EN.header.telNumber : FR.header.telNumber}</p>
           </a>
           <div className={getClassNames('mobile-menu', open && 'opened')}>
             <div className="mobile-links">
@@ -58,7 +60,7 @@ function Header({ setLanguage, english, isRetailPage, isThanksPage }) {
               }}>
               <img src={languageIcon} alt="" />
               {mobileView && <span className="mob-lang">Language: </span>}
-              <span>{english ? (mobileView ? 'English' : 'En') : mobileView ? 'Fr???' : 'Fr'}</span>
+              <span>{english ? (mobileView ? EN.header.languageMob : EN.header.language) : FR.header.language}</span>
             </div>
           </div>
           {mobileView && (

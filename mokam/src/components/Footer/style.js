@@ -32,7 +32,8 @@ export const StyledFooter = styled.footer`
           }
           &:nth-of-type(2) {
             span {
-              font-family: Lato-Bold;
+              font-family: Lato;
+              font-weight: 700;
               margin-top: 0;
               color: #1890ff;
             }
@@ -88,7 +89,8 @@ export const StyledFooter = styled.footer`
           h3 {
             font-size: 18px;
             color: #4d4d4d;
-            font-family: Lato-Bold;
+            font-family: Lato;
+            font-weight: 700;
           }
           .collapse-wrapper {
             a {

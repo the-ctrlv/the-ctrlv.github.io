@@ -6,9 +6,9 @@ import mediaSliderImage2 from '../../assets/images/media-slider-image2.png'
 import mediaSliderImage3 from '../../assets/images/media-slider-image3.png'
 import mediaSliderImage4 from '../../assets/images/media-slider-image4.png'
 import { ReactComponent as PointIcon } from '../../assets/images/point-icon.svg'
-import { getClassNames, useWindowResize } from '../../functions'
-import EN from '../../language/en.js'
-import FR from '../../language/fr.js'
+import { getClassNames, useWindowResize } from '../../shared/functions'
+import EN from '../../shared/language/en.js'
+import FR from '../../shared/language/fr.js'
 import { StyledContentSlider } from './style'
 
 function MokamContentSlider({ english }) {

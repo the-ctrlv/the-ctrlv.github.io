@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import './common.scss'
+import './shared/common.scss'
 import ManufacturersPage from './pages/Manufacturers'
 import RetailPage from './pages/Retail'
 import ThanksPage from './pages/Thanks'

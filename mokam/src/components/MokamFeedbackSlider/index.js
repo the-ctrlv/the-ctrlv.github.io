@@ -1,6 +1,6 @@
 import propTypes from 'prop-types'
-import EN from '../../language/en.js'
-import FR from '../../language/fr.js'
+import EN from '../../shared/language/en.js'
+import FR from '../../shared/language/fr.js'
 import { StyledMokamFeedbackSlider } from './style'
 
 function MokamFeedbackSlider({ english }) {

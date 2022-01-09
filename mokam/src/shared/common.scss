@@ -1,7 +1,9 @@
 @import './normalize.scss';
+@import './typography.scss';
 
 body {
-  font-family: 'Lato-Regular';
+  font-family: 'Lato';
+  font-weight: 500;
   box-sizing: border-box;
 }
 .width-wrapper {
@@ -34,7 +36,8 @@ body {
     height: 50px;
     text-align: center;
     cursor: pointer;
-    font-family: 'Lato-bold';
+    font-family: 'Lato';
+    font-weight: 700;
     font-size: 16px;
     color: #fff;
     appearance: none;

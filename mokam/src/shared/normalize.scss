@@ -63,9 +63,12 @@ table {
 input, textarea {
   box-sizing: inherit;
   color: #4d4d4d;
+  border: solid 1px #b3b3b3;
+  font-family: 'Lato';
+  font-weight: 500;
   &:focus {
+    border: solid 1px #0046a0 !important;
     outline: none;
-    border: solid 1px #448aff !important;
   }
   &::placeholder {
     color: #b3b3b3;
@@ -81,8 +84,8 @@ input, textarea {
 		src: url($furl) format('woff2');
   }
 }	
-@include font('Lato', normal, 400, './assets/fonts/Lato/Lato-Light.ttf');	
-@include font('Lato-Regular', normal, 500, './assets/fonts/Lato/Lato-Regular.ttf');
-@include font('Lato-Bold', normal, 700, './assets/fonts/Lato/Lato-Bold.ttf');
-@include font('AvenirNext-Bold', normal, 700, './assets/fonts/AvenirNext/AvenirNext-Bold.ttf');
+@include font('Lato', normal, 400, './../assets/fonts/Lato/Lato-Light.ttf');	
+@include font('Lato', normal, 500, './../assets/fonts/Lato/Lato-Regular.ttf');
+@include font('Lato', normal, 700, './../assets/fonts/Lato/Lato-Bold.ttf');
+@include font('AvenirNext', normal, 700, './../assets/fonts/AvenirNext/AvenirNext-Bold.ttf');
 

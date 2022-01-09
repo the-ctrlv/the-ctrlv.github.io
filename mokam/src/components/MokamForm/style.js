@@ -27,7 +27,6 @@ export const StyledGetInTouch = styled.div`
           margin-top: 5px;
           padding: 12px;
           border-radius: 4px;
-          border: solid 1px #b3b3b3;
         }
         &:last-of-type {
           width: 100%;
@@ -43,7 +42,7 @@ export const StyledGetInTouch = styled.div`
             border: solid 1px #b3b3b3;
             resize: none;
             appearance: none;
-            font-family: 'Lato-Regular';
+            font-family: 'Lato';
           }
         }
       }

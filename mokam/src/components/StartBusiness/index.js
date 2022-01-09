@@ -3,8 +3,8 @@ import { forwardRef } from 'react'
 import heroPic from '../../assets/images/hero-pic.jpg'
 import heroPicTablet from '../../assets/images/hero-pic-tablet.jpg'
 import telIcon from '../../assets/images/tel-icon.svg'
-import EN from '../../language/en.js'
-import FR from '../../language/fr.js'
+import EN from '../../shared/language/en.js'
+import FR from '../../shared/language/fr.js'
 import { StyledStartBusiness } from './style'
 
 const StartBusiness = forwardRef((props, ref) => (

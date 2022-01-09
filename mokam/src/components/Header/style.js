@@ -7,6 +7,7 @@ export const StyledHeader = styled.header`
   width: 100%;
   z-index: 1091;
   background-color: #fff;
+  border-bottom: solid 1px #ccc;
   .width-wrapper {
     display: flex;
     justify-content: space-between;
@@ -55,7 +56,8 @@ export const StyledHeader = styled.header`
           color: #4d4d4d;
         }
         p {
-          font-family: 'Lato-Bold';
+          font-family: 'Lato';
+          font-weight: 700;
           color: #1890ff;
         }
       }
@@ -129,7 +131,7 @@ export const StyledHeader = styled.header`
           .mobile-links {
             display: block;
             padding: 23px 15px 0px 15px;
-            font-family: 'Lato-Regular';
+            font-family: 'Lato';
             a {
               display: block;
               margin-bottom: 20px;

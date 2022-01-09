@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import { getClassNames, useWindowResize } from '../../functions'
+import { getClassNames, useWindowResize } from '../../shared/functions'
 import arrow from '../../assets/images/arrow.svg'
 import { StyledAccordion } from './style'
 

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import thanksImg from '../../assets/images/thank-you.png'
-import EN from '../../language/en.js'
-import FR from '../../language/fr.js'
+import EN from '../../shared/language/en.js'
+import FR from '../../shared/language/fr.js'
 import { StyledThanksPage } from './style'
 
 function ThanksPage({ english, setLanguage }) {

@@ -19,7 +19,8 @@ export const StyledMokamFeedbackSlider = styled(Slider)`
       width: 60%;
       p {
         margin-top: 50px;
-        font-family: 'Lato-Bold';
+        font-family: 'Lato';
+        font-weight: 700;
         font-size: 20px;
         letter-spacing: -0.2px;
         color: #1a1a1a;
@@ -70,7 +71,8 @@ export const StyledMokamFeedbackSlider = styled(Slider)`
         width: 100%;
         padding: 0;
         margin-top: 33px;
-        font-family: 'Lato-Bold';
+        font-family: 'Lato';
+        font-weight: 700;
         text-align: center;
         p {
           font-size: 20px;
