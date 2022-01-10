@@ -11,7 +11,7 @@ function MokamFeedbackSlider({ english }) {
     infinite: true,
     buttons: false,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     arrows: false,
   }

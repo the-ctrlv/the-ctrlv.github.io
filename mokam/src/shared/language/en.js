@@ -139,7 +139,7 @@ export default {
     },
   },
 
-  mokamSelectOptions: {
+  values: {
     option1: 'Director of Business Development',
     option2: 'Sales Executive',
     option3: 'Business Development Representative',
@@ -167,5 +167,13 @@ export default {
     option25: 'Procurement Manager',
     option26: 'Purchasing Director',
     option27: 'Sourcing Director',
+    option28: 'Others',
+  },
+  errors: {
+    name: 'Name must be at least 5 characters',
+    phone: 'Invalid phone number',
+    company: 'Company name must be at least 5 characters',
+    designation: 'Select a designation from dropdown',
+    comment: 'Comment must be at least 20 characters',
   },
 }

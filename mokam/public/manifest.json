@@ -1,8 +1,8 @@
 {
   "short_name": "Mokam App",
-  "name": "Mokam SPA!",
-  "start_url": ".",
+  "name": "Mokam!",
+  "start_url": "/#/retail",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#fff",
   "background_color": "#ffffff"
 }

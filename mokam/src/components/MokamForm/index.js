@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import propTypes from 'prop-types'
-import { forwardRef, useState } from 'react'
+import { forwardRef } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { useFormspark } from '@formspark/use-formspark'
 import EN from '../../shared/language/en.js'
@@ -9,11 +9,10 @@ import MokamSelect from './MokamSelect'
 import { StyledGetInTouch } from './style'
 
 const MokamForm = forwardRef((props, ref) => {
-  const testForm = 'SlWG9IDL'
+  const testForm = 'h5Tzo1lt'
   const [submit, submitting] = useFormspark({
     formId: testForm,
   })
-  const [message, setMessage] = useState('')
   const {
     register,
     handleSubmit,
@@ -22,16 +21,22 @@ const MokamForm = forwardRef((props, ref) => {
   } = useForm({
     mode: 'onBlur',
   })
+  const mokamErrors = {
+    name: props.english ? EN.errors.name : FR.errors.name,
+    phone: props.english ? EN.errors.phone : FR.errors.phone,
+    company: props.english ? EN.errors.company : FR.errors.company,
+    designation: props.english ? EN.errors.designation : FR.errors.designation,
+    comment: props.english ? EN.errors.comment : FR.errors.comment,
+  }
 
   const onSubmit = async (data, e) => {
-    alert(JSON.stringify(data))
     e.preventDefault()
     await submit({
       Name: data.name,
       Phone: data.phone,
       Company: data.company,
       Designation: data.designation,
-      Message: data.message,
+      Message: data.comment,
     })
     window.location.href = `/#/${props.url}/thanks`
   }
@@ -49,7 +54,13 @@ const MokamForm = forwardRef((props, ref) => {
           <label className={errors?.name && 'invalid'}>
             {props.english ? EN.getInTouch.form.name : FR.getInTouch.form.name}
             <input
-              {...register('name', { required: 'Name is required' })}
+              {...register('name', {
+                required: mokamErrors.name,
+                minLength: {
+                  value: 5,
+                  message: mokamErrors.name,
+                },
+              })}
               placeholder={props.english ? EN.getInTouch.form.nameholder : FR.getInTouch.form.nameholder}
             />
             {errors?.name && <p>{errors.name.message}</p>}
@@ -58,14 +69,10 @@ const MokamForm = forwardRef((props, ref) => {
             {props.english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
             <input
               {...register('phone', {
-                required: 'Phone is required',
+                required: mokamErrors.phone,
                 pattern: {
                   value: /^[0-9]{4,8}/,
-                  message: 'Phone number must be numbers only',
-                },
-                minLength: {
-                  value: 6,
-                  message: 'Phone number must be minimum 6 digits',
+                  message: mokamErrors.phone,
                 },
               })}
               placeholder={props.english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder}
@@ -78,7 +85,11 @@ const MokamForm = forwardRef((props, ref) => {
                 {props.english ? EN.getInTouch.form.company : FR.getInTouch.form.company}
                 <input
                   {...register('company', {
-                    required: 'Company is required',
+                    required: mokamErrors.company,
+                    minLength: {
+                      value: 5,
+                      message: mokamErrors.company,
+                    },
                   })}
                   type="text"
                   placeholder={props.english ? EN.getInTouch.form.companyholder : FR.getInTouch.form.companyholder}
@@ -93,25 +104,29 @@ const MokamForm = forwardRef((props, ref) => {
                   render={({ field }) => (
                     <MokamSelect
                       {...field}
-                      {...register('designation', { required: true })}
+                      {...register('designation', { required: props.english ? EN.errors.designation : FR.errors.designation })}
                       onChange={field.onChange}
                       english={props.english}
                     />
                   )}
                 />
-                {errors.designation && <p>Designation is required.</p>}
+                {errors?.designation && <p>{errors.designation.message}</p>}
               </label>
             </>
           )}
           <label>
             {props.english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
             <textarea
-              name="text-message"
+              {...register('comment', {
+                required: mokamErrors.comment,
+                minLength: {
+                  value: 20,
+                  message: mokamErrors.comment,
+                },
+              })}
               id=""
               cols="30"
               rows="10"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
               placeholder={props.english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
           </label>
           <div className="button-wrapper">

@@ -29,6 +29,11 @@ export const StyledMokamSelect = styled(Select)`
       overflow-y: scroll;
       div {
         padding: 13px;
+        color: #4d4d4d;
+        &.css-9gakcf-option {
+          background-color: #448aff;
+          color: #fff;
+        }
       }
     }
   }
