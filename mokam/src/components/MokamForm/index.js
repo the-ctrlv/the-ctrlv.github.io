@@ -30,6 +30,7 @@ const MokamForm = forwardRef((props, ref) => {
   }
 
   const onSubmit = async (data, e) => {
+    alert(JSON.stringify(data))
     e.preventDefault()
     await submit({
       Name: data.name,
@@ -38,8 +39,10 @@ const MokamForm = forwardRef((props, ref) => {
       Designation: data.designation,
       Message: data.comment,
     })
+
     window.location.href = `/#/${props.url}/thanks`
   }
+  console.log(errors)
   return (
     <StyledGetInTouch className="get-in-touch" ref={ref}>
       <div className="width-wrapper">
@@ -114,20 +117,28 @@ const MokamForm = forwardRef((props, ref) => {
               </label>
             </>
           )}
-          <label>
+          <label className={errors?.comment && 'invalid'}>
             {props.english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
-            <textarea
-              {...register('comment', {
-                required: mokamErrors.comment,
-                minLength: {
-                  value: 20,
-                  message: mokamErrors.comment,
-                },
-              })}
-              id=""
-              cols="30"
-              rows="10"
-              placeholder={props.english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}></textarea>
+            <Controller
+              name="designation"
+              control={control}
+              render={({ field }) => (
+                <textarea
+                  cols="30"
+                  rows="10"
+                  placeholder={props.english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}
+                  {...field}
+                  {...register('comment', {
+                    required: mokamErrors.comment,
+                    minLength: {
+                      value: 20,
+                      message: mokamErrors.comment,
+                    },
+                  })}
+                />
+              )}
+            />
+            {errors?.comment && <p>{errors.comment.message}</p>}
           </label>
           <div className="button-wrapper">
             <button className="mokam-button" type="submit" disabled={submitting}>
