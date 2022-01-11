@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e38722c6.css",
-    "main.js": "/static/js/main.525badf7.js",
+    "main.css": "/static/css/main.f714731c.css",
+    "main.js": "/static/js/main.ff6546dd.js",
     "static/js/787.72cb1e49.chunk.js": "/static/js/787.72cb1e49.chunk.js",
     "static/media/main-pic.jpg": "/static/media/main-pic.155d09a251f0589081f7.jpg",
     "static/media/main-pic2.jpg": "/static/media/main-pic2.f7a8dacfe0777f092d11.jpg",
+    "static/media/imageLink3.png": "/static/media/imageLink3.df2e1a4280ecdce24ce9.png",
     "static/media/hero-pic.jpg": "/static/media/hero-pic.02f74e3bf3beb1279042.jpg",
+    "static/media/imageLink4.png": "/static/media/imageLink4.054f834ea7da2f325155.png",
+    "static/media/imageLink1.png": "/static/media/imageLink1.4c0893226095c9e6978b.png",
+    "static/media/imageLink2.png": "/static/media/imageLink2.9de70495d54f45fd8d34.png",
     "static/media/main-pic-tablet.jpg": "/static/media/main-pic-tablet.91710c59d3cfc62d4187.jpg",
     "static/media/hero-pic-tablet.jpg": "/static/media/hero-pic-tablet.bb43ecbb2bc4bd8ab2d2.jpg",
     "static/media/AvenirNext-Bold.ttf": "/static/media/AvenirNext-Bold.ae3b1e683a0c6a170a24.ttf",
@@ -24,7 +28,8 @@
     "static/media/reason-pic3.png": "/static/media/reason-pic3.0efdb7517a10b253fa87.png",
     "static/media/media-slider-image1.png": "/static/media/media-slider-image1.5e9518b9bad484cdff63.png",
     "static/media/tel-icon.svg": "/static/media/tel-icon.83a24835aa75ba0d330fbe8b7d72e712.svg",
-    "static/media/mokam-logo.svg": "/static/media/mokam-logo.9a1bb4fd36a6df0f0975cfde30a18a0d.svg",
+    "static/media/mokam-logo-translated.svg": "/static/media/mokam-logo-translated.5e591bb6be59788708bba38432585191.svg",
+    "static/media/mokam-logo.svg": "/static/media/mokam-logo.6802f6aa811abf97def0e0d7b711ef64.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.8ed780c4bdd0b03c9cbd54ae06b4e0c0.svg",
     "static/media/language-icon.svg": "/static/media/language-icon.8156b17b50e3ca9fc04784a514dbf13b.svg",
     "static/media/facebook.svg": "/static/media/facebook.f38eb708f7f1c823dd9d3362f851cb7d.svg",
@@ -32,14 +37,15 @@
     "static/media/youtube.svg": "/static/media/youtube.5b97476bb6f14ffba7ed1ad408932733.svg",
     "index.html": "/index.html",
     "static/media/mail-icon.svg": "/static/media/mail-icon.ddcf15ce21b50c2b7b5300b43c9d1b64.svg",
+    "static/media/play-button.svg": "/static/media/play-button.650f1b41b034210b6d906aeff5cbbaf0.svg",
     "static/media/point-icon.svg": "/static/media/point-icon.bba4a5cb44baf38a897eb5935808ba1e.svg",
     "static/media/arrow.svg": "/static/media/arrow.5d891840ef5960012bb2996eec4862df.svg",
-    "main.e38722c6.css.map": "/static/css/main.e38722c6.css.map",
-    "main.525badf7.js.map": "/static/js/main.525badf7.js.map",
+    "main.f714731c.css.map": "/static/css/main.f714731c.css.map",
+    "main.ff6546dd.js.map": "/static/js/main.ff6546dd.js.map",
     "787.72cb1e49.chunk.js.map": "/static/js/787.72cb1e49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e38722c6.css",
-    "static/js/main.525badf7.js"
+    "static/css/main.f714731c.css",
+    "static/js/main.ff6546dd.js"
   ]
 }

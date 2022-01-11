@@ -1,11 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   header: {
-    link1: 'ম্যানুফ্যাকচারার',
+    link1: 'রিটেল',
     link2: 'ম্যানুফ্যাকচারার',
     telTitle: 'হটলাইন',
     telNumber: '০৯১০০৬৬৫২৫',
-    language: 'বাংলা',
+    language: 'BN',
   },
   main: {
     title: 'রিটেইল ব্যবসার পরিপূর্ণ সমাধান',
@@ -38,7 +38,7 @@ export default {
     text3: 'বাংলাদেশ রিটেইল অ্যাওয়ার্ড ২০২১-এ বিশেষ সম্মাননা',
   },
   whyChooseMokam: {
-    title: 'আমরা আপনার ব্যবসায় কি সুবিধা দিতে পারি?',
+    title: 'আমরা আপনার ব্যবসায় কি সুবিধা দিতে পারি',
 
     sliderTitle1: 'এক জায়গায় সব পণ্য',
 

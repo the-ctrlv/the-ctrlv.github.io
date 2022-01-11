@@ -1,6 +1,10 @@
 import propTypes from 'prop-types'
 import EN from '../../shared/language/en.js'
 import FR from '../../shared/language/fr.js'
+import imageLink1 from '../../assets/images/imageLink1.png'
+import imageLink2 from '../../assets/images/imageLink2.png'
+import imageLink3 from '../../assets/images/imageLink3.png'
+import imageLink4 from '../../assets/images/imageLink4.png'
 import { StyledMokamFeedbackSlider } from './style'
 
 function MokamFeedbackSlider({ english }) {
@@ -20,7 +24,9 @@ function MokamFeedbackSlider({ english }) {
     <StyledMokamFeedbackSlider {...settings}>
       <div className="feedback-post">
         <div className="media-container">
-          <iframe title="Retailer Shajal" width="100%" height="100%" frameBorder="{0}" src="https://www.youtube.com/embed/4DHXVh_-X9g" />
+          <a href="https://youtu.be/4DHXVh_-X9g" target="_blank" rel="noreferrer">
+            <img src={imageLink1} alt="" />
+          </a>
         </div>
         <div className="text-container">
           <p>{english ? EN.feedback.post1.text : FR.feedback.post1.text}</p>
@@ -30,7 +36,9 @@ function MokamFeedbackSlider({ english }) {
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <iframe title="Retailer Pankaj" width="100%" height="100%" frameBorder="{0}" src="https://www.youtube.com/embed/URPzlmwJ0vc" />
+          <a href="https://youtu.be/URPzlmwJ0vc" target="_blank" rel="noreferrer">
+            <img src={imageLink2} alt="" />
+          </a>
         </div>
         <div className="text-container">
           <p>{english ? EN.feedback.post2.text : FR.feedback.post2.text}</p>
@@ -40,13 +48,9 @@ function MokamFeedbackSlider({ english }) {
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <iframe
-            title="Retailer Jalaluddin"
-            width="100%"
-            height="100%"
-            frameBorder="{0}"
-            src="https://www.youtube.com/embed/orItI-N0_S0"
-          />
+          <a href="https://youtu.be/orItI-N0_S0" target="_blank" rel="noreferrer">
+            <img src={imageLink3} alt="" />
+          </a>
         </div>
         <div className="text-container">
           <p>{english ? EN.feedback.post3.text : FR.feedback.post3.text}</p>
@@ -56,7 +60,9 @@ function MokamFeedbackSlider({ english }) {
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <iframe title="Retailer Khokon" width="100%" height="100%" frameBorder="{0}" src="https://www.youtube.com/embed/yAkYyaR-AeU" />
+          <a href="https://youtu.be/yAkYyaR-AeU" target="_blank" rel="noreferrer">
+            <img src={imageLink4} alt="" />
+          </a>
         </div>
         <div className="text-container">
           <p>{english ? EN.feedback.post4.text : FR.feedback.post4.text}</p>

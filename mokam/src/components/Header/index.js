@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { useEffect, useState } from 'react'
 import mokamLogo from '../../assets/images/mokam-logo.svg'
+import mokamLogoTranslated from '../../assets/images/mokam-logo-translated.svg'
 import telIcon from '../../assets/images/tel-icon.svg'
 import languageIcon from '../../assets/images/language-icon.svg'
 import { getClassNames, useWindowResize } from '../../shared/functions'
@@ -27,7 +28,7 @@ function Header({ setLanguage, english, isRetailPage, isThanksPage }) {
       <div className="width-wrapper">
         <div className="left-container">
           <Link to={'/retail'} className="logo">
-            <img src={mokamLogo} alt="" />
+            <img src={english ? mokamLogo : mokamLogoTranslated} alt="" />
           </Link>
           <div className="links">
             <Link to={'/retail'} className={getClassNames(isRetailPage & !isThanksPage && 'active')}>

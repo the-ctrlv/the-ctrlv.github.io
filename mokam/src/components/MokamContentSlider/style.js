@@ -65,8 +65,8 @@ export const StyledContentSlider = styled.div`
         &::after {
           background-color: #0046a0;
         }
-        h2 {
-          color: #448aff;
+        h3 {
+          color: #0046a0;
         }
         svg {
           circle {
@@ -75,12 +75,6 @@ export const StyledContentSlider = styled.div`
               fill: #0046a0;
             }
           }
-        }
-      }
-      &:hover {
-        h3,
-        p {
-          color: #0046a0;
         }
       }
     }

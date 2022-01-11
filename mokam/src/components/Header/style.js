@@ -21,6 +21,9 @@ export const StyledHeader = styled.header`
         margin-right: 45px;
         display: flex;
         align-items: center;
+        img {
+          transform: scale(1.2);
+        }
       }
       .links {
         display: flex;
@@ -103,7 +106,7 @@ export const StyledHeader = styled.header`
       .left-container {
         .logo {
           img {
-            max-height: 38px;
+            transform: none;
           }
         }
         .links {

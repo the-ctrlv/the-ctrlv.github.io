@@ -23,6 +23,7 @@ export const StyledRetailPage = styled.div`
           }
           h3 {
             margin: 35px 0 7px;
+            line-height: 27px;
           }
           &::after {
             content: none !important;
@@ -64,7 +65,7 @@ export const StyledRetailPage = styled.div`
       color: #808080;
     }
     @media (max-width: 767px) {
-      padding: 55px 0 100px;
+      padding: 55px 0 64px;
       .subtitle {
         display: none;
       }
