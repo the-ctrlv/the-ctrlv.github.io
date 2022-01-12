@@ -42,7 +42,6 @@ const MokamForm = forwardRef((props, ref) => {
 
     window.location.href = `/#/${props.url}/thanks`
   }
-  console.log(errors)
   return (
     <StyledGetInTouch className="get-in-touch" ref={ref}>
       <div className="width-wrapper">

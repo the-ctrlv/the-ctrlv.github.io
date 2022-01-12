@@ -79,7 +79,7 @@ function RetailPage({ english, setLanguage }) {
             <h2>{english ? EN.getTheApp.title : FR.getTheApp.title}</h2>
             <p>{english ? EN.getTheApp.subtitle : FR.getTheApp.subtitle}</p>
           </div>
-          <a href="/some">
+          <a href="https://play.google.com/store/apps/details?id=com.mokam.app&hl=en_IN&gl=US">
             <img src={downloadAppLogo} alt="" />
           </a>
         </div>

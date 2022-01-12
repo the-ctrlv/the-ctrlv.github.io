@@ -45,7 +45,14 @@ body {
     border: none;
     color: #fff;
     &:hover {
-      background-color:#0046a0;
+      background-color: #72a7fe;
+    }
+    &:active {
+      background-color: #356ecc;
+      
+    }
+    &.disabled {
+      background-color: #8cc8ff;
     }
   }
   .subtitle {
