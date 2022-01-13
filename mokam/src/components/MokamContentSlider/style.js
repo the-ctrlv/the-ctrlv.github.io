@@ -49,10 +49,11 @@ export const StyledContentSlider = styled.div`
         font-size: 18px;
         max-width: 440px;
         color: #4d4d4d;
-        line-height: 1.56;
+        line-height: 28px;
         margin-top: 7px;
         @media (max-width: 767px) {
           margin: 7px auto;
+          max-width: 320px;
         }
       }
       svg {
@@ -66,7 +67,7 @@ export const StyledContentSlider = styled.div`
           background-color: #0046a0;
         }
         h3 {
-          color: #0046a0;
+          color: #448aff;
         }
         svg {
           circle {

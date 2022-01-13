@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d2ddb585.css",
-    "main.js": "/static/js/main.d5df028b.js",
+    "main.js": "/static/js/main.1dd58e07.js",
     "static/js/787.72cb1e49.chunk.js": "/static/js/787.72cb1e49.chunk.js",
     "static/media/main-pic.jpg": "/static/media/main-pic.155d09a251f0589081f7.jpg",
     "static/media/main-pic2.jpg": "/static/media/main-pic2.f7a8dacfe0777f092d11.jpg",
@@ -21,12 +21,13 @@
     "static/media/main-pic-mobile.jpg": "/static/media/main-pic-mobile.6cefd0742015a02c5437.jpg",
     "static/media/awards-pic3.png": "/static/media/awards-pic3.7c1f831af3c875ae5bbb.png",
     "static/media/main-pic2-mobile.jpg": "/static/media/main-pic2-mobile.31fbe00136ec092811ff.jpg",
+    "static/media/media-slider-image3.png": "/static/media/media-slider-image3.e9b8bf2bfb432d429566.png",
     "static/media/awards-pic1.png": "/static/media/awards-pic1.c77597849eaa395b78e2.png",
+    "static/media/media-slider-image2.png": "/static/media/media-slider-image2.cd7305e131e19175d6ba.png",
     "static/media/thank-you.png": "/static/media/thank-you.5c0a0466ab98cb3b2086.png",
-    "static/media/media-slider-image3.png": "/static/media/media-slider-image3.2b1eb21f9e36aebdfbb6.png",
-    "static/media/media-slider-image2.png": "/static/media/media-slider-image2.d1fd98fb3664311a1f2d.png",
+    "static/media/media-slider-image1.png": "/static/media/media-slider-image1.d704e95af864fb1eea19.png",
     "static/media/reason-pic3.png": "/static/media/reason-pic3.0efdb7517a10b253fa87.png",
-    "static/media/media-slider-image1.png": "/static/media/media-slider-image1.5e9518b9bad484cdff63.png",
+    "static/media/media-slider-image4.png": "/static/media/media-slider-image4.8ea9f8087f74889a7362.png",
     "static/media/tel-icon.svg": "/static/media/tel-icon.83a24835aa75ba0d330fbe8b7d72e712.svg",
     "static/media/mokam-logo-translated.svg": "/static/media/mokam-logo-translated.5e591bb6be59788708bba38432585191.svg",
     "static/media/mokam-logo.svg": "/static/media/mokam-logo.6802f6aa811abf97def0e0d7b711ef64.svg",
@@ -41,11 +42,11 @@
     "static/media/point-icon.svg": "/static/media/point-icon.bba4a5cb44baf38a897eb5935808ba1e.svg",
     "static/media/arrow.svg": "/static/media/arrow.5d891840ef5960012bb2996eec4862df.svg",
     "main.d2ddb585.css.map": "/static/css/main.d2ddb585.css.map",
-    "main.d5df028b.js.map": "/static/js/main.d5df028b.js.map",
+    "main.1dd58e07.js.map": "/static/js/main.1dd58e07.js.map",
     "787.72cb1e49.chunk.js.map": "/static/js/787.72cb1e49.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2ddb585.css",
-    "static/js/main.d5df028b.js"
+    "static/js/main.1dd58e07.js"
   ]
 }

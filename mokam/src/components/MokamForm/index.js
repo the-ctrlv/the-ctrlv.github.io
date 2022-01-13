@@ -30,7 +30,6 @@ const MokamForm = forwardRef((props, ref) => {
   }
 
   const onSubmit = async (data, e) => {
-    alert(JSON.stringify(data))
     e.preventDefault()
     await submit({
       Name: data.name,
@@ -119,7 +118,7 @@ const MokamForm = forwardRef((props, ref) => {
           <label className={errors?.comment && 'invalid'}>
             {props.english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
             <Controller
-              name="designation"
+              name="comment"
               control={control}
               render={({ field }) => (
                 <textarea
@@ -141,13 +140,7 @@ const MokamForm = forwardRef((props, ref) => {
           </label>
           <div className="button-wrapper">
             <button className="mokam-button" type="submit" disabled={submitting}>
-              {props.manufacturersForm
-                ? props.english
-                  ? EN.getInTouch.form.button2
-                  : FR.getInTouch.form.button
-                : props.english
-                ? EN.getInTouch.form.button
-                : FR.getInTouch.form.button}
+              {props.english ? EN.getInTouch.form.button : FR.getInTouch.form.button}
             </button>
           </div>
         </form>

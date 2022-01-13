@@ -24,8 +24,8 @@ function MokamFeedbackSlider({ english }) {
     <StyledMokamFeedbackSlider {...settings}>
       <div className="feedback-post">
         <div className="media-container">
-          <a href="https://youtu.be/4DHXVh_-X9g" target="_blank" rel="noreferrer">
-            <img src={imageLink1} alt="" />
+          <a href="https://youtu.be/URPzlmwJ0vc" target="_blank" rel="noreferrer">
+            <img src={imageLink2} alt="" />
           </a>
         </div>
         <div className="text-container">
@@ -36,8 +36,8 @@ function MokamFeedbackSlider({ english }) {
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <a href="https://youtu.be/URPzlmwJ0vc" target="_blank" rel="noreferrer">
-            <img src={imageLink2} alt="" />
+          <a href="https://youtu.be/orItI-N0_S0" target="_blank" rel="noreferrer">
+            <img src={imageLink3} alt="" />
           </a>
         </div>
         <div className="text-container">
@@ -48,8 +48,8 @@ function MokamFeedbackSlider({ english }) {
       </div>
       <div className="feedback-post">
         <div className="media-container">
-          <a href="https://youtu.be/orItI-N0_S0" target="_blank" rel="noreferrer">
-            <img src={imageLink3} alt="" />
+          <a href="https://youtu.be/4DHXVh_-X9g" target="_blank" rel="noreferrer">
+            <img src={imageLink1} alt="" />
           </a>
         </div>
         <div className="text-container">

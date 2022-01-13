@@ -89,6 +89,9 @@ export const StyledGetInTouch = styled.div`
         a {
           width: 100%;
         }
+        textarea {
+          height: 160px;
+        }
       }
     }
   }

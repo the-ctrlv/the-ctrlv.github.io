@@ -33,7 +33,7 @@ export const StyledManufacturersPage = styled.div`
           }
           p {
             text-align: center;
-            font-family: 'Lato-Regular';
+            font-family: 'Lato';
             font-size: 18px;
             line-height: 1.56;
             color: #4d4d4d;
