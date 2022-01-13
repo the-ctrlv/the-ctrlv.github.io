@@ -37,6 +37,7 @@ export const StyledStartBusiness = styled.div`
         }
         span {
           font-family: 'AvenirNext';
+          font-weight: 700;
           color: #448aff;
           font-size: 30px;
           letter-spacing: 0.5px;

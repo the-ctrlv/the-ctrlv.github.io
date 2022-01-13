@@ -26,6 +26,7 @@ export const StyledMainSection = styled.div`
       max-width: 600px;
       line-height: 68px;
       font-family: 'AvenirNext';
+      font-weight: 700;
     }
     h3 {
       margin: 17px 0 24px;

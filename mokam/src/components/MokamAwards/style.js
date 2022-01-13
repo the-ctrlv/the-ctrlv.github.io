@@ -32,6 +32,7 @@ export const StyledAwards = styled.div`
         h4 {
           margin: 23px 0 7px;
           font-family: 'AvenirNext';
+          font-weight: 700;
           font-size: 20px;
           line-height: 1.6;
           letter-spacing: 0.5px;

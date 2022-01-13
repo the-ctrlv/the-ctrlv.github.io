@@ -51,6 +51,7 @@ export const StyledMokamFeedbackSlider = styled(Slider)`
       }
       h4 {
         font-family: 'AvenirNext';
+        font-weight: 700;
         letter-spacing: 0.5px;
         color: #000;
       }

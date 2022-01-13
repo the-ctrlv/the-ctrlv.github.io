@@ -44,6 +44,7 @@ export const StyledContentSlider = styled.div`
         letter-spacing: 0.5px;
         color: #000;
         font-family: 'AvenirNext';
+        font-weight: 700;
       }
       p {
         font-size: 18px;
