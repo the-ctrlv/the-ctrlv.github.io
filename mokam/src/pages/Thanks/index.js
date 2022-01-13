@@ -1,32 +1,32 @@
-import { PropTypes } from 'prop-types'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { PropTypes } from 'prop-types'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import thanksImg from '../../assets/images/thank-you.png'
-import EN from '../../shared/language/en.js'
-import FR from '../../shared/language/fr.js'
 import { StyledThanksPage } from './style'
 
-function ThanksPage({ english, setLanguage }) {
+function ThanksPage({ currLang, setCurrLang }) {
+  const { t } = useTranslation()
   return (
     <StyledThanksPage>
-      <Header english={english} setLanguage={setLanguage} isThanksPage />
+      <Header isThanksPage currLang={currLang} setCurrLang={setCurrLang} />
       <section className="thanks">
         <div className="width-wrapper">
           <img src={thanksImg} alt="thank you" />
-          <h2>{english ? EN.thanks.title : FR.thanks.title}</h2>
-          <h4 className="subtitle">{english ? EN.thanks.subtitle : FR.thanks.subtitle}</h4>
+          <h2>{t('thanks.title')}</h2>
+          <h4 className="subtitle">{t('thanks.subtitle')}</h4>
           <Link to={'/retail'} className="mokam-button">
-            {english ? EN.thanks.button : FR.thanks.button}
+            {t('thanks.button')}
           </Link>
         </div>
       </section>
-      <Footer english={english} setLanguage={setLanguage} />
+      <Footer />
     </StyledThanksPage>
   )
 }
 ThanksPage.propTypes = {
-  english: PropTypes.bool,
-  setLanguage: PropTypes.func,
+  currLang: PropTypes.string,
+  setCurrLang: PropTypes.func,
 }
 export default ThanksPage

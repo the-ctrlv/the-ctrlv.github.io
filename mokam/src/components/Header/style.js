@@ -34,6 +34,8 @@ export const StyledHeader = styled.header`
           padding: 0 20px;
           position: relative;
           &.active {
+            color: #1890ff;
+            font-weight: 700;
             &::after {
               content: '';
               display: block;

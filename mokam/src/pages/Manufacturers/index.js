@@ -1,5 +1,6 @@
-import { PropTypes } from 'prop-types'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
+import { PropTypes } from 'prop-types'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import mainPic2 from '../../assets/images/main-pic2.jpg'
@@ -17,17 +18,16 @@ import brandPic4 from '../../assets/images/brand-pic4.png'
 import brandPic5 from '../../assets/images/brand-pic5.png'
 import brandPic6 from '../../assets/images/brand-pic6.png'
 
-import EN from '../../shared/language/en.js'
-import FR from '../../shared/language/fr.js'
 import StartBusiness from '../../components/StartBusiness'
 import MokamForm from '../../components/MokamForm'
 import { StyledMainSection } from '../style'
 import MokamAwards from '../../components/MokamAwards'
 import { StyledManufacturersPage } from './style'
 
-function ManufacturersPage({ english, setLanguage }) {
+function ManufacturersPage({ currLang, setCurrLang }) {
   const scrolledElToStartBusiness = useRef()
   const scrolledElToContactUs = useRef()
+  const { t } = useTranslation()
   const scrollToContact = (evt) => {
     evt.preventDefault()
     const y = scrolledElToContactUs.current.getBoundingClientRect().top + window.pageYOffset - 140
@@ -35,7 +35,7 @@ function ManufacturersPage({ english, setLanguage }) {
   }
   return (
     <StyledManufacturersPage>
-      <Header english={english} setLanguage={setLanguage} />
+      <Header currLang={currLang} setCurrLang={setCurrLang} />
 
       <StyledMainSection>
         <picture>
@@ -46,8 +46,9 @@ function ManufacturersPage({ english, setLanguage }) {
 
         <div className="width-wrapper">
           <div className="content-wrapper">
-            <h1>{english ? EN.main2.title : FR.main2.title}</h1>
-            <h3>{english ? EN.main2.subtitle : FR.main2.subtitle}</h3>
+            <h1>{t('main2.title')}</h1>
+            <br />
+            <br />
             <a
               href="#startBusiness"
               onClick={(evt) => {
@@ -56,7 +57,7 @@ function ManufacturersPage({ english, setLanguage }) {
                 window.scrollTo({ top: y, behavior: 'smooth' })
               }}
               className="mokam-button">
-              {english ? EN.main2.button : FR.main2.button}
+              {t('main2.button')}
             </a>
           </div>
         </div>
@@ -64,25 +65,25 @@ function ManufacturersPage({ english, setLanguage }) {
 
       <section className="help-business">
         <div className="width-wrapper">
-          <h2>{english ? EN.helpBusiness.title : FR.helpBusiness.title}</h2>
+          <h2>{t('helpBusiness.title')}</h2>
           <ul className="reasons">
             <li>
               <img src={reasonPic1} alt="" />
-              <h4>{english ? EN.helpBusiness.reasons.title1 : FR.helpBusiness.reasons.title1}</h4>
-              <p>{english ? EN.helpBusiness.reasons.text1 : FR.helpBusiness.reasons.text1}</p>
+              <h4>{t('helpBusiness.reasons.title1')}</h4>
+              <p>{t('helpBusiness.reasons.text1')}</p>
             </li>
             <li>
               <img src={reasonPic2} alt="" />
-              <h4>{english ? EN.helpBusiness.reasons.title2 : FR.helpBusiness.reasons.title2}</h4>
-              <p>{english ? EN.helpBusiness.reasons.text2 : FR.helpBusiness.reasons.text2}</p>
+              <h4>{t('helpBusiness.reasons.title2')}</h4>
+              <p>{t('helpBusiness.reasons.text2')}</p>
             </li>
             <li>
               <img src={reasonPic3} alt="" />
-              <h4>{english ? EN.helpBusiness.reasons.title3 : FR.helpBusiness.reasons.title3}</h4>
-              <p>{english ? EN.helpBusiness.reasons.text3 : FR.helpBusiness.reasons.text3}</p>
+              <h4>{t('helpBusiness.reasons.title3')}</h4>
+              <p>{t('helpBusiness.reasons.text3')}</p>
             </li>
           </ul>
-          <h2>{english ? EN.helpBusiness.bransTitle : FR.helpBusiness.bransTitle}</h2>
+          <h2>{t('helpBusiness.bransTitle')}</h2>
           <ul className="brands">
             <li>
               <img src={brandPic1} alt="" />
@@ -105,18 +106,18 @@ function ManufacturersPage({ english, setLanguage }) {
           </ul>
         </div>
       </section>
-      <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} english={english} manufacturersPage />
+      <StartBusiness scrollToContact={scrollToContact} manufacturersPage />
 
-      <MokamAwards english={english} />
+      <MokamAwards />
 
-      <MokamForm english={english} ref={scrolledElToContactUs} manufacturersForm url="manufacturers" />
+      <MokamForm ref={scrolledElToContactUs} manufacturersForm currLang={currLang} url="manufacturers" />
 
-      <Footer english={english} setLanguage={setLanguage} />
+      <Footer />
     </StyledManufacturersPage>
   )
 }
 ManufacturersPage.propTypes = {
-  english: PropTypes.bool,
-  setLanguage: PropTypes.func,
+  currLang: PropTypes.string,
+  setCurrLang: PropTypes.func,
 }
 export default ManufacturersPage

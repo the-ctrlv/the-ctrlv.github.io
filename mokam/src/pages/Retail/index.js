@@ -1,5 +1,6 @@
-import { PropTypes } from 'prop-types'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
+import { PropTypes } from 'prop-types'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import mainPic from '../../assets/images/main-pic.jpg'
@@ -10,15 +11,14 @@ import MokamContentSlider from '../../components/MokamContentSlider'
 import MokamForm from '../../components/MokamForm'
 import downloadAppLogo from '../../assets/images/download-logo.png'
 import MokamFeedbackSlider from '../../components/MokamFeedbackSlider'
-import EN from '../../shared/language/en.js'
-import FR from '../../shared/language/fr.js'
 import StartBusiness from '../../components/StartBusiness'
 import { StyledMainSection } from '../style'
 import { StyledRetailPage } from './style'
 
-function RetailPage({ english, setLanguage }) {
+function RetailPage({ currLang, setCurrLang }) {
   const scrolledElToStartBusiness = useRef()
   const scrolledElToContactUs = useRef()
+  const { t } = useTranslation()
   const scrollToContact = (evt) => {
     evt.preventDefault()
     const y = scrolledElToContactUs.current.getBoundingClientRect().top + window.pageYOffset - 140
@@ -27,7 +27,7 @@ function RetailPage({ english, setLanguage }) {
 
   return (
     <StyledRetailPage>
-      <Header english={english} setLanguage={setLanguage} isRetailPage />
+      <Header isRetailPage currLang={currLang} setCurrLang={setCurrLang} />
 
       <StyledMainSection>
         <picture>
@@ -38,8 +38,8 @@ function RetailPage({ english, setLanguage }) {
 
         <div className="width-wrapper">
           <div className="content-wrapper">
-            <h1>{english ? EN.main.title : FR.main.title}</h1>
-            <h3>{english ? EN.main.subtitle : FR.main.subtitle}</h3>
+            <h1>{t('main.title')}</h1>
+            <h3>{t('main.subtitle')}</h3>
             <a
               href="#startBusiness"
               onClick={(evt) => {
@@ -48,7 +48,7 @@ function RetailPage({ english, setLanguage }) {
                 window.scrollTo({ top: y, behavior: 'smooth' })
               }}
               className="mokam-button">
-              {english ? EN.main.button : FR.main.button}
+              {t('main.button')}
             </a>
           </div>
         </div>
@@ -56,40 +56,41 @@ function RetailPage({ english, setLanguage }) {
 
       <section className="why-mokam">
         <div className="width-wrapper">
-          <h2>{english ? EN.whyChooseMokam.title : FR.whyChooseMokam.title}</h2>
-          <MokamContentSlider english={english} scrollToContact={scrollToContact} />
+          <h2>{t('whyChooseMokam.title')}</h2>
+          <MokamContentSlider scrollToContact={scrollToContact} />
         </div>
       </section>
 
-      <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} english={english} />
+      <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} />
 
       <section className="feedback">
         <div className="width-wrapper">
-          <h2>{english ? EN.feedback.title : FR.feedback.title}</h2>
-          <h4 className="subtitle">{english ? EN.feedback.subtitle : FR.feedback.subtitle}</h4>
-          <MokamFeedbackSlider english={english} />
+          <h2>{t('feedback.title')}</h2>
+          <h4 className="subtitle">{t('feedback.subtitle')}</h4>
+          <MokamFeedbackSlider />
         </div>
       </section>
 
-      <MokamForm english={english} ref={scrolledElToContactUs} url="retail" />
+      <MokamForm ref={scrolledElToContactUs} currLang={currLang} url="retail" />
 
       <section className="get-the-app">
         <div className="width-wrapper">
           <div>
-            <h2>{english ? EN.getTheApp.title : FR.getTheApp.title}</h2>
-            <p>{english ? EN.getTheApp.subtitle : FR.getTheApp.subtitle}</p>
+            <h2>{t('getTheApp.title')}</h2>
+            <p>{t('getTheApp.subtitle')}</p>
           </div>
           <a href="https://play.google.com/store/apps/details?id=com.mokam.app&hl=en_IN&gl=US">
             <img src={downloadAppLogo} alt="" />
           </a>
         </div>
       </section>
-      <Footer english={english} />
+      <Footer />
     </StyledRetailPage>
   )
 }
+
 RetailPage.propTypes = {
-  english: PropTypes.bool,
-  setLanguage: PropTypes.func,
+  currLang: PropTypes.string,
+  setCurrLang: PropTypes.func,
 }
 export default RetailPage

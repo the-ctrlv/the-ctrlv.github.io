@@ -4,16 +4,17 @@ import './shared/common.scss'
 import ManufacturersPage from './pages/Manufacturers'
 import RetailPage from './pages/Retail'
 import ThanksPage from './pages/Thanks'
+import './i18n'
 
 function App() {
-  const [english, setEnglish] = useState(true)
+  const [currentLanguage, setCurrentLanguage] = useState('en')
   return (
     <div className="App">
       <Routes>
-        <Route path="/retail" element={<RetailPage english={english} setLanguage={setEnglish} />} />
-        <Route path="/manufacturers" element={<ManufacturersPage english={english} setLanguage={setEnglish} />} />
+        <Route path="/retail" element={<RetailPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
+        <Route path="/manufacturers" element={<ManufacturersPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
         {['/retail/thanks', '/manufacturers/thanks'].map((path, index) => (
-          <Route path={path} key={index} element={<ThanksPage english={english} setLanguage={setEnglish} />} />
+          <Route path={path} key={index} element={<ThanksPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
         ))}
       </Routes>
     </div>

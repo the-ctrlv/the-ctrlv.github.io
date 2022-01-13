@@ -1,47 +1,42 @@
 import propTypes from 'prop-types'
 import { forwardRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import heroPic from '../../assets/images/hero-pic.jpg'
 import heroPicTablet from '../../assets/images/hero-pic-tablet.jpg'
 import telIcon from '../../assets/images/tel-icon.svg'
-import EN from '../../shared/language/en.js'
-import FR from '../../shared/language/fr.js'
 import { StyledStartBusiness } from './style'
 
-const StartBusiness = forwardRef((props, ref) => (
-  <StyledStartBusiness id="startBusiness" ref={ref} {...props}>
-    <div className="width-wrapper">
-      <div className="text-container">
-        {props.manufacturersPage ? (
-          <h2>{props.english ? EN.startBusiness.title2 : FR.startBusiness.title2}</h2>
-        ) : (
-          <h2>{props.english ? EN.startBusiness.title : FR.startBusiness.title}</h2>
-        )}
+export const StartBusiness = forwardRef((props, ref) => {
+  const { t } = useTranslation()
+  return (
+    <StyledStartBusiness id="startBusiness" ref={ref} {...props}>
+      <div className="width-wrapper">
+        <div className="text-container">
+          {props.manufacturersPage ? <h2>{t('startBusiness.title2')}</h2> : <h2>{t('startBusiness.title')}</h2>}
 
-        <p>{props.english ? EN.startBusiness.subtitle1 : FR.startBusiness.subtitle1}</p>
-        <a href="/some">
-          <img src={telIcon} alt="tel" />
-          <span>09610066525</span>
-        </a>
-        <p>{props.english ? EN.startBusiness.subtitle2 : FR.startBusiness.subtitle2}</p>
-        <button type="button" className="mokam-button" onClick={props.scrollToContact}>
-          {props.english ? EN.startBusiness.button : FR.startBusiness.button}
-        </button>
+          <p>{t('startBusiness.subtitle1')}</p>
+          <a href="/some">
+            <img src={telIcon} alt="tel" />
+            <span>{t('startBusiness.telNumber')}</span>
+          </a>
+          <p>{t('startBusiness.subtitle2')}</p>
+          <button type="button" className="mokam-button" onClick={props.scrollToContact}>
+            {t('startBusiness.button')}
+          </button>
+        </div>
       </div>
-    </div>
-    {/* <img src={heroPic} alt="hero" /> */}
-    <picture>
-      <source media="(min-width:1025px)" srcSet={heroPic} />
-      <source media="(min-width:768px)" srcSet={heroPicTablet} />
-      <img src={heroPic} alt="main" />
-    </picture>
-  </StyledStartBusiness>
-))
+      <picture>
+        <source media="(min-width:1025px)" srcSet={heroPic} />
+        <source media="(min-width:768px)" srcSet={heroPicTablet} />
+        <img src={heroPic} alt="main" />
+      </picture>
+    </StyledStartBusiness>
+  )
+})
 
 StartBusiness.displayName = 'StartBusiness'
 StartBusiness.propTypes = {
   english: propTypes.bool,
-  scrolledElToStartBusiness: propTypes.func,
-  scrolledElToContactUs: propTypes.func,
   scrollToContact: propTypes.func,
   manufacturersPage: propTypes.bool,
 }

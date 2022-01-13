@@ -3,13 +3,13 @@ import propTypes from 'prop-types'
 import { forwardRef } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { useFormspark } from '@formspark/use-formspark'
-import EN from '../../shared/language/en.js'
-import FR from '../../shared/language/fr.js'
+import { useTranslation } from 'react-i18next'
 import MokamSelect from './MokamSelect'
 import { StyledGetInTouch } from './style'
 
-const MokamForm = forwardRef((props, ref) => {
+const MokamForm = forwardRef((props, currLang, ref) => {
   const testForm = 'h5Tzo1lt'
+  const { t } = useTranslation()
   const [submit, submitting] = useFormspark({
     formId: testForm,
   })
@@ -22,11 +22,11 @@ const MokamForm = forwardRef((props, ref) => {
     mode: 'onBlur',
   })
   const mokamErrors = {
-    name: props.english ? EN.errors.name : FR.errors.name,
-    phone: props.english ? EN.errors.phone : FR.errors.phone,
-    company: props.english ? EN.errors.company : FR.errors.company,
-    designation: props.english ? EN.errors.designation : FR.errors.designation,
-    comment: props.english ? EN.errors.comment : FR.errors.comment,
+    name: t('errors.name'),
+    phone: t('errors.phone'),
+    company: t('errors.company'),
+    designation: t('errors.designation'),
+    comment: t('errors.comment'),
   }
 
   const onSubmit = async (data, e) => {
@@ -44,16 +44,12 @@ const MokamForm = forwardRef((props, ref) => {
   return (
     <StyledGetInTouch className="get-in-touch" ref={ref}>
       <div className="width-wrapper">
-        {props.manufacturersForm ? (
-          <h2>{props.english ? EN.getInTouch.title2 : FR.getInTouch.title2}</h2>
-        ) : (
-          <h2>{props.english ? EN.getInTouch.title : FR.getInTouch.title}</h2>
-        )}
+        {props.manufacturersForm ? <h2>{t('getInTouch.title2')}</h2> : <h2>{t('getInTouch.title')}</h2>}
 
-        <h4 className="subtitle">{props.english ? EN.getInTouch.subtitle : FR.getInTouch.subtitle}</h4>
+        <h4 className="subtitle">{t('getInTouch.subtitle')}</h4>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className={errors?.name && 'invalid'}>
-            {props.english ? EN.getInTouch.form.name : FR.getInTouch.form.name}
+            {t('getInTouch.form.name')}
             <input
               {...register('name', {
                 required: mokamErrors.name,
@@ -62,12 +58,12 @@ const MokamForm = forwardRef((props, ref) => {
                   message: mokamErrors.name,
                 },
               })}
-              placeholder={props.english ? EN.getInTouch.form.nameholder : FR.getInTouch.form.nameholder}
+              placeholder={t('getInTouch.form.nameholder')}
             />
             {errors?.name && <p>{errors.name.message}</p>}
           </label>
           <label className={errors?.phone && 'invalid'}>
-            {props.english ? EN.getInTouch.form.phone : FR.getInTouch.form.phone}
+            {t('getInTouch.form.phone')}
             <input
               {...register('phone', {
                 required: mokamErrors.phone,
@@ -76,14 +72,14 @@ const MokamForm = forwardRef((props, ref) => {
                   message: mokamErrors.phone,
                 },
               })}
-              placeholder={props.english ? EN.getInTouch.form.phoneholder : FR.getInTouch.form.phoneholder}
+              placeholder={t('getInTouch.form.phoneholder')}
             />
             {errors?.phone && <p>{errors.phone.message}</p>}
           </label>
           {props.manufacturersForm && (
             <>
               <label className={errors?.company && 'invalid'}>
-                {props.english ? EN.getInTouch.form.company : FR.getInTouch.form.company}
+                {t('getInTouch.form.company')}
                 <input
                   {...register('company', {
                     required: mokamErrors.company,
@@ -93,22 +89,17 @@ const MokamForm = forwardRef((props, ref) => {
                     },
                   })}
                   type="text"
-                  placeholder={props.english ? EN.getInTouch.form.companyholder : FR.getInTouch.form.companyholder}
+                  placeholder={t('getInTouch.form.companyholder')}
                 />
                 {errors?.company && <p>{errors.company.message}</p>}
               </label>
               <label className={errors?.designation && 'invalid'}>
-                {props.english ? EN.getInTouch.form.designation : FR.getInTouch.form.designation}
+                {t('getInTouch.form.designation')}
                 <Controller
                   name="designation"
                   control={control}
                   render={({ field }) => (
-                    <MokamSelect
-                      {...field}
-                      {...register('designation', { required: props.english ? EN.errors.designation : FR.errors.designation })}
-                      onChange={field.onChange}
-                      english={props.english}
-                    />
+                    <MokamSelect {...field} {...register('designation', { required: t('errors.designation') })} onChange={field.onChange} />
                   )}
                 />
                 {errors?.designation && <p>{errors.designation.message}</p>}
@@ -116,7 +107,7 @@ const MokamForm = forwardRef((props, ref) => {
             </>
           )}
           <label className={errors?.comment && 'invalid'}>
-            {props.english ? EN.getInTouch.form.comment : FR.getInTouch.form.comment}
+            {t('getInTouch.form.comment')}
             <Controller
               name="comment"
               control={control}
@@ -124,7 +115,7 @@ const MokamForm = forwardRef((props, ref) => {
                 <textarea
                   cols="30"
                   rows="10"
-                  placeholder={props.english ? EN.getInTouch.form.commentholder : FR.getInTouch.form.commentholder}
+                  placeholder={t('getInTouch.form.commentholder')}
                   {...field}
                   {...register('comment', {
                     required: mokamErrors.comment,
@@ -140,7 +131,7 @@ const MokamForm = forwardRef((props, ref) => {
           </label>
           <div className="button-wrapper">
             <button className="mokam-button" type="submit" disabled={submitting}>
-              {props.english ? EN.getInTouch.form.button : FR.getInTouch.form.button}
+              {t('getInTouch.form.button')}
             </button>
           </div>
         </form>
@@ -151,7 +142,6 @@ const MokamForm = forwardRef((props, ref) => {
 
 MokamForm.displayName = 'MokamForm'
 MokamForm.propTypes = {
-  english: propTypes.bool,
   manufacturersForm: propTypes.bool,
   url: propTypes.string,
 }
