@@ -67,7 +67,9 @@ export const StyledContentSlider = styled.div`
           background-color: #0046a0;
         }
         h3 {
-          color: #448aff;
+          @media (min-width: 1025px) {
+            color: #448aff;
+          }
         }
         svg {
           circle {
