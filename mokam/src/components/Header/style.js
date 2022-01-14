@@ -150,6 +150,7 @@ export const StyledHeader = styled.header`
             padding-left: 15px;
             border: none;
             padding-bottom: 33px;
+            border-bottom: 1px solid rgb(204, 204, 204);
             .mob-lang {
               margin-right: 4px;
             }

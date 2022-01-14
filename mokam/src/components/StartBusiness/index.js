@@ -15,7 +15,7 @@ export const StartBusiness = forwardRef((props, ref) => {
           {props.manufacturersPage ? <h2>{t('startBusiness.title2')}</h2> : <h2>{t('startBusiness.title')}</h2>}
 
           <p>{t('startBusiness.subtitle1')}</p>
-          <a href="/some">
+          <a href="tel:09610066525">
             <img src={telIcon} alt="tel" />
             <span>{t('startBusiness.telNumber')}</span>
           </a>
