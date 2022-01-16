@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import MokamSelect from './MokamSelect'
 import { StyledGetInTouch } from './style'
 
-const MokamForm = forwardRef((props, currLang, ref) => {
+const MokamForm = forwardRef((props, ref) => {
   const testForm = 'h5Tzo1lt'
   const { t } = useTranslation()
   const [submit, submitting] = useFormspark({

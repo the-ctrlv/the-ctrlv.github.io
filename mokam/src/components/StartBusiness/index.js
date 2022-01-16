@@ -1,15 +1,14 @@
 import propTypes from 'prop-types'
-import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import heroPic from '../../assets/images/hero-pic.jpg'
 import heroPicTablet from '../../assets/images/hero-pic-tablet.jpg'
 import telIcon from '../../assets/images/tel-icon.svg'
 import { StyledStartBusiness } from './style'
 
-export const StartBusiness = forwardRef((props, ref) => {
+function StartBusiness(props) {
   const { t } = useTranslation()
   return (
-    <StyledStartBusiness id="startBusiness" ref={ref} {...props}>
+    <StyledStartBusiness id="startBusiness" {...props}>
       <div className="width-wrapper">
         <div className="text-container">
           {props.manufacturersPage ? <h2>{t('startBusiness.title2')}</h2> : <h2>{t('startBusiness.title')}</h2>}
@@ -32,9 +31,7 @@ export const StartBusiness = forwardRef((props, ref) => {
       </picture>
     </StyledStartBusiness>
   )
-})
-
-StartBusiness.displayName = 'StartBusiness'
+}
 StartBusiness.propTypes = {
   english: propTypes.bool,
   scrollToContact: propTypes.func,

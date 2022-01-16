@@ -20,3 +20,9 @@ export function useWindowResize() {
   }, [])
   return windowSize
 }
+
+export const scrollToContact = (evt, scrolledEl) => {
+  evt.preventDefault()
+  const y = scrolledEl.current.getBoundingClientRect().top + window.pageYOffset - 140
+  window.scrollTo({ top: y, behavior: 'smooth' })
+}

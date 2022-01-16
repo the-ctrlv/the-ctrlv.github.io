@@ -25,7 +25,6 @@ import MokamAwards from '../../components/MokamAwards'
 import { StyledManufacturersPage } from './style'
 
 function ManufacturersPage({ currLang, setCurrLang }) {
-  const scrolledElToStartBusiness = useRef()
   const scrolledElToContactUs = useRef()
   const { t } = useTranslation()
   const scrollToContact = (evt) => {
@@ -49,14 +48,7 @@ function ManufacturersPage({ currLang, setCurrLang }) {
             <h1>{t('main2.title')}</h1>
             <br />
             <br />
-            <a
-              href="#startBusiness"
-              onClick={(evt) => {
-                evt.preventDefault()
-                const y = scrolledElToStartBusiness.current.getBoundingClientRect().top + window.pageYOffset - 80
-                window.scrollTo({ top: y, behavior: 'smooth' })
-              }}
-              className="mokam-button">
+            <a href="#startBusiness" onClick={scrollToContact} className="mokam-button">
               {t('main2.button')}
             </a>
           </div>

@@ -16,7 +16,6 @@ import { StyledMainSection } from '../style'
 import { StyledRetailPage } from './style'
 
 function RetailPage({ currLang, setCurrLang }) {
-  const scrolledElToStartBusiness = useRef()
   const scrolledElToContactUs = useRef()
   const { t } = useTranslation()
   const scrollToContact = (evt) => {
@@ -40,14 +39,7 @@ function RetailPage({ currLang, setCurrLang }) {
           <div className="content-wrapper">
             <h1>{t('main.title')}</h1>
             <h3>{t('main.subtitle')}</h3>
-            <a
-              href="#startBusiness"
-              onClick={(evt) => {
-                evt.preventDefault()
-                const y = scrolledElToStartBusiness.current.getBoundingClientRect().top + window.pageYOffset - 80
-                window.scrollTo({ top: y, behavior: 'smooth' })
-              }}
-              className="mokam-button">
+            <a href="#startBusiness" onClick={scrollToContact} className="mokam-button">
               {t('main.button')}
             </a>
           </div>
@@ -61,7 +53,7 @@ function RetailPage({ currLang, setCurrLang }) {
         </div>
       </section>
 
-      <StartBusiness ref={scrolledElToStartBusiness} scrollToContact={scrollToContact} />
+      <StartBusiness scrollToContact={scrollToContact} />
 
       <section className="feedback">
         <div className="width-wrapper">
@@ -71,7 +63,7 @@ function RetailPage({ currLang, setCurrLang }) {
         </div>
       </section>
 
-      <MokamForm ref={scrolledElToContactUs} currLang={currLang} url="retail" />
+      <MokamForm ref={scrolledElToContactUs} url="retail" />
 
       <section className="get-the-app">
         <div className="width-wrapper">
