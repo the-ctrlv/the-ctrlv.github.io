@@ -5,7 +5,7 @@ export default {
     link2: 'ম্যানুফ্যাকচারার',
     telTitle: 'হটলাইন',
     telNumber: '০৯১০০৬৬৫২৫',
-    language: 'BN',
+    language: 'bn',
   },
   main: {
     title: 'রিটেইল ব্যবসার পরিপূর্ণ সমাধান',

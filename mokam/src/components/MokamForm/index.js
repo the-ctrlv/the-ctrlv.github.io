@@ -39,7 +39,7 @@ const MokamForm = forwardRef((props, ref) => {
       Message: data.comment,
     })
 
-    window.location.href = `/#/${props.url}/thanks`
+    window.location.href = `/${props.url}/thanks/${props.currLang}`
   }
   return (
     <StyledGetInTouch className="get-in-touch" ref={ref}>
@@ -144,6 +144,7 @@ MokamForm.displayName = 'MokamForm'
 MokamForm.propTypes = {
   manufacturersForm: propTypes.bool,
   url: propTypes.string,
+  currLang: propTypes.string,
 }
 
 export default MokamForm

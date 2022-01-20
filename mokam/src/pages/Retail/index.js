@@ -63,7 +63,7 @@ function RetailPage({ currLang, setCurrLang }) {
         </div>
       </section>
 
-      <MokamForm ref={scrolledElToContactUs} url="retail" />
+      <MokamForm ref={scrolledElToContactUs} currLang={currLang} url="retail" />
 
       <section className="get-the-app">
         <div className="width-wrapper">
@@ -76,7 +76,7 @@ function RetailPage({ currLang, setCurrLang }) {
           </a>
         </div>
       </section>
-      <Footer />
+      <Footer currLang={currLang} />
     </StyledRetailPage>
   )
 }

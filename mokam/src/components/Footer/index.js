@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { PropTypes } from 'prop-types'
 import pinIcon from '../../assets/images/pin-icon.svg'
 import mailIcon from '../../assets/images/mail-icon.svg'
 import facebookIcon from '../../assets/images/facebook.svg'
@@ -8,15 +9,15 @@ import linkedinIcon from '../../assets/images/linkedin.svg'
 import { StyledFooter } from './style'
 import Accordion from './accordion'
 
-function Footer() {
+function Footer({ currLang }) {
   const { t } = useTranslation()
   return (
     <StyledFooter>
       <div className="width-wrapper">
         <ul>
           <Accordion title={t('footer.column1.title')}>
-            <Link to={'/retail'}>{t('footer.column1.link1')}</Link>
-            <Link to={'/manufacturers'}>{t('footer.column1.link2')}</Link>
+            <Link to={`/retail/${currLang}`}>{t('footer.column1.link1')}</Link>
+            <Link to={`/manufacturers/${currLang}`}>{t('footer.column1.link2')}</Link>
           </Accordion>
           <Accordion title={t('footer.column2.title')}>
             <a href="./infringement_policy.html">{t('footer.column2.link1')}</a>
@@ -29,7 +30,7 @@ function Footer() {
               <img src={pinIcon} alt="map" />
               <span>{t('footer.column3.link1')}</span>
             </a>
-            <a href="/some" className="contact-links">
+            <a href="mailto:hello@mokam.com.bd" className="contact-links">
               <img src={mailIcon} alt="mail" />
               <span>{t('footer.column3.link2')}</span>
             </a>
@@ -53,5 +54,8 @@ function Footer() {
       </div>
     </StyledFooter>
   )
+}
+Footer.propTypes = {
+  currLang: PropTypes.string,
 }
 export default Footer

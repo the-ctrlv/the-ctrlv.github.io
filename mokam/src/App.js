@@ -7,13 +7,22 @@ import ThanksPage from './pages/Thanks'
 import './i18n'
 
 function App() {
-  const [currentLanguage, setCurrentLanguage] = useState('en')
+  const [currentLanguage, setCurrentLanguage] = useState('')
+
+  useState(() => {
+    if (window.location.pathname.includes('/bn')) {
+      setCurrentLanguage('bn')
+    } else {
+      setCurrentLanguage('en')
+    }
+  }, [])
   return (
     <div className="App">
       <Routes>
-        <Route path="/retail" element={<RetailPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
-        <Route path="/manufacturers" element={<ManufacturersPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
-        {['/retail/thanks', '/manufacturers/thanks'].map((path, index) => (
+        <Route path={'retail/:lang'} element={<RetailPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
+        <Route path={'manufacturers/:lang'} element={<ManufacturersPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
+
+        {['/retail/thanks/:lang', '/manufacturers/thanks/:lang'].map((path, index) => (
           <Route path={path} key={index} element={<ThanksPage currLang={currentLanguage} setCurrLang={setCurrentLanguage} />} />
         ))}
       </Routes>

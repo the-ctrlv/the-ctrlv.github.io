@@ -14,10 +14,19 @@ function Header({ isRetailPage, isThanksPage, currLang, setCurrLang }) {
   const [mobileView, setMobileView] = useState(null)
   const { width } = useWindowResize()
   const { t, i18n } = useTranslation()
-
+  const [switchTo, setSwitchTo] = useState(null)
+  const currentUrl = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + switchTo
   useEffect(() => {
     setMobileView(width <= 1024)
   }, [width])
+
+  useEffect(() => {
+    if (currLang === 'en') {
+      setSwitchTo('bn')
+    } else if (currLang === 'bn') {
+      setSwitchTo('en')
+    }
+  }, [currLang, setSwitchTo])
 
   useEffect(() => {
     i18n.changeLanguage(currLang)
@@ -25,8 +34,8 @@ function Header({ isRetailPage, isThanksPage, currLang, setCurrLang }) {
 
   const switchLanguage = () => {
     if (currLang === 'en') {
-      setCurrLang('bangla')
-    } else if (currLang === 'bangla') {
+      setCurrLang('bn')
+    } else if (currLang === 'bn') {
       setCurrLang('en')
     }
   }
@@ -38,14 +47,14 @@ function Header({ isRetailPage, isThanksPage, currLang, setCurrLang }) {
     <StyledHeader>
       <div className="width-wrapper">
         <div className="left-container">
-          <Link to={'/retail'} className="logo">
+          <Link to={`/retail/${currLang}`} className="logo">
             <img src={currLang === 'en' ? mokamLogo : mokamLogoTranslated} alt="" />
           </Link>
           <div className="links">
-            <Link to={'/retail'} className={getClassNames(isRetailPage && !isThanksPage && 'active')}>
+            <Link to={`/retail/${currLang}`} className={getClassNames(isRetailPage && !isThanksPage && 'active')}>
               {t('header.link1')}
             </Link>
-            <Link to={'/manufacturers'} className={getClassNames(!isRetailPage && !isThanksPage && 'active')}>
+            <Link to={`/manufacturers/${currLang}`} className={getClassNames(!isRetailPage && !isThanksPage && 'active')}>
               {t('header.link2')}
             </Link>
           </div>
@@ -58,18 +67,21 @@ function Header({ isRetailPage, isThanksPage, currLang, setCurrLang }) {
           </a>
           <div className={getClassNames('mobile-menu', open && 'opened')}>
             <div className="mobile-links">
-              <Link to={'/retail'} className={getClassNames(isRetailPage && !isThanksPage && 'active')} onClick={switchMenu}>
+              <Link to={`/retail/${currLang}`} className={getClassNames(isRetailPage && !isThanksPage && 'active')} onClick={switchMenu}>
                 Retail
               </Link>
-              <Link to={'/manufacturers'} className={getClassNames(!isRetailPage && !isThanksPage && 'active')} onClick={switchMenu}>
+              <Link
+                to={`/manufacturers/${currLang}`}
+                className={getClassNames(!isRetailPage && !isThanksPage && 'active')}
+                onClick={switchMenu}>
                 Manufacturers
               </Link>
             </div>
-            <div className="language-wrapper" onClick={switchLanguage}>
+            <Link to={currentUrl} className="language-wrapper" onClick={switchLanguage}>
               <img src={languageIcon} alt="" />
               {mobileView && <span className="mob-lang">Language: </span>}
               <span>{t(`header.${mobileView ? 'languageMob' : 'language'}`)}</span>
-            </div>
+            </Link>
           </div>
           {mobileView && (
             <nav className={getClassNames('hamburger-button', open && 'opened')} onClick={switchMenu}>

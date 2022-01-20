@@ -104,7 +104,7 @@ function ManufacturersPage({ currLang, setCurrLang }) {
 
       <MokamForm ref={scrolledElToContactUs} manufacturersForm currLang={currLang} url="manufacturers" />
 
-      <Footer />
+      <Footer currLang={currLang} />
     </StyledManufacturersPage>
   )
 }

@@ -16,7 +16,7 @@ function ThanksPage({ currLang, setCurrLang }) {
           <img src={thanksImg} alt="thank you" />
           <h2>{t('thanks.title')}</h2>
           <h4 className="subtitle">{t('thanks.subtitle')}</h4>
-          <Link to={'/retail'} className="mokam-button">
+          <Link to={`/retail/${currLang}`} className="mokam-button">
             {t('thanks.button')}
           </Link>
         </div>

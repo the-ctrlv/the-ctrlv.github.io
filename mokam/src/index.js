@@ -1,6 +1,6 @@
 import React from 'react'
 import { hydrate, render } from 'react-dom'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { register } from 'register-service-worker'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -9,18 +9,18 @@ const rootElement = document.getElementById('root')
 if (rootElement.hasChildNodes()) {
   hydrate(
     <React.StrictMode>
-      <HashRouter>
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </React.StrictMode>,
     rootElement,
   )
 } else {
   render(
     <React.StrictMode>
-      <HashRouter>
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </React.StrictMode>,
     rootElement,
   )
