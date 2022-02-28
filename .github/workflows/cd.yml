@@ -1,0 +1,60 @@
+name: Mokam Prod Deployment
+on:
+  release:
+    types: [published]
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GKE_PRODUCTION_CLUSTER: ${{ secrets.GKE_PRODUCTION_CLUSTER }}    # TODO: update to cluster name
+  GKE_ZONE: ${{ secrets.GKE_ZONE }}   # TODO: update to cluster zone
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+  DEV_OWNER: ${{ github.event.pusher.name}}
+
+jobs:
+  setup-build-publish-deploy-production:
+    name: Setup, Build, Publish, and Deploy to Production
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: |-
+          sudo rm -rf /usr/share/dotnet
+      # Setup gcloud CLI
+      - uses: google-github-actions/setup-gcloud@master
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          export_default_credentials: true
+
+      # Configure Docker to use the gcloud command-line tool as a credential
+      # helper for authentication
+      - run: |-
+          gcloud --quiet auth configure-docker
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.16.0'
+
+      - name: Build Docker image
+        run: |
+          if ! `git diff --quiet HEAD "$(git describe --tags --abbrev=0 HEAD)" -- mokam`
+          then
+            cd mokam
+            docker build -t mokam-web . 
+            docker tag mokam-web gcr.io/voonik-tech/vnkshopup/mokam-web:${GITHUB_REF##*/}
+            docker push gcr.io/voonik-tech/vnkshopup/mokam-web:${GITHUB_REF##*/}
+          fi
+      - uses: azure/setup-helm@v1
+        with:
+          version: '3.4.1' # default is latest stable
+        id: install
+      - name: Deploy to Production
+        run: |
+          gcloud container clusters get-credentials $GKE_PRODUCTION_CLUSTER --zone asia-southeast1 --project $PROJECT_ID
+          helm plugin install https://github.com/hayorov/helm-gcs --version 0.3.5
+          helm repo add shopup gs://shopup-prod/helm-charts
+          helm repo update
+          helm upgrade --install --atomic --timeout 600s --namespace mokam mokam-web shopup/mokam-web --set image.tag=${GITHUB_REF##*/}
+

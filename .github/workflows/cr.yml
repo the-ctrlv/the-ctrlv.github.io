@@ -1,0 +1,19 @@
+name: Manual workflow
+on:
+  push:
+    branches: [main]
+
+jobs:
+  create-release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    container:
+      image: smartive/semantic-release-image:latest
+      options: --user 0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
+        run: npx semantic-release

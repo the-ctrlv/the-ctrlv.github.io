@@ -20,10 +20,10 @@ function Footer({ currLang }) {
             <Link to={`/manufacturers/${currLang}`}>{t('footer.column1.link2')}</Link>
           </Accordion>
           <Accordion title={t('footer.column2.title')}>
-            <a href="./infringement_policy.html">{t('footer.column2.link1')}</a>
-            <a href="./permitted_usage_policy.html">{t('footer.column2.link2')}</a>
-            <a href="./privacy_policy.html">{t('footer.column2.link3')}</a>
-            <a href="./terms_of_service.html">{t('footer.column2.link4')}</a>
+            <a href="/infringement_policy.html">{t('footer.column2.link1')}</a>
+            <a href="/permitted_usage_policy.html">{t('footer.column2.link2')}</a>
+            <a href="/privacy_policy.html">{t('footer.column2.link3')}</a>
+            <a href="/terms_of_service.html">{t('footer.column2.link4')}</a>
           </Accordion>
           <Accordion title={t('footer.column3.title')}>
             <a href="/some" className="contact-links">

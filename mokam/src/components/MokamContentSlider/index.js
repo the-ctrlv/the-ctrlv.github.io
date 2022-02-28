@@ -30,7 +30,6 @@ function MokamContentSlider() {
     afterChange: (current) => setCurrentSlide(current),
   }
 
-  // eslint-disable-next-line prettier/prettier
   const handleOnClick = index => {
     sliderRef.current.slickGoTo(index - 1)
   }
