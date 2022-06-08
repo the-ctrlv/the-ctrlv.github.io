@@ -1,5 +1,10 @@
 {
-  "plugins": ["prettier", "react", "import", "react-hooks"],
+  "plugins": [
+    "prettier",
+    "react",
+    "import",
+    "react-hooks"
+  ],
   "extends": [
     "eslint:recommended",
     "prettier",
@@ -16,11 +21,13 @@
       "jsx": true
     }
   },
-
   "rules": {
     "no-debugger": 0,
     "no-unused-vars": 2,
-    "arrow-body-style": [2, "as-needed"],
+    "arrow-body-style": [
+      2,
+      "as-needed"
+    ],
     "no-unused-expressions": [
       2,
       {
@@ -58,19 +65,30 @@
     "import/newline-after-import": 2,
     "import/no-named-as-default-member": 0,
     "import/no-duplicates": 2,
-    "import/no-useless-path-segments": [2, {
-      "noUselessIndex": true
-    }],
+    "import/no-useless-path-segments": [
+      2,
+      {
+        "noUselessIndex": true
+      }
+    ],
     "no-shadow": [
       2,
       {
         "hoist": "all",
-        "allow": ["resolve", "reject", "done", "next", "err", "error"]
+        "allow": [
+          "resolve",
+          "reject",
+          "done",
+          "next",
+          "err",
+          "error"
+        ]
       }
     ],
     "quotes": [
       2,
-      "single", { 
+      "single",
+      {
         "avoidEscape": true
       }
     ],
@@ -78,7 +96,13 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "parent", "sibling", "index"]
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index"
+        ]
       }
     ],
     "prefer-const": 2,
@@ -95,7 +119,7 @@
         "useTabs": false,
         "semi": false,
         "bracketSpacing": true,
-        "jsxBracketSameLine": true,
+        "jsxBracketSameLine": false,
         "parser": "babel"
       }
     ]
