@@ -1,4 +1,4 @@
-.modal {
+.pretzel-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -7,11 +7,102 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 1080;
     background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+
+    .sub-title {
+        color: #676477;
+        font-size: 20px;
+
+        @media (min-width: 768px) {
+            font-size: 32px;
+        }
+    }
 
     &__close-button {
         position: absolute;
         right: 15px;
         top: 15px;
         cursor: pointer;
+    }
+
+    &::before {
+        content: '';
+        background: url('../../../assets/images/splash3.svg') left center / contain no-repeat;
+        display: block;
+        width: 37vw;
+        height: 78vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        background: url('../../../assets/images/splash4.svg') right center / contain no-repeat;
+        display: block;
+        width: 37vw;
+        height: 78vh;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.modal-form {
+    margin: 0 auto;
+    text-align: left;
+
+    @media (min-width: '768px') {
+        width: 440px;
+    }
+
+    label {
+        position: relative;
+
+        &.invalid {
+            color: #E4265C;
+
+            input {
+                border-bottom: 1px solid #E4265C;
+            }
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid #BDBEBF;
+            font-weight: bold;
+            background-color: transparent;
+            color: var(--deep-blue);
+            padding: 7px 0;
+
+            &::placeholder {
+                font-weight: 400;
+            }
+        }
+
+        .validation-error {
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            bottom: 23px;
+        }
+    }
+
+    button {
+        background-color: #EA2667;
+        padding: 10px 16px;
+        color: #fff;
+
+        &:hover {
+            background-color: #cf1251;
+            color: #fff;
+        }
+
+        &:focus {
+            outline: none;
+        }
     }
 }
