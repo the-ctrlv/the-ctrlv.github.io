@@ -19,4 +19,12 @@
     &__form {
         background-color: rgba(0, 0, 0, 0.3);
     }
+
+    &__logo-container {
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            margin: 0
+        }
+    }
 }
