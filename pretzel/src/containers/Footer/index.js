@@ -8,13 +8,14 @@ import { serviceLinks } from './helpers'
 
 import './style.scss'
 
+
 function Footer() {
     return (
         <footer className="footer">
             <div className="container-xl">
                 <ul className='d-flex flex-column flex-md-row justify-content-between flex-md-wrap flex-lg-nowrap pt-5'>
                     <li className='mt-4 mt-md-0 mb-5 mb-lg-0 text-center text-md-start order-last 
-                    order-md-first col-md-6 col-lg-auto'>
+            order-md-first col-md-6 col-lg-auto'>
                         <img src={pretzelLogo} alt="Pretzel Logo" className='mb-4' />
                         <div className='footer__logo-container d-flex justify-content-between col-6 col-lg-12'>
                             <a href='/'>

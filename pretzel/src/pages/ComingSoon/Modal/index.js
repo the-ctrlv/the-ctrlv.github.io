@@ -21,7 +21,6 @@ function ComingSoonModal({ showModal, setShowModal }) {
             </div>
             <img src={closeButton} className='modal__close-button cursor-pointer'
                 onClick={() => setShowModal(false)} />
-
         </div>
     );
 }

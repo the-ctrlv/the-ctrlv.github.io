@@ -1,41 +1,108 @@
 .coming-soon-layout {
-    .backed-by {
-        background-color: #F5F4FA;
+    .coming-soon {
+        min-height: 100vh;
+        background: url('../../assets/images/coming-soon-hero.jpg') center center/cover no-repeat;
 
-        >div {
-            padding: 100px 0;
+        &__content {
+            color: var(--bs-white);
 
-            .title {
-                font-size: 40px;
-                color: var(--deep-blue);
+        }
+    }
+
+    .benefits {
+        padding: 65px 0 45px;
+
+        @media (min-width: '768px') {
+            padding: 105px 0 75px;
+        }
+
+        .sub-title {
+            font-size: 32px;
+            color: #676477;
+            margin-bottom: 80px;
+
+            @media (min-width: '768px') {
+                margin-bottom: 140px;
+            }
+        }
+
+        &__list {
+            .image-wrapper {
+                height: 150px;
+
+                img {
+                    width: 80%;
+                    margin: 0 auto;
+
+                    @media (min-width: '992') {
+                        width: auto;
+                    }
+                }
+            }
+
+            &:last-child {
+                .image-wrapper {
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &::before {
+                content: '';
+                background: url('../../assets/images/splash.svg') left center / contain no-repeat;
+                display: block;
+                width: 37vw;
+                height: 58vh;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                background: url('../../assets/images/splash2.svg') right center / contain no-repeat;
+                display: block;
+                width: 37vw;
+                height: 58vh;
+                position: absolute;
+                right: 0;
+                top: 60%;
+                z-index: -1;
+            }
+        }
+
+        .backed-by {
+            background-color: #F5F4FA;
+
+            >div {
+                padding: 100px 0;
+
+                .title {
+                    color: var(--deep-blue);
+                }
+
+                p {
+                    color: #676477;
+                    font-size: 22px;
+                    line-height: 33px;
+                    margin-bottom: 75px;
+
+                    @media (min-width: 768px) {
+                        margin-bottom: 150px;
+                    }
+
+                }
+
+                .logo-wrapper {
+                    margin: 0 auto;
+                }
 
                 @media (min-width: 768px) {
-                    font-size: 50px;
+                    padding: 200px 0;
                 }
-
-                @media (min-width: 1200px) {
-                    font-size: 64px;
-                }
-            }
-
-            p {
-                color: #676477;
-                font-size: 22px;
-                line-height: 33px;
-                margin-bottom: 75px;
-
-                @media (min-width: 768px) {
-                    margin-bottom: 150px;
-                }
-
-            }
-
-            .logo-wrapper {
-                margin: 0 auto;
-            }
-
-            @media (min-width: 768px) {
-                padding: 200px 0;
             }
         }
     }
