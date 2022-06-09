@@ -1,0 +1,22 @@
+.footer {
+    background-color: var(--deep-blue);
+    color: var(--bs-white);
+    font-size: 20px;
+
+    a {
+        color: var(--bs-white);
+    }
+
+    .stay-in-touch-container {
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    .copyright {
+        border-top: 1px solid rgba(219, 218, 224, 0.3);
+        color: #79768B;
+    }
+
+    &__form {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}

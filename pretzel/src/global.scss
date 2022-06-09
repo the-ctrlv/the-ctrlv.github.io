@@ -1,5 +1,53 @@
+:root {
+    --deep-blue: #1F1A3D;
+}
+
 body {
     font-family: 'Noto Sans';
+    font-weight: 400;
+
+    a {
+        text-decoration: none;
+        color: var(--deep-blue);
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    footer {
+        font-family: 'DMSans';
+    }
+}
+
+.pretzel-input {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--deep-blue);
+
+    &::placeholder {
+        color: #79768B;
+        font-size: 16px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dark {
+        color: var(--bs-white);
+    }
+}
+
+.rounded {
+    border-radius: 10px !important;
 }
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
@@ -14,3 +62,5 @@ body {
 
 @include font('Noto Sans', normal, 400, 'assets/fonts/NotoSans-Light.woff2');
 @include font('Noto Sans', normal, 700, 'assets/fonts/NotoSans-Bold.woff2');
+@include font('DMSans', normal, 400, 'assets/fonts/DMSans-Regular.woff2');
+@include font('DMSans', normal, 700, 'assets/fonts/DMSans-Bold.woff2');

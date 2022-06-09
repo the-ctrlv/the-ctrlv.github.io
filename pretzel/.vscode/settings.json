@@ -12,4 +12,7 @@
     "typescriptreact"
   ],
   "javascript.validate.enable": false,
+  "cSpell.words": [
+    "Pinterest"
+  ],
 }
