@@ -3,7 +3,12 @@
     "development": {
       "presets": [
         [
-          "@babel/preset-react"
+          "@babel/preset-react",
+          {
+            "targets": {
+              "node": true
+            }
+          }
         ]
       ]
     }

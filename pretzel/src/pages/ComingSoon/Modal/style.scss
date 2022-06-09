@@ -1,0 +1,17 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1080;
+    background-color: #fff;
+
+    &__close-button {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+}

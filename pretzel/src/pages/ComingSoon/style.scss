@@ -1,0 +1,42 @@
+.coming-soon-layout {
+    .backed-by {
+        background-color: #F5F4FA;
+
+        >div {
+            padding: 100px 0;
+
+            .title {
+                font-size: 40px;
+                color: var(--deep-blue);
+
+                @media (min-width: 768px) {
+                    font-size: 50px;
+                }
+
+                @media (min-width: 1200px) {
+                    font-size: 64px;
+                }
+            }
+
+            p {
+                color: #676477;
+                font-size: 22px;
+                line-height: 33px;
+                margin-bottom: 75px;
+
+                @media (min-width: 768px) {
+                    margin-bottom: 150px;
+                }
+
+            }
+
+            .logo-wrapper {
+                margin: 0 auto;
+            }
+
+            @media (min-width: 768px) {
+                padding: 200px 0;
+            }
+        }
+    }
+}
