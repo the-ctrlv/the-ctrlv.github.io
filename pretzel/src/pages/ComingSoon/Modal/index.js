@@ -1,5 +1,6 @@
 import { Modal } from 'bootstrap';
 
+import ModalForm from './ModalForm';
 import closeButton from '../../../assets/images/close-button.svg';
 
 import './style.scss'
@@ -15,9 +16,9 @@ function ComingSoonModal({ showModal, setShowModal }) {
                 <span className='sub-title'>
                     Sign up to get notified
                 </span>
-                <form>
 
-                </form>
+
+                <ModalForm />
             </div>
             <img src={closeButton} className='modal__close-button cursor-pointer'
                 onClick={() => setShowModal(false)} />

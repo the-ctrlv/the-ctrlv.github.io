@@ -73,7 +73,8 @@ function Header({ isRetailPage, isThanksPage, currLang, setCurrLang }) {
               <Link
                 to={`/manufacturers/${currLang}`}
                 className={getClassNames(!isRetailPage && !isThanksPage && 'active')}
-                onClick={switchMenu}>
+                onClick={switchMenu}
+              >
                 Manufacturers
               </Link>
             </div>
