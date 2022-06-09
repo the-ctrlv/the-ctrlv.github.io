@@ -29,6 +29,12 @@ body {
         }
     }
 
+    section {
+        &.colored {
+            background-color: #F5F4FA;
+        }
+    }
+
     footer {
         font-family: 'DMSans';
     }

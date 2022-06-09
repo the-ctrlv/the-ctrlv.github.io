@@ -9,34 +9,51 @@
         }
     }
 
-    .benefits {
+    .benefits,
+    .how-it-works,
+    .no-drama {
         padding: 65px 0 45px;
 
         @media (min-width: '768px') {
             padding: 105px 0 75px;
         }
 
+        .list-title {
+            font-size: 25px;
+
+            @media (min-width: '768px') {
+                font-size: 20px;
+            }
+
+        }
+
+
         .sub-title {
-            font-size: 32px;
+            font-size: 20px;
             color: #676477;
             margin-bottom: 80px;
 
             @media (min-width: '768px') {
                 margin-bottom: 140px;
+                font-size: 32px;
             }
         }
 
         &__list {
             .image-wrapper {
-                height: 150px;
+                height: auto;
 
                 img {
                     width: 80%;
                     margin: 0 auto;
 
-                    @media (min-width: '992') {
+                    @media (min-width: '992px') {
                         width: auto;
                     }
+                }
+
+                @media (min-width: '768px') {
+                    height: 150px;
                 }
             }
 
@@ -44,7 +61,11 @@
                 .image-wrapper {
                     img {
                         width: auto;
-                        height: 100%;
+                        height: 300px;
+
+                        @media (min-width: '768px') {
+                            height: auto;
+                        }
                     }
                 }
             }
@@ -74,35 +95,74 @@
             }
         }
 
-        .backed-by {
-            background-color: #F5F4FA;
 
-            >div {
-                padding: 100px 0;
+    }
 
-                .title {
-                    color: var(--deep-blue);
+    .how-it-works {
+        &__list {
+            .image-wrapper {
+                height: auto;
+
+                img {
+                    width: 200px;
                 }
 
-                p {
-                    color: #676477;
-                    font-size: 22px;
-                    line-height: 33px;
-                    margin-bottom: 75px;
-
-                    @media (min-width: 768px) {
-                        margin-bottom: 150px;
-                    }
-
+                @media (min-width: '768px') {
+                    height: 250px;
                 }
+            }
 
-                .logo-wrapper {
-                    margin: 0 auto;
-                }
+            p {
+                min-height: 60px;
+            }
+        }
+    }
+
+    .no-drama {
+        &__list {
+            .list-title {
+                min-height: 150px;
+            }
+        }
+    }
+
+    .pretzel-means {
+        padding: 255px 0;
+
+        .sub-title {
+            color: #676477;
+            line-height: 33px;
+        }
+    }
+
+    .backed-by {
+        background-color: #F5F4FA;
+
+        >div {
+            padding: 100px 0;
+
+            .title {
+                color: var(--deep-blue);
+            }
+
+            p {
+                color: #676477;
+                line-height: 33px;
+                margin-bottom: 75px;
 
                 @media (min-width: 768px) {
-                    padding: 200px 0;
+                    font-size: 22px;
+                    margin-bottom: 150px;
                 }
+
+            }
+
+            .logo-wrapper {
+                margin: 0 auto;
+            }
+
+            @media (min-width: 768px) {
+                padding: 200px 0;
             }
         }
     }
