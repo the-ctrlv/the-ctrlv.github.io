@@ -5,10 +5,21 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1080;
     background-color: #fff;
     text-align: center;
     overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    z-index: 1080;
+
+    &.show {
+        transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+
+    }
 
     .core {
         @media (max-height: '700px') {
@@ -34,6 +45,18 @@
         right: 15px;
         top: 15px;
         cursor: pointer;
+
+        @media (min-width: '768px') {
+            top: 25px;
+            right: 25px;
+
+        }
+
+        @media (min-width: '1200px') {
+            top: 50px;
+            right: 50px;
+
+        }
     }
 
     &::before {
@@ -72,35 +95,52 @@
     .form-group {
         position: relative;
 
-        label {
-            cursor: pointer;
-            width: 100%;
-            color: var(--deep-blue);
-            font-size: 14px;
+        .label-wrapper {
+            input {
+                border: none;
+                border-bottom: 1px solid #BDBEBF;
+                font-weight: bold;
+                background-color: transparent;
+                color: var(--deep-blue);
+                padding: 7px 0;
 
-            &:focus {
-                color: #E4265C;
+                &::placeholder {
+                    font-weight: 400;
+                }
+            }
+
+            label {
+                cursor: text;
+                width: 100%;
+                color: var(--deep-blue);
+                font-size: 14px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform-origin: left;
+                transform: scale(0.8) translate3d(5px, 20px, 0);
+                user-select: none;
+                transition: transform 200ms ease-in;
+
+                &:focus {
+                    color: #E4265C;
+                }
+            }
+
+            input:focus~label,
+            input:not(:placeholder-shown):not(:focus)~label {
+                transform: scale(1) translate3d(0px, -15px, 0);
+
             }
         }
 
         &.invalid {
-
-            input {
-                border-bottom: 1px solid #E4265C;
+            .label-wrapper {
+                input {
+                    border-bottom: 1px solid #E4265C;
+                }
             }
-        }
 
-        input {
-            border: none;
-            border-bottom: 1px solid #BDBEBF;
-            font-weight: bold;
-            background-color: transparent;
-            color: var(--deep-blue);
-            padding: 7px 0;
-
-            &::placeholder {
-                font-weight: 400;
-            }
         }
 
         .validation-error {

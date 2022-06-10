@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import ComingSoonModal from './Modal';
 import AIGLogo from '../../assets/images/aig-logo.svg';
@@ -11,9 +11,13 @@ import './style.scss';
 function ComingSoon() {
     const [showModal, setShowModal] = useState(false);
 
+    useEffect(() => {
+        document.body.style.overflow = showModal ? 'hidden' : 'auto';
+    }, [showModal]);
+
     return (
         <>
-            {showModal && <ComingSoonModal showModal={showModal} setShowModal={setShowModal} />}
+            <ComingSoonModal showModal={showModal} setShowModal={setShowModal} />
 
             <section className='hero h-100 d-flex justify-content-center align-items-center'>
                 <div className='container-xl'>

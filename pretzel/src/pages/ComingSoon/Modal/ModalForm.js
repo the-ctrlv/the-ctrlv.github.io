@@ -31,48 +31,56 @@ function ModalForm({ SetIsFormSubmitted }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='modal-form px-4 px-md-0'>
       <div className={getClassNames('w-100 mb-5 form-group', errors?.name && 'invalid')}>
-        <label className='d-inline-block' for="firstName">First Name</label>
-        <input
-          id="firstName"
-          {...register('name', {
-            required: pretzelErrors.name,
-            minLength: {
-              value: 5,
-              message: pretzelErrors.minLength,
-            },
-          })}
-          className='w-100'
-        />
+        <div className='label-wrapper'>
+          <input
+            id="firstName"
+            {...register('name', {
+              required: pretzelErrors.name,
+              minLength: {
+                value: 5,
+                message: pretzelErrors.minLength,
+              },
+            })}
+            placeholder=" "
+            className='w-100'
+          />
+          <label className='d-inline' for="firstName">First Name</label>
+        </div>
         {errors?.name && <p className='validation-error'>{errors.name.message}</p>}
       </div>
       <div className={getClassNames('w-100 mb-5 form-group', errors?.lastName && 'invalid')}>
-        <label for="LastName" className='d-inline-block'>Last Name</label>
-        <input
-          id="LastName"
-          {...register('lastName', {
-            required: pretzelErrors.lastName,
-            minLength: {
-              value: 5,
-              message: pretzelErrors.minLengthLastName,
-            },
-          })}
-          className='w-100'
-        />
+        <div className='label-wrapper'>
+          <input
+            id="LastName"
+            {...register('lastName', {
+              required: pretzelErrors.lastName,
+              minLength: {
+                value: 5,
+                message: pretzelErrors.minLengthLastName,
+              },
+            })}
+            placeholder=" "
+            className='w-100'
+          />
+          <label for="LastName" className='d-inline-block'>Last Name</label>
+        </div>
         {errors?.lastName && <p className='validation-error'>{errors.lastName.message}</p>}
       </div>
       <div className={getClassNames('w-100 mb-5 form-group', errors?.email && 'invalid')}>
-        <label className='d-inline-block' for="email">Email Address</label>
-        <input
-          id="email"
-          {...register('email', {
-            required: pretzelErrors.email,
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'invalid email address'
-            },
-          })}
-          className='w-100'
-        />
+        <div className='label-wrapper'>
+          <input
+            id="email"
+            {...register('email', {
+              required: pretzelErrors.email,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'Invalid email address'
+              },
+            })}
+            placeholder=" "
+            className='w-100' />
+          <label className='d-inline-block' for="email">Email Address</label>
+        </div>
         {errors?.email && <p className='validation-error'>{errors.email.message}</p>}
       </div>
       <div className='w-100 text-center'>

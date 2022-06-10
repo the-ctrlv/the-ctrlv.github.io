@@ -2,6 +2,7 @@
   "name": "pretzel",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/pretzel",
   "dependencies": {
     "@babel/eslint-plugin": "^7.17.7",
     "@popperjs/core": "^2.11.5",

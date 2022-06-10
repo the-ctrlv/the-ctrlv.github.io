@@ -4,14 +4,16 @@ import { Modal } from 'bootstrap';
 import ModalForm from './ModalForm';
 import closeButton from '../../../assets/images/close-button.svg';
 import okLogo from '../../../assets/images/OK.svg';
+import { getClassNames } from '../../../shared/functions';
 
 import './style.scss'
 
-function ComingSoonModal({ showModal, setShowModal }) {
+function ComingSoonModal({ showModal, setShowModal, className }) {
     const [isFormSubmitted, SetIsFormSubmitted] = useState(false)
 
     return (
-        <div className='pretzel-modal d-flex justify-content-center align-items-center'>
+        <div className={getClassNames('pretzel-modal d-flex justify-content-center align-items-center',
+            showModal && 'show')}>
             <div className='core'>
                 {!isFormSubmitted && (
                     <>
