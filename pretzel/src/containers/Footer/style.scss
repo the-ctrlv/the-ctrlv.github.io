@@ -7,6 +7,10 @@
         color: var(--bs-white);
     }
 
+    ul li ul li {
+        margin: 0 0 10px;
+    }
+
     .stay-in-touch-container {
         border: 1px dashed rgba(0, 0, 0, 0.2);
     }

@@ -24,13 +24,47 @@
     }
 }
 
-.coming-soon {
+.hero {
     min-height: 100vh;
     background: url('../../assets/images/coming-soon-hero.jpg') center center/cover no-repeat;
+    background-attachment: fixed;
+    padding: 80px 0;
+
+    &_title {
+        @media (min-width: 1200px) {
+            line-height: 1.1;
+        }
+    }
+
+    &_top-title {
+        margin-bottom: 35px !important;
+    }
 
     &__content {
         color: var(--bs-white);
+    }
+}
 
+.list-caption {
+    margin: 0 0 140px;
+}
+
+.sub-title {
+    font-size: 20px;
+    color: #676477;
+    margin-bottom: 80px;
+
+    @media (min-width: '768px') {
+        margin-bottom: 140px;
+        font-size: 24px;
+    }
+}
+
+.no-drama {
+    .sub-title {
+        @media (min-width: '768px') {
+            margin-bottom: 80px;
+        } 
     }
 }
 
@@ -48,19 +82,6 @@
 
         @media (min-width: '768px') {
             font-size: 20px;
-        }
-
-    }
-
-
-    .sub-title {
-        font-size: 20px;
-        color: #676477;
-        margin-bottom: 80px;
-
-        @media (min-width: '768px') {
-            margin-bottom: 140px;
-            font-size: 32px;
         }
     }
 
@@ -193,7 +214,7 @@
     padding: 100px 0;
 
     @media (min-width: '768px') {
-        padding: 255px 0;
+        padding: 255px 0 225px;
     }
 
     .sub-title {
@@ -205,7 +226,7 @@
 .backed-by {
     background-color: #F5F4FA;
 
-    >div {
+    &_content {
         padding: 100px 0;
 
         .title {
@@ -218,7 +239,7 @@
             margin-bottom: 75px;
 
             @media (min-width: 768px) {
-                font-size: 22px;
+                // font-size: 22px;
                 margin-bottom: 150px;
             }
 

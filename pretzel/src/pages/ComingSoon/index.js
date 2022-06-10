@@ -15,18 +15,18 @@ function ComingSoon() {
         <>
             {showModal && <ComingSoonModal showModal={showModal} setShowModal={setShowModal} />}
 
-            <section className='coming-soon h-100 d-flex justify-content-center align-items-center'>
+            <section className='hero h-100 d-flex justify-content-center align-items-center'>
                 <div className='container-xl'>
-                    <div className='coming-soon__content text-center'>
-                        <span className='title fw-bold d-block mb-4'>Coming Soon!</span>
-                        <span className='title fw-bold'>
+                    <div className='hero__content text-center'>
+                        <span className='hero_top-title title title fw-bold d-block'>Coming Soon!</span>
+                        <h1 className='hero_title title fw-bold'>
                             Making life better <br />
                             through better protection.
-                        </span>
-                        <p className='sub-title mt-4 mb-2'>
+                        </h1>
+                        <p className='mt-4 mb-2'>
                             Simple, straight forward protection plans for everything that matters.
                         </p>
-                        <span className='benefits fw-bold d-block pb-3 mb-5'>
+                        <span className='fw-bold d-block pb-3 mb-5'>
                             HOME. CAR. ELECTRONICS. PHONE.
                         </span>
                         <button onClick={() => { setShowModal(true) }} className='pretzel-button btn btn-primary'>
@@ -74,9 +74,9 @@ function ComingSoon() {
                         <span className='title fw-bold d-block mb-3'>
                             Here's how it will work
                         </span>
-                        <span className='sub-title fw-bold d-block'>
+                        <p className='sub-title fw-bold d-block'>
                             We run protection plans the way they should be run – as a service designed to save you money and make your life easier. You pay a low, flat monthly fee, and when something happens that’s covered, we foot the bill or make sure you get paid easily and quickly.
-                        </span>
+                        </p>
                         <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-between'>
                             {howItWorksList.map((howItWorks, index) => (
                                 <li key={index} className='how-it-works__list text-center col-12 col-md-6 
@@ -99,10 +99,11 @@ function ComingSoon() {
                     <span className='title fw-bold d-block mb-3'>
                         No more drama
                     </span>
-                    <span className='sub-title fw-bold d-block'>
+                    <p className='sub-title fw-bold d-block'>
                         We know what you’ve heard about extended warranties, but that’s not us. We’re here because, frankly?
                         Extended warranties are broken, and we’re here to fix them. Simple as that.
-                    </span>
+                    </p>
+                    <span className='fw-bold d-block list-caption'>That means…</span>
                     <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-between'>
                         {noDramaList.map((noDrama, index) => (
                             <li key={index} className='no-drama__list text-center col-12 col-md-6
@@ -125,13 +126,13 @@ function ComingSoon() {
                     <span className='fw-bold d-block my-3'>
                         (we’re a soft, warm pretzel)
                     </span>
-                    <span className='sub-title fw-bold d-block pxx-3 px-lg-5'>
+                    <p className='sub-title fw-bold d-block pxx-3 px-lg-5'>
                         When we say our mission is making life better through better protection,
                         we mean making the world better too. That’s why we make regular donations to charities chosen by Pretzel customers like you.
-                    </span>
+                    </p>
                     <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-between mt-5'>
                         {pretzelMeansList.map((pretzelMeans, index) => (
-                            <li key={index} className='pretzel-means__list text-center d-flex justify-content-center col-12 col-md-2 mb-5'>
+                            <li key={index} className='pretzel-means__list text-center d-flex justify-content-center col-12 col-md-2'>
                                 <div className='image-wrapper h-100 d-flex align-items-center'>
                                     <img src={pretzelMeans} alt={pretzelMeans} className="d-block" />
                                 </div>
@@ -143,9 +144,9 @@ function ComingSoon() {
 
 
             <section className='backed-by colored'>
-                <div className='container-xl text-center'>
-                    <span className='title fw-bold d-block'>Backed by the best</span>
-                    <p className='fw-bold px-4 px-xl-2'>Pretzel has great extended protection plans, backed by top financial institutions like Allianz, AIG, and A+ financial. </p>
+                <div className='backed-by_content container-xl text-center'>
+                    <span className='title mb-3 fw-bold d-block'>Backed by the best</span>
+                    <p className='sub-title fw-bold px-4 px-xl-2'>Pretzel has great extended protection plans, backed by top financial institutions like Allianz, AIG, and A+ financial. </p>
                     <div className='logo-wrapper d-md-flex justify-content-center px-3'>
                         <img src={AllianzLogo} alt="Allianz Logo" className='mb-4 mb-md-0 me-md-3' />
                         <img src={AIGLogo} alt="AIG Logo" className='ms-md-3' />

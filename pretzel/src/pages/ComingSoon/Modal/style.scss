@@ -59,11 +59,16 @@
         width: 440px;
     }
 
-    label {
+    .form-group {
         position: relative;
 
+        label {
+            color: #EA2667;
+            font-size: 14px;
+        }
+
         &.invalid {
-            color: #E4265C;
+            // color: #E4265C;
 
             input {
                 border-bottom: 1px solid #E4265C;
@@ -86,8 +91,9 @@
         .validation-error {
             position: absolute;
             left: 0;
-            font-size: 16px;
-            bottom: 23px;
+            font-size: 12px;
+            bottom: -22px;
+            color: red;
         }
     }
 

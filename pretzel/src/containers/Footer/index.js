@@ -33,10 +33,10 @@ function Footer() {
                         </div>
                     </li>
                     <li className='mb-4 col-md-6 col-lg-auto d-flex d-lg-block order-md-2 order-lg-0'>
-                        <a href='/' className='d-block fw-bold'>
+                        <a href='/' className='d-block fw-bold mb-3'>
                             Plans
                         </a>
-                        <a href='/' className='d-block fw-bold mx-3 mx-lg-0'>
+                        <a href='/' className='d-block fw-bold mx-3 mx-lg-0 mb-3'>
                             FAQ
                         </a>
                         <a href='/' className='d-block fw-bold'>
@@ -44,7 +44,7 @@ function Footer() {
                         </a>
                     </li>
                     <li className='col-md-4 mb-4 col-md-6 col-lg-4'>
-                        <span className='fw-bold user-select-none'>Services</span>
+                        <h5 className='fw-bold user-select-none mb-3'>Services</h5>
                         <ul className="d-flex flex-wrap">
                             {serviceLinks.map((link, index) => (
                                 <li key={index} className='w-50'>

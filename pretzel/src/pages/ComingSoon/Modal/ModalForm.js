@@ -30,8 +30,8 @@ function ModalForm({ SetIsFormSubmitted }) {
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='modal-form px-4 px-md-0'>
-      <label className={getClassNames('w-100', errors?.name && 'invalid')}>
-        <span className='fw-bold d-inline-block'>First Name</span>
+      <div className={getClassNames('w-100 mb-5 form-group', errors?.name && 'invalid')}>
+        <label className='d-inline-block'>First Name</label>
         <input
           {...register('name', {
             required: pretzelErrors.name,
@@ -40,12 +40,12 @@ function ModalForm({ SetIsFormSubmitted }) {
               message: pretzelErrors.minLength,
             },
           })}
-          className='w-100 mb-5'
+          className='w-100'
         />
         {errors?.name && <p className='validation-error'>{errors.name.message}</p>}
-      </label>
-      <label className={getClassNames('w-100', errors?.name && 'invalid')}>
-        <span className='fw-bold d-inline-block'>Last Name</span>
+      </div>
+      <div className={getClassNames('w-100 mb-5 form-group', errors?.name && 'invalid')}>
+        <label className='d-inline-block'>Last Name</label>
         <input
           {...register('lastName', {
             required: pretzelErrors.lastName,
@@ -54,12 +54,12 @@ function ModalForm({ SetIsFormSubmitted }) {
               message: pretzelErrors.minLengthLastName,
             },
           })}
-          className='w-100 mb-5'
+          className='w-100'
         />
         {errors?.lastName && <p className='validation-error'>{errors.lastName.message}</p>}
-      </label>
-      <label className={getClassNames('w-100', errors?.name && 'invalid')}>
-        <span className='fw-bold d-inline-block'>Email Address</span>
+      </div>
+      <div className={getClassNames('w-100 mb-5 form-group', errors?.name && 'invalid')}>
+        <label className='d-inline-block'>Email Address</label>
         <input
           {...register('email', {
             required: pretzelErrors.email,
@@ -68,12 +68,12 @@ function ModalForm({ SetIsFormSubmitted }) {
               message: 'invalid email address'
             },
           })}
-          className='w-100 mb-5'
+          className='w-100'
         />
         {errors?.email && <p className='validation-error'>{errors.email.message}</p>}
-      </label>
+      </div>
       <div className='w-100 text-center'>
-        <button className="rounded btn border-0" type="submit">
+        <button className="rounded btn border-0 fw-bold" type="submit">
           Submit
         </button>
       </div>
