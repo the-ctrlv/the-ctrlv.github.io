@@ -29,7 +29,7 @@ function ModalForm({ setIsFormSubmitted }) {
     setIsFormSubmitted(true)
   }
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='modal-form px-4 px-md-0'>
+    <form onSubmit={handleSubmit(onSubmit)} className='modal-form'>
       <div className={getClassNames('w-100 mb-5 form-group', errors?.name && 'invalid')}>
         <div className='label-wrapper'>
           <input

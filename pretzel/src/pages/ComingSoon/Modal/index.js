@@ -14,7 +14,7 @@ function ComingSoonModal({ showModal, setShowModal, className }) {
     return (
         <div className={getClassNames('pretzel-modal d-flex justify-content-center align-items-center',
             showModal && 'show')}>
-            <div className='core'>
+            <div className='core px-4'>
                 {!isFormSubmitted && (
                     <>
                         <span className='title fw-bold d-block mt-5 pt-5'>
