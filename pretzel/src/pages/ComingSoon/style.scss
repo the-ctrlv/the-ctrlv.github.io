@@ -47,6 +47,7 @@
 
 .list-caption {
     margin: 0 0 140px;
+    font-size: 24px;
 }
 
 .sub-title {
@@ -60,13 +61,6 @@
     }
 }
 
-.no-drama {
-    .sub-title {
-        @media (min-width: '768px') {
-            margin-bottom: 80px;
-        } 
-    }
-}
 
 .benefits,
 .how-it-works,
@@ -118,7 +112,42 @@
     }
 }
 
+
+.no-drama {
+
+    .sub-title {
+        margin: 0 auto;
+
+        @media (min-width: '768px') {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.benefits {
+    .sub-title {
+        font-size: 20px;
+
+        @media (min-width: '768px') {
+            font-size: 32px;
+        }
+    }
+
+    &__list {
+        p {
+            letter-spacing: -1px;
+            line-height: 28px;
+        }
+    }
+}
+
 .how-it-works {
+    padding-bottom: 160px;
+
+    .sub-title {
+        margin: 0 auto;
+    }
+
     &__list {
         .image-wrapper {
             height: auto;
@@ -135,13 +164,29 @@
         p {
             min-height: 60px;
         }
+
+        .list-title {
+            min-height: 110px;
+
+            @media (min-width: '768px') {
+                font-size: 24px;
+            }
+        }
     }
 }
 
 .no-drama {
+    padding-bottom: 160px;
+
     &__list {
         .list-title {
             min-height: 150px;
+            line-height: 33px;
+            letter-spacing: -1px;
+
+            @media (min-width: '768px') {
+                font-size: 24px;
+            }
         }
 
         &::before {
@@ -208,6 +253,10 @@
             }
         }
     }
+
+    .pretzel-button {
+        font-size: 20px;
+    }
 }
 
 .pretzel-means {
@@ -220,11 +269,16 @@
     .sub-title {
         color: #676477;
         line-height: 33px;
+        margin-bottom: 100px;
     }
 }
 
 .backed-by {
     background-color: #F5F4FA;
+
+    .sub-title {
+        margin: 0 auto 200px;
+    }
 
     &_content {
         padding: 100px 0;
