@@ -9,8 +9,8 @@ import { getClassNames } from '../../../shared/functions';
 import './style.scss'
 
 function ComingSoonModal({ showModal, setShowModal, className }) {
-    const [isFormSubmitted, SetIsFormSubmitted] = useState(false)
-
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+    console.log(isFormSubmitted)
     return (
         <div className={getClassNames('pretzel-modal d-flex justify-content-center align-items-center',
             showModal && 'show')}>
@@ -24,20 +24,23 @@ function ComingSoonModal({ showModal, setShowModal, className }) {
                             Sign up to get notified
                         </span>
 
-                        <ModalForm SetIsFormSubmitted={SetIsFormSubmitted} />
+                        <ModalForm setIsFormSubmitted={setIsFormSubmitted} />
                     </>
                 )}
                 {isFormSubmitted && (
                     <>
                         <span className='title fw-bold d-block pb-5 mb-5'>Thank you <br />
                             for signing up!</span>
-                        <img src={okLogo} alt="ok!" />
+                        <img src={okLogo} alt="ok!" style={{ minHeight: '69px' }} />
                     </>
                 )}
 
             </div>
             <img src={closeButton} className='pretzel-modal__close-button cursor-pointer'
-                onClick={() => setShowModal(false)} />
+                onClick={() => {
+                    setShowModal(false)
+                    setIsFormSubmitted(false)
+                }} />
         </div>
     );
 }

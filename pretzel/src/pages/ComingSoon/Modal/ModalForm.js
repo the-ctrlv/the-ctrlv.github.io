@@ -4,7 +4,7 @@ import { getClassNames } from '../../../shared/functions';
 
 import './style.scss'
 
-function ModalForm({ SetIsFormSubmitted }) {
+function ModalForm({ setIsFormSubmitted }) {
 
   const { register, handleSubmit, control, formState: { errors }, } =
     useForm({ mode: 'onBlur', })
@@ -26,7 +26,7 @@ function ModalForm({ SetIsFormSubmitted }) {
       'LastName': data.lastName,
       'Email': data.email,
     })
-    SetIsFormSubmitted(true)
+    setIsFormSubmitted(true)
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='modal-form px-4 px-md-0'>
@@ -44,7 +44,7 @@ function ModalForm({ SetIsFormSubmitted }) {
             placeholder=" "
             className='w-100'
           />
-          <label className='d-inline' for="firstName">First Name</label>
+          <label className='d-inline' htmlFor="firstName">First Name</label>
         </div>
         {errors?.name && <p className='validation-error'>{errors.name.message}</p>}
       </div>
@@ -62,7 +62,7 @@ function ModalForm({ SetIsFormSubmitted }) {
             placeholder=" "
             className='w-100'
           />
-          <label for="LastName" className='d-inline-block'>Last Name</label>
+          <label htmlFor="LastName" className='d-inline-block'>Last Name</label>
         </div>
         {errors?.lastName && <p className='validation-error'>{errors.lastName.message}</p>}
       </div>
@@ -79,7 +79,7 @@ function ModalForm({ SetIsFormSubmitted }) {
             })}
             placeholder=" "
             className='w-100' />
-          <label className='d-inline-block' for="email">Email Address</label>
+          <label className='d-inline-block' htmlFor="email">Email Address</label>
         </div>
         {errors?.email && <p className='validation-error'>{errors.email.message}</p>}
       </div>

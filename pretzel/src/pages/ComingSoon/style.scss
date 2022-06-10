@@ -35,8 +35,12 @@
 .hero {
     min-height: 100vh;
     background: url('../../assets/images/coming-soon-hero.jpg') center center/cover no-repeat;
-    background-attachment: fixed;
     padding: 80px 0;
+
+    @media (min-width: '768px') {
+        background-attachment: fixed;
+    }
+
 
     &_title {
         @media (min-width: 1200px) {
