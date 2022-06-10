@@ -8,17 +8,16 @@
     background-color: #fff;
     text-align: center;
     overflow: auto;
-    visibility: hidden;
+    pointer-events: none;
     opacity: 0;
     transform: scale(0.9);
     z-index: 1080;
+    transition: all .2s ease-in-out;
 
     &.show {
-        transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
         transform: scale(1);
         opacity: 1;
-        visibility: visible;
-
+        pointer-events: all;
     }
 
     .core {

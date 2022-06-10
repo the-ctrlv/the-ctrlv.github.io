@@ -12,7 +12,7 @@ import './style.scss'
 function Footer() {
     return (
         <footer className="footer">
-            <div className="container-xl pt-5">
+            <div className="container-xl pt-5 px-md-4">
                 <ul className='d-flex flex-column flex-md-row justify-content-between flex-md-wrap flex-lg-nowrap pt-5 px-xl-5'>
                     <li className='me-xl-5 pe-xl-5 mt-4 mt-md-0 mb-5 mb-lg-0 text-center text-md-start order-last 
             order-md-first col-md-6 col-lg-auto'>

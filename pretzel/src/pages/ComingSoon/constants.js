@@ -3,7 +3,7 @@ import electronicsLogo from '../../assets/images/electronics.svg';
 import heartLogo from '../../assets/images/heart.svg';
 import hobeLogo from '../../assets/images/hobe.svg';
 import homeLogo from '../../assets/images/home.svg';
-import iphoneLogo from '../../assets/images/iphone.svg';
+import iphoneLogo from '../../assets/images/iphone.png';
 import noDramaLogo1 from '../../assets/images/no-drama1.svg';
 import noDramaLogo2 from '../../assets/images/no-drama2.svg';
 import noDramaLogo3 from '../../assets/images/no-drama3.svg';

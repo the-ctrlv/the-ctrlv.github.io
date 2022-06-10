@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3011374b.css",
-    "main.js": "/static/js/main.27847a96.js",
+    "main.css": "/static/css/main.feae3584.css",
+    "main.js": "/static/js/main.8b77a306.js",
     "static/js/787.39f62c83.chunk.js": "/static/js/787.39f62c83.chunk.js",
     "static/media/no-drama4.svg": "/static/media/no-drama4.cbadbeb8c076fb487256b0ccb1be4815.svg",
     "static/media/home.svg": "/static/media/home.65d09af097e823970719d86a278dc17f.svg",
@@ -14,11 +14,11 @@
     "static/media/no-drama2.svg": "/static/media/no-drama2.b07714d661436ff213dc943b0d7e58df.svg",
     "static/media/payments.svg": "/static/media/payments.961372ff008f84bc41c4b21b5acfb2ec.svg",
     "static/media/coming-soon-hero.jpg": "/static/media/coming-soon-hero.e03b2446f7eb7d818b65.jpg",
-    "static/media/iphone.svg": "/static/media/iphone.eb38d5dc8f4f67814cc0d3ef906ad976.svg",
     "static/media/heart.svg": "/static/media/heart.9e2498f25074b7b726b1238258f9d50d.svg",
     "static/media/allianz-logo.svg": "/static/media/allianz-logo.dae3c737e69b5c74faab26f14502075c.svg",
     "static/media/NotoSans-Light.woff2": "/static/media/NotoSans-Light.067b6adc4bbfb62b9c82.woff2",
     "static/media/NotoSans-Bold.woff2": "/static/media/NotoSans-Bold.c5c9a566ce37b2716b90.woff2",
+    "static/media/iphone.png": "/static/media/iphone.a31c05d3bfec0db94d8d.png",
     "static/media/scv.svg": "/static/media/scv.432e3c066c6a18173c780b7b578120af.svg",
     "static/media/tip3.svg": "/static/media/tip3.0056a4c93f17a00218f1.svg",
     "static/media/tip4.svg": "/static/media/tip4.92b3808cc28c90061a4c.svg",
@@ -44,12 +44,12 @@
     "static/media/telegram-logo.svg": "/static/media/telegram-logo.1cc5ddef5479c1e13eb5c3c44a4d6a13.svg",
     "static/media/close-button.svg": "/static/media/close-button.a5baf54afd99f0bd1c7372dc86e9b7a2.svg",
     "static/media/OK.svg": "/static/media/OK.4e8411da4a23e3c6bcc4702966d94991.svg",
-    "main.3011374b.css.map": "/static/css/main.3011374b.css.map",
-    "main.27847a96.js.map": "/static/js/main.27847a96.js.map",
+    "main.feae3584.css.map": "/static/css/main.feae3584.css.map",
+    "main.8b77a306.js.map": "/static/js/main.8b77a306.js.map",
     "787.39f62c83.chunk.js.map": "/static/js/787.39f62c83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3011374b.css",
-    "static/js/main.27847a96.js"
+    "static/css/main.feae3584.css",
+    "static/js/main.8b77a306.js"
   ]
 }

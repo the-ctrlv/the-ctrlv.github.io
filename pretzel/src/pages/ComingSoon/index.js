@@ -52,12 +52,12 @@ function ComingSoon() {
                         <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-between px-lg-5'>
                             {benefitsList.map((benefit, index) => (
                                 <li key={index} className='benefits__list text-center col-12 col-md-6 
-                                col-lg-3 mb-5 d-flex flex-column justify-content-between'>
+                                col-lg-3 mb-5 pb-md-5 pb-lg-0 d-flex flex-column justify-content-between'>
                                     <div>
                                         <div className='image-wrapper d-flex align-items-center'>
                                             <img src={benefit.logo} alt={benefit.title} className="d-block" />
                                         </div>
-                                        <span className='fw-bold mt-4 mt-lg-2 d-block list-title'>Your {benefit.title}</span>
+                                        <span className='fw-bold mt-4 mt-lg-2 d-block mb-3 mb-md-0 list-title'>Your {benefit.title}</span>
                                         <p className='px-3'>{benefit.text}</p>
                                     </div>
 
@@ -78,13 +78,13 @@ function ComingSoon() {
                         <span className='title fw-bold d-block mb-3'>
                             Here's how it will work
                         </span>
-                        <p className='sub-title fw-bold d-block col-lg-10 px-md-3 mb-5'>
+                        <p className='sub-title fw-bold d-block col-lg-10 px-4 mb-5'>
                             We run protection plans the way they should be run – as a service designed to save you money and make your life easier. You pay a low, flat monthly fee, and when something happens that’s covered, we foot the bill or make sure you get paid easily and quickly.
                         </p>
                         <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-between px-lg-5'>
                             {howItWorksList.map((howItWorks, index) => (
                                 <li key={index} className='how-it-works__list text-center col-12 col-md-6 
-                                col-lg-3 mb-5 d-flex flex-column justify-content-between'>
+                                col-lg-3 mb-2 mb-md-5 d-flex flex-column justify-content-between'>
                                     <div className='image-wrapper d-flex align-items-center'>
                                         <img src={howItWorks.logo} alt={howItWorks.title} className="d-block" />
                                     </div>
@@ -103,7 +103,7 @@ function ComingSoon() {
                     <span className='title fw-bold d-block mb-3'>
                         No more drama
                     </span>
-                    <p className='sub-title fw-bold d-block col-lg-10'>
+                    <p className='sub-title fw-bold d-block col-lg-10 px-4'>
                         We know what you’ve heard about extended warranties, but that’s not us. We’re here because, frankly?
                         Extended warranties are broken, and we’re here to fix them. Simple as that.
                     </p>
@@ -115,7 +115,7 @@ function ComingSoon() {
                                 <div className='image-wrapper d-flex align-items-center'>
                                     <img src={noDrama.logo} alt={noDrama.title} className="d-block" />
                                 </div>
-                                <p className='px-3 fw-bold mt-5 list-title'>{noDrama.text}</p>
+                                <p className='px-4 fw-bold mt-md-5 list-title'>{noDrama.text}</p>
                             </li>
                         ))}
                     </ul>
@@ -132,16 +132,17 @@ function ComingSoon() {
                     <span className='title fw-bold d-block mb-3'>
                         Pretzel means coverage with a heart
                     </span>
-                    <span className='fw-bold d-block my-3'>
+                    <span className='fw-bold d-block my-4 my-md-3'>
                         (we’re a soft, warm pretzel)
                     </span>
                     <p className='sub-title fw-bold d-block px-3 px-lg-5'>
                         When we say our mission is making life better through better protection,
                         we mean making the world better too. That’s why we make regular donations to charities chosen by Pretzel customers like you.
                     </p>
-                    <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-between'>
+                    <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-around'>
                         {pretzelMeansList.map((pretzelMeans, index) => (
-                            <li key={index} className='pretzel-means__list text-center d-flex justify-content-center col-12 col-md-2'>
+                            <li key={index} className='pretzel-means__list text-center d-flex flex-wrap 
+                            justify-content-center my-3 my-md-0 col-6 col-md-2'>
                                 <div className='image-wrapper h-100 d-flex align-items-center'>
                                     <img src={pretzelMeans} alt={pretzelMeans} className="d-block" />
                                 </div>
@@ -157,7 +158,7 @@ function ComingSoon() {
                     <span className='title mb-3 fw-bold d-block'>Backed by the best</span>
                     <p className='sub-title fw-bold px-4 px-xl-2 col-lg-10'>Pretzel has great extended protection plans, backed by top financial institutions like Allianz, AIG, and A+ financial. </p>
                     <div className='logo-wrapper d-md-flex justify-content-center px-3'>
-                        <img src={AllianzLogo} alt="Allianz Logo" className='mb-4 mb-md-0 me-md-5' />
+                        <img src={AllianzLogo} alt="Allianz Logo" className='col-12 col-md-5 col-lg-auto mb-4 mb-md-0 me-md-5' />
                         <img src={AIGLogo} alt="AIG Logo" className='ms-md-5' />
                     </div>
                 </div>
