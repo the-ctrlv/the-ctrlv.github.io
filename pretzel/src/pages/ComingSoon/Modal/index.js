@@ -15,7 +15,7 @@ function ComingSoonModal({ showModal, setShowModal }) {
             <div className='core'>
                 {!isFormSubmitted && (
                     <>
-                        <span className='title fw-bold d-block'>
+                        <span className='title fw-bold d-block mt-5 pt-5'>
                             We are coming soon!
                         </span>
                         <span className='sub-title fw-bold mt-3 mb-5 pb-4 d-block'>

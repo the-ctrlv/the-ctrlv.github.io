@@ -8,19 +8,29 @@
     z-index: 1080;
     background-color: #fff;
     text-align: center;
-    overflow: hidden;
+    overflow: auto;
+
+    .core {
+        @media (max-height: '700px') {
+            padding: 70px 0;
+        }
+    }
 
     .sub-title {
         color: #676477;
         font-size: 20px;
 
         @media (min-width: 768px) {
+            font-size: 25px;
+        }
+
+        @media (min-width: 1200px) {
             font-size: 32px;
         }
     }
 
     &__close-button {
-        position: absolute;
+        position: fixed;
         right: 15px;
         top: 15px;
         cursor: pointer;
@@ -63,12 +73,17 @@
         position: relative;
 
         label {
-            color: #EA2667;
+            cursor: pointer;
+            width: 100%;
+            color: var(--deep-blue);
             font-size: 14px;
+
+            &:focus {
+                color: #E4265C;
+            }
         }
 
         &.invalid {
-            // color: #E4265C;
 
             input {
                 border-bottom: 1px solid #E4265C;

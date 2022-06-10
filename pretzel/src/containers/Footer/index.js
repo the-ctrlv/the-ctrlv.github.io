@@ -12,9 +12,9 @@ import './style.scss'
 function Footer() {
     return (
         <footer className="footer">
-            <div className="container-xl">
-                <ul className='d-flex flex-column flex-md-row justify-content-between flex-md-wrap flex-lg-nowrap pt-5'>
-                    <li className='mt-4 mt-md-0 mb-5 mb-lg-0 text-center text-md-start order-last 
+            <div className="container-xl pt-5">
+                <ul className='d-flex flex-column flex-md-row justify-content-between flex-md-wrap flex-lg-nowrap pt-5 px-xl-5'>
+                    <li className='me-xl-5 pe-xl-5 mt-4 mt-md-0 mb-5 mb-lg-0 text-center text-md-start order-last 
             order-md-first col-md-6 col-lg-auto'>
                         <img src={pretzelLogo} alt="Pretzel Logo" className='mb-4' />
                         <div className='footer__logo-container d-flex justify-content-between col-6 col-lg-12'>
@@ -43,17 +43,17 @@ function Footer() {
                             Login
                         </a>
                     </li>
-                    <li className='col-md-4 mb-4 col-md-6 col-lg-4'>
+                    <li className='col-md-4 mb-4 col-md-6 col-lg-4 col-xl-3' style={{ minWidth: '300px' }}>
                         <h5 className='fw-bold user-select-none mb-3'>Services</h5>
                         <ul className="d-flex flex-wrap">
                             {serviceLinks.map((link, index) => (
                                 <li key={index} className='w-50'>
-                                    <a href='/'>{link}</a>
+                                    <a href='/' className='text-nowrap'>{link}</a>
                                 </li>
                             ))}
                         </ul>
                     </li>
-                    <li className='stay-in-touch-container p-2 pt-4 rounded col-md-6 col-lg-auto order-4'>
+                    <li className='stay-in-touch-container p-2 pt-4 rounded col-md-6 col-lg-3 ms-lg-5 order-4'>
                         <span className='fw-bold d-block'>Lets stay in touch!</span>
                         <p className='my-2'>Subscribe our newsletter</p>
                         <form className='d-flex form-group footer__form rounded'>
@@ -64,7 +64,7 @@ function Footer() {
                         </form>
                     </li>
                 </ul>
-                <div className='copyright w-100 text-center mt-4'>
+                <div className='copyright text-center mt-3 mx-xl-5'>
                     <p className='pt-4 pb-5 user-select-none'>© Copyright 2021 Pretzel</p>
                 </div>
             </div>
