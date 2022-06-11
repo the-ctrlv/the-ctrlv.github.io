@@ -13,6 +13,15 @@
 
     .stay-in-touch-container {
         border: 1px dashed rgba(0, 0, 0, 0.2);
+
+        img {
+            transition: 100ms ease-in;
+
+            &:hover {
+                transition: 100ms ease-in;
+                transform: scale(1.2);
+            }
+        }
     }
 
     .copyright {
@@ -26,6 +35,15 @@
 
     &__logo-container {
         margin: 0 auto;
+
+        img {
+            transition: 100ms ease-in;
+
+            &:hover {
+                transition: 100ms ease-in;
+                transform: scale(1.2);
+            }
+        }
 
         @media (min-width: 768px) {
             margin: 0

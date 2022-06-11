@@ -24,6 +24,10 @@ input {
 a {
     text-decoration: none;
     color: var(--deep-blue);
+
+    &:hover {
+        color: #C8134F;
+    }
 }
 
 ul {
@@ -54,13 +58,17 @@ section {
     font-weight: bold;
     border: none;
 
+    &:hover {
+        background: linear-gradient(90deg, #C8134F 0%, #EE5386 250%);
+    }
+
     @media (min-width: '768px') {
         font-size: 24px;
     }
 }
 
 .title {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 45px;
 
     @media (min-width: 768px) {

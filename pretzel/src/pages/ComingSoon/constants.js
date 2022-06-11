@@ -1,7 +1,7 @@
 import bankLogo from '../../assets/images/bank.svg'
+import directReliefLogo from '../../assets/images/direct-relief.svg';
 import electronicsLogo from '../../assets/images/electronics.svg';
 import heartLogo from '../../assets/images/heart.svg';
-import hobeLogo from '../../assets/images/hobe.svg';
 import homeLogo from '../../assets/images/home.svg';
 import iphoneLogo from '../../assets/images/iphone.png';
 import noDramaLogo1 from '../../assets/images/no-drama1.svg';
@@ -10,33 +10,37 @@ import noDramaLogo3 from '../../assets/images/no-drama3.svg';
 import noDramaLogo4 from '../../assets/images/no-drama4.svg';
 import paymentsLogo from '../../assets/images/payments.svg';
 import ratesLogo from '../../assets/images/rate.svg';
-import scvLogo from '../../assets/images/scv.svg';
 import unicefLogo from '../../assets/images/unicef.svg';
 import vehicleLogo from '../../assets/images/vehicle.svg';
 import wagsLogo from '../../assets/images/wags.svg';
+import wckLogo from '../../assets/images/wck.svg';
 import wwfLogo from '../../assets/images/wwf.svg';
 
 
 export const benefitsList = [
   {
+    logo: vehicleLogo,
     title: 'Vehicle',
     text: 'Breakdowns happen. Protect your transmission, brakes, A/C, and more.',
-    logo: vehicleLogo,
+    price: '$79,99'
   },
   {
     logo: homeLogo,
     title: 'Home',
     text: 'Cover your dishwasher, electrical, plumbing, and other stuff.',
+    price: '$39,99'
   },
   {
     logo: electronicsLogo,
     title: 'Electronics',
     text: 'From breaks to bugs, protect your laptop, gaming systems, and other bits and bytes.',
+    price: '$24,99'
   },
   {
     logo: iphoneLogo,
     title: 'Phone',
     text: 'Your smartphone is essential. Cover it for just a few dollars a month.',
+    price: '$8,00'
   },
 ]
 
@@ -82,6 +86,6 @@ export const noDramaList = [
 ]
 
 export const pretzelMeansList = [
-  wagsLogo, wwfLogo, scvLogo, unicefLogo, hobeLogo
+  wagsLogo, wwfLogo, wckLogo, unicefLogo, directReliefLogo
 
 ]
