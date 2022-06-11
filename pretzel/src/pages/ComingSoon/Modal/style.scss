@@ -110,6 +110,7 @@
             }
 
             label {
+                pointer-events: none;
                 cursor: text;
                 width: 100%;
                 color: var(--deep-blue);

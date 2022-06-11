@@ -8,9 +8,9 @@ import { getClassNames } from '../../../shared/functions';
 
 import './style.scss'
 
-function ComingSoonModal({ showModal, setShowModal, className }) {
+function ComingSoonModal({ showModal, setShowModal, footerEmail, setFooterEmail }) {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
-    console.log(isFormSubmitted)
+
     return (
         <div className={getClassNames('pretzel-modal d-flex justify-content-center align-items-center',
             showModal && 'show')}>
@@ -24,7 +24,7 @@ function ComingSoonModal({ showModal, setShowModal, className }) {
                             Sign up to get notified
                         </span>
 
-                        <ModalForm setIsFormSubmitted={setIsFormSubmitted} />
+                        <ModalForm setIsFormSubmitted={setIsFormSubmitted} footerEmail={footerEmail} setFooterEmail={setFooterEmail} />
                     </>
                 )}
                 {isFormSubmitted && (

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import ComingSoonModal from './Modal';
 import AIGLogo from '../../assets/images/aig-logo.svg';
 import AllianzLogo from '../../assets/images/allianz-logo.svg';
+import pretzelLogo from '../../assets/images/logo.svg';
 import Footer from '../../containers/Footer';
 import { benefitsList, howItWorksList, noDramaList, pretzelMeansList } from './constants';
 
@@ -10,17 +11,20 @@ import './style.scss';
 
 function ComingSoon() {
     const [showModal, setShowModal] = useState(false);
-
+    const [footerEmail, setFooterEmail] = useState('');
     useEffect(() => {
         document.body.style.overflow = showModal ? 'hidden' : 'auto';
     }, [showModal]);
 
+
     return (
         <>
-            <ComingSoonModal showModal={showModal} setShowModal={setShowModal} />
+            <ComingSoonModal showModal={showModal} setShowModal={setShowModal} footerEmail={footerEmail} setFooterEmail={setFooterEmail} />
 
-            <section className='hero h-100 d-flex justify-content-center align-items-center'>
-                <div className='container-xl'>
+            <section className='hero'>
+                <div className='container-xl position-relative h-100 
+                d-flex justify-content-center align-items-center'>
+                    <img src={pretzelLogo} alt="Pretzel Logo" className='pretzel-logo position-absolute' />
                     <div className='hero__content text-center'>
                         <span className='hero_top-title title title fw-bold d-block'>Coming Soon!</span>
                         <h1 className='hero_title title fw-bold'>
@@ -65,7 +69,7 @@ function ComingSoon() {
                                         <span className='fw-bold d-block my-3 my-lg-5' style={{ color: '#EE2E64' }}>
                                             Coming Soon!
                                         </span>
-                                        <span>FROM $X/MO</span>
+                                        <span>FROM {benefit.price}</span>
                                     </div>
                                 </li>
                             ))}
@@ -142,7 +146,7 @@ function ComingSoon() {
                     <ul className='d-flex flex-wrap flex-lg-nowrap justify-content-around'>
                         {pretzelMeansList.map((pretzelMeans, index) => (
                             <li key={index} className='pretzel-means__list text-center d-flex flex-wrap 
-                            justify-content-center my-3 my-md-0 col-6 col-md-2'>
+                            justify-content-center my-3 my-md-0 col-6 col-lg-2'>
                                 <div className='image-wrapper h-100 d-flex align-items-center'>
                                     <img src={pretzelMeans} alt={pretzelMeans} className="d-block" />
                                 </div>
@@ -164,7 +168,7 @@ function ComingSoon() {
                 </div>
             </section>
 
-            <Footer />
+            <Footer setShowModal={setShowModal} setFooterEmail={setFooterEmail} />
         </>
 
     );

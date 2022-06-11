@@ -1,11 +1,11 @@
-import { useForm } from 'react-hook-form'
+import { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form'
 
 import { getClassNames } from '../../../shared/functions';
 
 import './style.scss'
 
-function ModalForm({ setIsFormSubmitted }) {
-
+function ModalForm({ setIsFormSubmitted, footerEmail, setFooterEmail }) {
   const { register, handleSubmit, control, formState: { errors }, } =
     useForm({ mode: 'onBlur', })
 
@@ -27,6 +27,7 @@ function ModalForm({ setIsFormSubmitted }) {
       'Email': data.email,
     })
     setIsFormSubmitted(true)
+    setFooterEmail('')
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='modal-form'>
@@ -68,17 +69,22 @@ function ModalForm({ setIsFormSubmitted }) {
       </div>
       <div className={getClassNames('w-100 mb-5 form-group', errors?.email && 'invalid')}>
         <div className='label-wrapper'>
-          <input
-            id="email"
-            {...register('email', {
-              required: pretzelErrors.email,
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: 'Invalid email address'
-              },
-            })}
-            placeholder=" "
-            className='w-100' />
+          <Controller
+            name="email"
+            control={control}
+            render={({ field }) => (
+              <input {...field}
+                placeholder=" "
+                value={footerEmail}
+                className='w-100'
+                {...register('email', {
+                  required: pretzelErrors.email,
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: 'Invalid email address'
+                  },
+                })} onChange={(e) => setFooterEmail(e.target.value)} />
+            )} />
           <label className='d-inline-block' htmlFor="email">Email Address</label>
         </div>
         {errors?.email && <p className='validation-error'>{errors.email.message}</p>}

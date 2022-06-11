@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react'
+
 import facebookLogo from '../../assets/images/facebook-logo.svg'
 import instagramLogo from '../../assets/images/instagram-logo.svg'
 import pretzelLogo from '../../assets/images/logo.svg'
-import pinterestLogo from '../../assets/images/pinterest-logo.svg'
 import telegramLogo from '../../assets/images/telegram-logo.svg'
 import twitterLogo from '../../assets/images/twitter-logo.svg'
 import { serviceLinks } from './helpers'
@@ -9,7 +10,14 @@ import { serviceLinks } from './helpers'
 import './style.scss'
 
 
-function Footer() {
+function Footer({ setShowModal, setFooterEmail }) {
+
+    const [inputValue, setInputValue] = useState('')
+
+    useEffect(() => {
+        setFooterEmail(inputValue)
+    }, [inputValue])
+
     return (
         <footer className="footer">
             <div className="container-xl pt-5 px-md-4">
@@ -17,18 +25,16 @@ function Footer() {
                     <li className='me-xl-5 pe-xl-5 mt-4 mt-md-0 mb-5 mb-lg-0 text-center text-md-start order-last 
             order-md-first col-md-6 col-lg-auto'>
                         <img src={pretzelLogo} alt="Pretzel Logo" className='mb-4' />
-                        <div className='footer__logo-container d-flex justify-content-between col-6 col-lg-12'>
+                        <div className='footer__logo-container d-flex justify-content-center 
+                        justify-content-md-start col-6 col-lg-12 px-1'>
                             <a href='/'>
                                 <img src={facebookLogo} alt="Facebook Logo" />
                             </a>
-                            <a href='/'>
+                            <a href='/' className='mx-4'>
                                 <img src={twitterLogo} alt="Twitter Logo" />
                             </a>
                             <a href="/">
                                 <img src={instagramLogo} alt="Instagram Logo" />
-                            </a>
-                            <a href="/">
-                                <img src={pinterestLogo} alt="Pinterest Logo" />
                             </a>
                         </div>
                     </li>
@@ -57,15 +63,17 @@ function Footer() {
                         <span className='fw-bold d-block'>Lets stay in touch!</span>
                         <p className='my-2'>Subscribe our newsletter</p>
                         <form className='d-flex form-group footer__form rounded'>
-                            <input type="text" placeholder="Enter email" className='pretzel-input dark flex-grow-1' />
-                            <button type="submit" className='btn'>
+                            <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}
+                                placeholder="Enter email" className='pretzel-input dark flex-grow-1' />
+                            <button type="button" className='btn'
+                                onClick={() => setShowModal(true)}>
                                 <img src={telegramLogo} alt="Submit Telegram Logo" />
                             </button>
                         </form>
                     </li>
                 </ul>
                 <div className='copyright text-center mt-3 mx-xl-5'>
-                    <p className='pt-4 pb-5 user-select-none'>© Copyright 2021 Pretzel</p>
+                    <p className='pt-4 pb-5 user-select-none'>© Copyright 2022 Pretzel</p>
                 </div>
             </div>
         </footer>
