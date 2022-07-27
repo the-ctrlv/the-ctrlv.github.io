@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": false
+  },
+  "eslint.validate": [
+    "javascript",
+    "javacriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "javascript.validate.enable": false,
+  "cSpell.words": [
+    "Clickout",
+    "currys",
+    "followees",
+    "horiz",
+    "intitialise",
+    "Klarna",
+    "pinterest",
+    "Selfridges",
+    "Swiper",
+    "tsncs",
+    "unmark",
+    "weshares",
+    "weshop"
+  ]
+}

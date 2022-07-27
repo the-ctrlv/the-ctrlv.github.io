@@ -1,0 +1,79 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "simple-import-sort"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/display-name": "off",
+        "simple-import-sort/imports": [
+            2,
+            {
+                "groups": [
+                    // Packages. `react` related packages come first.
+                    // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+                    [
+                        "^react",
+                        "^@?\\w"
+                    ], // Absolute imports
+                    [
+                        "^(pages)(/.*|$)",
+                        "^(containers|shared|utils)(/.*|$)"
+                    ], // ../ imports
+                    [
+                        "^\\./Modal",
+                        "^\\.",
+                        "^\\./types",
+                        "^\\./constants",
+                        "^\\./functions",
+                        "^\\./use"
+                    ], // Assets
+                    [
+                        "^(assets)(/.*|$)"
+                    ], // for scss imports.
+                    [
+                        "^[^.]"
+                    ]
+                ]
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 120
+            }
+        ],
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "react/prop-types": 0
+    }
+}
