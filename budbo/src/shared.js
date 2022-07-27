@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -8,6 +9,12 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: #F3F1F8;
         color: #000;
+    }
+    h2 {
+        font-size: 56px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
     }
     ul {
         list-style: none;
@@ -27,7 +34,10 @@ export const GlobalStyles = createGlobalStyle`
     }
     .rounded {
         border-radius: 8px !important;
-    }import { styled } from 'styled-components/macro';
+    }
+    .cursor-pointer {
+        cursor: pointer;
+    }
 
 `
 
@@ -39,3 +49,22 @@ export const StyledWhiteWrapper = styled.div`
     border-radius: 48px;
     
 `
+
+export const getClassNames = (...args) =>
+    args.filter(Boolean).join(' ');
+
+export const useOnClickOutside = (ref, handler) => {
+    useEffect(() => {
+        const listener = (event) => {
+            if (!ref.current || ref.current.contains(event.target)) {
+                return;
+            }
+            handler(event);
+        };
+        document.addEventListener('mousedown', listener);
+
+        return () => {
+            document.removeEventListener('mousedown', listener);
+        };
+    }, [ref, handler]);
+};

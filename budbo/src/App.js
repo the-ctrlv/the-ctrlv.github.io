@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import BudboTeam from './sections/BudboTeam';
 import Footer from './sections/Footer';
 import Main from './sections/main';
 import { GlobalStyles, StyledWhiteWrapper } from './shared';
@@ -14,7 +15,7 @@ function App() {
 
       <StyledWhiteWrapper>
         <div className="container">
-          <h1>content</h1>
+          <BudboTeam />
         </div>
       </StyledWhiteWrapper>
 
