@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const StyledBudboTeam = styled.div`
-    padding: 86px 0;
+    padding: 86px 0 0;
     .roadmap {
         margin: 65px 0 135px;
         &::after {

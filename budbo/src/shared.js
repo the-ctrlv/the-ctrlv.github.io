@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components/macro'
 
 export const GlobalStyles = createGlobalStyle`
     :root {
@@ -9,12 +10,21 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: #F3F1F8;
         color: #000;
+        font-weight: 500;
+    }
+    h1 {
+        font-size: 72px;
     }
     h2 {
         font-size: 56px;
     }
+    h3 {
+        font-size: 32px;
+        line-height: 38px;
+    }
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
+        font-weight: bold;
     }
     ul {
         list-style: none;
@@ -27,6 +37,9 @@ export const GlobalStyles = createGlobalStyle`
     }
     p {
         margin: 0;
+    }
+    .fw-semi-bold {
+        font-weight: 600;
     }
     .btn-primary {
         background-color: var(--primary);
@@ -43,11 +56,16 @@ export const GlobalStyles = createGlobalStyle`
 
 export const StyledWhiteWrapper = styled.div`
     background-color: #fff;
+    position: relative;
     width: calc(100vw - 64px);
     margin: 0 32px;
     padding: 54px;
     border-radius: 48px;
-    
+    margin-bottom: 90px;
+    .notification-wrapper {
+        top: -50%;
+        transform: translateY(-50%);
+    }
 `
 
 export const getClassNames = (...args) =>
