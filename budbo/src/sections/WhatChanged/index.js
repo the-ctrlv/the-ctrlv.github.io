@@ -1,5 +1,5 @@
 import whatChangedImg from '../../assets/images/what-changed-image.png'
-import Notification from '../Notification'
+import Notification from '../../components/Notification'
 import { StyledWhatChanged } from './styles'
 import { mockOffers, mockTextContent } from './constants'
 

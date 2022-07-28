@@ -1,4 +1,5 @@
-import Notification from '../Notification'
+
+import Notification from '../../components/Notification'
 import { StyledBillionDollar } from './styles'
 import { mockBillionIdea, mockBillionSolution } from './constants'
 

@@ -1,5 +1,5 @@
 import uniqueImage from '../../assets/images/unique-img.png';
-import Notification from '../Notification';
+import Notification from '../../components/Notification';
 import { StyledBudboUnique } from './styles';
 import { mockCannabisData, mockFeatures } from './constants';
 

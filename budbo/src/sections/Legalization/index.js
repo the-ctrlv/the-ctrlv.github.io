@@ -1,4 +1,4 @@
-import Notification from '../Notification';
+import Notification from '../../components/Notification';
 import { StyledLegalization } from './styles';
 
 function Legalization() {
