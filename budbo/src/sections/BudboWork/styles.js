@@ -26,5 +26,25 @@ export const StyledBudboWork = styled.div`
             }
         }
     }
+    .company-logos {
+        gap: 50px;
+        margin: 133px 0 110px;
+        img {
+            width: 180px;
+            &:nth-child(1) {
+                width: 121px;
+            }
+            &:nth-child(2) {
+                width: 142px;
+            }
+            &:nth-child(3) {
+                width: 173px;
+            }
+            
+            &:nth-child(5) {
+                width: 176px;
+            }
+        }
+    }
     
 `

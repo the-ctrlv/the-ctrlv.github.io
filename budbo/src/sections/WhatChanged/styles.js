@@ -1,6 +1,9 @@
 import styled from 'styled-components/macro';
 
 export const StyledWhatChanged = styled.div`
+    h2 {
+        margin-top: 169px;
+    }
     h3 {
         margin-bottom: 48px;
     }

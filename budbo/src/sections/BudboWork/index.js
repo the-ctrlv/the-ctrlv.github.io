@@ -1,12 +1,12 @@
 import workImage from '../../assets/images/work-bg.png';
 import { StyledBudboWork } from './styles';
-import { mockBenefits } from './constants';
+import { mockBenefits, mockCompanyLogos } from './constants';
 
 function BudboWork() {
     return (
         <StyledBudboWork>
             <div className="container">
-                <div className='width-wrapper col-10'>
+                <div className='width-wrapper col-9'>
 
                     <h2 className="mb-5 text-center">
                         How Does <span style={{ color: 'var(--primary)' }}>Budbo</span> Work?</h2>
@@ -36,6 +36,12 @@ function BudboWork() {
                             </li>
                         ))}
                     </ul>
+                    <h2><span style={{ color: 'var(--primary)' }}>Budbo</span> has been featured in:</h2>
+                    <div className='d-flex flex-wrap justify-content-center company-logos'>
+                        {mockCompanyLogos.map((company, index) => (
+                            <img key={index} src={company} alt={index} className='mx-2' />
+                        ))}
+                    </div>
                 </div>
             </div>
         </StyledBudboWork>

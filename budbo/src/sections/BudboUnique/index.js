@@ -13,7 +13,7 @@ function BudboUnique() {
                     linkText='Invest Now'
                     transformed
                 />
-                <div className='width-wrapper col-10'>
+                <div className='width-wrapper col-9'>
                     <h2 className='transformed'>What Makes Budbo Unique</h2>
                     <p>Budbo is an all-in-one turnkey solution for everyone in the cannabis market,
                         from growers and sellers to the final customers and every distributor in between.
@@ -45,13 +45,13 @@ function BudboUnique() {
                         Budbo head-and-shoulders above the <br /> competition</h3>
                     <h1 className='my-5'>TABLE HERE</h1>
                 </div>
-                <div className='width-wrapper col-10'>
-                    <Notification
-                        title='Become a pioneer in the brave new cannabis world.'
-                        description='Invest in Budbo today!'
-                        link='/'
-                        linkText='Invest Now'
-                    />
+                <Notification
+                    title='Become a pioneer in the brave new cannabis world.'
+                    description='Invest in Budbo today!'
+                    link='/'
+                    linkText='Invest Now'
+                />
+                <div className='width-wrapper col-9'>
                     <h2 className='margin-top'>The Numbers Are In (and They Suggest You Should Invest in
                         Budbo Now)</h2>
                     <h3 className='mt-4 mb-5'>

@@ -8,6 +8,13 @@ import logo7 from '../../assets/images/benefit-icon7.svg';
 import logo8 from '../../assets/images/benefit-icon8.svg';
 import logo9 from '../../assets/images/benefit-icon9.svg';
 import logo10 from '../../assets/images/benefit-icon10.svg';
+import bitcoinist from '../../assets/images/bitcoinist.svg';
+import bitcoins from '../../assets/images/bitcoins.svg';
+import huffington from '../../assets/images/huffington.svg';
+import insider from '../../assets/images/insider.svg';
+import knowTechie from '../../assets/images/knowtechie.svg';
+import newsBTC from '../../assets/images/newsbtc.svg';
+import yahoo from '../../assets/images/yahoo.svg';
 
 export const mockBenefits = [
     {
@@ -75,4 +82,8 @@ export const mockBenefits = [
             'trends and inventory balance.'
     }
 
+]
+
+export const mockCompanyLogos = [
+    yahoo, insider, bitcoinist, huffington, bitcoins, knowTechie, newsBTC
 ]

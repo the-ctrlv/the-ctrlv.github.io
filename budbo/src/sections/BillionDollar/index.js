@@ -6,7 +6,7 @@ function BillionDollar() {
     return (
         <StyledBillionDollar>
             <div className="container">
-                <div className="width-wrapper col-10">
+                <div className="width-wrapper col-9">
                     <h2>{mockBillionIdea.title}</h2>
                     <img src={mockBillionIdea.image} alt="idea" className="w-100" />
                     {mockBillionIdea.description}
@@ -21,7 +21,7 @@ function BillionDollar() {
                     linkText="Invest Now"
                     minimized
                 />
-                <div className="width-wrapper col-10">
+                <div className="width-wrapper col-9">
                     {mockBillionSolution.title}
                     <img src={mockBillionSolution.image} alt="solution" className="w-100" />
                     {mockBillionSolution.description}

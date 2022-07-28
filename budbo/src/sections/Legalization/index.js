@@ -5,7 +5,7 @@ function Legalization() {
     return (
         <StyledLegalization>
             <div className='container'>
-                <div className='width-wrapper col-10'>
+                <div className='width-wrapper col-9'>
                     <h2 className='mb-5'>Continued Legalization.</h2>
                     <h3>
                         <span style={{ color: 'var(--primary)' }}>Many states are expected to include cannabis reform
