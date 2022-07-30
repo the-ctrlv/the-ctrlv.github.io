@@ -97,6 +97,11 @@ export const StyledReasons = styled.div`
                 z-index: -1;
             }
         }
+        .with-indent {
+            &::before {
+                box-shadow: none;
+            }
+        }
     }
     
     .reason6 {

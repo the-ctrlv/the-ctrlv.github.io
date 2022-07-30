@@ -138,11 +138,11 @@ function Reasons() {
                                 industries. </span>
                         </h3>
 
-                        <p className='with-indent mb-5 text-colored'>The regulated cannabis market in the US alone will
+                        <p className='with-indent mb-4 text-colored'>The regulated cannabis market in the US alone will
                             grow at a 25.5% CAGR between 2022 and 2030.</p>
 
 
-                        <p className='with-indent mb-5 text-colored'>
+                        <p className='with-indent mb-4 text-colored'>
                             The global blockchain market will grow from $7.18 billion
                             in 2022 to $163.83 billion by 2029, at a CAGR of 56.3%.</p>
 

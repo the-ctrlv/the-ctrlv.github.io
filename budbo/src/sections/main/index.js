@@ -1,5 +1,5 @@
+import arrowSm from '../../assets/images/arrow-sm.svg';
 import { StyledMain } from './styles'
-
 function Main() {
     return (
         <StyledMain className='d-flex justify-content-center align-items-center'>
@@ -15,6 +15,7 @@ function Main() {
                 </p>
                 <button className="btn btn-primary">
                     Invest now
+                    <img src={arrowSm} alt='arrow' className='ms-1' />
                 </button>
             </div>
         </StyledMain>

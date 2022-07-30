@@ -1,7 +1,10 @@
 import Header from './components/Header';
 import BillionDollar from './sections/BillionDollar';
 import BlockchainTechnology from './sections/BlockchainTechnology';
+import BudboApp from './sections/BudboApp';
+import BudboConnect from './sections/BudboConnect';
 import BudboTeam from './sections/BudboTeam';
+import BudboTrax from './sections/BudboTrax';
 import BudboUnique from './sections/BudboUnique';
 import BudboWork from './sections/BudboWork';
 import Buildings from './sections/Buildings';
@@ -17,7 +20,7 @@ function App() {
     <div className="App">
       <GlobalStyles />
 
-      <Header />``
+      <Header />
       <Main />
 
 
@@ -41,6 +44,13 @@ function App() {
 
 
       <Buildings />
+
+      <StyledWhiteWrapper>
+        <BudboApp />
+        <BudboConnect />
+        <BudboTrax />
+      </StyledWhiteWrapper>
+
       <BlockchainTechnology />
 
 

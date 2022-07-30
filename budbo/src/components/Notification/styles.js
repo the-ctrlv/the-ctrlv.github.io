@@ -44,6 +44,5 @@ export const StyledNotification = styled.div`
         height: 160px;
         background: url(${owl}) center center/cover no-repeat;
         transform: translateY(55%);
-        
     }
 `

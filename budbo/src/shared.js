@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         --primary: #6E2DFA;
         --text-purple: #736B8E;
         --orange: #FF9644;
+        --aqua: #30C6FF;
     }
     body {
         background-color: #F3F1F8;
@@ -113,6 +114,42 @@ export const StyledWhiteWrapper = styled.div`
             transform: translateX(-120px);
             border-radius: 24px;
         }        
+    }
+`
+
+export const StyledColoredWrapper = styled.div`
+    background-color: #F1EAFE;
+    padding: 95px 48px 0;
+    margin-bottom: 185px;
+    border-radius: 48px;
+    transform: translateX(-120px);
+    .padding-wrapper {
+        padding: 0 70px;
+    }
+    h3 {
+
+    }
+    p {
+        &.text {
+            margin: 25px 0 100px
+        }
+    }
+    .uma-img {
+        width: 80%;
+        margin: 0 auto 66px;
+    }
+    .with-indent {
+        &::before {   
+            box-shadow: none;
+        }
+    }
+    &.connect {
+        margin-bottom: 290px;
+        background-color: #FFF5EC;
+    }
+    &.trax {
+        background-color: #EAF9FF;
+        margin-bottom: 300px;
     }
 `
 

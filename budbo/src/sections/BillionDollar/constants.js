@@ -6,7 +6,7 @@ export const mockBillionIdea = {
     image: ideaImage,
     description: <h3>The global cannabis market (regulated and illicit) is currently estimated
         at <span className="text-primary">$344 billion USD. </span> The regulated market in
-        the US alone <span className="text-primary">will grow at a 25.5% CAGR</span>
+        the US alone <span className="text-primary">will grow at a 25.5% CAGR</span>{' '}
         between 2022 and 2030. The global blockchain market will grow from $7.18 billion
         in 2022 to $163.83 billion by 2029, at a <span className="text-primary">
             CAGR of 56.3%.</span></h3>,
