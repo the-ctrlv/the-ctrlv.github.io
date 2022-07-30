@@ -19,7 +19,7 @@ export const StyledBillionDollar = styled.div`
             }
         }
         h2 {
-            margin-top: 160px;
+            margin-top: 70px;
         }
         > img {
                 margin: 48px 0;

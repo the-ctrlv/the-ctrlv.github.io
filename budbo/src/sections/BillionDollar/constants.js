@@ -5,10 +5,10 @@ export const mockBillionIdea = {
     title: 'A Multi-Billion Dollar Business Idea in 30 Seconds',
     image: ideaImage,
     description: <h3>The global cannabis market (regulated and illicit) is currently estimated
-        at <span style={{ color: 'var(--primary)' }}>$344 billion USD. </span> The regulated market in
-        the US alone <span style={{ color: 'var(--primary)' }}>will grow at a 25.5% CAGR</span>
+        at <span className="text-primary">$344 billion USD. </span> The regulated market in
+        the US alone <span className="text-primary">will grow at a 25.5% CAGR</span>
         between 2022 and 2030. The global blockchain market will grow from $7.18 billion
-        in 2022 to $163.83 billion by 2029, at a <span style={{ color: 'var(--primary)' }}>
+        in 2022 to $163.83 billion by 2029, at a <span className="text-primary">
             CAGR of 56.3%.</span></h3>,
     text: <p className='text'>
         By combining these two markets, Budbo empowers the cannabis industry to grow at an even faster
@@ -21,7 +21,7 @@ export const mockBillionIdea = {
 
 export const mockBillionSolution = {
     title: <h2>A 300-Billion Dollar Problem Meets a
-        <span style={{ color: 'var(--primary)' }}> 300-Billion Dollar Solution</span>
+        <span className="text-primary"> 300-Billion Dollar Solution</span>
     </h2>,
     image: solutionImage,
     description: <h3> Any new industry comes with new challenges (especially when <span

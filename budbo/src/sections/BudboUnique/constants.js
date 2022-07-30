@@ -42,7 +42,7 @@ export const mockFeatures = [
 
 export const mockCannabisData = [
     {
-        title: <h3>New Frontier Data further reports <span style={{ color: 'var(--primary)' }}>
+        title: <h3>New Frontier Data further reports <span className="text-primary">
             263 million cannabis consumers</span> currently make up that worldwide market.</h3>,
         image: image1,
         text: <p>The cannabis market is expected to grow at a CAGR of 26.7% from 2021 to 2028.

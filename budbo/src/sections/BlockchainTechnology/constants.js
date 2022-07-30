@@ -7,7 +7,7 @@ import uniswapLogo from '../../assets/images/uniswap-logo.svg';
 export const mockBlockchainTechnologies = [
     {
         logo: polygonLogo,
-        title: <h6><span style={{ color: 'var(--primary)' }}>A hallmark of the Budbo Ecosystem is its
+        title: <h6><span className="text-primary">A hallmark of the Budbo Ecosystem is its
             token rewards system.</span>As information is passed
             from dispensaries, labs, manufacturers, and growers on to patients and consumers, data is also
             relayed back to these key cannabis industry producers from the mobile app user.</h6>,

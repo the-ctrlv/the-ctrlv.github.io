@@ -1,4 +1,6 @@
+import table from '../../assets/images/table.jpg';
 import uniqueImage from '../../assets/images/unique-img.png';
+import violetMap from '../../assets/images/violet-map.svg';
 import Notification from '../../components/Notification';
 import { StyledBudboUnique } from './styles';
 import { mockCannabisData, mockFeatures } from './constants';
@@ -30,7 +32,7 @@ function BudboUnique() {
                     <h6>Unique features you’ll be hard-pressed to find anywhere else:</h6>
                     <ul className='unique-features'>
                         {mockFeatures.map((feature, index) => (
-                            <li key={index} className="border d-flex align-items-center">
+                            <li key={index} className="border d-flex align-items-center bg-white">
                                 <div>
                                     <div className='d-flex align-items-center'>
                                         <img src={feature.logo} alt={feature.title} className="me-3" />
@@ -43,8 +45,10 @@ function BudboUnique() {
                     </ul>
                     <h3>Budding Technologies offers a complete ecosystem <br /> putting
                         Budbo head-and-shoulders above the <br /> competition</h3>
-                    <h1 className='my-5'>TABLE HERE</h1>
                 </div>
+
+                <img src={table} alt="Budbo Unique" className='w-100 table' />
+
                 <Notification
                     title='Become a pioneer in the brave new cannabis world.'
                     description='Invest in Budbo today!'
@@ -64,7 +68,19 @@ function BudboUnique() {
                         this business model is virtually endlessly scalable, offering
                         <span className='fw-bold'> an unparalleled potential for growth.</span>
                     </p>
-                    <h1 className='my-5'>VIOLET SECTION HERE</h1>
+                </div>
+                <div className='violet-map'>
+                    <h2>
+                        New Frontier Data, released the <br /> Global Cannabis Report:
+                        <span className='d-block'>2019 Industry Outlook</span>
+                    </h2>
+                    <h3 className='mt-5'>
+                        Raport estimates the global total addressable cannabis market (regulated and illicit)
+                        at $344 billion USD and identifying the top five regional markets to be:
+                    </h3>
+                    <img src={violetMap} alt="Violet Map" className='w-100' />
+                </div>
+                <div className='width-wrapper col-9'>
                     <ul className='cannabis-data'>
                         {mockCannabisData.map((data, index) => (
                             <li key={index}>

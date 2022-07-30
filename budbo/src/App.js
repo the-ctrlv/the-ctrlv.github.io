@@ -8,6 +8,7 @@ import Buildings from './sections/Buildings';
 import Footer from './sections/Footer';
 import Legalization from './sections/Legalization';
 import Main from './sections/main';
+import Reasons from './sections/Reasons';
 import WhatChanged from './sections/WhatChanged';
 import { GlobalStyles, StyledWhiteWrapper } from './shared';
 
@@ -16,13 +17,26 @@ function App() {
     <div className="App">
       <GlobalStyles />
 
-      <Header />
+      <Header />``
       <Main />
 
+
       <StyledWhiteWrapper>
+        <div className='container video-container'>
+          <iframe width="85%" height="500px" src="https://www.youtube.com/embed/gtV-Z-qiZW8"
+            title="YouTube video player" frameBorder="{0}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen />
+        </div>
+        <Reasons />
         <BillionDollar />
         <WhatChanged />
         <BudboWork />
+        <div className='sticky-container position-absolute col-3'>
+          <div className='position-sticky sticky-top'>
+            <h1>CHECK</h1>
+          </div>
+        </div>
       </StyledWhiteWrapper>
 
 

@@ -1,3 +1,4 @@
+import locationMap from '../../assets/images/location-map.svg';
 import Notification from '../../components/Notification';
 import { StyledLegalization } from './styles';
 
@@ -8,7 +9,7 @@ function Legalization() {
                 <div className='width-wrapper col-9'>
                     <h2 className='mb-5'>Continued Legalization.</h2>
                     <h3>
-                        <span style={{ color: 'var(--primary)' }}>Many states are expected to include cannabis reform
+                        <span className="text-primary">Many states are expected to include cannabis reform
                             initiatives</span> on the November 2022 ballots.
                         There are an estimated population of 16.7 million cannabis consumers in the 16 states that
                         have potential of legalization
@@ -20,6 +21,7 @@ function Legalization() {
                         dollars in EMMAC Life Sciences, a multinational European operator.1</p>
                     <h5 className='fw-semi-bold'>Budbo locations:</h5>
                 </div>
+                <img src={locationMap} alt="Budbo Locations" className='location-map' />
                 <Notification
                     title='As the market grows, a return on investment can blossom.'
                     description='This is your chance to get in early and reap the benefits.'
