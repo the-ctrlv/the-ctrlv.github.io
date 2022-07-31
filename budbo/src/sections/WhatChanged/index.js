@@ -7,7 +7,7 @@ function WhatChanged() {
     return (
         <StyledWhatChanged>
             <div className="container">
-                <div className="width-wrapper col-9">
+                <div className="width-wrapper col-12 col-xl-9">
                     {mockTextContent.title}
                     <img src={whatChangedImg} alt="what-changed" className='what-changed-img' />
                     <h3>{mockTextContent.subtitle}</h3>

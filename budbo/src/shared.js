@@ -62,6 +62,10 @@ export const GlobalStyles = createGlobalStyle`
     h3 {
         font-size: 32px;
         line-height: 38px;
+        @media (max-width: 992px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
     }
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
@@ -108,8 +112,11 @@ export const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
     .table {
-        transform: translateX(-120px);
-        margin: 68px 0;
+        margin: 31px 0 50px;
+        @media (min-width: 1440px) {
+            margin: 68px 0;
+            transform: translateX(-120px);
+        }
     }
     .with-indent {
         position: relative;
@@ -144,14 +151,6 @@ export const StyledWhiteWrapper = styled.div`
             max-width: none;
         }
     }
-    .sticky-container {
-        height: 100%;
-        right: 0;
-        top: 0;
-        div {
-            padding-top: 54px;
-        }
-    }
 
     .notification-wrapper {
         top: -50%;
@@ -179,9 +178,12 @@ export const StyledWhiteWrapper = styled.div`
     &.exception-mobile {
         @media (max-width: 767px) {
             padding: 0;
-            margin: 0;
             background-color: transparent;
         }
+    }
+    @media (max-width: 767px) {
+        padding: 0 16px;
+        margin: 0;
     }
 `
 

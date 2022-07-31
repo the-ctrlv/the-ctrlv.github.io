@@ -1,11 +1,16 @@
 import table from '../../assets/images/table.jpg';
 import uniqueImage from '../../assets/images/unique-img.png';
+import uniqueImageMob from '../../assets/images/unique-img-mob.png';
 import violetMap from '../../assets/images/violet-map.svg';
+import violetMapMob from '../../assets/images/violet-map-mob.svg';
 import Notification from '../../components/Notification';
+import { useMobileMode } from '../../shared';
 import { StyledBudboUnique } from './styles';
 import { mockCannabisData, mockFeatures } from './constants';
 
 function BudboUnique() {
+    const isMobileMode = useMobileMode()
+
     return (
         <StyledBudboUnique className='position-relative'>
             <div className="container">
@@ -15,20 +20,24 @@ function BudboUnique() {
                     linkText='Invest Now'
                     transformed
                 />
-                <div className='width-wrapper col-9'>
+                <div className='width-wrapper col-12 col-xl-9'>
                     <h2 className='transformed'>What Makes Budbo Unique</h2>
                     <h3 className='mb-5'>Budbo is an all-in-one turnkey solution for everyone in the cannabis market,
                         from growers and sellers to the final customers and every distributor in between.
                         With Budbo, everyone can benefit from secure transactions, state-of-the-art business management,
                         and an opportunity to discover new cannabis products with a tap on their screen.
                     </h3>
-                    <p>
+                    <p className='text-colored'>
                         Its all-encompassing model makes Budbo a best-in-class global platform for all things cannabis.
                         Powered by blockchain and the increasing number of states where cannabis is legalized,
                         this business model is virtually endlessly scalable,
                         offering <span className="text-body fw-bold"> an unparalleled potential for growth.</span>
                     </p>
-                    <img src={uniqueImage} alt="Budbo Unique" className='w-100 unique-img' />
+                    {isMobileMode ?
+                        <img src={uniqueImageMob} alt="Budbo Unique" className='w-100 unique-img' />
+                        :
+                        <img src={uniqueImage} alt="Budbo Unique" className='w-100 unique-img' />
+                    }
                     <h5>Unique features you’ll be hard-pressed to find anywhere else:</h5>
                     <ul className='unique-features'>
                         {mockFeatures.map((feature, index) => (
@@ -55,7 +64,7 @@ function BudboUnique() {
                     link='/'
                     linkText='Invest Now'
                 />
-                <div className='width-wrapper col-9'>
+                <div className='width-wrapper col-12 col-xl-9'>
                     <h2 className='margin-top'>The Numbers Are In (and They Suggest You Should Invest in
                         Budbo Now)</h2>
                     <h3 className='mt-4 mb-5'>
@@ -71,16 +80,17 @@ function BudboUnique() {
                 </div>
                 <div className='violet-map'>
                     <h2>
-                        New Frontier Data, released the <br /> Global Cannabis Report:
+                        New Frontier Data, released the <br className='d-none d-lg-block' /> Global Cannabis Report:
                         <span className='d-block'>2019 Industry Outlook</span>
                     </h2>
                     <h3 className='mt-5'>
                         Raport estimates the global total addressable cannabis market (regulated and illicit)
                         at $344 billion USD and identifying the top five regional markets to be:
                     </h3>
-                    <img src={violetMap} alt="Violet Map" className='w-100' />
+                    <img src={isMobileMode ? violetMapMob : violetMap}
+                        alt="Violet Map" className='w-100' />
                 </div>
-                <div className='width-wrapper col-9'>
+                <div className='width-wrapper col-12 col-xl-9'>
                     <ul className='cannabis-data'>
                         {mockCannabisData.map((data, index) => (
                             <li key={index}>

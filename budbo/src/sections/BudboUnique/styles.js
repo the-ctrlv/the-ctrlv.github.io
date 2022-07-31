@@ -27,15 +27,23 @@ export const StyledBudboUnique = styled.div`
     }
     .unique-img {
         margin: 80px 0;
+        @media (max-width: 767px) {
+            margin: 48px 0;
+            width: calc(100% + 32px) !important;
+            transform: translateX(-16px);
+        }
     }
     .violet-map {
-        transform: translateX(-120px);
-        margin: 108px 0;
+        margin: 50px 0;
         background-color: #6E2DFA;
         color: #fff;
         border-radius: 48px;
-        padding: 120px 130px;
-        
+        padding: 64px 41px;
+        @media (min-width: 1440px) {
+            transform: translateX(-120px);
+            padding: 120px 130px;
+            margin: 108px 0;
+        }
         h2 {
             span {
                 color: var(--orange);
@@ -43,7 +51,9 @@ export const StyledBudboUnique = styled.div`
             }
         }
         img {
-            margin-top: 65px;
+            @media (min-width: 768px) {
+                margin-top: 65px;   
+            }
         }
     }
     .unique-features {
@@ -56,9 +66,12 @@ export const StyledBudboUnique = styled.div`
             position: relative;
             z-index: 1;
             border-radius: 16px;
-            width: calc(50% - 16px);
             margin-bottom: 32px;
-            padding: 44px;
+            padding: 32px 24px;
+            @media (min-width: 992px) {
+                width: calc(50% - 16px);
+                padding: 44px;
+            }
             img {
                 width: 30px;
                 height: 30px;
@@ -70,7 +83,9 @@ export const StyledBudboUnique = styled.div`
                 color: var(--text-purple);
             }
             &:last-child {
-                transform: translateX(calc(50% + 16px));
+                @media (min-width: 992px) {
+                    transform: translateX(calc(50% + 16px));
+                }
             }
         }
         &::before {
@@ -80,17 +95,27 @@ export const StyledBudboUnique = styled.div`
             height: 120px;
             background: url(${token}) center center/cover no-repeat;
             position: absolute;
-            right: 50%;
+            right: 20%;
             transform: translateX(50%);
-            top: 17%;
+            top: 14%;
             z-index: 0;
+            @media (min-width: 992px) {
+                right: 50%;
+                top: 17%;
+            }
         }
     }
     .cannabis-data {
         margin: 108px 0;
+        @media (max-width: 767px) {
+            padding-bottom: 95px;
+        }
         li {
             &:not(:last-child) {
-                margin-bottom: 120px;
+                margin-bottom: 64px;
+                @media (min-width: 1440px) {
+                    margin-bottom: 120px;
+                }
             }
         }
         img {

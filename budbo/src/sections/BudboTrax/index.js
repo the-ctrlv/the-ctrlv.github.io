@@ -8,7 +8,7 @@ function BudboTrax() {
     return (
         <StyledBudboTrax>
             <div className="container">
-                <div className="width-wrapper col-9">
+                <div className="width-wrapper col-12 col-xl-9">
                     <h2>Budbo Trax</h2>
                     <h5 className='mt-2 mb-5'>Supply Chain & Chain of Custody Simplified</h5>
                     <span className='budbo-badge fw-bold'>BUDBO TRAX</span>

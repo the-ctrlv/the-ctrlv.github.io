@@ -5,15 +5,24 @@ import owl from '../../assets/images/owl.svg';
 export const StyledNotification = styled.div`
     background: #E6FBF7;
     border-radius: 24px;
-    padding: 80px 120px;
-    transform: translateX(-120px);
+    padding: 48px 24px;
+    
+    @media (min-width: 1200px) {
+        padding: 58px 34px;
+    }
+    @media (min-width: 1440px) {
+        transform: translateX(-120px);
+        padding: 80px 120px;
+    }
     h2   {
         font-size: 48px;
         line-height: 56px;
+        @media (max-width: 1200px) { 
+            font-size: 32px;
+            line-height: 39px;
+        }
     }
-    p {
-       font-size: 32px; 
-       font-weight: bold;
+    h3 {
        margin-top: 32px;
        &.minimized {
         font-weight: 500;
@@ -30,7 +39,11 @@ export const StyledNotification = styled.div`
         padding: 15px;
     }
     &.transformed {
-        transform: translate3d(-120px, calc(-50% - 54px), 0);
+        transform: translateY(calc(-50% - 54px));
+        @media (min-width: 1440px) {
+            transform: translate3d(-120px, calc(-50% - 54px), 0);    
+        }
+
         h2 {
             max-width: 85%;
         }

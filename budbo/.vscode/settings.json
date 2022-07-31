@@ -29,5 +29,6 @@
     "unmark",
     "weshares",
     "weshop"
-  ]
+  ],
+  "workbench.colorTheme": "React Theme"
 }

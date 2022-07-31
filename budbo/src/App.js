@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import StickyBar from './components/StickyBar';
 import BillionDollar from './sections/BillionDollar';
 import BlockchainTechnology from './sections/BlockchainTechnology';
 import BudboApp from './sections/BudboApp';
@@ -35,11 +36,9 @@ function App() {
         <BillionDollar />
         <WhatChanged />
         <BudboWork />
-        <div className='sticky-container position-absolute col-3'>
-          <div className='position-sticky sticky-top'>
-            <h1>CHECK</h1>
-          </div>
-        </div>
+
+        <StickyBar />
+
       </StyledWhiteWrapper>
 
 

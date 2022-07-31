@@ -6,7 +6,7 @@ function BudboWork() {
     return (
         <StyledBudboWork>
             <div className="container">
-                <div className='width-wrapper col-9'>
+                <div className='width-wrapper col-12 col-xl-9'>
 
                     <h2 className="mb-5 text-center">
                         How Does <span className="text-primary">Budbo</span> Work?</h2>

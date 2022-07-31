@@ -8,7 +8,7 @@ function BudboConnect() {
     return (
         <StyledBudboConnect>
             <div className="container">
-                <div className="width-wrapper col-9">
+                <div className="width-wrapper col-12 col-xl-9">
                     <h2>Budbo Connect</h2>
                     <h5 className='mt-2 mb-5'>Sell more cannabis products with data-driven decision-making</h5>
                     <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>

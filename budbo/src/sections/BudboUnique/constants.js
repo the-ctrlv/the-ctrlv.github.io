@@ -51,7 +51,9 @@ export const mockCannabisData = [
                 these products for the treatment of chronic diseases are the key factors driving the market
                 for legal marijuana.</p>
             <p className='text-colored'>
-                In 2020 the adult - use segment dominated the market with a revenue share of 54.6 % and is
+                <span className='underlined' style={{ color: 'var(--text-purple)', textDecoration: 'underline' }}>
+                    In 2020 the adult - use segment dominated the market with a revenue share of 54.6% </span>
+                and is
                 expected to continue to expand at a significant CAGR due to the high demand among millennials
                 and patients who do not qualify for medical cannabis.Medical marijuana is expected to continue
                 to grow at a stable rate due to the legalization in various markets as compared to the adult

@@ -5,7 +5,7 @@ function Notification({ title, description, link, linkText, transformed, minimiz
     return (
         <StyledNotification className={getClassNames('position-relative w-100', transformed ? 'transformed' : '')}>
             <h2>{title}</h2>
-            {description && (<p className={getClassNames(minimized ? 'minimized' : '')}>{description}</p>)}
+            {description && <h3 className={getClassNames(minimized ? 'minimized' : '')}>{description}</h3>}
             <a href={link} className='btn'>
                 {linkText}
                 <img src={arrowSm} alt='arrow' className='ms-1' />

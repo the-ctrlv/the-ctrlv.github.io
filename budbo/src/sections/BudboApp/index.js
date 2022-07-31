@@ -12,7 +12,7 @@ function BudboApp() {
     return (
         <StyledBudboApp>
             <div className="container">
-                <div className="width-wrapper col-9">
+                <div className="width-wrapper col-12 col-xl-9">
                     <img src={budbo} alt="budbo" className='budbo-img' />
                     <h2 className='budbo-title'>Budbo App</h2>
                     <h5>The right cannabis products - a screen tap away</h5>
