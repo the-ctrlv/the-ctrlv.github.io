@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import mainBg from '../../assets/images/main-bg.png';
 
 export const StyledMain = styled.section`
-    min-height: 100vh;
+    min-height: 92vh;
     > div {
         z-index: 1;
         h1 {
@@ -29,7 +29,7 @@ export const StyledMain = styled.section`
         content: '';
         position: absolute;
         z-index: 0;
-        bottom: 0;
+        bottom: -12vh;
         right: 0;
         display: block;
         width: 50vw;

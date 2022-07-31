@@ -5,7 +5,7 @@ import inside3 from '../../assets/images/inside3.svg'
 import inside4 from '../../assets/images/inside4.svg'
 import uma from '../../assets/images/uma.png'
 import WhoBudboIsFor from '../../components/WhoBudboIsFor/index';
-import { StyledColoredWrapper } from '../../shared';
+import { StyledColoredWrapper, StyledInsideUl } from '../../shared';
 import { StyledBudboApp } from './styles'
 
 function BudboApp() {
@@ -16,13 +16,13 @@ function BudboApp() {
                     <img src={budbo} alt="budbo" className='budbo-img' />
                     <h2 className='budbo-title'>Budbo App</h2>
                     <h5>The right cannabis products - a screen tap away</h5>
-                    <span className='budbo-badge'>BUDBO APP</span>
+                    <span className='budbo-badge d-block mb-2'>BUDBO APP</span>
                     <h3>The app allows consumers to easily find their preferred
                         cannabis strain in a familiar and gamified manner through
                         a modern and user-friendly interface.
                     </h3>
                     <h5 className='what-inside-title'>What{"'"}s inside?</h5>
-                    <ul className='inside d-flex justify-content-between flex-wrap'>
+                    <StyledInsideUl>
                         <li className='border d-flex justify-content-center align-items-center'>
                             <div className='d-flex align-items-center w-100'>
                                 <img src={inside1} alt="inside1" className='me-3' />
@@ -35,8 +35,8 @@ function BudboApp() {
                                 <img src={inside2} alt="inside1" className='me-3 mt-1' />
                                 <div className='flex-grow-1'>
                                     <h5>Wide range of tokens and cryptocurrencies</h5>
-                                    <p className='colored mt-2'>to incentivize, engage, <br />
-                                        and reward users</p>
+                                    <h6 className='text-colored mt-2'>to incentivize, engage, <br />
+                                        and reward users</h6>
                                 </div>
                             </div>
 
@@ -56,11 +56,11 @@ function BudboApp() {
                                     Google Play and App Store</h5>
                             </div>
                         </li>
-                    </ul>
+                    </StyledInsideUl>
                 </div>
                 <StyledColoredWrapper>
-                    <div className='padding-wrapper'>
-                        <span className='budbo-badge'>BUDBO APP</span>
+                    <div className='width-wrapper col-10 mx-auto'>
+                        <span className='budbo-badge d-block mb-2'>BUDBO APP</span>
                         <h3>
                             Budbo’s unique “Tinder-like model” has proven to be highly effective
                             in driving alignment between our business and operating models.
@@ -80,30 +80,38 @@ function BudboApp() {
                             Budbo’s key advisors, Dr. Uma Dhanablan.
                         </p>
                         <img src={uma} alt="uma" className='uma-img d-block' />
+                        <div className='col-11 mx-auto'>
+                            <h4 className='mb-2'>Dr. Uma Dhanabalan</h4>
+                            <h5 style={{ fontWeight: 500 }}>Key Advisor to Budding Technologies, Inc.</h5>
+                            <p className='text-colored with-indent mt-5 mb-4 ms-0'>
+                                Dr Uma’s Bio - Dr. Dhanabalan is a highly respected and educated physician
+                                and known to most
+                                as Dr Uma. She completed her Bachelor of Arts degree with High Honors from Rutgers
+                                University
+                                and her Medical Degree from the University of Medicine & Dentistry in Newark,
+                                New Jersey.
+                            </p>
 
-                        <h4 className='mb-2'>Dr. Uma Dhanabalan</h4>
-                        <h5 style={{ fontWeight: 500 }}>Key Advisor to Budding Technologies, Inc.</h5>
-                        <p className='text-colored with-indent mt-5 mb-4'>
-                            Dr Uma’s Bio - Dr. Dhanabalan is a highly respected and educated physician and known to most
-                            as Dr Uma. She completed her Bachelor of Arts degree with High Honors from Rutgers
-                            University
-                            and her Medical Degree from the University of Medicine & Dentistry in Newark, New Jersey.
-                        </p>
-
-                        <p className='text-colored with-indent mb-4'>
-                            She completed her Family Practice Residency at the Medical University of South Carolina, in
-                            Charleston, South Carolina. She has her Master’s in Public Health and completed her
-                            Occupational
-                            & Environmental Medicine Residency and Fellowship in Heavy Metals at the Harvard School of
-                            Public Health in Boston, Massachusetts. She is a Fellow of the American Academy of Family
-                            Physicians.
-                        </p>
-                        <p className='text-colored with-indent mb-4'>
-                            She is a Diplomat in Cannabinoid Medicine Certified by the American Academy of Cannabinoid
-                            Medicine, and a Medical Review Officer Certified by  Medical Review Officer Certification
-                            Council.
-                        </p>
-                        <p className='text-colored mt-5'>
+                            <p className='text-colored with-indent mb-4 ms-0'>
+                                She completed her Family Practice Residency at the Medical University of South
+                                Carolina, in
+                                Charleston, South Carolina. She has her Master’s in Public Health and completed her
+                                Occupational
+                                & Environmental Medicine Residency and Fellowship in Heavy Metals at the Harvard
+                                School of
+                                Public Health in Boston, Massachusetts. She is a Fellow of the American Academy of
+                                Family
+                                Physicians.
+                            </p>
+                            <p className='text-colored with-indent mb-4 ms-0'>
+                                She is a Diplomat in Cannabinoid Medicine Certified by the American Academy of
+                                Cannabinoid
+                                Medicine, and a Medical Review Officer Certified by  Medical Review Officer
+                                Certification
+                                Council.
+                            </p>
+                        </div>
+                        <p className='text-colored my-5'>
                             The Token Swap streamlines the purchase even further, allowing for a gamified,
                             seamless experience.
                         </p>

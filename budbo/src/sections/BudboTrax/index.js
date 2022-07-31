@@ -1,6 +1,8 @@
+import traxImg from '../../assets/images/trax-bg.png';
 import WhoBudboIsFor from '../../components/WhoBudboIsFor';
-import { StyledColoredWrapper } from '../../shared';
+import { StyledColoredWrapper, StyledInsideUl } from '../../shared';
 import { StyledBudboTrax } from './styles';
+import { mockTraxInside } from './constants';
 
 function BudboTrax() {
     return (
@@ -20,9 +22,41 @@ function BudboTrax() {
                     </p>
                 </div>
                 <StyledColoredWrapper className='trax'>
-                    <h5 className='mt-5 mb-4'>
-                        Budbo Connect is a platform that enables dispensaries to sell more products with a minimal
-                    </h5>
+                    <img src={traxImg} alt="trax" className='trax-img d-block' />
+                    <div className="width-wrapper col-10 mx-auto transformed">
+                        <span className='budbo-badge d-block mb-2'>BUDBO TRAX</span>
+                        <h3>
+                            Dispensaries and other vested parties will have full control over and insight into all
+                            cannabis movements via the Budbo Connect Dashboard. <span>From there, products will
+                                be tracked during transport by GPS</span> via a free driver app that is part
+                            of the Budbo Tech Ecosystem.
+                        </h3>
+                        <p className='text-colored mt-4'>
+                            Analytical data reports and insights are also available
+                            to growers and the broader cannabis network.
+                        </p>
+                        <h5 className='what-inside-title'>What{"'"}s inside?</h5>
+                        <StyledInsideUl className='trax'>
+                            {mockTraxInside.map((item, index) => (
+                                <li key={index} className='d-flex align-items-center bg-white border'>
+                                    <div>
+                                        <div className='d-flex align-items-center'>
+                                            <img src={item.logo} alt={item.title} className="me-3" />
+                                            <h5>{item.title}</h5>
+                                        </div>
+                                        <h6 className='text-colored mt-3 col-10'>{item.text}</h6>
+                                    </div>
+                                </li>
+                            ))}
+                        </StyledInsideUl>
+
+                        <h5>Business logic:</h5>
+                        <p className="text-colored mt-3 mb-5" style={{ fontStyle: 'italic' }}>
+                            Building strong relationships with dispensaries, growers, and labs
+                            will provide an avenue to cross-sell the “BudboTrax” GPS tracking system.
+                        </p>
+                    </div>
+
                     <WhoBudboIsFor contentToShow='trax' />
                 </StyledColoredWrapper>
             </div>

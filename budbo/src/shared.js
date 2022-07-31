@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components/macro'
 
+import token from './assets/images/token.svg';
+
 export const GlobalStyles = createGlobalStyle`
     :root {
         --primary: #6E2DFA;
@@ -110,10 +112,23 @@ export const StyledWhiteWrapper = styled.div`
         transform: translateY(-50%);
     }
     .video-container {
+        position: relative;
+        z-index: 1;
         iframe {
             transform: translateX(-120px);
             border-radius: 24px;
-        }        
+        }   
+        &::before {
+                content: '';
+                display: block;
+                width: 109px;
+                height: 120px;
+                background: url(${token}) center center/cover no-repeat;
+                position: absolute;
+                left: 0;
+                top: -150px;
+                z-index: -1;
+            }     
     }
 `
 
@@ -123,12 +138,6 @@ export const StyledColoredWrapper = styled.div`
     margin-bottom: 185px;
     border-radius: 48px;
     transform: translateX(-120px);
-    .padding-wrapper {
-        padding: 0 70px;
-    }
-    h3 {
-
-    }
     p {
         &.text {
             margin: 25px 0 100px
@@ -143,13 +152,57 @@ export const StyledColoredWrapper = styled.div`
             box-shadow: none;
         }
     }
+    .connect-img {
+        transform: translateY(-10%);
+    }
     &.connect {
+        padding-top: 0;
         margin-bottom: 290px;
         background-color: #FFF5EC;
+        h3 {
+            span {
+                color: var(--orange);
+            }
+        }
     }
     &.trax {
+        padding-top: 0;
         background-color: #EAF9FF;
-        margin-bottom: 300px;
+        margin: 350px 0 300px;
+        h3 {
+            span {
+                color: var(--aqua);
+            }
+        }
+        .transformed {
+            margin-top: -220px;
+        }
+        .trax-img {
+            width: 90%;
+            margin: 0 auto;
+            transform: translateY(-28%);
+        }
+        .what-inside-title {
+            margin-top: 80px;
+        }
+    }
+`
+
+export const StyledInsideUl = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    margin-top: 32px;
+    margin-bottom: 95px;
+    li {
+        height: 170px;
+        border-radius: 16px;
+        width: calc(50% - 16px);
+        margin-bottom: 32px;
+        padding: 0 48px;
+    }
+    &.trax {
+        margin-bottom: 10px;
     }
 `
 

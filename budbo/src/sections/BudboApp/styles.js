@@ -17,16 +17,4 @@ export const StyledBudboApp = styled.div`
     .what-inside-title {
         margin-top: 95px;
     }
-    .inside {
-        display: flex;
-        margin-top: 32px;
-        margin-bottom: 95px;
-        li {
-            height: 170px;
-            border-radius: 16px;
-            width: calc(50% - 16px);
-            margin-bottom: 32px;
-            padding: 0 48px;
-        }
-    }
 `

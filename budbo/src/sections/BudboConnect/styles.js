@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const StyledBudboConnect = styled.div`
-    h2, .budbo-badge {
+    .width-wrapper > h2, .budbo-badge {
         color: var(--orange);
     }
     .width-wrapper {
