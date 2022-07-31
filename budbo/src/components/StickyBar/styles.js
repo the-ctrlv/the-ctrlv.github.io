@@ -7,15 +7,15 @@ export const StyledStickyBar = styled.div`
         height: 100%;
         right: 5vw;
         top: 0;
-        padding: 54px 0;
         width: 350px;
         @media (min-width: 1440px) {
             right: 10vw;    
         }
-        .sticky-container {
+        .side-bar-container {
             top: 54px;
             background-color: #F3F1F8;
             z-index: 1;
+            position: relative;
             .top-content {
                 padding: 0 24px 32px;
                 z-index: 5;
@@ -70,9 +70,6 @@ export const StyledStickyBar = styled.div`
             z-index: 0;
             height: calc(100% - 108px);
             width: 350px;
-            > div {
-                top: 54px;
-                height: 810px;
                 &::before {
                     content: '';
                     position: absolute;
@@ -82,7 +79,6 @@ export const StyledStickyBar = styled.div`
                     width: 109px;
                     height: 120px;
                     background: url(${tokenMirror}) center right/contain no-repeat;
-                }
             }
              
         }

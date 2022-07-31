@@ -6,7 +6,7 @@ import SideBarSwiper from './Swiper';
 function StickyBar() {
     return (
         <StyledStickyBar className='position-absolute h-100'>
-            <div className='sticky-container position-sticky rounded border'>
+            <div className='side-bar-container rounded border'>
                 <div className='top-content rounded-top border-bottom'>
                     <ul className='d-flex justify-content-between flex-wrap'>
                         <li>
@@ -72,7 +72,6 @@ function StickyBar() {
                 <SideBarSwiper />
             </div>
             <div className="ghost-container position-absolute">
-                <div className='position-sticky' />
             </div>
         </StyledStickyBar>
     )
