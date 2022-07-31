@@ -73,7 +73,6 @@ export const StyledReasons = styled.div`
                     width: 5px;
                     height: 5px;
                     border-radius: 50%;
-                    text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
                 }
             }
         }    

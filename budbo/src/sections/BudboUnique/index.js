@@ -17,19 +17,19 @@ function BudboUnique() {
                 />
                 <div className='width-wrapper col-9'>
                     <h2 className='transformed'>What Makes Budbo Unique</h2>
-                    <p>Budbo is an all-in-one turnkey solution for everyone in the cannabis market,
+                    <h3 className='mb-5'>Budbo is an all-in-one turnkey solution for everyone in the cannabis market,
                         from growers and sellers to the final customers and every distributor in between.
                         With Budbo, everyone can benefit from secure transactions, state-of-the-art business management,
                         and an opportunity to discover new cannabis products with a tap on their screen.
-                    </p>
+                    </h3>
                     <p>
                         Its all-encompassing model makes Budbo a best-in-class global platform for all things cannabis.
                         Powered by blockchain and the increasing number of states where cannabis is legalized,
                         this business model is virtually endlessly scalable,
-                        offering <span className="fw-bold"> an unparalleled potential for growth.</span>
+                        offering <span className="text-body fw-bold"> an unparalleled potential for growth.</span>
                     </p>
                     <img src={uniqueImage} alt="Budbo Unique" className='w-100 unique-img' />
-                    <h6>Unique features you’ll be hard-pressed to find anywhere else:</h6>
+                    <h5>Unique features you’ll be hard-pressed to find anywhere else:</h5>
                     <ul className='unique-features'>
                         {mockFeatures.map((feature, index) => (
                             <li key={index} className="border d-flex align-items-center bg-white">
@@ -62,11 +62,11 @@ function BudboUnique() {
                         A quick look at the industry statistics that paint a clear <br />
                         picture: Don’t let this opportunity slip away!
                     </h3>
-                    <p>
+                    <p className='text-colored'>
                         Its all-encompassing model makes Budbo a best-in-class global platform for all things cannabis.
                         Powered by blockchain and the increasing number of states where cannabis is legalized,
                         this business model is virtually endlessly scalable, offering
-                        <span className='fw-bold'> an unparalleled potential for growth.</span>
+                        <span className='text-body fw-bold'> an unparalleled potential for growth.</span>
                     </p>
                 </div>
                 <div className='violet-map'>

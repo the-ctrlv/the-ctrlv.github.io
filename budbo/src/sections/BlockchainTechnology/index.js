@@ -10,7 +10,7 @@ function BlockchainTechnology() {
                     <ul className='blockchain-list'>
                         {mockBlockchainTechnologies.map((blockchainTechnology, index) => (
                             <li key={index}>
-                                <img className='mb-3 logo' src={blockchainTechnology.logo} alt={index} />
+                                <img className='mb-5 logo' src={blockchainTechnology.logo} alt={index} />
                                 {blockchainTechnology.title}
                                 <img src={blockchainTechnology.image} alt={index} />
                                 {blockchainTechnology.description}

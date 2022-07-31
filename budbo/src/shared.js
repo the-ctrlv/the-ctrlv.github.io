@@ -2,9 +2,42 @@ import { useEffect, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components/macro'
 
+import GilroyBoldWoff from './assets/fonts/Gilroy-Bold.woff';
+import GilroyBoldWoff2 from './assets/fonts/Gilroy-Bold.woff2';
+import GilroyMediumWoff from './assets/fonts/Gilroy-Medium.woff';
+import GilroyMediumWoff2 from './assets/fonts/Gilroy-Medium.woff2';
+import GilroyMediumItalicWoff from './assets/fonts/Gilroy-MediumItalic.woff';
+import GilroyMediumItalicWoff2 from './assets/fonts/Gilroy-MediumItalic.woff2';
+import GilroySBoldWoff from './assets/fonts/Gilroy-Semibold.woff';
+import GilroySBoldWoff2 from './assets/fonts/Gilroy-Semibold.woff2';
 import token from './assets/images/token.svg';
 
 export const GlobalStyles = createGlobalStyle`
+    @font-face {
+        font-family: 'Gilroy';
+        src: url(${GilroyBoldWoff2}) format('woff2'), url(${GilroyBoldWoff}) format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url(${GilroySBoldWoff2}) format('woff2'), url(${GilroySBoldWoff}) format('woff');
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url(${GilroyMediumWoff2}) format('woff2'), url(${GilroyMediumWoff}) format('woff');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url(${GilroyMediumItalicWoff2}) format('woff2'), url(${GilroyMediumItalicWoff}) format('woff');
+        font-weight: 500;
+        font-style: italic;
+    }
+
     :root {
         --primary: #6E2DFA;
         --text-purple: #736B8E;
@@ -12,6 +45,7 @@ export const GlobalStyles = createGlobalStyle`
         --aqua: #30C6FF;
     }
     body {
+        font-family: 'Gilroy';
         background-color: #F3F1F8;
         color: #000;
         font-weight: 500;
@@ -21,6 +55,9 @@ export const GlobalStyles = createGlobalStyle`
     }
     h2 {
         font-size: 56px;
+        @media (max-width: 992px) {
+            font-size: 32px;
+        }
     }
     h3 {
         font-size: 32px;
@@ -47,8 +84,11 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 20px;
         line-height: 28px;
     }
-    .fw-semi-bold {
-        font-weight: 600;
+    .container {
+        @media (max-width: 767px) {
+            padding: 16px;
+            margin: 0;
+        }
     }
     .text-primary {
         color: var(--primary) !important;
@@ -84,7 +124,6 @@ export const GlobalStyles = createGlobalStyle`
             width: 5px;
             height: 5px;
             border-radius: 50%;
-            text-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
         }
     }
 `
@@ -97,7 +136,14 @@ export const StyledWhiteWrapper = styled.div`
     padding: 54px;
     border-radius: 48px;
     margin-bottom: 90px;
-
+    @media (max-width: 767px) {
+        width: 100%;
+        .container {
+            padding: 0;
+            margin: 0;
+            max-width: none;
+        }
+    }
     .sticky-container {
         height: 100%;
         right: 0;
@@ -129,6 +175,13 @@ export const StyledWhiteWrapper = styled.div`
                 top: -150px;
                 z-index: -1;
             }     
+    }
+    &.exception-mobile {
+        @media (max-width: 767px) {
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+        }
     }
 `
 

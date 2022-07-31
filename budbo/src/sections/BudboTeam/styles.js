@@ -2,8 +2,14 @@ import styled from 'styled-components/macro';
 
 export const StyledBudboTeam = styled.div`
     padding: 86px 0 0;
+    @media (max-width: 992px) {
+        padding: 56px 0 0;
+    }
     .roadmap {
         margin: 65px 0 135px;
+        @media (max-width: 767px) {
+            margin: 0 16px;
+        }
         &::after {
             content: '';
             display: block;
@@ -18,9 +24,34 @@ export const StyledBudboTeam = styled.div`
             position: relative;
             padding-left: 45px;
             margin-bottom: 55px;
+            h4 {
+                color: var(--primary);
+                @media (max-width: 767px) {
+                    font-size: 32px;
+                }
+            }
             p {
-                line-height: 45px;
                 color: var(--text-purple);
+                position: relative;
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+                 &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                    top: 9px;
+                    left: -44.5px;
+                    transform: translateX(-50%);
+                    width: 9px;
+                    height: 9px;
+                    background-color: #dee2e6;
+                    border-radius: 50%;
+                    @media (max-width: 767px) {
+                        top: 5px;
+                    }
+                }
             }
             &::after {
                 content: '';
@@ -41,9 +72,24 @@ export const StyledBudboTeam = styled.div`
         span {
             color: var(--primary);
         }
+        @media (max-width: 767px) {
+            margin: 0 16px;
+        }
+    }
+    .team-wrapper {
+        @media (max-width: 767px) {
+            background-color: #fff;
+            padding: 64px 0;
+            border-radius: 48px;
+            margin-bottom: 64px;
+            ul {
+                margin-bottom: 0;
+            }
+        }
     }
     .team {
         margin: 54px 0 100px;
+        
         h4 {
             font-size: 20px;
         }
@@ -59,14 +105,21 @@ export const StyledBudboTeam = styled.div`
             color: var(--text-purple);
         }
         li {
-            width: calc((100% / 4) - 1.8vw);
+            @media (min-width: 768px) {
+                width: calc((100% / 2) - 1.8vw);
+            }
+            @media (min-width: 992px) {
+                width: calc((100% / 4) - 1.8vw);
+            }
             margin-bottom: 1.8vw;
             padding: 32px 0 86px;
         }
     }
     .faq {
-        height: 260px;
         margin-top: 70px;
+        @media (max-width: 767px) {
+            margin-top: 30px;
+        }
         li {
             p {
                 max-height: 0;
@@ -80,9 +133,13 @@ export const StyledBudboTeam = styled.div`
             }
             &.active {
                 p {
-                    max-height: 100px;
+                    max-height: 300px;
                     padding-bottom: 20px;
+                    padding-top: 20px;
                     transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
+                    @media (max-width: 767px) {
+                        max-height: 300px;
+                    }
                 }
                 img {
                     transform: rotate(-180deg);

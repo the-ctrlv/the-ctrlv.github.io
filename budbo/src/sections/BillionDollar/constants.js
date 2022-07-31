@@ -31,7 +31,8 @@ export const mockBillionSolution = {
         dealt with before, partly because even in states that have legalized the sale of cannabis,
         cannabis-related businesses still face many business restrictions and inefficiencies.
     </h4>,
-    text2: <p>This is particularly true when it comes to <span className='bold'> banking, legal protection,
-        consumer outreach, and supply chain management. </span>The government has historically
+    text2: <p className='text-colored'>
+        This is particularly true when it comes to <span className='text-body fw-bold'> banking, legal protection,
+            consumer outreach, and supply chain management. </span>The government has historically
         restricted and penalized cannabis users and businesses -- until recently.</p>
 }

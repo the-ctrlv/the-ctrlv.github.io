@@ -11,7 +11,7 @@ function BudboConnect() {
                 <div className="width-wrapper col-9">
                     <h2>Budbo Connect</h2>
                     <h5 className='mt-2 mb-5'>Sell more cannabis products with data-driven decision-making</h5>
-                    <span className='budbo-badge d-block mb-2'>BUDBO CONNECT</span>
+                    <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>
                     <h3>Budbo Connect is a retailer dashboard that provides growers and vendors with business
                         intelligence, empowering them to make proactive, data-driven decisions.</h3>
                     <p className='text-colored mt-5'>
@@ -39,7 +39,7 @@ function BudboConnect() {
                 <StyledColoredWrapper className='connect'>
                     <img src={connectBg} alt="connect" className='connect-img w-100' />
                     <div className="width-wrapper col-10 mx-auto">
-                        <span className='budbo-badge d-block mb-2'>BUDBO CONNECT</span>
+                        <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>
                         <h3>
                             We expect the <span>increase in foot traffic, improved analytics,
                                 and exceptional customer service</span> to cement strong, longstanding

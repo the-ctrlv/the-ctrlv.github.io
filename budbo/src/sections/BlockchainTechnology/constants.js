@@ -13,17 +13,21 @@ export const mockBlockchainTechnologies = [
             relayed back to these key cannabis industry producers from the mobile app user.</h6>,
         image: technologyImage,
         description:
-            <p>
-                For instance, strain match data gives <span>invaluable insight into the purchasing preferences
+            <p className='text-colored'>
+                For instance, strain match data gives <span className='text-body fw-bold'>
+                    invaluable insight into the purchasing preferences
                     of local users</span>,
-                allowing these key industry producers to <span>make better business decisions</span> regarding
+                allowing these key industry producers to <span className='text-body fw-bold'>
+                    make better business decisions</span> regarding
                 which strains of cannabis
                 to grow, create, and stock on their shelves.
                 <br />
                 <br />
                 In return for their actions inside the app which provide this data,
-                <span>the user is “rewarded” with ERC-20, Budbo Tokens (BUBO)</span>. Where applicable,
-                these tokens <span>can be redeemed for products and services within the Budbo ecosystem.</span>
+                <span className='text-body fw-bold'>{' '}
+                    the user is “rewarded” with ERC-20, Budbo Tokens (BUBO)</span>. Where applicable,
+                these tokens <span className='text-body fw-bold'>
+                    can be redeemed for products and services within the Budbo ecosystem.</span>
                 <br />
                 <br />
                 To keep costs in check and transactions at near-instant speeds with a throughput of up to 10,000
@@ -38,13 +42,14 @@ export const mockBlockchainTechnologies = [
             when dealing with transactions inside the app.</h6>,
         image: technologyImage2,
         description:
-            <p>
+            <p className='text-colored'>
                 For some, the technical barrier to entry into tokens and cryptocurrency is still high, which
                 is why both app users and cannabis industry producers can be off-put by concepts such as
                 blockchain and tokens.
                 <br />
                 <br />
-                Budbo solves this problem and <span>allows end-users and cannabis businesses to enjoy the benefits of
+                Budbo solves this problem and <span className='text-body fw-bold'>{' '}
+                    allows end-users and cannabis businesses to enjoy the benefits of
                     tokens and cryptocurrency without having to write a single line of code or even be
                     technically inclined.</span>
                 <br />

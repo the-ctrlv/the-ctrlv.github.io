@@ -10,7 +10,7 @@ export const StyledBlockChainTechnology = styled.div`
                 line-height: 32px;
                 font-weight: 700;
             }
-            p {
+            /* p {
                 color: var(--text-purple);
                 font-size: 20px;
                 line-height: 28px;
@@ -18,7 +18,7 @@ export const StyledBlockChainTechnology = styled.div`
                 span {
                     color: #000;
                 }
-            }
+            } */
             img {
                 &:not(.logo) {
                     margin: 48px 0;

@@ -14,10 +14,6 @@ export const StyledBudboUnique = styled.div`
         }
     }
     p {
-        &:first-of-type {
-            font-size: 32px;
-            line-height: 38px;
-        } 
         &:nth-of-type(2),
         &:nth-of-type(3) {
             font-size: 20px;
@@ -33,6 +29,7 @@ export const StyledBudboUnique = styled.div`
         margin: 80px 0;
     }
     .violet-map {
+        transform: translateX(-120px);
         margin: 108px 0;
         background-color: #6E2DFA;
         color: #fff;
@@ -92,18 +89,19 @@ export const StyledBudboUnique = styled.div`
     .cannabis-data {
         margin: 108px 0;
         li {
-            margin-bottom: 120px;
+            &:not(:last-child) {
+                margin-bottom: 120px;
+            }
         }
         img {
             margin: 48px 0;
         }
         p {
             font-size: 20px;
-            font-weight: 600;
             line-height: 28px;
             margin-bottom: 32px;
-            &.secondary {
-                color: var(--text-purple);
+            &:not(.text-colored) {
+                font-weight: 600;
             }
         }
     }

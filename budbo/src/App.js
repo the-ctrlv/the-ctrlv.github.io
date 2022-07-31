@@ -62,7 +62,7 @@ function App() {
       <Legalization />
 
 
-      <StyledWhiteWrapper>
+      <StyledWhiteWrapper className='exception-mobile'>
         <div className="container">
           <BudboTeam />
         </div>

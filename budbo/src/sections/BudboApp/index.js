@@ -16,7 +16,7 @@ function BudboApp() {
                     <img src={budbo} alt="budbo" className='budbo-img' />
                     <h2 className='budbo-title'>Budbo App</h2>
                     <h5>The right cannabis products - a screen tap away</h5>
-                    <span className='budbo-badge d-block mb-2'>BUDBO APP</span>
+                    <span className='budbo-badge fw-bold d-block mb-2'>BUDBO APP</span>
                     <h3>The app allows consumers to easily find their preferred
                         cannabis strain in a familiar and gamified manner through
                         a modern and user-friendly interface.
@@ -60,7 +60,7 @@ function BudboApp() {
                 </div>
                 <StyledColoredWrapper>
                     <div className='width-wrapper col-10 mx-auto'>
-                        <span className='budbo-badge d-block mb-2'>BUDBO APP</span>
+                        <span className='budbo-badge fw-bold d-block mb-2'>BUDBO APP</span>
                         <h3>
                             Budbo’s unique “Tinder-like model” has proven to be highly effective
                             in driving alignment between our business and operating models.

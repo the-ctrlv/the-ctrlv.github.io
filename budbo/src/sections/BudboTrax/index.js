@@ -11,12 +11,12 @@ function BudboTrax() {
                 <div className="width-wrapper col-9">
                     <h2>Budbo Trax</h2>
                     <h5 className='mt-2 mb-5'>Supply Chain & Chain of Custody Simplified</h5>
-                    <span className='budbo-badge'>BUDBO TRAX</span>
+                    <span className='budbo-badge fw-bold'>BUDBO TRAX</span>
                     <h3 className='mt-2'>BudboTrax is built to establish order, peace of mind, and real-time
                         visibility: ;
                         in the transport of cannabis products throughout the cannabis ecosystem.</h3>
                     <p className='text-colored mt-4'>
-                        BudboTrax is a <span className='text-body'>mobile-powered GPS</span>{' '}
+                        BudboTrax is a <span className='text-body fw-bold'>mobile-powered GPS</span>{' '}
                         logistics solution built to monitor the
                         entire cannabis supply chain - from grower to end-user.
                     </p>
@@ -24,7 +24,7 @@ function BudboTrax() {
                 <StyledColoredWrapper className='trax'>
                     <img src={traxImg} alt="trax" className='trax-img d-block' />
                     <div className="width-wrapper col-10 mx-auto transformed">
-                        <span className='budbo-badge d-block mb-2'>BUDBO TRAX</span>
+                        <span className='budbo-badge fw-bold d-block mb-2'>BUDBO TRAX</span>
                         <h3>
                             Dispensaries and other vested parties will have full control over and insight into all
                             cannabis movements via the Budbo Connect Dashboard. <span>From there, products will
