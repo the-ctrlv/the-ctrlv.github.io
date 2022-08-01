@@ -14,7 +14,7 @@ function Reasons() {
     return (
         <StyledReasons>
             <div className='container'>
-                <div className='width-container col-9'>
+                <div className='width-wrapper col-10'>
                     <h2 className='reasons-title'>Here are <span>7 reasons
                     </span>
                         {' '}why Budding Technologies, Inc.
@@ -85,7 +85,9 @@ function Reasons() {
                         <h3 className='mt-2 mb-5'>
                             Budbo is the first holistic ecosystem that touches every stakeholder of the {' '}
                             <span className="text-primary">cannabis industry.</span></h3>
-                        <img src={table} alt="Budbo Unique" className='w-100' />
+                        <div className="width-wrapper col-12 col-xl-10">
+                            <img src={table} alt="Budbo Unique" className='table' />
+                        </div>
                     </div>
 
                     <div className="reasons reason4 border-bottom">

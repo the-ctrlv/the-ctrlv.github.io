@@ -7,7 +7,7 @@ function WhatChanged() {
     return (
         <StyledWhatChanged>
             <div className="container">
-                <div className="width-wrapper col-12 col-xl-9">
+                <div className="width-wrapper col-12 col-xl-10">
                     {mockTextContent.title}
                     <img src={whatChangedImg} alt="what-changed" className='what-changed-img' />
                     <h3>{mockTextContent.subtitle}</h3>
@@ -21,13 +21,13 @@ function WhatChanged() {
                         ))}
                     </ul>
                     {mockTextContent.text}
+                    <Notification
+                        title="So far, we’ve zoomed out so you can see the big picture."
+                        description="Let’s zoom in on Budbo now so you can make an informed investment decision."
+                        link="/"
+                        linkText="Invest Now"
+                    />
                 </div>
-                <Notification
-                    title="So far, we’ve zoomed out so you can see the big picture."
-                    description="Let’s zoom in on Budbo now so you can make an informed investment decision."
-                    link="/"
-                    linkText="Invest Now"
-                />
             </div>
         </StyledWhatChanged>
     )

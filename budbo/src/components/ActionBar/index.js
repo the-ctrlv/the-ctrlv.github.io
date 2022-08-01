@@ -1,12 +1,12 @@
 import arrowSm from '../../assets/images/purple-arrow.svg';
 import BudboSelect from './Select';
-import { StyledStickyBar } from './styles';
+import { StyledActionBar } from './styles';
 import SideBarSwiper from './Swiper';
 
-function StickyBar() {
+function ActionBar() {
     return (
-        <StyledStickyBar className='position-absolute h-100'>
-            <div className='side-bar-container rounded border'>
+        <StyledActionBar>
+            <div className='side-bar-container rounded border w-100 position-absolute'>
                 <div className='top-content rounded-top border-bottom'>
                     <ul className='d-flex justify-content-between flex-wrap'>
                         <li>
@@ -73,7 +73,7 @@ function StickyBar() {
             </div>
             <div className="ghost-container position-absolute">
             </div>
-        </StyledStickyBar>
+        </StyledActionBar>
     )
 }
-export default StickyBar;
+export default ActionBar;

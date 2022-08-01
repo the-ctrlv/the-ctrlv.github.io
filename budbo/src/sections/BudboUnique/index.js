@@ -14,13 +14,14 @@ function BudboUnique() {
     return (
         <StyledBudboUnique className='position-relative'>
             <div className="container">
-                <Notification
-                    title='Ready to invest in a future-proof platform? Start Here!'
-                    link='/'
-                    linkText='Invest Now'
-                    transformed
-                />
-                <div className='width-wrapper col-12 col-xl-9'>
+                <div className='width-wrapper col-12 col-xl-10'>
+                    <Notification
+                        title='Ready to invest in a future-proof platform? Start Here!'
+                        link='/'
+                        linkText='Invest Now'
+                        transformed
+                        w80
+                    />
                     <h2 className='transformed'>What Makes Budbo Unique</h2>
                     <h3 className='mb-5'>Budbo is an all-in-one turnkey solution for everyone in the cannabis market,
                         from growers and sellers to the final customers and every distributor in between.
@@ -55,16 +56,16 @@ function BudboUnique() {
                     <h3>Budding Technologies offers a complete ecosystem <br /> putting
                         Budbo head-and-shoulders above the <br /> competition</h3>
                 </div>
-
-                <img src={table} alt="Budbo Unique" className='w-100 table' />
-
-                <Notification
-                    title='Become a pioneer in the brave new cannabis world.'
-                    description='Invest in Budbo today!'
-                    link='/'
-                    linkText='Invest Now'
-                />
-                <div className='width-wrapper col-12 col-xl-9'>
+                <div className="width-wrapper col-12 col-xl-10">
+                    <img src={table} alt="Budbo Unique" className='table' />
+                </div>
+                <div className='width-wrapper col-12 col-xl-10'>
+                    <Notification
+                        title='Become a pioneer in the brave new cannabis world.'
+                        description='Invest in Budbo today!'
+                        link='/'
+                        linkText='Invest Now'
+                    />
                     <h2 className='margin-top'>The Numbers Are In (and They Suggest You Should Invest in
                         Budbo Now)</h2>
                     <h3 className='mt-4 mb-5'>
@@ -77,20 +78,20 @@ function BudboUnique() {
                         this business model is virtually endlessly scalable, offering
                         <span className='text-body fw-bold'> an unparalleled potential for growth.</span>
                     </p>
+                    <div className='violet-map'>
+                        <h2>
+                            New Frontier Data, released the <br className='d-none d-lg-block' /> Global Cannabis Report:
+                            <span className='d-block'>2019 Industry Outlook</span>
+                        </h2>
+                        <h3 className='mt-5'>
+                            Raport estimates the global total addressable cannabis market (regulated and illicit)
+                            at $344 billion USD and identifying the top five regional markets to be:
+                        </h3>
+                        <img src={isMobileMode ? violetMapMob : violetMap}
+                            alt="Violet Map" className='w-100' />
+                    </div>
                 </div>
-                <div className='violet-map'>
-                    <h2>
-                        New Frontier Data, released the <br className='d-none d-lg-block' /> Global Cannabis Report:
-                        <span className='d-block'>2019 Industry Outlook</span>
-                    </h2>
-                    <h3 className='mt-5'>
-                        Raport estimates the global total addressable cannabis market (regulated and illicit)
-                        at $344 billion USD and identifying the top five regional markets to be:
-                    </h3>
-                    <img src={isMobileMode ? violetMapMob : violetMap}
-                        alt="Violet Map" className='w-100' />
-                </div>
-                <div className='width-wrapper col-12 col-xl-9'>
+                <div className='width-wrapper col-12 col-xl-10'>
                     <ul className='cannabis-data'>
                         {mockCannabisData.map((data, index) => (
                             <li key={index}>
@@ -102,7 +103,7 @@ function BudboUnique() {
                     </ul>
                 </div>
             </div>
-        </StyledBudboUnique>
+        </StyledBudboUnique >
     )
 }
 

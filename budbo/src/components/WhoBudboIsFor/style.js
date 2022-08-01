@@ -4,9 +4,10 @@ import tokenMirror from '../../assets/images/token-mirror.svg';
 
 export const StyledWhoBudboIsFor = styled.div`
     border-radius: 24px;
-    transform: translateY(20%);
+    transform: translate3d(40px,20%,0);
     position: relative;
     padding: 80px 120px;
+    width: calc(100% - 80px);
     h2 {
         width: 100%;
         text-align: center;

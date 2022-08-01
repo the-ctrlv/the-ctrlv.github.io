@@ -6,7 +6,7 @@ function Legalization() {
     return (
         <StyledLegalization>
             <div className='container'>
-                <div className='width-wrapper col-12 col-xl-9'>
+                <div className='width-wrapper col-12 col-xl-10'>
                     <h2 className='mb-5'>Continued Legalization.</h2>
                     <h3>
                         <span className="text-primary">Many states are expected to include cannabis reform
@@ -22,16 +22,20 @@ function Legalization() {
                         dollars in EMMAC Life Sciences, a multinational European operator.1</p>
                     <h5>Budbo locations:</h5>
                 </div>
-                <img src={locationMap} alt="Budbo Locations" className='location-map' />
-                <Notification
-                    title='As the market grows, a return on investment can blossom.'
-                    description='This is your chance to get in early and reap the benefits.'
-                    link='/'
-                    linkText='Invest Now'
-                    minimized
-                />
+                <div className="width-wrapper col-12 col-xl-10">
+                    <img src={locationMap} alt="Budbo Locations" className='location-map' />
+                </div>
+                <div className='width-wrapper col-12 col-xl-10'>
+                    <Notification
+                        title='As the market grows, a return on investment can blossom.'
+                        description='This is your chance to get in early and reap the benefits.'
+                        link='/'
+                        linkText='Invest Now'
+                        minimized
+                    />
+                </div>
             </div>
-        </StyledLegalization>
+        </StyledLegalization >
     )
 }
 

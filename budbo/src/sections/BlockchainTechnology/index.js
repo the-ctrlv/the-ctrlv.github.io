@@ -6,7 +6,7 @@ function BlockchainTechnology() {
         <StyledBlockChainTechnology>
             <div className="container">
                 <h2 className="mb-5">How Does Blockchain Technology <br /> Fuel the Budbo App?</h2>
-                <div className="width-wrapper col-8">
+                <div className="col-8">
                     <ul className='blockchain-list'>
                         {mockBlockchainTechnologies.map((blockchainTechnology, index) => (
                             <li key={index}>

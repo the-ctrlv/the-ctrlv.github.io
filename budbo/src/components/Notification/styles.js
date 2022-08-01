@@ -3,17 +3,8 @@ import styled from 'styled-components/macro';
 import owl from '../../assets/images/owl.svg';
 
 export const StyledNotification = styled.div`
-    background: #E6FBF7;
-    border-radius: 24px;
-    padding: 48px 24px;
-    
-    @media (min-width: 1200px) {
-        padding: 58px 34px;
-    }
-    @media (min-width: 1440px) {
-        transform: translateX(-120px);
-        padding: 80px 120px;
-    }
+    position: relative;
+    padding: 4vw 0;
     h2   {
         font-size: 48px;
         line-height: 56px;
@@ -38,24 +29,34 @@ export const StyledNotification = styled.div`
         width: 100%;
         padding: 15px;
     }
-    &.transformed {
-        transform: translateY(calc(-50% - 54px));
-        @media (min-width: 1440px) {
-            transform: translate3d(-120px, calc(-50% - 54px), 0);    
+    >div {
+        z-index: 1;
+        &.transformed {
+            transform: translateY(-115%);
+            h2 {
+                max-width: 85%;
+            }
         }
-
-        h2 {
-            max-width: 85%;
+         &::before {
+            content: '';
+            position: absolute;
+            top: -4vw;
+            z-index: -1;
+            left: -8vw;
+            width: calc(100% + 16vw);
+            height: calc(100% + 8vw);
+            background-color: #E6FBF7;
+            border-radius: 24px;
         }
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 160px;
-        height: 160px;
-        background: url(${owl}) center center/cover no-repeat;
-        transform: translateY(55%);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -140px;
+            width: 160px;
+            height: 160px;
+            background: url(${owl}) center center/cover no-repeat;
+            transform: translateY(55%);
+        }
     }
 `

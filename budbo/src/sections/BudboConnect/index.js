@@ -8,7 +8,7 @@ function BudboConnect() {
     return (
         <StyledBudboConnect>
             <div className="container">
-                <div className="width-wrapper col-12 col-xl-9">
+                <div className="width-wrapper col-12 col-xl-10">
                     <h2>Budbo Connect</h2>
                     <h5 className='mt-2 mb-5'>Sell more cannabis products with data-driven decision-making</h5>
                     <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>
@@ -36,9 +36,9 @@ function BudboConnect() {
                         ))}
                     </ul>
                 </div>
-                <StyledColoredWrapper className='connect'>
+                <StyledColoredWrapper className='connect col-10'>
                     <img src={connectBg} alt="connect" className='connect-img w-100' />
-                    <div className="width-wrapper col-10 mx-auto">
+                    <div className="width-wrapper">
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>
                         <h3>
                             We expect the <span>increase in foot traffic, improved analytics,

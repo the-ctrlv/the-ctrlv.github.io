@@ -1,5 +1,5 @@
+import ActionBar from './components/ActionBar';
 import Header from './components/Header';
-import StickyBar from './components/StickyBar';
 import BillionDollar from './sections/BillionDollar';
 import BlockchainTechnology from './sections/BlockchainTechnology';
 import BudboApp from './sections/BudboApp';
@@ -26,18 +26,20 @@ function App() {
 
 
       <StyledWhiteWrapper>
-        <div className='container video-container'>
-          <iframe width="85%" height="500px" src="https://www.youtube.com/embed/gtV-Z-qiZW8"
+        <div className='col-11 mx-auto video-container d-flex justify-content-between'>
+          <iframe width="auto" height="500px" src="https://www.youtube.com/embed/gtV-Z-qiZW8"
             title="YouTube video player" frameBorder="{0}"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen />
+            allowFullScreen
+            className='me-5'
+          />
+          <ActionBar />
         </div>
+
         <Reasons />
         <BillionDollar />
         <WhatChanged />
         <BudboWork />
-
-        <StickyBar />
 
       </StyledWhiteWrapper>
 

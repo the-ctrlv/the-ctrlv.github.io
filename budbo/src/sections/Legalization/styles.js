@@ -10,8 +10,8 @@ export const StyledLegalization = styled.div`
         margin-top: 80px;
     }
     .location-map {
-        width: 120%;
-        transform: translateX(-120px);
         margin: 25px 0 70px;
+        width: calc(100% + 16vw);
+        transform: translateX(-8vw);
     }
 `

@@ -8,7 +8,7 @@ function BudboTrax() {
     return (
         <StyledBudboTrax>
             <div className="container">
-                <div className="width-wrapper col-12 col-xl-9">
+                <div className="width-wrapper col-12 col-xl-10">
                     <h2>Budbo Trax</h2>
                     <h5 className='mt-2 mb-5'>Supply Chain & Chain of Custody Simplified</h5>
                     <span className='budbo-badge fw-bold'>BUDBO TRAX</span>
@@ -21,9 +21,9 @@ function BudboTrax() {
                         entire cannabis supply chain - from grower to end-user.
                     </p>
                 </div>
-                <StyledColoredWrapper className='trax'>
+                <StyledColoredWrapper className='trax col-10'>
                     <img src={traxImg} alt="trax" className='trax-img d-block' />
-                    <div className="width-wrapper col-10 mx-auto transformed">
+                    <div className="width-wrapper transformed">
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO TRAX</span>
                         <h3>
                             Dispensaries and other vested parties will have full control over and insight into all

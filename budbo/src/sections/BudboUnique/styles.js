@@ -6,7 +6,7 @@ import token from '../../assets/images/token.svg';
 export const StyledBudboUnique = styled.div`
     h2 {
         &.transformed {
-            margin-top: -70px;
+            margin-top: -110px;
             margin-bottom: 30px;
         }
         &.margin-top {
@@ -39,8 +39,9 @@ export const StyledBudboUnique = styled.div`
         color: #fff;
         border-radius: 48px;
         padding: 64px 41px;
+        width: calc(100% + 16vw);
+        transform: translateX(-8vw);
         @media (min-width: 1440px) {
-            transform: translateX(-120px);
             padding: 120px 130px;
             margin: 108px 0;
         }

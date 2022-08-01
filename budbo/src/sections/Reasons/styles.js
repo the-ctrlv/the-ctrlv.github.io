@@ -6,8 +6,12 @@ export const StyledReasons = styled.div`
     .reasons-title {
         margin: 82px 0 -30px;
         line-height: 64px;
+        max-width: 950px;
         span:first-of-type {
             text-decoration: underline;
+        }
+        @media (min-width: 1280px) and (max-width: 1440px) {
+            max-width: 650px;
         }
     }
     .reasons {

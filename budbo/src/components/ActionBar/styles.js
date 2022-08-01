@@ -3,19 +3,18 @@ import styled from 'styled-components/macro';
 import sideBarImg from '../../assets/images/sidebar-img.png';
 import swiperArrow from '../../assets/images/swiper-arrow.svg';
 import tokenMirror from '../../assets/images/token-mirror.svg';
-export const StyledStickyBar = styled.div`
+
+export const StyledActionBar = styled.div`
         height: 100%;
-        right: 5vw;
-        top: 0;
         width: 350px;
-        @media (min-width: 1440px) {
-            right: 10vw;    
-        }
+        position: relative;
         .side-bar-container {
-            top: 54px;
             background-color: #F3F1F8;
             z-index: 1;
-            position: relative;
+            right: 0;
+            @media (max-width: 1280px) {
+                position: relative !important;
+            }
             .top-content {
                 padding: 0 24px 32px;
                 z-index: 5;

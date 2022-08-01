@@ -12,7 +12,7 @@ function BudboApp() {
     return (
         <StyledBudboApp>
             <div className="container">
-                <div className="width-wrapper col-12 col-xl-9">
+                <div className="width-wrapper col-12 col-xl-10">
                     <img src={budbo} alt="budbo" className='budbo-img' />
                     <h2 className='budbo-title'>Budbo App</h2>
                     <h5>The right cannabis products - a screen tap away</h5>
@@ -58,8 +58,8 @@ function BudboApp() {
                         </li>
                     </StyledInsideUl>
                 </div>
-                <StyledColoredWrapper>
-                    <div className='width-wrapper col-10 mx-auto'>
+                <StyledColoredWrapper className='col-10'>
+                    <div className='width-wrapper'>
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO APP</span>
                         <h3>
                             Budbo’s unique “Tinder-like model” has proven to be highly effective

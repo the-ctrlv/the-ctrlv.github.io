@@ -108,15 +108,18 @@ export const GlobalStyles = createGlobalStyle`
     .rounded {
         border-radius: 8px !important;
     }
+    .width-wrapper {
+        @media (max-width: 1440px) {
+            margin: 0 auto;
+        }
+    }
     .cursor-pointer {
         cursor: pointer;
     }
     .table {
         margin: 31px 0 50px;
-        @media (min-width: 1440px) {
-            margin: 68px 0;
-            transform: translateX(-120px);
-        }
+        width: calc(100% + 16vw);
+        transform: translateX(-8vw);
     }
     .with-indent {
         position: relative;
@@ -151,7 +154,6 @@ export const StyledWhiteWrapper = styled.div`
             max-width: none;
         }
     }
-
     .notification-wrapper {
         top: -50%;
         transform: translateY(-50%);
@@ -160,8 +162,8 @@ export const StyledWhiteWrapper = styled.div`
         position: relative;
         z-index: 1;
         iframe {
-            transform: translateX(-120px);
             border-radius: 24px;
+            width: calc(100% - 350px);
         }   
         &::before {
                 content: '';
@@ -188,11 +190,13 @@ export const StyledWhiteWrapper = styled.div`
 `
 
 export const StyledColoredWrapper = styled.div`
-    background-color: #F1EAFE;
-    padding: 95px 48px 0;
     margin-bottom: 185px;
     border-radius: 48px;
-    transform: translateX(-120px);
+    position: relative;
+    z-index: 1;
+    @media (max-width: 1600px) {
+        margin: 0 auto 145px;
+    }
     p {
         &.text {
             margin: 25px 0 100px
@@ -213,17 +217,21 @@ export const StyledColoredWrapper = styled.div`
     &.connect {
         padding-top: 0;
         margin-bottom: 290px;
-        background-color: #FFF5EC;
         h3 {
             span {
                 color: var(--orange);
             }
         }
+        &::before {
+            background-color: #FFF5EC;
+        }
     }
     &.trax {
         padding-top: 0;
-        background-color: #EAF9FF;
         margin: 350px 0 300px;
+        @media (max-width: 1600px) {
+            margin: 250px auto 200px;
+        }
         h3 {
             span {
                 color: var(--aqua);
@@ -240,6 +248,21 @@ export const StyledColoredWrapper = styled.div`
         .what-inside-title {
             margin-top: 80px;
         }
+        &::before {
+            background-color: #EAF9FF;
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -6vw;
+        z-index: -1;
+        left: -8vw;
+        width: calc(100% + 16vw);
+        height: calc(100% + 6vw);
+        background-color: #F1EAFE;
+        border-radius: 24px;
+
     }
 `
 
@@ -248,7 +271,7 @@ export const StyledInsideUl = styled.ul`
     justify-content: space-between;
     flex-flow: wrap;
     margin-top: 32px;
-    margin-bottom: 95px;
+    margin-bottom: 200px;
     li {
         height: 170px;
         border-radius: 16px;
