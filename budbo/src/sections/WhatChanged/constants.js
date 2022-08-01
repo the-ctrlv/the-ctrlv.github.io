@@ -2,7 +2,7 @@ import logo1 from '../../assets/images/offer-icon1.svg';
 import logo2 from '../../assets/images/offer-icon2.svg';
 
 export const mockTextContent = {
-    title: <h2>What Changed - and Why <br /> Should it Matter to You?</h2>,
+    title: <h2>What Changed - and Why <br className='d-none d-md-block' /> Should it Matter to You?</h2>,
     subtitle: 'We are now seeing a strong and effective push for the federal government to establish,' +
         ' regulate, and encourage an open and fair market for the use and sale of cannabis and' +
         ' cannabis- related products.',

@@ -11,8 +11,11 @@ export const StyledBillionDollar = styled.div`
                 }
             }
         }
-        h2 {
+        > h2 {
             margin-top: 70px;
+            @media (max-width: 767px) {
+                margin-top: 150px;
+            }
         }
         > img {
                 margin: 48px 0;

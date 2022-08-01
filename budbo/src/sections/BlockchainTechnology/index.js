@@ -4,9 +4,9 @@ import { mockBlockchainTechnologies } from './constants';
 function BlockchainTechnology() {
     return (
         <StyledBlockChainTechnology>
-            <div className="container">
-                <h2 className="mb-5">How Does Blockchain Technology <br /> Fuel the Budbo App?</h2>
-                <div className="col-lg-8">
+            <div className="container col-12 col-xl-10">
+                <div className="col-9 col-xl-10">
+                    <h2 className="mb-5">How Does Blockchain Technology <br /> Fuel the Budbo App?</h2>
                     <ul className='blockchain-list'>
                         {mockBlockchainTechnologies.map((blockchainTechnology, index) => (
                             <li key={index}>

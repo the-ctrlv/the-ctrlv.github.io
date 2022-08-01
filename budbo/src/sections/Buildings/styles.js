@@ -3,8 +3,16 @@ import styled from 'styled-components/macro';
 import buildings from '../../assets/images/buildings.png';
 
 export const StyledBuildings = styled.div`
-    margin-top: 150px;
-    margin-bottom: 350px;
+    margin: 150px 0 350px;
+    @media (max-width: 768px) {
+        margin: 80px 0;
+    }
+    h1 {
+        @media (max-width: 768px) {
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
     h3 {
         margin-top: 20px;
     }

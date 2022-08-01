@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro';
 
+import notificationBg from '../../assets/images/notification-bg.png';
+import mobBg from '../../assets/images/notification-bg-mob.png';
 import owl from '../../assets/images/owl.svg';
 
 export const StyledNotification = styled.div`
@@ -48,8 +50,14 @@ export const StyledNotification = styled.div`
             left: -8vw;
             width: calc(100% + 16vw);
             height: calc(100% + 8vw);
-            background-color: #E6FBF7;
+            background: url(${notificationBg}) center center/105% no-repeat;
             border-radius: 24px;
+            @media (max-width: 768px) {
+                height: calc(100% + 96px);
+                top: -48px;
+                background: url(${mobBg}) center center/105% no-repeat;
+
+            }
         }
         &::after {
             content: '';
@@ -62,7 +70,7 @@ export const StyledNotification = styled.div`
             transform: translateY(55%);
             @media (max-width: 767px) {
                 bottom: -50px;
-                right: 0;
+                right: -25px;
             }
         }
     }

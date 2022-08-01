@@ -2,6 +2,13 @@ import styled from 'styled-components/macro';
 
 export const StyledBlockChainTechnology = styled.div`
     margin: 82px 0 300px;
+    .container {
+        > div {
+            @media (max-width: 1440px) {
+                margin: 0 auto;
+            }
+        }
+    }
     .blockchain-list {
         li {
             margin-bottom: 57px;

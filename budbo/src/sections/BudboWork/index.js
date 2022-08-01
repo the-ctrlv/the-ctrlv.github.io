@@ -10,7 +10,8 @@ function BudboWork() {
 
                     <h2 className="mb-5 text-center">
                         How Does <span className="text-primary">Budbo</span> Work?</h2>
-                    <img src={workImage} alt="How does budbo work?" className='work-image w-100' />
+                    <img src={workImage} alt="How does budbo work?" className='d-none d-md-block work-image w-100' />
+                    <div className="mob-img d-md-none" />
                     <h3>Budbo is a complete technology solution that benefits cannabis dispensaries, growers,
                         couriers, and users.</h3>
                     <p className='mt-4 mb-5'>
@@ -36,10 +37,11 @@ function BudboWork() {
                             </li>
                         ))}
                     </ul>
-                    <h2><span className="text-primary">Budbo</span> has been featured in:</h2>
-                    <div className='d-flex flex-wrap justify-content-center company-logos'>
+                    <h2 className='d-none d-md-block'>
+                        <span className="text-primary">Budbo</span> has been featured in:</h2>
+                    <div className='d-md-flex flex-wrap justify-content-center company-logos'>
                         {mockCompanyLogos.map((company, index) => (
-                            <img key={index} src={company} alt={index} className='mx-2' />
+                            <img key={index} src={company} alt={index} className='d-block mb-5 mx-auto mx-md-2' />
                         ))}
                     </div>
                 </div>

@@ -9,12 +9,13 @@ function WhatChanged() {
             <div className="container">
                 <div className="width-wrapper col-12 col-xl-10">
                     {mockTextContent.title}
-                    <img src={whatChangedImg} alt="what-changed" className='what-changed-img' />
+                    <img src={whatChangedImg} alt="what-changed" className='d-none d-md-block what-changed-img w-100' />
+                    <div className='mob-img d-md-none' />
                     <h3>{mockTextContent.subtitle}</h3>
                     <h4>{mockTextContent.subtitle2}</h4>
                     <ul className='offers'>
                         {mockOffers.map((offer, index) => (
-                            <li key={index} className="d-flex align-items-center">
+                            <li key={index} className="d-flex align-items-start align-items-md-center">
                                 <img src={offer.logo} alt={index} className="me-4" />
                                 {offer.text}
                             </li>

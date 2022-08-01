@@ -4,9 +4,6 @@ import token from '../../assets/images/token.svg';
 
 
 export const StyledBudboUnique = styled.div`
-    @media (min-width: 768px) {
-        overflow: hidden;
-    }
     h2 {
         &.transformed {
             margin-top: -110px;
@@ -14,6 +11,9 @@ export const StyledBudboUnique = styled.div`
         }
         &.margin-top {
             margin-top: 120px;
+            @media (max-width: 766px) {
+                margin-top: 150px;
+            }
         }
         & + h3 {
             @media (max-width: 767px) {

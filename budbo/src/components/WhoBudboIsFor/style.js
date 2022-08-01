@@ -11,7 +11,7 @@ export const StyledWhoBudboIsFor = styled.div`
     @media (min-width: 992px) {
         width: calc(100% - 80px);
         transform: translate3d(40px,20%,0);
-           padding: 60px 100px;
+        padding: 60px 40px;
     }
     @media (min-width: 1600px) {
         padding: 80px 120px;
@@ -27,7 +27,7 @@ export const StyledWhoBudboIsFor = styled.div`
             width: 100%;
             margin-bottom: 24px; 
             padding: 16px;
-            @media (min-width: 768px) {
+            @media (min-width: 992px) {
                 width: calc(50% - 12px);    
                 padding: 16px 8px;
             }
@@ -52,24 +52,25 @@ export const StyledWhoBudboIsFor = styled.div`
                     @media (min-width: 992px) {
                         width: auto !important;
                         padding: 16px 24px;
-                        transform: translateX(37%);
+                        transform: translateX(0%);
+                        width: 100% !important;
                     }
                 }
             }
         }
     }
     &::before {
-            content: '';
-            display: block;
-            width: 109px;
-            height: 120px;
-            background: url(${tokenMirror}) center center/contain no-repeat;
-            position: absolute;
-            right: 50%;
-            transform: translate3d(50%, -50%, 0);
-            top: 0;
-            z-index: 0;
-        }
+        content: '';
+        display: block;
+        width: 109px;
+        height: 120px;
+        background: url(${tokenMirror}) center center/contain no-repeat;
+        position: absolute;
+        right: 50%;
+        transform: translate3d(50%, -50%, 0);
+        top: 0;
+        z-index: 0;
+    }
     &.budbo-trax {
         background-color: #CEF1FF;
         h2 {

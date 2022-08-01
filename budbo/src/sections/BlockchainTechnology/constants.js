@@ -8,7 +8,7 @@ export const mockBlockchainTechnologies = [
     {
         logo: polygonLogo,
         title: <h4><span className="text-primary">A hallmark of the Budbo Ecosystem is its
-            token rewards system.</span>As information is passed
+            token rewards system.</span> As information is passed
             from dispensaries, labs, manufacturers, and growers on to patients and consumers, data is also
             relayed back to these key cannabis industry producers from the mobile app user.</h4>,
         image: technologyImage,

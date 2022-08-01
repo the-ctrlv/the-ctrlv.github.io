@@ -91,9 +91,31 @@ export const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+           &:hover {
+            color: var(--primary);
+        }
     }
     .text-body {
         color: #000 !important;
+    }
+    .btn {
+        border: none !important;
+        img {
+            transition: 0.3s ease-in-out;
+        }
+        &:hover {
+            background-color: #059479;
+            color: #fff;
+            img {
+                transform: translateX(20px);
+                transition: 0.3s ease-in-out;
+            }
+        }
+        &-primary {
+            &:hover {
+                background-color: #5413df;
+            }
+        }
     }
     p {
         margin: 0;
@@ -296,7 +318,11 @@ export const StyledColoredWrapper = styled.div`
             }
         }
         .transformed {
-            margin-top: -220px;
+            margin-top: -110px;
+            @media (min-width: 1600px) {
+                margin-top: -220px;
+            }
+            
         }
         .trax-img {
             width: calc(100% + 32px);

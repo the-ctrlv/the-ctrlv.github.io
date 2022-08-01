@@ -3,7 +3,7 @@ import { getClassNames } from '../../shared';
 import { StyledNotification } from './styles';
 function Notification({ title, description, link, linkText, transformed, minimized }) {
     return (
-        <StyledNotification className={getClassNames('container', transformed ? 'col-10' : '')}>
+        <StyledNotification className={getClassNames('container', transformed ? 'col-md-10' : '')}>
             <div className={getClassNames('position-relative col-12',
                 transformed ? 'transformed' : '')}>
                 <h2>{title}</h2>

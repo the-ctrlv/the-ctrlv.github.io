@@ -10,12 +10,13 @@ export const mockBillionIdea = {
         between 2022 and 2030. The global blockchain market will grow from $7.18 billion
         in 2022 to $163.83 billion by 2029, at a <span className="text-primary">
             CAGR of 56.3%.</span></h3>,
-    text: <p className='text'>
+    text: <p className='text text-colored'>
         By combining these two markets, Budbo empowers the cannabis industry to grow at an even faster
         pace and removes the inefficiencies and challenges cannabis businesses face even in regulated states.
         <br />
         <br />
-        Budding Technologies, Inc offers <span>unified solution for cannabis businesses and users
+        Budding Technologies, Inc offers <span className='text-body fw-bold'>
+            unified solution for cannabis businesses and users
             to transact safely, securely, and in compliance with federal and state regulations.</span></p>
 }
 

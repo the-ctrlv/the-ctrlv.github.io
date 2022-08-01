@@ -23,8 +23,11 @@ export const StyledBudboConnect = styled.div`
             width: calc(50% - 16px);
             margin-bottom: 32px;
             padding: 0 48px;
-            @media (max-width: 768px) {
+            @media (max-width: 992px) {
                 height: 64px;
+            }
+            @media (max-width: 1440px) {
+                height: 80px;
             }
         }
     }
