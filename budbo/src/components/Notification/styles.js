@@ -5,6 +5,9 @@ import owl from '../../assets/images/owl.svg';
 export const StyledNotification = styled.div`
     position: relative;
     padding: 4vw 0;
+    @media (max-width: 768px) {
+        padding: 4vw 32px !important;    
+    }
     h2   {
         font-size: 48px;
         line-height: 56px;
@@ -52,11 +55,15 @@ export const StyledNotification = styled.div`
             content: '';
             position: absolute;
             bottom: -60px;
-            right: -140px;
+            right: -120px;
             width: 160px;
             height: 160px;
             background: url(${owl}) center center/cover no-repeat;
             transform: translateY(55%);
+            @media (max-width: 767px) {
+                bottom: -50px;
+                right: 0;
+            }
         }
     }
 `

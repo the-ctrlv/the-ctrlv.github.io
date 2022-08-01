@@ -1,10 +1,13 @@
 import connectBg from '../../assets/images/connect-bg.png';
+import connectBgMob from '../../assets/images/connect-bg-mob.png';
 import WhoBudboIsFor from '../../components/WhoBudboIsFor';
-import { StyledColoredWrapper } from '../../shared';
+import { StyledColoredWrapper, useMobileMode } from '../../shared';
 import { StyledBudboConnect } from './styles';
 import { mockBudboConnect } from './constants';
 
 function BudboConnect() {
+    const isMobileMode = useMobileMode();
+
     return (
         <StyledBudboConnect>
             <div className="container">
@@ -25,7 +28,7 @@ function BudboConnect() {
                     <h5 className='mt-5 mb-4'>
                         With Budbo’s industry analytics and actionable insights, cannabis business owners can easily
                     </h5>
-                    <ul className='d-flex justify-content-between flex-wrap'>
+                    <ul className='d-none d-xl-flex justify-content-between flex-wrap'>
                         {mockBudboConnect.map((item, index) => (
                             <li key={index} className='border d-flex justify-content-center align-items-center'>
                                 <div className='d-flex align-items-center w-100'>
@@ -36,8 +39,8 @@ function BudboConnect() {
                         ))}
                     </ul>
                 </div>
-                <StyledColoredWrapper className='connect col-10'>
-                    <img src={connectBg} alt="connect" className='connect-img w-100' />
+                <StyledColoredWrapper className='connect col-12 col-lg-10'>
+                    <img src={isMobileMode ? connectBgMob : connectBg} alt="connect" className='connect-img w-100' />
                     <div className="width-wrapper">
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>
                         <h3>

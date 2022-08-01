@@ -1,10 +1,13 @@
 import traxImg from '../../assets/images/trax-bg.png';
+import traxImgMob from '../../assets/images/trax-bg-mob.png';
 import WhoBudboIsFor from '../../components/WhoBudboIsFor';
-import { StyledColoredWrapper, StyledInsideUl } from '../../shared';
+import { StyledColoredWrapper, StyledInsideUl, useMobileMode } from '../../shared';
 import { StyledBudboTrax } from './styles';
 import { mockTraxInside } from './constants';
 
 function BudboTrax() {
+    const isMobileMode = useMobileMode();
+
     return (
         <StyledBudboTrax>
             <div className="container">
@@ -21,8 +24,8 @@ function BudboTrax() {
                         entire cannabis supply chain - from grower to end-user.
                     </p>
                 </div>
-                <StyledColoredWrapper className='trax col-10'>
-                    <img src={traxImg} alt="trax" className='trax-img d-block' />
+                <StyledColoredWrapper className='trax col-12 col-lg-10'>
+                    <img src={isMobileMode ? traxImgMob : traxImg} alt="trax" className='trax-img d-block' />
                     <div className="width-wrapper transformed">
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO TRAX</span>
                         <h3>

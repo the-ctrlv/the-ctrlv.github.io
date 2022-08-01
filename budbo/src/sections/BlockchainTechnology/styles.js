@@ -5,24 +5,22 @@ export const StyledBlockChainTechnology = styled.div`
     .blockchain-list {
         li {
             margin-bottom: 57px;
+            .logo {
+                max-height: 40px ;
+            }
             h6 {
                 font-size: 24px;
                 line-height: 32px;
                 font-weight: 700;
             }
-            /* p {
-                color: var(--text-purple);
-                font-size: 20px;
-                line-height: 28px;
-                font-weight: 600;
-                span {
-                    color: #000;
-                }
-            } */
             img {
                 &:not(.logo) {
                     margin: 48px 0;
                     border-radius: 48px;
+                    @media (max-width: 768px) {
+                        margin: 32px 0;
+                        border-radius: 24px;
+                    }
                 }
             }
         }

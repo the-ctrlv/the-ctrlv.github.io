@@ -8,6 +8,13 @@ export const StyledBudboConnect = styled.div`
         > ul {
             margin-bottom: 148px;
         }
+        h5 {
+            &:last-of-type {
+                @media (max-width: 1199px) {
+                    margin-bottom: 148px !important;
+                }
+            }
+        }
     }
     ul {
         li {
@@ -16,6 +23,9 @@ export const StyledBudboConnect = styled.div`
             width: calc(50% - 16px);
             margin-bottom: 32px;
             padding: 0 48px;
+            @media (max-width: 768px) {
+                height: 64px;
+            }
         }
     }
 `

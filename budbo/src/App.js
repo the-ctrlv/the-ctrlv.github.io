@@ -1,19 +1,19 @@
-import ActionBar from './components/ActionBar';
-import Header from './components/Header';
-import BillionDollar from './sections/BillionDollar';
+// import ActionBar from './components/ActionBar';
+// import Header from './components/Header';
+// import BillionDollar from './sections/BillionDollar';
 import BlockchainTechnology from './sections/BlockchainTechnology';
 import BudboApp from './sections/BudboApp';
 import BudboConnect from './sections/BudboConnect';
 import BudboTeam from './sections/BudboTeam';
 import BudboTrax from './sections/BudboTrax';
 import BudboUnique from './sections/BudboUnique';
-import BudboWork from './sections/BudboWork';
-import Buildings from './sections/Buildings';
+// import BudboWork from './sections/BudboWork';
+// import Buildings from './sections/Buildings';
 import Footer from './sections/Footer';
 import Legalization from './sections/Legalization';
-import Main from './sections/main';
-import Reasons from './sections/Reasons';
-import WhatChanged from './sections/WhatChanged';
+// import Main from './sections/main';
+// import Reasons from './sections/Reasons';
+// import WhatChanged from './sections/WhatChanged';
 import { GlobalStyles, StyledWhiteWrapper } from './shared';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <GlobalStyles />
 
-      <Header />
+      {/* <Header />
       <Main />
 
 
@@ -44,7 +44,7 @@ function App() {
       </StyledWhiteWrapper>
 
 
-      <Buildings />
+      <Buildings /> */}
 
       <StyledWhiteWrapper>
         <BudboApp />

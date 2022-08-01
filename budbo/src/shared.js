@@ -67,6 +67,12 @@ export const GlobalStyles = createGlobalStyle`
             line-height: 28px;
         }
     }
+    h4 {
+        @media (max-width: 992px) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
         font-weight: bold;
@@ -87,6 +93,10 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         font-size: 20px;
         line-height: 28px;
+        @media (max-width: 992px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     .container {
         @media (max-width: 767px) {
@@ -118,8 +128,10 @@ export const GlobalStyles = createGlobalStyle`
     }
     .table {
         margin: 31px 0 50px;
-        width: calc(100% + 16vw);
-        transform: translateX(-8vw);
+        @media (min-width: 1200px) {
+            width: calc(100% + 16vw);
+            transform: translateX(-8vw);
+        }
     }
     .with-indent {
         position: relative;
@@ -191,9 +203,11 @@ export const StyledWhiteWrapper = styled.div`
 
 export const StyledColoredWrapper = styled.div`
     margin-bottom: 185px;
-    border-radius: 48px;
     position: relative;
     z-index: 1;
+    @media (max-width: 1600px) {
+        margin: 0 auto 145px;
+    }
     @media (max-width: 1600px) {
         margin: 0 auto 145px;
     }
@@ -217,6 +231,9 @@ export const StyledColoredWrapper = styled.div`
     &.connect {
         padding-top: 0;
         margin-bottom: 290px;
+        @media (max-width: 767px) {
+            margin-bottom: 48px;
+        }
         h3 {
             span {
                 color: var(--orange);
@@ -229,8 +246,11 @@ export const StyledColoredWrapper = styled.div`
     &.trax {
         padding-top: 0;
         margin: 350px 0 300px;
-        @media (max-width: 1600px) {
-            margin: 250px auto 200px;
+        @media (max-width: 1440px) {
+            margin: 200px auto 150px;
+        }
+        @media (max-width: 767px) {
+            margin: 136px auto 94px;
         }
         h3 {
             span {
@@ -241,13 +261,30 @@ export const StyledColoredWrapper = styled.div`
             margin-top: -220px;
         }
         .trax-img {
-            width: 90%;
-            margin: 0 auto;
-            transform: translateY(-28%);
+            width: calc(100% + 32px);
+            transform: translate3d(-16px, -15%, 0);
+            margin-bottom: 160px;
+            @media (min-width: 768px) {
+                width: 90%;
+                margin: 0 auto 0;
+                transform: translateY(-28%);    
+            }
         }
         .what-inside-title {
             margin-top: 80px;
         }
+        @media (max-width: 767px) {
+            .content {
+                li {
+                    &:nth-of-type(5),
+                    &:nth-of-type(6),
+                    &:nth-of-type(7) {
+                        display: none !important; 
+                    }
+                }   
+            }
+        }
+        
         &::before {
             background-color: #EAF9FF;
         }
@@ -261,7 +298,11 @@ export const StyledColoredWrapper = styled.div`
         width: calc(100% + 16vw);
         height: calc(100% + 6vw);
         background-color: #F1EAFE;
-        border-radius: 24px;
+        border-radius: 48px;
+        @media (max-width: 768px) {
+            width: calc(100% + 32px);
+            left: -16px;
+        }
 
     }
 `
@@ -271,13 +312,19 @@ export const StyledInsideUl = styled.ul`
     justify-content: space-between;
     flex-flow: wrap;
     margin-top: 32px;
-    margin-bottom: 200px;
+    @media (min-width: 992px) {
+        margin-bottom: 200px;
+    }
     li {
         height: 170px;
         border-radius: 16px;
-        width: calc(50% - 16px);
         margin-bottom: 32px;
-        padding: 0 48px;
+        padding: 0 5px 0 24px;
+        width: 100%;
+        @media (min-width: 992px) {
+            padding: 0 48px;
+            width: calc(50% - 16px);
+        }
     }
     &.trax {
         margin-bottom: 10px;

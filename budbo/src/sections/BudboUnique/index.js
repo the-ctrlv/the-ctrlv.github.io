@@ -39,7 +39,7 @@ function BudboUnique() {
                         :
                         <img src={uniqueImage} alt="Budbo Unique" className='w-100 unique-img' />
                     }
-                    <h5>Unique features you’ll be hard-pressed to find anywhere else:</h5>
+                    <h5 style={{ fontWeigth: 600 }}>Unique features you’ll be hard-pressed to find anywhere else:</h5>
                     <ul className='unique-features'>
                         {mockFeatures.map((feature, index) => (
                             <li key={index} className="border d-flex align-items-center bg-white">

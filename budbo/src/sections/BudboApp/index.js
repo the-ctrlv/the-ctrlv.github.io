@@ -4,11 +4,14 @@ import inside2 from '../../assets/images/inside2.svg'
 import inside3 from '../../assets/images/inside3.svg'
 import inside4 from '../../assets/images/inside4.svg'
 import uma from '../../assets/images/uma.png'
+import umaMob from '../../assets/images/uma-mob.png'
 import WhoBudboIsFor from '../../components/WhoBudboIsFor/index';
-import { StyledColoredWrapper, StyledInsideUl } from '../../shared';
+import { StyledColoredWrapper, StyledInsideUl, useMobileMode } from '../../shared';
 import { StyledBudboApp } from './styles'
 
 function BudboApp() {
+    const isMobileMode = useMobileMode()
+
     return (
         <StyledBudboApp>
             <div className="container">
@@ -58,7 +61,7 @@ function BudboApp() {
                         </li>
                     </StyledInsideUl>
                 </div>
-                <StyledColoredWrapper className='col-10'>
+                <StyledColoredWrapper className='col-12 col-lg-10'>
                     <div className='width-wrapper'>
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO APP</span>
                         <h3>
@@ -79,7 +82,11 @@ function BudboApp() {
                             research.  The AI driven algorithm is improving everyday with the help of one of
                             Budbo’s key advisors, Dr. Uma Dhanablan.
                         </p>
-                        <img src={uma} alt="uma" className='uma-img d-block' />
+                        {isMobileMode ?
+                            <img src={umaMob} alt="uma" className='d-block w-100' />
+                            :
+                            <img src={uma} alt="uma" className='uma-img d-block' />
+                        }
                         <div className='col-11 mx-auto'>
                             <h4 className='mb-2'>Dr. Uma Dhanabalan</h4>
                             <h5 style={{ fontWeight: 500 }}>Key Advisor to Budding Technologies, Inc.</h5>

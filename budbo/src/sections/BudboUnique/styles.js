@@ -4,6 +4,9 @@ import token from '../../assets/images/token.svg';
 
 
 export const StyledBudboUnique = styled.div`
+    @media (min-width: 768px) {
+        overflow: hidden;
+    }
     h2 {
         &.transformed {
             margin-top: -110px;
@@ -11,6 +14,11 @@ export const StyledBudboUnique = styled.div`
         }
         &.margin-top {
             margin-top: 120px;
+        }
+        & + h3 {
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
         }
     }
     p {
@@ -29,8 +37,8 @@ export const StyledBudboUnique = styled.div`
         margin: 80px 0;
         @media (max-width: 767px) {
             margin: 48px 0;
-            width: calc(100% + 32px) !important;
-            transform: translateX(-16px);
+            /* width: calc(100% + 32px) !important; */
+            transform:  scale(1.1);
         }
     }
     .violet-map {
@@ -39,8 +47,12 @@ export const StyledBudboUnique = styled.div`
         color: #fff;
         border-radius: 48px;
         padding: 64px 41px;
-        width: calc(100% + 16vw);
-        transform: translateX(-8vw);
+        
+        @media (min-width: 1200px) {
+            width: calc(100% + 16vw);
+            transform: translateX(-8vw);
+        }
+
         @media (min-width: 1440px) {
             padding: 120px 130px;
             margin: 108px 0;
@@ -105,11 +117,17 @@ export const StyledBudboUnique = styled.div`
                 top: 17%;
             }
         }
+        & + h3 {
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
+        }
     }
     .cannabis-data {
         margin: 108px 0;
         @media (max-width: 767px) {
-            padding-bottom: 95px;
+            padding-bottom: 50px;
+            margin: 48px 0 32px;
         }
         li {
             &:not(:last-child) {
