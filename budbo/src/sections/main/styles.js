@@ -1,15 +1,15 @@
 import styled from 'styled-components/macro';
 
 import mainBg from '../../assets/images/main-bg.png';
+import mainBgMob from '../../assets/images/main-bg-mob.png';
 
 export const StyledMain = styled.section`
     min-height: 92vh;
     > div {
         z-index: 1;
         h1 {
-            font-size: 72px;
             color: var(--primary);
-            line-height: 88px;
+            
             .slogan {
                 color: #000;    
             }
@@ -35,5 +35,13 @@ export const StyledMain = styled.section`
         width: 50vw;
         height: 94vh;
         background: url(${mainBg}) right bottom /contain no-repeat;
+        @media (max-width: 768px) {
+            background: url(${mainBgMob}) right bottom /contain no-repeat;
+                bottom: -180px;
+                right: 0;
+                display: block;
+                width: 100vw;
+                height: 94vh;
+        }
     }
 `

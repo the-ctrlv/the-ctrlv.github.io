@@ -14,7 +14,7 @@ function Reasons() {
     return (
         <StyledReasons>
             <div className='container'>
-                <div className='width-wrapper col-10'>
+                <div className='width-wrapper col-md-10'>
                     <h2 className='reasons-title'>Here are <span>7 reasons
                     </span>
                         {' '}why Budding Technologies, Inc.
@@ -50,8 +50,10 @@ function Reasons() {
                         </p>
                         <ul className='ecosystem w-100'>
                             {reason1Content.map((item, index) => (
-                                <li key={index} className="d-flex align-items-center border-bottom">
-                                    <img src={item.logo} alt="logo" className='me-5' />
+                                <li key={index} className="d-flex align-items-center border-bottom flex-wrap
+                                flex-lg-nowrap">
+                                    <img src={item.logo} alt="logo" className='me-lg-5 col-9 col-lg
+                                    mb-4 mb-lg-0' />
                                     <p className='text-colored'>{item.text}</p>
                                 </li>
                             ))}
@@ -82,7 +84,7 @@ function Reasons() {
 
                     <div className="reasons reason3 border-bottom">
                         <h6># REASON 3</h6>
-                        <h3 className='mt-2 mb-5'>
+                        <h3 className='mt-2 mb-2 mb-md-5'>
                             Budbo is the first holistic ecosystem that touches every stakeholder of the {' '}
                             <span className="text-primary">cannabis industry.</span></h3>
                         <div className="width-wrapper col-12 col-xl-10">
@@ -107,11 +109,11 @@ function Reasons() {
 
                         <PhoneSwiper reason4 />
 
-                        <div className='mentor d-flex align-items-end'>
-                            <img src={mentor} alt="mentor" className='col-3 me-4' />
+                        <div className='mentor d-lg-flex align-items-end'>
+                            <img src={mentor} alt="mentor" className='col-8 mx-auto mb-4 d-block col-lg-3 me-lg-4' />
                             <ul>
                                 {mockMentorAwards.map((award, index) => (
-                                    <li key={index} className='mb-2'>
+                                    <li key={index} className='ms-4 ms-lg-0 mb-2'>
                                         <p>{award}</p>
                                     </li>
                                 ))}
@@ -154,7 +156,7 @@ function Reasons() {
                             businesses face today, even in regulated states.
                         </p>
                         <div className="img-wrapper position-relative">
-                            <img src={reason5} alt="reason5" className='w-100' />
+                            <img src={reason5} alt="reason5" className='d-none d-lg-block w-100' />
                         </div>
 
                     </div>
@@ -182,20 +184,23 @@ function Reasons() {
                             and ML, SaaS, Apparel manufacturing and Foodtech on an international basis.
                         </p>
 
-                        <div className='mentor d-flex align-items-start justify-content-between 
-                        position-relative'>
-                            <img src={mentor2} alt="mentor" className='col-3' />
-                            <ul className='col-7'>
+                        <div className='mentor d-lg-flex align-items-start justify-content-between 
+                        position-relative col-10 mx-auto col-md-12'>
+                            <div className='col-12 col-lg-3'>
+                                <img src={mentor2} alt="mentor" className='w-100' />
+                                <p className='position-absolute text-colored'>
+                                    Stephen Rosen <br />
+                                    CFO of Budding Technologies, Inc.
+                                </p>
+                            </div>
+
+                            <ul className='pt-5 mt-5 pt-lg-0 mt-lg-3 mt-lg-0 col-lg-7'>
                                 {mockStephenCFO.map((text, index) => (
                                     <li key={index} className='mb-2'>
                                         {text.text}
                                     </li>
                                 ))}
                             </ul>
-                            <p className='position-absolute text-colored'>
-                                Stephen Rosen <br />
-                                CFO of Budding Technologies, Inc.
-                            </p>
                         </div>
                     </div>
 
@@ -214,8 +219,9 @@ function Reasons() {
                             and more patients all over the world can reap its benefits.
                         </p>
                         <div className='map-wrapper mt-4 position-relative'>
-                            <img src={reason7Map} alt="reason7Map" className='w-100' />
-                            <p className='position-absolute text-colored'>
+                            <img src={reason7Map} alt="reason7Map" className='w-100 d-none d-md-block' />
+                            <div className='mob-map' />
+                            <p className='text-colored'>
                                 By investing in Budbo, you help our users  gain faster and easier access to the
                                 cannabis products they need. Now is the ideal time to take advantage of the growth
                                 potential of the cannabis industry.

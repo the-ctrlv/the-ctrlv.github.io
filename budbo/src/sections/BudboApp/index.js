@@ -83,14 +83,14 @@ function BudboApp() {
                             Budbo’s key advisors, Dr. Uma Dhanablan.
                         </p>
                         {isMobileMode ?
-                            <img src={umaMob} alt="uma" className='d-block w-100' />
+                            <img src={umaMob} alt="uma" className='d-block my-4 w-100' />
                             :
                             <img src={uma} alt="uma" className='uma-img d-block' />
                         }
                         <div className='col-11 mx-auto'>
                             <h4 className='mb-2'>Dr. Uma Dhanabalan</h4>
                             <h5 style={{ fontWeight: 500 }}>Key Advisor to Budding Technologies, Inc.</h5>
-                            <p className='text-colored with-indent mt-5 mb-4 ms-0'>
+                            <p className='text-colored with-indent mt-3 mt-md-5 mb-4 ms-3 ms-md-0'>
                                 Dr Uma’s Bio - Dr. Dhanabalan is a highly respected and educated physician
                                 and known to most
                                 as Dr Uma. She completed her Bachelor of Arts degree with High Honors from Rutgers
@@ -99,7 +99,7 @@ function BudboApp() {
                                 New Jersey.
                             </p>
 
-                            <p className='text-colored with-indent mb-4 ms-0'>
+                            <p className='text-colored with-indent mb-4 ms-3 ms-md-0'>
                                 She completed her Family Practice Residency at the Medical University of South
                                 Carolina, in
                                 Charleston, South Carolina. She has her Master’s in Public Health and completed her
@@ -110,7 +110,7 @@ function BudboApp() {
                                 Family
                                 Physicians.
                             </p>
-                            <p className='text-colored with-indent mb-4 ms-0'>
+                            <p className='text-colored with-indent mb-4 ms-3 ms-md-0'>
                                 She is a Diplomat in Cannabinoid Medicine Certified by the American Academy of
                                 Cannabinoid
                                 Medicine, and a Medical Review Officer Certified by  Medical Review Officer

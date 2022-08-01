@@ -5,7 +5,7 @@ import SideBarSwiper from './Swiper';
 
 function ActionBar() {
     return (
-        <StyledActionBar>
+        <StyledActionBar className='d-none d-xxl-block'>
             <div className='side-bar-container rounded border w-100 position-absolute'>
                 <div className='top-content rounded-top border-bottom'>
                     <ul className='d-flex justify-content-between flex-wrap'>

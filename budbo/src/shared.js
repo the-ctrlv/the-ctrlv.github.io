@@ -10,6 +10,7 @@ import GilroyMediumItalicWoff from './assets/fonts/Gilroy-MediumItalic.woff';
 import GilroyMediumItalicWoff2 from './assets/fonts/Gilroy-MediumItalic.woff2';
 import GilroySBoldWoff from './assets/fonts/Gilroy-Semibold.woff';
 import GilroySBoldWoff2 from './assets/fonts/Gilroy-Semibold.woff2';
+import connectBgMob from './assets/images/connect-bg-mob.png';
 import token from './assets/images/token.svg';
 
 export const GlobalStyles = createGlobalStyle`
@@ -52,6 +53,11 @@ export const GlobalStyles = createGlobalStyle`
     }
     h1 {
         font-size: 72px;
+        line-height: 88px;
+        @media (max-width: 992px) {
+            font-size: 32px;
+            line-height: 38px;
+        }
     }
     h2 {
         font-size: 56px;
@@ -174,10 +180,21 @@ export const StyledWhiteWrapper = styled.div`
         position: relative;
         z-index: 1;
         iframe {
+            width: 100%;
             border-radius: 24px;
-            width: calc(100% - 350px);
+            @media (min-width: 1200px) {
+                width: calc(100% - 350px);
+            }
+            @media (max-width: 767px) {
+                height: 191px;
+                margin-top: 40px;
+            }
+            @media (max-width: 992px) {
+                height: 300px;
+            }
         }   
-        &::before {
+        @media (min-width: 992px) {
+            &::before {
                 content: '';
                 display: block;
                 width: 109px;
@@ -187,7 +204,8 @@ export const StyledWhiteWrapper = styled.div`
                 left: 0;
                 top: -150px;
                 z-index: -1;
-            }     
+            }         
+        }
     }
     &.exception-mobile {
         @media (max-width: 767px) {
@@ -205,6 +223,23 @@ export const StyledColoredWrapper = styled.div`
     margin-bottom: 185px;
     position: relative;
     z-index: 1;
+    .mobile-image {
+        @media (max-width: 767px) {
+            width: 100%;
+            height: 340px;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -80px;
+                left: -16px;
+                width: calc(100% + 32px);
+                height: 100%;
+                background: url(${connectBgMob}) center center/cover no-repeat;
+            }
+        }
+    }
     @media (max-width: 1600px) {
         margin: 0 auto 145px;
     }
@@ -213,7 +248,10 @@ export const StyledColoredWrapper = styled.div`
     }
     p {
         &.text {
-            margin: 25px 0 100px
+            margin: 25px 0 100px;
+            @media (max-width: 767px) {
+                margin: 32px 0 25px;
+            }
         }
     }
     .uma-img {
@@ -316,12 +354,14 @@ export const StyledInsideUl = styled.ul`
         margin-bottom: 200px;
     }
     li {
-        height: 170px;
+        height: auto;
         border-radius: 16px;
         margin-bottom: 32px;
-        padding: 0 5px 0 24px;
+        padding: 32px 24px;
         width: 100%;
         @media (min-width: 992px) {
+            height: 170px;
+            padding: 0 5px 0 24px;
             padding: 0 48px;
             width: calc(50% - 16px);
         }

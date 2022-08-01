@@ -8,11 +8,11 @@ function Buildings() {
                     Technologies, Inc. <br />
                     Ecosystem
                 </h1>
-                <p className='fw-bold'>
+                <h3>
                     Budbo is far more than an app. It is a holistic ecosystem, <br />
                     touching every stakeholder of the cannabis industry and <br /> poised
                     for endless scalability at all levels.
-                </p>
+                </h3>
             </div>
         </StyledBuildings>
     )

@@ -1,12 +1,10 @@
 import connectBg from '../../assets/images/connect-bg.png';
-import connectBgMob from '../../assets/images/connect-bg-mob.png';
 import WhoBudboIsFor from '../../components/WhoBudboIsFor';
-import { StyledColoredWrapper, useMobileMode } from '../../shared';
+import { StyledColoredWrapper } from '../../shared';
 import { StyledBudboConnect } from './styles';
 import { mockBudboConnect } from './constants';
 
 function BudboConnect() {
-    const isMobileMode = useMobileMode();
 
     return (
         <StyledBudboConnect>
@@ -40,7 +38,8 @@ function BudboConnect() {
                     </ul>
                 </div>
                 <StyledColoredWrapper className='connect col-12 col-lg-10'>
-                    <img src={isMobileMode ? connectBgMob : connectBg} alt="connect" className='connect-img w-100' />
+                    <div className="mobile-image" />
+                    <img src={connectBg} alt="connect" className='connect-img d-none d-md-block w-100' />
                     <div className="width-wrapper">
                         <span className='budbo-badge fw-bold d-block mb-2'>BUDBO CONNECT</span>
                         <h3>
