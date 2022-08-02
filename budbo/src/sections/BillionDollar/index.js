@@ -8,7 +8,7 @@ function BillionDollar() {
         <StyledBillionDollar>
             <div className="container">
                 <div className="width-wrapper col-12 col-xl-10">
-                    <h2>{mockBillionIdea.title}</h2>
+                    <h2 className='mt-0'>{mockBillionIdea.title}</h2>
                     <img src={mockBillionIdea.image} alt="idea" className="w-100" />
                     {mockBillionIdea.description}
                     {mockBillionIdea.text}

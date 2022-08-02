@@ -1,7 +1,8 @@
 import styled from 'styled-components/macro';
 
 export const StyledLegalization = styled.div`
-    margin: 78px 0 148px;
+    margin: 78px 0 0 0;
+    padding-bottom: 148px;
     @media (max-width: 768px) {
         margin-bottom: 0;
         padding-bottom: 130px;

@@ -294,6 +294,9 @@ export const StyledColoredWrapper = styled.div`
         @media (max-width: 767px) {
             margin-bottom: 48px;
         }
+        @media (max-width: 1200px) {
+            margin-bottom: 148px;
+        }
         h3 {
             span {
                 color: var(--orange);

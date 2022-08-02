@@ -60,30 +60,6 @@ export const StyledReasons = styled.div`
             margin: 20px 0 0 0;
         }
     }
-    .phone-slider {
-        margin-top: 50px;
-        @media (min-width: 768px) {
-            margin-top: 80px;
-        }
-        div {
-            img {
-                width: calc(100% - 64px);
-                margin: 0 auto;
-                display: block;
-                @media (min-width: 768px) {
-                    height: 80%;
-                    width: 80%;
-                }
-            }
-            &:nth-child(2) {
-                img {
-                    @media (min-width: 768px) {
-                       width: 100%;
-                    }
-                }
-            }
-        }
-    }
     .reason4 {
         .mentor {
             margin: 60px 0 80px;

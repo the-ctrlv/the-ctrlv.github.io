@@ -79,7 +79,7 @@ function Reasons() {
                             <br />
                             It helps users find exactly what they need in a simple gamified manner.
                         </p>
-                        <PhoneSwiper />
+                        <PhoneSwiper description />
                     </div>
 
                     <div className="reasons reason3 border-bottom">
@@ -218,7 +218,7 @@ function Reasons() {
                             As the medical world unveils the benefits of cannabis for a variety of illnesses, more
                             and more patients all over the world can reap its benefits.
                         </p>
-                        <div className='map-wrapper mt-4 position-relative'>
+                        <div className='map-wrapper mt-4 mb-3 position-relative'>
                             <img src={reason7Map} alt="reason7Map" className='w-100 d-none d-md-block' />
                             <div className='mob-map' />
                             <p className='text-colored'>

@@ -5,6 +5,7 @@ import inside3 from '../../assets/images/inside3.svg'
 import inside4 from '../../assets/images/inside4.svg'
 import uma from '../../assets/images/uma.png'
 import umaMob from '../../assets/images/uma-mob.png'
+import SlideTo from '../../components/SlideTo'
 import WhoBudboIsFor from '../../components/WhoBudboIsFor/index';
 import { StyledColoredWrapper, StyledInsideUl, useMobileMode } from '../../shared';
 import { StyledBudboApp } from './styles'
@@ -24,6 +25,10 @@ function BudboApp() {
                         cannabis strain in a familiar and gamified manner through
                         a modern and user-friendly interface.
                     </h3>
+
+                    <SlideTo />
+                    <SlideTo discover />
+
                     <h5 className='what-inside-title'>What{"'"}s inside?</h5>
                     <StyledInsideUl>
                         <li className='border d-flex justify-content-center align-items-center'>

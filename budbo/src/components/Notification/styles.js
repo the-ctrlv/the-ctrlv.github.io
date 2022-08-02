@@ -55,8 +55,11 @@ export const StyledNotification = styled.div`
             @media (max-width: 768px) {
                 height: calc(100% + 96px);
                 top: -48px;
-                background: url(${mobBg}) center center/105% no-repeat;
-
+                background: url(${mobBg}) center center/145% no-repeat;
+            }
+            @media (min-width: 768px) and (max-width: 1200px) {
+                width: calc(100% + 10vw);
+                left: -5vw;
             }
         }
         &::after {
@@ -68,7 +71,7 @@ export const StyledNotification = styled.div`
             height: 160px;
             background: url(${owl}) center center/cover no-repeat;
             transform: translateY(55%);
-            @media (max-width: 767px) {
+            @media (max-width: 1200px) {
                 bottom: -50px;
                 right: -25px;
             }
