@@ -1,0 +1,51 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['plugin:@next/next/recommended', 'airbnb'],
+  overrides: [],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
+  },
+  plugins: ['react', 'autofix'],
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'max-len': ['error', { code: 120 }],
+    'react/react-in-jsx-scope': 'off',
+    'autofix/no-debugger': 'error',
+    'react/prop-types': 0,
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-indent': 'off',
+    'no-tabs': 0,
+    indent: 'off',
+    'react/no-array-index-key': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/jsx-indent-props': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/no-danger': 'off',
+    'object-curly-newline': 'off',
+    'comma-dangle': ['error', 'only-multiline'],
+    'operator-linebreak': 'off',
+    'no-underscore-dangle': 'off',
+  },
+};
