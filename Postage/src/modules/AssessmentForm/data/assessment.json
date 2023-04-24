@@ -1,0 +1,332 @@
+{
+  "title": "New TRT Patient Assessment",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "text",
+          "name": "question11",
+          "title": "First Name",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "question12",
+          "title": "Middle Name",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "question13",
+          "title": "Last Name",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "question14",
+          "title": "DOB",
+          "isRequired": true,
+          "inputType": "date"
+        },
+        {
+          "type": "radiogroup",
+          "name": "question15",
+          "title": "Legal Sex",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Male"
+            },
+            {
+              "value": "Item 2",
+              "text": "Female"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question16",
+          "title": "Sex at Birth",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Male"
+            },
+            {
+              "value": "Item 2",
+              "text": "Female"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "question18",
+          "title": "Race",
+          "isRequired": true,
+          "choices": [
+            "American Indian or Alaska Native",
+            "Asian",
+            "Black or African American",
+            "Native Hawaiian or Other Pacific Islander",
+            "White",
+            "Other Race"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "question19",
+          "title": "Ethnicity",
+          "isRequired": true,
+          "choices": [
+            "Hispanic or Latino",
+            "Not Hispanic or Latino",
+            "Decline to Specify"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question17",
+          "title": "Are you a U.S. Military Veteran?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Yes"
+            },
+            {
+              "value": "Item 2",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "multipletext",
+          "name": "question20",
+          "title": "Home Address",
+          "isRequired": true,
+          "items": [
+            {
+              "name": "address",
+              "title": "Street Address"
+            },
+            {
+              "name": "address2",
+              "title": "Street Address Line 2"
+            },
+            {
+              "name": "city",
+              "title": "City"
+            },
+            {
+              "name": "state",
+              "title": "State"
+            },
+            {
+              "name": "postal",
+              "title": "Postal / Zip Code"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "question21",
+          "title": "Drivers License State of Issuance",
+          "isRequired": true,
+          "choices": [
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"
+          ]
+        },
+        {
+          "type": "text",
+          "name": "question22",
+          "title": "Drivers License Number",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "question23",
+          "title": "Drivers License Expiration Date",
+          "inputType": "date"
+        },
+        {
+          "type": "text",
+          "name": "question24",
+          "title": "SSN"
+        },
+        {
+          "type": "text",
+          "name": "question25",
+          "title": "Mobile Phone Number",
+          "isRequired": true,
+          "inputType": "tel"
+        },
+        {
+          "type": "text",
+          "name": "question26",
+          "title": "Email Address",
+          "isRequired": true,
+          "inputType": "email"
+        },
+        {
+          "type": "checkbox",
+          "name": "question27",
+          "title": "Please indicate which communication method(s) you authorize Postage Health to use when sharing personal health-related information with you.  For example, we will  need to let you know when \"New Lab Results are available in your Patient Portal.\"  You may choose one or more of the below options:",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Email"
+            },
+            {
+              "value": "Item 2",
+              "text": "Text Message"
+            },
+            {
+              "value": "Item 3",
+              "text": "Phone Call"
+            }
+          ]
+        }
+      ],
+      "title": "New Patient Registration"
+    },
+    {
+      "name": "page4",
+      "elements": [
+        {
+          "type": "multipletext",
+          "name": "question32",
+          "title": "Mailing Address",
+          "isRequired": true,
+          "items": [
+            {
+              "name": "address",
+              "title": "Street Address"
+            },
+            {
+              "name": "address2",
+              "title": "Street Address Line 2"
+            },
+            {
+              "name": "city",
+              "title": "City"
+            },
+            {
+              "name": "state",
+              "title": "State"
+            },
+            {
+              "name": "postal",
+              "title": "Postal / Zip Code"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question29",
+          "title": "Is the Mailing Address the same as the Billing Address?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Yes"
+            },
+            {
+              "value": "Item 2",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "multipletext",
+          "name": "question30",
+          "title": "Billing Address",
+          "isRequired": true,
+          "items": [
+            {
+              "name": "address",
+              "title": "Street Address"
+            },
+            {
+              "name": "address2",
+              "title": "Street Address Line 2"
+            },
+            {
+              "name": "city",
+              "title": "City"
+            },
+            {
+              "name": "state",
+              "title": "State"
+            },
+            {
+              "name": "postal",
+              "title": "Postal / Zip Code"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "question28",
+          "title": "Email for receipt",
+          "inputType": "email",
+          "isRequired": true
+        }
+      ],
+      "title": "Order At Home Hormone Assessment"
+    }
+  ]
+}
