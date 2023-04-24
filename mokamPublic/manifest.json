@@ -1,8 +1,0 @@
-{
-  "short_name": "Mokam App",
-  "name": "Mokam!",
-  "start_url": "/#/retail",
-  "display": "standalone",
-  "theme_color": "#fff",
-  "background_color": "#ffffff"
-}
