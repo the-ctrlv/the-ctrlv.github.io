@@ -1,6 +1,6 @@
 import { getClassNames } from "../../shared/functions";
 import { QuestionType } from "../../shared/types";
-import { StyledHamburger, StyledSideBar } from "./styles";
+import { StyledSideBar } from "./styles";
 import { ReactComponent as ImageBorderButton } from "../../assets/button-border.svg";
 import { useClickOutside, useWindowResize } from "../../shared/hooks";
 import { useEffect, useRef, useState } from "react";
@@ -27,16 +27,16 @@ export default function SideBar(props: SideBarProps) {
 
 	useClickOutside(sideBarRef, () => { setIsMenuOpen(false) });
 	return (
-		<div ref={sideBarRef}>
+		<StyledSideBar ref={sideBarRef}>
 			{isTablet &&
-				<StyledHamburger onClick={onHamburgerClick}
+				<div onClick={onHamburgerClick}
 					className={getClassNames('hamburger', isMenuOpen ? 'active' : '')}>
-					<div className="hamburger__line"></div>
-					<div className="hamburger__line"></div>
-					<div className="hamburger__line"></div>
-				</StyledHamburger>
+					<div className="hamburger__line" />
+					<div className="hamburger__line" />
+					<div className="hamburger__line" />
+				</div>
 			}
-			<StyledSideBar className={getClassNames('side-bar', isMenuOpen ? 'active' : '')}>
+			<div className={getClassNames('side-bar', isMenuOpen ? 'active' : '')}>
 				<div className="side-bar__container">
 					{questionList.map((question, index) => (
 						<div key={index}
@@ -48,7 +48,7 @@ export default function SideBar(props: SideBarProps) {
 						</div>
 					))}
 				</div>
-			</StyledSideBar>
-		</div>
+			</div>
+		</StyledSideBar>
 	);
 }

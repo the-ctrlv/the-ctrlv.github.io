@@ -1,17 +1,10 @@
 import { useRef } from "react";
-import { QuestionType } from "../../shared/types";
+import { QuestionProps } from "../../shared/types";
 
 import { ReactComponent as ImageBorderButtonLarge } from "../../assets/button-border-large.svg";
 
 import { StyledQuestionButton } from "./styles";
-type QuestionButtonProps = {
-	option: string;
-	questionInfo: QuestionType;
-	nextQuestion: () => void;
-	setIsGameFinished: (isGameFinished: boolean) => void;
-	setTotalEarned: (totalEarned: string) => void;
-	setIsModalVisible: (isModalVisible: boolean) => void;
-};
+
 export default function QuestionButton({
 	option,
 	nextQuestion,
@@ -19,7 +12,7 @@ export default function QuestionButton({
 	setTotalEarned,
 	setIsGameFinished,
 	setIsModalVisible,
-}: QuestionButtonProps) {
+}: QuestionProps) {
 	const btnRef = useRef<HTMLLIElement>(null);
 
 

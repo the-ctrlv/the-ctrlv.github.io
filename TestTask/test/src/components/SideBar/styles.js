@@ -3,16 +3,14 @@ import { breakpoints, colors } from '../../shared/constants'
 import { mqMax } from '../../shared/functions'
 
 export const StyledSideBar = styled.div`
-	&& {
-		max-width: 376px;
-		width: 100%;
+	max-width: 376px;
+	width: 100%;
+	.side-bar {
 		background-color: ${colors.white};
 		display: flex;
 		align-items: center;
 		height: 100vh;
 		z-index: 1040;
-	}
-	.side-bar {
 		&__container {
 			width: 100%;
 			display: flex;
@@ -55,34 +53,22 @@ export const StyledSideBar = styled.div`
 			}
 		}
 	}
-	@media ${mqMax(breakpoints.xl)} { 
-		position: fixed;
-		right: -100%;
-		width: 100vw;
-		top: 0;
-		transition: all .3s 0s;
-		&.active {
-			right: 0;
-		}
-	}
-`
-
-export const StyledHamburger = styled.div`
-	cursor: pointer;
-	width: 45px;
-	height: 45px;
-	background-color: ${colors.button};
-	border-radius: 100%;
-	position: absolute;
-	top: 40px;
-	right: 40px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-end;
-	z-index: 1050;
-	transition: background-color .3s 0s;
+	
 	.hamburger {
+		cursor: pointer;
+		width: 45px;
+		height: 45px;
+		background-color: ${colors.button};
+		border-radius: 100%;
+		position: fixed;
+		top: 24px;
+		right: 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
+		z-index: 1050;
+		transition: background-color .3s 0s;
 		&__line {
 			height: 2px;
 			width: 38px;
@@ -112,31 +98,53 @@ export const StyledHamburger = styled.div`
 				transform: translate3d(-50%,0,0);
 			}
 		}
+		&.active {
+			.hamburger__line {
+				background-color: ${colors.button};
+				transition: background-color .3s 0s;
+				&:nth-child(1) {
+					transform: translate3d(-50%,-50%,0) rotate(45deg);
+					top: 50%;
+					transition: top .3s,transform .3s .3s,-webkit-transform .3s .3s;
+				}
+				&:nth-child(2) {
+					width: 0;
+				}
+				&:nth-child(3) {
+					transform: translate3d(-50%,50%,0) rotate(-45deg);
+					bottom: 50%;
+					transition: bottom .3s,transform .3s .3s,-webkit-transform .3s .3s;
+				}
+			}
+		}
 	}
-	&.active {
-		background-color: #fff;
-		transition: background-color .3s 0s;
-		.hamburger__line {
-			background-color: ${colors.button};
-			transition: background-color .3s 0s;
-			&:nth-child(1) {
-				transform: translate3d(-50%,-50%,0) rotate(45deg);
-				top: 50%;
-				transition: top .3s,transform .3s .3s,-webkit-transform .3s .3s;
-			}
-			&:nth-child(2) {
-				width: 0;
-			}
-			&:nth-child(3) {
-				transform: translate3d(-50%,50%,0) rotate(-45deg);
-				bottom: 50%;
-				transition: bottom .3s,transform .3s .3s,-webkit-transform .3s .3s;
+	@media ${mqMax(breakpoints.xl)} { 
+		width: 0;
+		.side-bar {
+			position: fixed;
+			right: -100%;
+			width: 376px;
+			top: 0;
+			transition: all .3s 0s;
+			&.active {
+				right: 0;
 			}
 		}
 	}
 	@media ${mqMax(breakpoints.md)} {
-		top: 10px;
-		right: 10px;
+		.hamburger {
+			top: 10px;
+			right: 10px;
+		}
+		.side-bar {
+			width: 100vw;
+		}
 	}
-
+	@media ${mqMax(breakpoints.md)} {
+		.side-bar {
+			&__item {
+				height: 30px;
+			}
+		}
+	}
 `

@@ -1,15 +1,9 @@
-import { QuestionType } from "../../shared/types";
+import { QuestionProps } from "../../shared/types";
+
 import QuestionButton from "./QuestionButton";
+
 import { StyledQuestion } from "./styles";
 
-
-type QuestionProps = {
-	questionInfo: QuestionType;
-	nextQuestion: () => void;
-	setIsGameFinished: (isGameFinished: boolean) => void;
-	setTotalEarned: (totalEarned: string) => void;
-	setIsModalVisible: (isModalVisible: boolean) => void;
-};
 
 export default function Question({
 	questionInfo,

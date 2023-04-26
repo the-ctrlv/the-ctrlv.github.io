@@ -88,4 +88,16 @@ export const StyledModal = styled.div`
 			}
 		}
 	}
+	@media ${mqMax(breakpoints.md)} {
+		.modal {
+			&__content {
+				&__text {
+					h1 {
+						font-size: 30px;
+						line-height: 36px;
+					}
+				}
+			}
+		}
+	}
 `

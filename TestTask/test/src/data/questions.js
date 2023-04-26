@@ -11,7 +11,7 @@ export const MOCK_QUESTIONS = [
 		price: "500$"
 	},
 	{
-		title: "How old your elder brother was 10 years before you was born, mate?",
+		title: "22222How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -22,7 +22,7 @@ export const MOCK_QUESTIONS = [
 		price: "1000$"
 	},
 	{
-		title: "2How old your elder brother was 10 years before you was born, mate?",
+		title: "3333How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -33,7 +33,7 @@ export const MOCK_QUESTIONS = [
 		price: "2,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "44444How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -44,7 +44,7 @@ export const MOCK_QUESTIONS = [
 		price: "4,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "55555How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -55,7 +55,7 @@ export const MOCK_QUESTIONS = [
 		price: "8,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "6666How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -66,7 +66,7 @@ export const MOCK_QUESTIONS = [
 		price: "16,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "7777How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -77,7 +77,7 @@ export const MOCK_QUESTIONS = [
 		price: "32,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "8888How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -88,7 +88,7 @@ export const MOCK_QUESTIONS = [
 		price: "64,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "9999How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -99,7 +99,7 @@ export const MOCK_QUESTIONS = [
 		price: "125,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "10How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -110,7 +110,7 @@ export const MOCK_QUESTIONS = [
 		price: "250,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "11How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
@@ -121,7 +121,7 @@ export const MOCK_QUESTIONS = [
 		price: "500,000$"
 	},
 	{
-		title: "3How old your elder brother was 10 years before you was born, mate?",
+		title: "12How old your elder brother was 10 years before you was born, mate?",
 		options: [
 			"10 years",
 			"16 years",
