@@ -7,6 +7,7 @@ type QuestionButtonProps = {
 	nextQuestion: () => void;
 	setIsGameFinished: (isGameFinished: boolean) => void;
 	setTotalEarned: (totalEarned: string) => void;
+	setIsModalVisible: (isModalVisible: boolean) => void;
 };
 export default function QuestionButton({
 	option,
@@ -14,6 +15,7 @@ export default function QuestionButton({
 	questionInfo,
 	setTotalEarned,
 	setIsGameFinished,
+	setIsModalVisible,
 }: QuestionButtonProps) {
 	const btnRef = useRef<HTMLLIElement>(null);
 
@@ -36,6 +38,7 @@ export default function QuestionButton({
 				setTimeout(() => {
 					setTotalEarned(questionInfo.price === '500$' ? '0$' : questionInfo.price)
 					setIsGameFinished(true);
+					setIsModalVisible(true);
 				}, 2000);
 			}
 			document.querySelectorAll<HTMLElement>('.btn').forEach((btn) => {

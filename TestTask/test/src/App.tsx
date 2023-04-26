@@ -12,6 +12,8 @@ import { useMultiStepForm } from "./shared/hooks";
 function App() {
   const [totalEarned, setTotalEarned] = useState('');
   const [isGameFinished, setIsGameFinished] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
   const { nextQuestion, currentStepIndex, currentStep, reset } =
     useMultiStepForm(MOCK_QUESTIONS);
 
@@ -24,9 +26,16 @@ function App() {
 
   return (
     <>
-      <Modal isGameFinished={isGameFinished} reset={reset} totalEarned={totalEarned} />
+      {isModalVisible && <Modal
+        setIsModalVisible={setIsModalVisible}
+        isGameFinished={isGameFinished}
+        setIsGameFinished={setIsGameFinished}
+        reset={reset}
+        totalEarned={totalEarned} />
+      }
       <div className="content-container">
         <Question
+          setIsModalVisible={setIsModalVisible}
           setTotalEarned={setTotalEarned}
           setIsGameFinished={setIsGameFinished}
           questionInfo={currentStep}

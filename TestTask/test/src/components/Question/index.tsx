@@ -8,11 +8,13 @@ type QuestionProps = {
 	nextQuestion: () => void;
 	setIsGameFinished: (isGameFinished: boolean) => void;
 	setTotalEarned: (totalEarned: string) => void;
+	setIsModalVisible: (isModalVisible: boolean) => void;
 };
 
 export default function Question({
 	questionInfo,
 	nextQuestion,
+	setIsModalVisible,
 	setTotalEarned,
 	setIsGameFinished }: QuestionProps) {
 
@@ -29,6 +31,7 @@ export default function Question({
 						nextQuestion={nextQuestion}
 						setTotalEarned={setTotalEarned}
 						setIsGameFinished={setIsGameFinished}
+						setIsModalVisible={setIsModalVisible}
 					/>
 				))}
 			</ul>
