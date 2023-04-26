@@ -1,0 +1,16 @@
+{
+	"editor.fontSize": 12,
+	"editor.formatOnType": true,
+	"editor.formatOnSave": true,
+	"eslint.format.enable": true,
+	"editor.tabSize": 2,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"html",
+		"typescriptreact"
+	],
+}
