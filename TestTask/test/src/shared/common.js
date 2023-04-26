@@ -51,6 +51,11 @@ h2 {
 		outline: none;
 		background-color: ${colors.darkBlue};
 	}
+	@media ${mqMax(breakpoints.md)} {
+		max-width: none;
+		width: 100%;
+		padding: 16px 0;
+	}
 }
 
 .content-container {

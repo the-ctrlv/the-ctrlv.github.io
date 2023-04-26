@@ -41,6 +41,7 @@ export const StyledQuestionButton = styled.li`
 	cursor: pointer;
 	svg {
 		width: 100%;
+		height: auto;
 	}
 	span {
 		position: absolute;
