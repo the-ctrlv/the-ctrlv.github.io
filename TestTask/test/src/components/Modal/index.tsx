@@ -1,7 +1,9 @@
+import { useRef } from "react";
+
 import { StyledModal } from "./styles";
+
 import imageHand from "../../assets/hand.png";
-import { getClassNames } from "../../shared/functions";
-import { useRef, useState } from "react";
+
 
 type ModalProps = {
 	isGameFinished: boolean;
@@ -25,8 +27,8 @@ export default function Modal({
 				<img src={imageHand} alt="hand" />
 				<div className="modal__content__text">
 					{isGameFinished && <span>Total score:</span>}
-					<h2>{isGameFinished ? `${totalEarned} earned` : 'Who wants to be a millionaire?'}</h2>
-					<button onClick={() => {
+					<h1>{isGameFinished ? `${totalEarned} earned` : 'Who wants to be a millionaire?'}</h1>
+					<button className="btn" onClick={() => {
 						reset();
 						setIsGameFinished(false)
 						setIsModalVisible(false)
@@ -34,6 +36,7 @@ export default function Modal({
 					}>{isGameFinished ? 'Try again' : 'Start'}</button>
 				</div>
 			</div>
+			<div className="modal__polygon" />
 		</StyledModal>
 	);
 }

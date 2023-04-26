@@ -8,6 +8,10 @@ import { MOCK_QUESTIONS } from "./data/questions";
 
 import { useMultiStepForm } from "./shared/hooks";
 
+import 'normalize.css/normalize.css';
+import { GlobalStyle } from "./shared/common";
+import Loader from "./components/Loader";
+
 
 function App() {
   const [totalEarned, setTotalEarned] = useState('');
@@ -18,14 +22,15 @@ function App() {
     useMultiStepForm(MOCK_QUESTIONS);
 
   useEffect(() => {
-    document.querySelectorAll('.btn').forEach((item) => {
-      item.classList.remove('correct');
-      item.classList.remove('incorrect');
+    document.querySelectorAll('.btn-question').forEach((item) => {
+      item.classList.remove('correct', 'incorrect', 'selected', 'disabled');
     })
   }, [currentStepIndex, isGameFinished])
 
   return (
     <>
+      <GlobalStyle />
+      <Loader />
       {isModalVisible && <Modal
         setIsModalVisible={setIsModalVisible}
         isGameFinished={isGameFinished}

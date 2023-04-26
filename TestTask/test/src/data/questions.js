@@ -8,7 +8,18 @@ export const MOCK_QUESTIONS = [
 			"12 years"
 		],
 		correctAnswer: "14 years",
-		price: "1,000$"
+		price: "500$"
+	},
+	{
+		title: "How old your elder brother was 10 years before you was born, mate?",
+		options: [
+			"10 years",
+			"16 years",
+			"14 years",
+			"12 years"
+		],
+		correctAnswer: "14 years",
+		price: "1000$"
 	},
 	{
 		title: "2How old your elder brother was 10 years before you was born, mate?",

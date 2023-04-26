@@ -1,5 +1,8 @@
 import { useRef } from "react";
 import { QuestionType } from "../../shared/types";
+
+import { ReactComponent as ImageBorderButtonLarge } from "../../assets/button-border-large.svg";
+
 import { StyledQuestionButton } from "./styles";
 type QuestionButtonProps = {
 	option: string;
@@ -22,7 +25,7 @@ export default function QuestionButton({
 
 	const handleClick = () => {
 		btnRef.current?.classList.add('selected');
-		document.querySelectorAll<HTMLElement>('.btn').forEach((btn) => {
+		document.querySelectorAll<HTMLElement>('.btn-question').forEach((btn) => {
 			btn.classList.add('disabled');
 		});
 
@@ -32,7 +35,7 @@ export default function QuestionButton({
 				btnRef.current?.classList.add('correct')
 				setTimeout(() => {
 					nextQuestion();
-				}, 2000);
+				}, 1000);
 			} else {
 				btnRef.current?.classList.add('incorrect');
 				setTimeout(() => {
@@ -49,8 +52,9 @@ export default function QuestionButton({
 
 
 	return (
-		<StyledQuestionButton className="btn" ref={btnRef} onClick={handleClick}>
+		<StyledQuestionButton className="btn-question" ref={btnRef} onClick={handleClick}>
 			<span>{option}</span>
+			<ImageBorderButtonLarge />
 		</StyledQuestionButton >
 	)
 }

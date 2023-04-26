@@ -20,9 +20,9 @@ export default function Question({
 
 
 	return (
-		<StyledQuestion className="question">
+		<StyledQuestion>
 			<h2>{questionInfo.title}</h2>
-			<ul className="options">
+			<ul>
 				{questionInfo.options.map((option: string, index: number) => (
 					<QuestionButton
 						key={index}

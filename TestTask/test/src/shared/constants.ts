@@ -4,8 +4,13 @@ export const colors = {
   darkBlue: '#004974',
   midBlue: '#1E6A8E',
   lightBlue: '#3891B1',
-
-  
+  black100: '#1C1C21',
+  orange: '#FF8B37',
+  orange2: '#FFF3EB',
+  red: '#EC6259',
+  red2: '#FDEEED',
+  green: '#47D867',
+  green2: '#E6FAEA',
 }
 
 export const breakpoints = {
